@@ -55,20 +55,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Social proof */}
-      <section className="bg-gray-50 py-12 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-gray-500 text-sm font-medium uppercase tracking-wider mb-8">Trusted by independent brokerages across the US</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {["Apex Realty Group", "Summit Properties", "BlueSky Brokerage", "Cornerstone RE"].map((name) => (
-              <div key={name} className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-                <p className="text-gray-400 text-sm font-medium">{name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Feature highlights */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -125,6 +111,20 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">{step}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
                 <p className="text-gray-600">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social proof */}
+      <section className="bg-gray-50 py-12 px-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-gray-500 text-sm font-medium uppercase tracking-wider mb-8">Trusted by independent brokerages across the US</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {["Apex Realty Group", "Summit Properties", "BlueSky Brokerage", "Cornerstone RE"].map((name) => (
+              <div key={name} className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+                <p className="text-gray-400 text-sm font-medium">{name}</p>
               </div>
             ))}
           </div>
