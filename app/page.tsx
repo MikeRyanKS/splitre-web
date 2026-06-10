@@ -58,7 +58,7 @@ export default function HomePage() {
       {/* Social proof */}
       <section className="bg-gray-50 py-12 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-gray-500 text-sm font-medium uppercase tracking-wider mb-8">Trusted by brokers managing 5–50 agents across the US</p>
+          <p className="text-gray-500 text-sm font-medium uppercase tracking-wider mb-8">Trusted by independent brokerages across the US</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {["Apex Realty Group", "Summit Properties", "BlueSky Brokerage", "Cornerstone RE"].map((name) => (
               <div key={name} className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
