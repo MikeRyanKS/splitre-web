@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,7 +7,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2">
-            <Link href="/" className="text-2xl font-bold text-white">SplitRE</Link>
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image src="/icon.svg" alt="" width={28} height={28} />
+              <span className="text-xl font-extrabold text-white tracking-tight">
+                Split<span className="text-indigo-400">RE</span>
+              </span>
+            </Link>
             <p className="mt-3 text-sm text-gray-400 max-w-xs">
               Commission calculations on autopilot for independent real estate brokerages.
             </p>
