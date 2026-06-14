@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
   description:
     "SplitRE automates real estate commission calculations, agent cap tracking, and QuickBooks Online sync for independent brokerages. Replace your spreadsheets and pay agents correctly, every time.",
-  metadataBase: new URL("https://splitre.com"),
+  metadataBase: new URL("https://splitre.app"),
   keywords: [
     "real estate commission management software",
     "commission calculation software for brokerages",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "SplitRE — Commission Management Software for Real Estate Brokerages",
     description:
       "Automate commission calculations, cap tracking, and QuickBooks sync for your independent real estate brokerage. Starts at $89/mo.",
-    url: "https://splitre.com",
+    url: "https://splitre.app",
   },
   twitter: {
     card: "summary_large_image",

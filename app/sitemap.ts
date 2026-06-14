@@ -4,7 +4,7 @@ import { getAllSlugs } from "@/lib/blog";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://splitre.com";
+  const baseUrl = "https://splitre.app";
   const slugs = getAllSlugs();
 
   const staticPages = [

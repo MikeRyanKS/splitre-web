@@ -162,7 +162,7 @@ export default function PricingClient() {
                 <p className="text-sm font-semibold text-indigo-600 mb-6">{plan.agentLimit}</p>
 
                 <Link
-                  href="https://app.splitre.com/signup"
+                  href="https://app.splitre.app/signup"
                   className={`block w-full text-center font-semibold py-3 rounded-xl mb-8 transition-colors ${
                     plan.popular
                       ? "bg-indigo-600 text-white hover:bg-indigo-700"
@@ -280,7 +280,7 @@ export default function PricingClient() {
           <h2 className="text-3xl font-bold mb-3">Ready to ditch the spreadsheet?</h2>
           <p className="text-indigo-200 mb-8">Start your free 14-day trial. No credit card required.</p>
           <Link
-            href="https://app.splitre.com/signup"
+            href="https://app.splitre.app/signup"
             className="inline-block bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors"
           >
             Start free trial

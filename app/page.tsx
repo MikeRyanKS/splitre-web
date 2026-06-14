@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "SplitRE — Commission Management Software for Real Estate Brokerages",
   description:
     "SplitRE replaces commission spreadsheets for independent real estate brokerages. Automated split calculations, agent cap tracking, and one-click QuickBooks Online sync. Starts at $89/mo.",
-  alternates: { canonical: "https://splitre.com" },
+  alternates: { canonical: "https://splitre.app" },
 };
 
 const jsonLd = {
@@ -23,7 +23,7 @@ const jsonLd = {
     offerCount: "3",
   },
   operatingSystem: "Web",
-  url: "https://splitre.com",
+  url: "https://splitre.app",
 };
 
 export default function HomePage() {
@@ -50,7 +50,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://app.splitre.com/signup"
+              href="https://app.splitre.app/signup"
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-indigo-200"
             >
               Start free — no credit card
@@ -96,7 +96,7 @@ export default function HomePage() {
               For a 5-agent brokerage closing 50 deals a year, that&apos;s roughly 37–50 hours of manual admin — and 2–3 commission errors that cost an average of $1,100 each to untangle.
             </p>
             <Link
-              href="https://app.splitre.com/signup"
+              href="https://app.splitre.app/signup"
               className="inline-flex items-center gap-2 bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-700 transition-colors"
             >
               Fix it with SplitRE
@@ -368,7 +368,7 @@ export default function HomePage() {
               View pricing
             </Link>
             <Link
-              href="https://app.splitre.com/signup"
+              href="https://app.splitre.app/signup"
               className="border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
             >
               Start free trial

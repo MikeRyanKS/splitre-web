@@ -178,7 +178,7 @@ export default function FeaturesPage() {
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Ready to eliminate commission errors?</h2>
           <p className="text-indigo-100 mb-8">Start your 14-day free trial. No credit card, no commitment.</p>
-          <Link href="https://app.splitre.com/signup" className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors inline-block">
+          <Link href="https://app.splitre.app/signup" className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors inline-block">
             Start free trial
           </Link>
         </div>

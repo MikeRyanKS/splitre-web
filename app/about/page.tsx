@@ -100,7 +100,7 @@ export default function AboutPage() {
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">Get in touch</h2>
           <p className="text-gray-600 mb-4">Questions, feedback, or just want to talk shop about commission structures?</p>
-          <a href="mailto:hello@splitre.com" className="text-indigo-600 font-semibold hover:underline text-lg">hello@splitre.com</a>
+          <a href="mailto:mike@keplify.com" className="text-indigo-600 font-semibold hover:underline text-lg">mike@keplify.com</a>
         </div>
       </section>
     </>

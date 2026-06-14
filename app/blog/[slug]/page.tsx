@@ -41,7 +41,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     publisher: {
       "@type": "Organization",
       name: "SplitRE",
-      url: "https://splitre.com",
+      url: "https://splitre.app",
     },
     keywords: post.keywords.join(", "),
   };
@@ -76,7 +76,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <p className="text-sm font-semibold text-gray-900 mb-4">Share this article</p>
             <div className="flex gap-3">
               <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://splitre.com/blog/${post.slug}`)}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://splitre.app/blog/${post.slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-900 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 Share on X
               </a>
               <a
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://splitre.com/blog/${post.slug}`)}`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://splitre.app/blog/${post.slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
