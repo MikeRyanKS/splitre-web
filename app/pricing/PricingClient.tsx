@@ -37,15 +37,15 @@ const plans = [
 ];
 
 const allFeatures = [
-  "Unlimited deals & transactions",
+  "Unlimited deals and transactions",
   "Commission calculation engine",
   "Tiered splits, flat fees, referral deductions",
-  "Annual cap tracking & automatic cap flip",
+  "Annual cap tracking and automatic cap flip",
   "Mid-year cap migration for new hires",
   "Per-agent plan overrides",
-  "QuickBooks Online sync (Invoice + Bill)",
+  "QuickBooks Online sync (Invoice and Bill)",
   "Sync preview before committing",
-  "Sync log & undo capability",
+  "Sync log and undo capability",
   "PDF agent earnings statements",
   "CSV data export",
   "Shareable deal breakdown links",
@@ -56,7 +56,7 @@ const allFeatures = [
 const faqs = [
   {
     q: "Do all plans include the same features?",
-    a: "Yes. Every SplitRE plan includes every feature — QuickBooks sync, cap tracking, PDF statements, deal share links, and everything else. The only difference between plans is the number of active agents your brokerage can have. No features are paywalled behind higher tiers.",
+    a: "Yes. Every SplitRE plan includes every feature: QuickBooks sync, cap tracking, PDF statements, deal share links, and everything else. The only difference between plans is the number of active agents your brokerage can have. No features are locked behind higher tiers.",
   },
   {
     q: "What counts toward my agent limit?",
@@ -68,19 +68,19 @@ const faqs = [
   },
   {
     q: "How does the annual plan work?",
-    a: "Annual plans are billed once per year at the discounted rate — saving you roughly 30% compared to paying month-to-month. You can cancel before your renewal date and you won't be charged again.",
+    a: "Annual plans are billed once per year at the discounted rate, saving you roughly 30% compared to monthly. You can cancel before your renewal date and you won't be charged again.",
   },
   {
     q: "Which QuickBooks plan does SplitRE support?",
-    a: "SplitRE works with QuickBooks Online — Simple Start, Essentials, Plus, and Advanced. It does not support QuickBooks Desktop. If you're not using QBO, you can still use SplitRE and export a CSV for your bookkeeper instead.",
+    a: "SplitRE works with QuickBooks Online (Simple Start, Essentials, Plus, and Advanced). It does not support QuickBooks Desktop. If you're not on QBO yet, you can still use SplitRE and export a CSV for your bookkeeper instead.",
   },
   {
     q: "What happens at the end of my free trial?",
-    a: "If you don't add a payment method before your trial ends, your account is paused and your data is preserved for 30 days. Nothing is deleted automatically — you can reactivate any time.",
+    a: "If you don't add a payment method before your trial ends, your account is paused and your data is preserved for 30 days. Nothing gets deleted automatically. You can reactivate any time.",
   },
   {
     q: "Is my brokerage data secure?",
-    a: "Yes. All data is encrypted in transit and at rest. Row-level security ensures your brokerage data is fully isolated from other accounts. You can export all your data at any time.",
+    a: "Yes. All data is encrypted in transit and at rest. Row-level security in our database ensures your brokerage data is completely isolated from other accounts. You can export all your data at any time.",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function PricingClient() {
         <div className="max-w-3xl mx-auto">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
           <p className="text-xl text-gray-600 mb-2">No per-agent fees. No feature paywalls. No surprise charges.</p>
-          <p className="text-indigo-600 font-semibold">14-day free trial on all plans — no credit card required.</p>
+          <p className="text-indigo-600 font-semibold">14-day free trial on all plans, no credit card required.</p>
         </div>
       </section>
 
@@ -192,7 +192,7 @@ export default function PricingClient() {
 
         <div className="max-w-5xl mx-auto mt-6">
           <div className="bg-indigo-50 border border-indigo-100 rounded-xl px-6 py-4 text-sm text-indigo-700 text-center">
-            <strong>Every plan includes every feature.</strong> The tier only controls your active agent limit — not what the software can do.
+            <strong>Every plan includes every feature.</strong> The tier only controls your active agent limit.
           </div>
         </div>
       </section>
@@ -224,9 +224,9 @@ export default function PricingClient() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
               { label: "Admin labor saved", value: "~50 hrs/yr" },
-              { label: "Avg commission errors prevented", value: "2–3/yr" },
+              { label: "Commission errors prevented", value: "2 to 3/yr" },
               { label: "Cost per error (10% slip on $11K GCI)", value: "~$1,100" },
-              { label: "Net annual savings", value: "$2,500–$4,000" },
+              { label: "Net annual savings", value: "$2,500 to $4,000" },
             ].map(({ label, value }) => (
               <div key={label} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                 <div className="text-xl font-bold text-indigo-600 mb-1">{value}</div>
@@ -236,7 +236,7 @@ export default function PricingClient() {
           </div>
           <p className="text-gray-500 text-sm">
             At $749/yr (Boutique annual), SplitRE returns{" "}
-            <strong className="text-gray-900">3.5× – 5× your subscription cost</strong> — and pays for itself with the first commission error it prevents.
+            <strong className="text-gray-900">3.5× to 5× your subscription cost</strong> and pays for itself with the first commission error it prevents.
           </p>
         </div>
       </section>

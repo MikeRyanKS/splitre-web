@@ -15,7 +15,7 @@ export default function BlogPage() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">The SplitRE Blog</h1>
-          <p className="text-xl text-gray-600">Commission calculations, QuickBooks guides, and brokerage best practices — for brokers who mean business.</p>
+          <p className="text-xl text-gray-600">Commission calculations, QuickBooks guides, and brokerage back-office tips from the team at SplitRE.</p>
         </div>
       </section>
 

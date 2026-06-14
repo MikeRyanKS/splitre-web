@@ -4,12 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Features — Commission Calculation, Cap Tracking & QuickBooks Sync",
   description:
-    "SplitRE handles every commission structure your brokerage uses — percentage splits, tiered splits, flat fees, E&O deductions — with automatic cap tracking and one-click QuickBooks Online sync. Built for independent real estate brokerages.",
+    "SplitRE handles every commission structure your brokerage uses: percentage splits, tiered splits, flat fees, E&O deductions, automatic cap tracking, and one-click QuickBooks Online sync. Built for independent real estate brokerages.",
   alternates: { canonical: "https://splitre.app/features" },
   openGraph: {
     title: "SplitRE Features — Built for How Brokerages Actually Work",
     description:
-      "Commission calculation engine, real-time cap tracking, one-click QuickBooks sync, per-agent plan overrides, and PDF earnings statements. No spreadsheets, no manual QBO entry.",
+      "Commission calculation engine, real-time cap tracking, one-click QuickBooks sync, per-agent plan overrides, and PDF earnings statements.",
     url: "https://splitre.app/features",
   },
 };
@@ -31,7 +31,7 @@ const faqSchema = {
       name: "How does cap tracking work in SplitRE?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SplitRE tracks each agent's cumulative gross commission income (GCI) toward their annual cap. When an agent crosses their cap amount, their split automatically flips to 100% for the remainder of the cap year — no manual intervention required. Mid-year cap migrations for new hires are also supported.",
+        text: "SplitRE tracks each agent's cumulative gross commission income toward their annual cap. When an agent crosses their cap amount, their split automatically flips to 100% for the remainder of the cap year with no manual intervention required.",
       },
     },
     {
@@ -39,7 +39,7 @@ const faqSchema = {
       name: "Which QuickBooks products does SplitRE support?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SplitRE integrates with QuickBooks Online — Simple Start, Essentials, Plus, and Advanced. It does not support QuickBooks Desktop. Each confirmed deal syncs as an Invoice (GCI received from the title company) and a Bill (agent payout), keeping your books clean and categorized.",
+        text: "SplitRE integrates with QuickBooks Online (Simple Start, Essentials, Plus, and Advanced). It does not support QuickBooks Desktop. Each confirmed deal syncs as an Invoice and a Bill, keeping your books clean and categorized.",
       },
     },
     {
@@ -47,7 +47,7 @@ const faqSchema = {
       name: "Can I override commission plans for individual agents?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Every agent can have a brokerage-wide plan or an individual override. If one agent negotiated a different split, you set the override at the agent level — it applies only to their deals without affecting anyone else's plan.",
+        text: "Yes. Every agent can follow the brokerage-wide plan or have an individual override. If one agent negotiated a different split, you set the override at the agent level and it only applies to their deals.",
       },
     },
   ],
@@ -60,10 +60,11 @@ export default function FeaturesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-6">Built for how brokerages actually work</h1>
-          <p className="text-xl text-gray-600">Every feature was designed to eliminate the manual work that eats your week — from commission calculations to QuickBooks entries.</p>
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-6">What SplitRE actually does</h1>
+          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week, from commission calculations to QuickBooks entries.</p>
         </div>
       </section>
 
@@ -73,14 +74,14 @@ export default function FeaturesPage() {
           <div>
             <div className="inline-block bg-indigo-100 text-indigo-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Commission Engine</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Calculation you can trust</h2>
-            <p className="text-gray-600 mb-6">SplitRE handles every plan structure your brokerage uses — percentage splits, tiered splits, flat fees, E&amp;O deductions, and transaction fees. Define rules once; every deal calculates correctly from then on.</p>
+            <p className="text-gray-600 mb-6">SplitRE handles every plan structure your brokerage uses: percentage splits, tiered splits, flat fees, E&amp;O deductions, and transaction fees. Set up the rules once and every deal calculates correctly from that point on.</p>
             <ul className="space-y-3">
               {[
                 "Live deal preview before confirming",
                 "Rule-based commission plans per agent",
                 "Annual cap tracking with automatic flip to 100%",
                 "E&O and transaction fee deductions",
-                "Support for referral fee splits",
+                "Referral fee splits",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -132,14 +133,14 @@ export default function FeaturesPage() {
           <div className="order-1 md:order-2">
             <div className="inline-block bg-emerald-100 text-emerald-700 rounded-full px-3 py-1 text-sm font-medium mb-4">QuickBooks Online</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">One-click sync to QBO</h2>
-            <p className="text-gray-600 mb-6">Every confirmed deal flows to QuickBooks Online automatically. Your bookkeeper gets clean, categorized entries — no more spreadsheet-to-QBO manual entry at month end.</p>
+            <p className="text-gray-600 mb-6">Every confirmed deal flows to QuickBooks Online automatically. Your bookkeeper gets clean, categorized entries with no spreadsheet-to-QBO re-keying at month end.</p>
             <ul className="space-y-3">
               {[
                 "One-click sync from deal to QBO",
                 "Dry-run preview before any sync",
                 "Undo a sync if you catch an error",
                 "Full sync log with timestamps",
-                "Bookkeeper CSV export included on all plans",
+                "CSV export included on all plans",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -159,7 +160,7 @@ export default function FeaturesPage() {
           <div>
             <div className="inline-block bg-violet-100 text-violet-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Agent Management</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Every agent, always accurate</h2>
-            <p className="text-gray-600 mb-6">Manage your entire roster from one dashboard. See cap progress at a glance, assign commission plans, and handle mid-year plan migrations without recalculating anything by hand.</p>
+            <p className="text-gray-600 mb-6">Manage your entire roster from one dashboard. Cap progress at a glance, commission plan assignments, and mid-year plan migrations handled without recalculating anything by hand.</p>
             <ul className="space-y-3">
               {[
                 "Per-agent cap progress dashboard",
@@ -205,8 +206,8 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Deal History</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Every deal, always on record</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">A permanent, searchable history of every confirmed deal with full audit trails, CSV export, and PDF agent summaries for year-end or disputes.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Every deal, permanently on record</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">A searchable history of every confirmed deal with full audit trails, CSV export, and PDF agent summaries for year-end or disputes.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
