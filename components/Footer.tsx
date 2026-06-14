@@ -10,7 +10,7 @@ export default function Footer() {
             <p className="mt-3 text-sm text-gray-400 max-w-xs">
               Commission calculations on autopilot for independent real estate brokerages.
             </p>
-            <p className="mt-4 text-sm text-gray-500">© {new Date().getFullYear()} SplitRE. All rights reserved.</p>
+            <p className="mt-4 text-sm text-gray-500">© {new Date().getFullYear()} Keplify LLC. All rights reserved.</p>
           </div>
 
           <div>

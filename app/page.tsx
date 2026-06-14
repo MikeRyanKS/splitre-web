@@ -8,13 +8,23 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://splitre.app" },
 };
 
-const jsonLd = {
+const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "SplitRE",
   applicationCategory: "BusinessApplication",
   description:
     "Commission management software for independent real estate brokerages. Automates split calculations, cap tracking, and QuickBooks Online sync.",
+  featureList: [
+    "Automated commission split calculations",
+    "Annual agent cap tracking with automatic cap flip",
+    "One-click QuickBooks Online sync",
+    "PDF agent earnings statements",
+    "Tiered commission split support",
+    "Per-agent commission plan overrides",
+    "Shareable deal breakdown links",
+    "CSV data export",
+  ],
   offers: {
     "@type": "AggregateOffer",
     lowPrice: "89",
@@ -24,6 +34,35 @@ const jsonLd = {
   },
   operatingSystem: "Web",
   url: "https://splitre.app",
+  creator: {
+    "@type": "Organization",
+    name: "Keplify LLC",
+  },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to process a real estate commission deal with SplitRE",
+  description:
+    "SplitRE turns a 45-minute manual commission process into under two minutes.",
+  step: [
+    {
+      "@type": "HowToStep",
+      name: "Enter the deal",
+      text: "Add the address, sale price, commission rate, and agent. SplitRE pulls the correct commission plan and calculates the full breakdown — splits, deductions, and cap progress — in real time.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Review and confirm",
+      text: "See the exact agent split, every deduction, and the updated cap balance before committing. Edit and recalculate instantly if anything changes.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Sync to QuickBooks",
+      text: "One click posts the Invoice (GCI received) and Bill (agent payout) to QuickBooks Online. Your bookkeeper sees clean, categorized entries with no manual re-keying.",
+    },
+  ],
 };
 
 export default function HomePage() {
@@ -31,7 +70,11 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       {/* Hero */}

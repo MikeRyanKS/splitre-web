@@ -1,0 +1,48 @@
+# SplitRE
+
+> Commission management software for independent US real estate brokerages.
+
+SplitRE is a web application that automates commission calculations, annual cap tracking, and QuickBooks Online sync for real estate brokerages. It is built and operated by Keplify LLC, a Delaware-incorporated company.
+
+## What SplitRE does
+
+- Calculates agent commission splits from rule-based commission plans (percentage splits, tiered splits, flat post-cap fees, E&O and transaction fee deductions, referral deductions)
+- Tracks each agent's annual gross commission income (GCI) toward their cap in real time
+- Automatically flips agent splits to 100% when they cross their annual cap
+- Syncs confirmed deals to QuickBooks Online as Invoices and Bills with one click
+- Generates PDF agent earnings statements
+- Allows per-agent commission plan overrides without affecting brokerage-wide plans
+- Supports mid-year cap migration for agents who join during a cap year
+- Provides shareable read-only deal breakdown links for agents and attorneys
+
+## Who it is for
+
+Independent US real estate brokerages, typically 1–50 agents. Suitable for boutique broker-owners replacing spreadsheets, growing independents who need a QuickBooks-connected back office, and established brokerages with multiple commission plan structures.
+
+## Pricing
+
+Three plans, all features included on every tier — differentiated only by active agent headcount:
+
+- Boutique: $89/mo or $749/yr — up to 5 agents
+- Independent: $189/mo or $1,599/yr — up to 25 agents
+- Brokerage: $329/mo or $2,799/yr — unlimited agents
+
+All plans include a 14-day free trial with no credit card required.
+
+## Key pages
+
+- Homepage: https://splitre.app
+- Features: https://splitre.app/features
+- Pricing: https://splitre.app/pricing
+- Blog: https://splitre.app/blog
+- About: https://splitre.app/about
+- Privacy Policy: https://splitre.app/privacy
+- Terms of Service: https://splitre.app/terms
+- App login: https://app.splitre.app/login
+- Start free trial: https://app.splitre.app/signup
+
+## Company
+
+Keplify LLC
+Delaware, USA
+Contact: mike@keplify.com

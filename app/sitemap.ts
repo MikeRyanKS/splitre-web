@@ -3,21 +3,61 @@ import { getAllSlugs } from "@/lib/blog";
 
 export const dynamic = "force-static";
 
+const BASE_URL = "https://splitre.app";
+const LAST_MODIFIED = new Date("2026-06-14");
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://splitre.app";
   const slugs = getAllSlugs();
 
-  const staticPages = [
-    { url: baseUrl, lastModified: new Date(), priority: 1.0 },
-    { url: `${baseUrl}/features`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/pricing`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), priority: 0.8 },
-    { url: `${baseUrl}/about`, lastModified: new Date(), priority: 0.7 },
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: BASE_URL,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 1.0,
+    },
+    {
+      url: `${BASE_URL}/features`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/pricing`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/privacy`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terms`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 
-  const blogPages = slugs.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
+  const blogPages: MetadataRoute.Sitemap = slugs.map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: LAST_MODIFIED,
+    changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 

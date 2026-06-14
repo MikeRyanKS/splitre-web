@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "SplitRE was built by brokers who got tired of spreadsheets. Learn our mission, values, and why we built a better commission tool for independent brokerages.",
+  title: "About SplitRE — Commission Software Built for Independent Brokerages",
+  description:
+    "SplitRE is built by Keplify LLC, a Delaware-incorporated company. Our mission: make commission accuracy a given for every independent real estate brokerage, from boutique to established.",
+  alternates: { canonical: "https://splitre.app/about" },
+  openGraph: {
+    title: "About SplitRE — Why We Built a Better Commission Tool",
+    description:
+      "The problem every independent broker knows: spreadsheets that break, cap balances that are always wrong, and a bookkeeper who dreads month-end. We built SplitRE to fix it.",
+    url: "https://splitre.app/about",
+  },
 };
 
 export default function AboutPage() {

@@ -2,13 +2,64 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Features",
-  description: "Commission calculation engine, cap tracking, QuickBooks Online sync, agent management, and deal history — everything your independent brokerage needs.",
+  title: "Features — Commission Calculation, Cap Tracking & QuickBooks Sync",
+  description:
+    "SplitRE handles every commission structure your brokerage uses — percentage splits, tiered splits, flat fees, E&O deductions — with automatic cap tracking and one-click QuickBooks Online sync. Built for independent real estate brokerages.",
+  alternates: { canonical: "https://splitre.app/features" },
+  openGraph: {
+    title: "SplitRE Features — Built for How Brokerages Actually Work",
+    description:
+      "Commission calculation engine, real-time cap tracking, one-click QuickBooks sync, per-agent plan overrides, and PDF earnings statements. No spreadsheets, no manual QBO entry.",
+    url: "https://splitre.app/features",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Does SplitRE support tiered commission splits?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SplitRE supports percentage splits, tiered splits (where the agent split percentage changes at different GCI thresholds), flat post-cap fees, E&O deductions, transaction fees, and referral deductions. You define the rules once and every deal calculates from them automatically.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does cap tracking work in SplitRE?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SplitRE tracks each agent's cumulative gross commission income (GCI) toward their annual cap. When an agent crosses their cap amount, their split automatically flips to 100% for the remainder of the cap year — no manual intervention required. Mid-year cap migrations for new hires are also supported.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which QuickBooks products does SplitRE support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SplitRE integrates with QuickBooks Online — Simple Start, Essentials, Plus, and Advanced. It does not support QuickBooks Desktop. Each confirmed deal syncs as an Invoice (GCI received from the title company) and a Bill (agent payout), keeping your books clean and categorized.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I override commission plans for individual agents?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Every agent can have a brokerage-wide plan or an individual override. If one agent negotiated a different split, you set the override at the agent level — it applies only to their deals without affecting anyone else's plan.",
+      },
+    },
+  ],
 };
 
 export default function FeaturesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-6">Built for how brokerages actually work</h1>
@@ -88,7 +139,7 @@ export default function FeaturesPage() {
                 "Dry-run preview before any sync",
                 "Undo a sync if you catch an error",
                 "Full sync log with timestamps",
-                "Bookkeeper CSV export on Growth and above",
+                "Bookkeeper CSV export included on all plans",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">

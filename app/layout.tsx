@@ -9,8 +9,12 @@ export const metadata: Metadata = {
     template: "%s | SplitRE",
   },
   description:
-    "SplitRE automates real estate commission calculations, agent cap tracking, and QuickBooks Online sync for independent brokerages. Replace your spreadsheets and pay agents correctly, every time.",
+    "SplitRE automates real estate commission calculations, agent cap tracking, and QuickBooks Online sync for independent brokerages. Replace spreadsheets and pay agents correctly, every time. Plans from $89/mo.",
   metadataBase: new URL("https://splitre.app"),
+  applicationName: "SplitRE",
+  authors: [{ name: "Keplify LLC", url: "https://splitre.app" }],
+  creator: "Keplify LLC",
+  publisher: "Keplify LLC",
   keywords: [
     "real estate commission management software",
     "commission calculation software for brokerages",
@@ -20,21 +24,67 @@ export const metadata: Metadata = {
     "commission split calculator",
     "real estate cap tracking",
     "independent brokerage software",
+    "real estate commission split software",
+    "brokerage commission tracking",
+    "annual cap tracking real estate",
+    "commission disbursement software",
   ],
   openGraph: {
     type: "website",
     siteName: "SplitRE",
     title: "SplitRE — Commission Management Software for Real Estate Brokerages",
     description:
-      "Automate commission calculations, cap tracking, and QuickBooks sync for your independent real estate brokerage. Starts at $89/mo.",
+      "Automate commission calculations, cap tracking, and QuickBooks sync for your independent real estate brokerage. No per-agent fees. Starts at $89/mo.",
     url: "https://splitre.app",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
+    site: "@splitre",
     title: "SplitRE — Commission Management for Real Estate Brokerages",
     description:
-      "Replace your commission spreadsheets. Automated calculations, cap tracking, and one-click QuickBooks sync.",
+      "Replace your commission spreadsheets. Automated calculations, cap tracking, and one-click QuickBooks sync. From $89/mo.",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "technology",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Keplify LLC",
+  legalName: "Keplify LLC",
+  url: "https://splitre.app",
+  logo: "https://splitre.app/logo.png",
+  foundingDate: "2024",
+  foundingLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "DE",
+      addressCountry: "US",
+    },
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "mike@keplify.com",
+    contactType: "customer support",
+    availableLanguage: "English",
+  },
+  sameAs: [
+    "https://x.com/splitre",
+    "https://linkedin.com/company/splitre",
+  ],
 };
 
 export default function RootLayout({
@@ -44,6 +94,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Nav />
         <main className="flex-1">{children}</main>
