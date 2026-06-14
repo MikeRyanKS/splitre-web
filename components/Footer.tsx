@@ -26,7 +26,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-              <li><a href="mailto:hello@splitre.com" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="mailto:mike@keplify.com" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
 

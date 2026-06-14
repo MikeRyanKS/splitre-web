@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "SplitRE — Commission Calculations on Autopilot",
-  description: "SplitRE eliminates spreadsheet-based commission tracking for independent real estate brokerages. Automated calculations, QuickBooks sync, and accurate agent payments.",
+  title: "SplitRE — Commission Management Software for Real Estate Brokerages",
+  description:
+    "SplitRE replaces commission spreadsheets for independent real estate brokerages. Automated split calculations, agent cap tracking, and one-click QuickBooks Online sync. Starts at $89/mo.",
+  alternates: { canonical: "https://splitre.com" },
 };
 
 const jsonLd = {
@@ -11,14 +13,17 @@ const jsonLd = {
   "@type": "SoftwareApplication",
   name: "SplitRE",
   applicationCategory: "BusinessApplication",
-  description: "Commission calculation engine and QuickBooks sync tool for independent real estate brokerages.",
+  description:
+    "Commission management software for independent real estate brokerages. Automates split calculations, cap tracking, and QuickBooks Online sync.",
   offers: {
     "@type": "AggregateOffer",
-    lowPrice: "49",
-    highPrice: "179",
+    lowPrice: "89",
+    highPrice: "329",
     priceCurrency: "USD",
+    offerCount: "3",
   },
   operatingSystem: "Web",
+  url: "https://splitre.com",
 };
 
 export default function HomePage() {
@@ -33,63 +38,195 @@ export default function HomePage() {
       <section className="bg-white pt-20 pb-24 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 rounded-full px-4 py-1.5 text-sm font-medium mb-8">
-            <span className="w-2 h-2 bg-indigo-500 rounded-full"></span>
-            Built for US real estate brokerages
+            <span className="w-2 h-2 bg-indigo-500 rounded-full" />
+            Built for independent US real estate brokerages
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-            Commission Calculations<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">on Autopilot</span>
+            Stop Doing Commissions<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">in Spreadsheets</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Stop spending 40–80 hours a month on spreadsheets. SplitRE calculates commissions automatically, keeps caps up to date, and syncs every transaction to QuickBooks Online in one click.
+            SplitRE calculates every agent split automatically, tracks annual caps in real time, and syncs confirmed deals to QuickBooks Online in one click — no manual entry, no errors, no spreadsheets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://app.splitre.com/signup" className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-indigo-200">
-              Start free trial — no credit card
+            <Link
+              href="https://app.splitre.com/signup"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-indigo-200"
+            >
+              Start free — no credit card
             </Link>
-            <Link href="/features" className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold px-8 py-4 rounded-xl text-lg transition-colors">
+            <Link
+              href="/features"
+              className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold px-8 py-4 rounded-xl text-lg transition-colors"
+            >
               See how it works
             </Link>
           </div>
-          <p className="mt-4 text-sm text-gray-400">14-day free trial · No credit card required</p>
+          <p className="mt-4 text-sm text-gray-400">14-day free trial · All features included · Cancel any time</p>
+        </div>
+      </section>
+
+      {/* ROI bar */}
+      <section className="bg-indigo-600 py-10 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
+          {[
+            { stat: "~50 hrs/yr", label: "saved on commission admin for a 5-agent brokerage" },
+            { stat: "3.5× – 5× ROI", label: "average return on the annual subscription cost" },
+            { stat: "$2,200+/yr", label: "in prevented commission errors per brokerage" },
+          ].map(({ stat, label }) => (
+            <div key={stat}>
+              <div className="text-3xl font-extrabold mb-1">{stat}</div>
+              <div className="text-indigo-200 text-sm">{label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Problem → Solution */}
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              The spreadsheet problem every independent broker knows
+            </h2>
+            <p className="text-gray-600 mb-4">
+              You copy last month&apos;s spreadsheet, update the numbers by hand, hope the cap balance is right, then manually key the same transaction into QuickBooks. One typo in a formula and an agent gets underpaid — or worse, overpaid, and now you have a conversation you don&apos;t want to have.
+            </p>
+            <p className="text-gray-600 mb-6">
+              For a 5-agent brokerage closing 50 deals a year, that&apos;s roughly 37–50 hours of manual admin — and 2–3 commission errors that cost an average of $1,100 each to untangle.
+            </p>
+            <Link
+              href="https://app.splitre.com/signup"
+              className="inline-flex items-center gap-2 bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-700 transition-colors"
+            >
+              Fix it with SplitRE
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+          {/* Mock deal breakdown card */}
+          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 shadow-sm">
+            <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-5">Live Deal Preview</div>
+            <div className="space-y-2.5 text-sm">
+              <div className="flex justify-between">
+                <span className="text-gray-500">Sale price</span>
+                <span className="font-semibold text-gray-900">$415,000</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-500">Gross commission (2.75%)</span>
+                <span className="font-semibold text-gray-900">$11,413</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-500">E&amp;O deduction</span>
+                <span className="font-semibold text-red-500">−$150</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-500">Transaction fee</span>
+                <span className="font-semibold text-red-500">−$295</span>
+              </div>
+              <div className="border-t border-gray-200 pt-3 mt-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-500">Agent split (70%)</span>
+                  <span className="font-bold text-indigo-600">$7,677</span>
+                </div>
+                <div className="flex justify-between mt-1">
+                  <span className="text-gray-500">Broker keep (30%)</span>
+                  <span className="font-semibold text-gray-900">$3,290</span>
+                </div>
+              </div>
+              <div className="bg-amber-50 border border-amber-100 rounded-lg px-3 py-2.5 mt-2">
+                <div className="text-xs font-semibold text-amber-700">Cap progress: $26,400 / $30,000</div>
+                <div className="mt-1.5 bg-amber-200 rounded-full h-1.5 w-full">
+                  <div className="bg-amber-500 h-1.5 rounded-full" style={{ width: "88%" }} />
+                </div>
+              </div>
+            </div>
+            <button className="mt-5 w-full bg-indigo-600 text-white text-sm font-semibold py-2.5 rounded-lg">
+              Confirm &amp; sync to QuickBooks →
+            </button>
+          </div>
         </div>
       </section>
 
       {/* Feature highlights */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Everything your brokerage needs</h2>
-            <p className="text-lg text-gray-600">From deal entry to agent payment — no spreadsheets required.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Everything your brokerage needs — in one tool
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From deal entry to QuickBooks — no spreadsheets, no manual QBO entry, no second-guessing cap balances.
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {[
+              {
+                color: "bg-indigo-100",
+                iconColor: "text-indigo-600",
+                icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Live deal preview</h3>
-              <p className="text-gray-600">See the full commission breakdown before you confirm. Agent split, broker cut, E&amp;O deductions, transaction fees — no surprises.</p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                ),
+                title: "Accurate commission calculations",
+                desc: "Define your commission plans once — percentage splits, tiered splits, flat post-cap fees, E&O, transaction fees, referral deductions. Every deal calculates in real time from those rules.",
+              },
+              {
+                color: "bg-violet-100",
+                iconColor: "text-violet-600",
+                icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Cap tracking</h3>
-              <p className="text-gray-600">Annual cap balances update automatically with every deal. When an agent hits their cap, the split flips to 100% — instantly, correctly, every time.</p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                ),
+                title: "Automatic cap tracking",
+                desc: "Annual cap balances update with every confirmed deal. When an agent crosses their cap, the split automatically flips to 100% — no manual intervention, no missed cap mid-deal.",
+              },
+              {
+                color: "bg-emerald-100",
+                iconColor: "text-emerald-600",
+                icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
+                ),
+                title: "One-click QuickBooks sync",
+                desc: "Preview the QBO Invoice and Bill before committing. One click posts both to QuickBooks Online. Your bookkeeper sees clean, categorized entries — nothing to re-key.",
+              },
+              {
+                color: "bg-amber-100",
+                iconColor: "text-amber-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                ),
+                title: "PDF agent earnings statements",
+                desc: "Generate a professional annual earnings PDF for any agent in seconds — useful for mortgage applications, tax prep, or simply keeping agents informed of their YTD income.",
+              },
+              {
+                color: "bg-sky-100",
+                iconColor: "text-sky-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                ),
+                title: "Per-agent plan overrides",
+                desc: "One agent negotiated a better split? No problem. Override any rule at the agent level without touching the brokerage-wide plan — changes apply only to that agent's deals.",
+              },
+              {
+                color: "bg-rose-100",
+                iconColor: "text-rose-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                ),
+                title: "Shareable deal breakdowns",
+                desc: "Share a read-only deal breakdown link with an agent or their attorney — no login required. Everything they need to verify the split, deductions, and QBO sync status.",
+              },
+            ].map(({ color, iconColor, icon, title, desc }) => (
+              <div key={title} className="bg-white rounded-2xl p-8 border border-gray-100">
+                <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center mb-4`}>
+                  <svg className={`w-6 h-6 ${iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {icon}
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">QuickBooks sync</h3>
-              <p className="text-gray-600">One click pushes every confirmed deal to QuickBooks Online. Preview before syncing, undo if needed, and see a complete sync log for your bookkeeper.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -98,18 +235,35 @@ export default function HomePage() {
       <section className="py-24 px-4 bg-indigo-50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">How it works</h2>
-            <p className="text-lg text-gray-600">Three steps from deal to books — in minutes, not hours.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">From deal to books in three steps</h2>
+            <p className="text-lg text-gray-600">What used to take 45 minutes per deal now takes under two.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { step: "1", title: "Enter the deal", desc: "Add the closing price, agent, and property details. SplitRE pulls the right commission plan automatically." },
-              { step: "2", title: "See the breakdown", desc: "Review the full split calculation — GCI, agent portion, broker keep, deductions — with live cap tracking." },
-              { step: "3", title: "Sync to QuickBooks", desc: "One click sends the transaction to QBO. Your bookkeeper sees clean, categorized entries with zero manual entry." },
+              {
+                step: "1",
+                title: "Enter the deal",
+                desc: "Add the address, sale price, commission rate, and agent. SplitRE pulls the right commission plan and calculates the full breakdown in real time.",
+              },
+              {
+                step: "2",
+                title: "Review &amp; confirm",
+                desc: "See the exact split, every deduction, and the updated cap balance — before committing anything. Change your mind? Edit and recalculate instantly.",
+              },
+              {
+                step: "3",
+                title: "Sync to QuickBooks",
+                desc: "One click posts the Invoice (GCI received) and Bill (agent payout) to QuickBooks Online. Your bookkeeper sees clean entries — nothing left to do.",
+              },
             ].map(({ step, title, desc }) => (
               <div key={step} className="text-center">
-                <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">{step}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+                <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  {step}
+                </div>
+                <h3
+                  className="text-xl font-bold text-gray-900 mb-2"
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
                 <p className="text-gray-600">{desc}</p>
               </div>
             ))}
@@ -117,14 +271,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Social proof */}
-      <section className="bg-gray-50 py-12 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-gray-500 text-sm font-medium uppercase tracking-wider mb-8">Trusted by independent brokerages across the US</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {["Apex Realty Group", "Summit Properties", "BlueSky Brokerage", "Cornerstone RE"].map((name) => (
-              <div key={name} className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-                <p className="text-gray-400 text-sm font-medium">{name}</p>
+      {/* Who it's for */}
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Built for independent brokerages of every size</h2>
+          <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
+            SplitRE has no agent cap — a 3-agent boutique and a 40-agent independent brokerage both get the exact same tool. Your plan tier reflects your team size, not your feature set.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            {[
+              {
+                who: "Boutique broker-owners",
+                size: "1 – 5 agents",
+                pain: "You&apos;re doing commissions yourself in a spreadsheet you copy every month. One wrong formula and you&apos;re explaining an underpayment to your top producer.",
+              },
+              {
+                who: "Growing independents",
+                size: "6 – 25 agents",
+                pain: "You&apos;ve outgrown the spreadsheet but can&apos;t justify enterprise software. Your bookkeeper manually re-keys every closing into QuickBooks. It&apos;s nobody&apos;s favorite task.",
+              },
+              {
+                who: "Established brokerages",
+                size: "26+ agents",
+                pain: "You have multiple commission plan structures, cap migration for mid-year hires, and a bookkeeper who needs a clean QBO audit trail. SplitRE handles all of it.",
+              },
+            ].map(({ who, size, pain }) => (
+              <div key={who} className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
+                <div className="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-1">{size}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{who}</h3>
+                <p
+                  className="text-sm text-gray-600 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: pain }}
+                />
               </div>
             ))}
           </div>
@@ -132,7 +310,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">What brokers are saying</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -153,7 +331,7 @@ export default function HomePage() {
                 role: "Broker/Owner, 12 agents",
               },
             ].map(({ quote, name, role }) => (
-              <div key={name} className="bg-gray-50 rounded-2xl p-8">
+              <div key={name} className="bg-white rounded-2xl p-8 border border-gray-100">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -172,19 +350,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pricing teaser */}
+      {/* Pricing CTA */}
       <section className="py-24 px-4 bg-gradient-to-br from-indigo-600 to-violet-700 text-white text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4">Plans starting at $49/month</h2>
-          <p className="text-indigo-100 text-lg mb-8">All plans include a 14-day free trial and no credit card required. Cancel any time.</p>
+          <h2 className="text-4xl font-bold mb-4">Plans starting at $89/month</h2>
+          <p className="text-indigo-100 text-lg mb-3">
+            All plans include every feature — no paywalled upgrades. Pay annually and save ~30%.
+          </p>
+          <p className="text-indigo-200 text-sm mb-8">
+            For a 5-agent brokerage, SplitRE pays for itself in the first commission error it prevents.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/pricing" className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors">
+            <Link
+              href="/pricing"
+              className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors"
+            >
               View pricing
             </Link>
-            <Link href="https://app.splitre.com/signup" className="border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">
+            <Link
+              href="https://app.splitre.com/signup"
+              className="border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
+            >
               Start free trial
             </Link>
           </div>
+          <p className="mt-4 text-sm text-indigo-300">14-day free trial · No credit card required</p>
         </div>
       </section>
     </>

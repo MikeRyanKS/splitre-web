@@ -5,22 +5,35 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "SplitRE — Commission Calculations on Autopilot",
+    default: "SplitRE — Commission Management Software for Real Estate Brokerages",
     template: "%s | SplitRE",
   },
-  description: "SplitRE automates commission calculations and QuickBooks sync for independent real estate brokerages. Eliminate spreadsheets, pay agents correctly, every time.",
+  description:
+    "SplitRE automates real estate commission calculations, agent cap tracking, and QuickBooks Online sync for independent brokerages. Replace your spreadsheets and pay agents correctly, every time.",
   metadataBase: new URL("https://splitre.com"),
+  keywords: [
+    "real estate commission management software",
+    "commission calculation software for brokerages",
+    "agent commission tracking",
+    "real estate brokerage back office software",
+    "QuickBooks real estate brokerage",
+    "commission split calculator",
+    "real estate cap tracking",
+    "independent brokerage software",
+  ],
   openGraph: {
     type: "website",
     siteName: "SplitRE",
-    title: "SplitRE — Commission Calculations on Autopilot",
-    description: "Automate commission calculations and QuickBooks sync for your real estate brokerage.",
+    title: "SplitRE — Commission Management Software for Real Estate Brokerages",
+    description:
+      "Automate commission calculations, cap tracking, and QuickBooks sync for your independent real estate brokerage. Starts at $89/mo.",
     url: "https://splitre.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SplitRE — Commission Calculations on Autopilot",
-    description: "Automate commission calculations and QuickBooks sync for your real estate brokerage.",
+    title: "SplitRE — Commission Management for Real Estate Brokerages",
+    description:
+      "Replace your commission spreadsheets. Automated calculations, cap tracking, and one-click QuickBooks sync.",
   },
 };
 
