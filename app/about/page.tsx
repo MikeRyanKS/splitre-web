@@ -111,6 +111,33 @@ export default function AboutPage() {
           <a href="mailto:mike@keplify.com" className="text-indigo-600 font-semibold hover:underline text-lg">mike@keplify.com</a>
         </div>
       </section>
+
+      {/* Legal */}
+      <section className="py-12 px-4 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Legal</h2>
+          <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            SplitRE is a product of Keplify LLC, a Delaware limited liability company. Our registered address is 8 The Green, Suite 20261, Dover, Delaware 19901. We are incorporated under the laws of the State of Delaware, United States.
+          </p>
+          <p className="text-gray-600 text-sm">
+            Read our full legal documentation:
+          </p>
+          <ul className="mt-2 space-y-1 text-sm">
+            <li>
+              <Link href="/terms" className="text-indigo-600 hover:underline">Terms of Service</Link>
+              {" "}— governs your use of the SplitRE application and website
+            </li>
+            <li>
+              <Link href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</Link>
+              {" "}— describes how we collect, use, and protect your data, including CCPA rights
+            </li>
+            <li>
+              <Link href="/refund-policy" className="text-indigo-600 hover:underline">Refund / Cancellation Policy</Link>
+              {" "}— our 7-day refund window and data export terms
+            </li>
+          </ul>
+        </div>
+      </section>
     </>
   );
 }

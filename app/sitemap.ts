@@ -52,6 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${BASE_URL}/refund-policy`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 
   const blogPages: MetadataRoute.Sitemap = slugs.map((slug) => ({
