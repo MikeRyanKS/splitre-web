@@ -93,22 +93,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">The team</h2>
-          <p className="text-gray-600 leading-relaxed">
-            SplitRE is built and maintained by a small team based in the United States, with backgrounds in real estate brokerage operations, accounting software, and product engineering. We keep the team small on purpose. It keeps us focused on what matters: making commission calculations something your brokerage never has to think about.
-          </p>
-        </div>
-      </section>
-
       {/* Contact */}
       <section className="py-16 px-4 bg-indigo-50">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">Get in touch</h2>
           <p className="text-gray-600 mb-4">Questions, feedback, or want to talk through a commission structure?</p>
-          <a href="mailto:mike@keplify.com" className="text-indigo-600 font-semibold hover:underline text-lg">mike@keplify.com</a>
+          <a href="mailto:support@splitre.app" className="text-indigo-600 font-semibold hover:underline text-lg">support@splitre.app</a>
         </div>
       </section>
 

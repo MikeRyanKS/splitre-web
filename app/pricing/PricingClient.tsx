@@ -251,7 +251,7 @@ export default function PricingClient() {
             </p>
           </div>
           <a
-            href="mailto:mike@keplify.com"
+            href="mailto:support@splitre.app"
             className="shrink-0 bg-gray-900 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors"
           >
             Contact us
