@@ -91,25 +91,24 @@ export default function RefundPolicyPage() {
           {/* ─── 3. How to Request ─── */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">3. How to request a refund</h2>
-            <p>To request a refund:</p>
-            <ol className="list-decimal pl-5 mt-3 space-y-2">
-              <li>
-                Email{" "}
-                <a href={`mailto:${BILLING_EMAIL}`} className="text-indigo-600 hover:underline">{BILLING_EMAIL}</a>{" "}
-                within 7 calendar days of the payment you are disputing.
-              </li>
-              <li>
-                Include the email address on your {APP_NAME} account and the approximate
-                date of the charge. You do not need to provide a reason, but doing so
-                helps us improve the product.
-              </li>
-              <li>
-                We will confirm receipt within 1 business day and process approved refunds
-                within 5 business days. Refunds are returned to the original payment method
-                via Stripe. Depending on your card issuer, the credit may take 5 to 10
-                business days to appear on your statement.
-              </li>
-            </ol>
+            <p>
+              The fastest way to request a refund is directly inside the app. After canceling your
+              subscription (Settings › Billing › Cancel subscription), a refund request form will
+              appear if you are within the 7-day window. Fill in the reason and submit — we will
+              receive the request immediately.
+            </p>
+            <p className="mt-3">
+              You can also email{" "}
+              <a href={`mailto:${BILLING_EMAIL}`} className="text-indigo-600 hover:underline">{BILLING_EMAIL}</a>{" "}
+              within 7 calendar days of the payment you are disputing. Include the email address
+              on your {APP_NAME} account and the approximate date of the charge.
+            </p>
+            <p className="mt-3">
+              We will confirm receipt within 1 business day and process approved refunds within
+              2 business days. Refunds are returned to the original payment method via Stripe.
+              Depending on your card issuer, the credit may take 5 to 10 business days to appear
+              on your statement.
+            </p>
           </section>
 
           {/* ─── 4. Cancellation ─── */}
