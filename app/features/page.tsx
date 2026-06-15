@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Features — Commission Calculation, Cap Tracking & QuickBooks Sync",
@@ -68,6 +69,22 @@ export default function FeaturesPage() {
         </div>
       </section>
 
+      {/* Full-width dashboard screenshot */}
+      <section className="bg-gray-50 pb-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
+            <Image
+              src="/screenshots/dashboard.png"
+              alt="SplitRE dashboard — cap progress for 6 agents, $74,428 YTD broker revenue, recent deals"
+              width={1440}
+              height={900}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Commission calculation engine */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -92,21 +109,14 @@ export default function FeaturesPage() {
               ))}
             </ul>
           </div>
-          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-            <div className="text-sm font-semibold text-gray-500 mb-4">Deal Preview</div>
-            <div className="space-y-3">
-              <div className="flex justify-between text-sm"><span className="text-gray-600">Sale price</span><span className="font-semibold">$485,000</span></div>
-              <div className="flex justify-between text-sm"><span className="text-gray-600">Gross commission (3%)</span><span className="font-semibold">$14,550</span></div>
-              <div className="flex justify-between text-sm"><span className="text-gray-600">E&amp;O deduction</span><span className="text-red-500 font-semibold">-$150</span></div>
-              <div className="flex justify-between text-sm"><span className="text-gray-600">Net commission</span><span className="font-semibold">$14,400</span></div>
-              <div className="border-t border-gray-100 pt-3">
-                <div className="flex justify-between text-sm"><span className="text-gray-600">Agent split (70%)</span><span className="text-indigo-600 font-bold">$10,080</span></div>
-                <div className="flex justify-between text-sm mt-1"><span className="text-gray-600">Broker keep (30%)</span><span className="font-semibold">$4,320</span></div>
-              </div>
-              <div className="bg-amber-50 rounded-lg p-3 text-sm">
-                <span className="text-amber-700 font-medium">Cap progress: $28,400 / $30,000</span>
-              </div>
-            </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <Image
+              src="/screenshots/deal_entry.png"
+              alt="SplitRE deal entry form showing live payout preview with broker cut, agent gross, and net payout"
+              width={1440}
+              height={900}
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
@@ -114,21 +124,14 @@ export default function FeaturesPage() {
       {/* QuickBooks sync */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div className="order-2 md:order-1 bg-gray-50 rounded-2xl p-8 border border-gray-100">
-            <div className="text-sm font-semibold text-gray-500 mb-4">QuickBooks Sync Log</div>
-            <div className="space-y-3">
-              {[
-                { deal: "123 Oak St", status: "Synced", color: "text-emerald-600" },
-                { deal: "44 Maple Ave", status: "Synced", color: "text-emerald-600" },
-                { deal: "Riverside Condo", status: "Pending", color: "text-amber-600" },
-              ].map(({ deal, status, color }) => (
-                <div key={deal} className="flex items-center justify-between bg-white rounded-lg p-3 border border-gray-100">
-                  <span className="text-sm text-gray-700">{deal}</span>
-                  <span className={`text-xs font-semibold ${color}`}>{status}</span>
-                </div>
-              ))}
-              <button className="w-full bg-indigo-600 text-white text-sm font-semibold py-2.5 rounded-lg">Sync 1 pending deal</button>
-            </div>
+          <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <Image
+              src="/screenshots/deals.png"
+              alt="SplitRE deals list showing synced and pending QuickBooks statuses across 20 transactions"
+              width={1440}
+              height={900}
+              className="w-full h-auto"
+            />
           </div>
           <div className="order-1 md:order-2">
             <div className="inline-block bg-emerald-100 text-emerald-700 rounded-full px-3 py-1 text-sm font-medium mb-4">QuickBooks Online</div>
@@ -178,25 +181,14 @@ export default function FeaturesPage() {
               ))}
             </ul>
           </div>
-          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-            <div className="text-sm font-semibold text-gray-500 mb-4">Cap Progress</div>
-            <div className="space-y-4">
-              {[
-                { name: "Sarah M.", pct: 95, amount: "$28,500", cap: "$30,000" },
-                { name: "James K.", pct: 60, amount: "$18,000", cap: "$30,000" },
-                { name: "Lisa P.", pct: 33, amount: "$9,900", cap: "$30,000" },
-              ].map(({ name, pct, amount, cap }) => (
-                <div key={name}>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span className="font-medium text-gray-900">{name}</span>
-                    <span className="text-gray-500">{amount} / {cap}</span>
-                  </div>
-                  <div className="w-full bg-gray-100 rounded-full h-2">
-                    <div className="bg-indigo-600 h-2 rounded-full" style={{ width: `${pct}%` }}></div>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <Image
+              src="/screenshots/agents.png"
+              alt="SplitRE agents page showing cap progress bars for 6 agents across two commission plans"
+              width={1440}
+              height={900}
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>

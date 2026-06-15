@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "SplitRE — Commission Management Software for Real Estate Brokerages",
@@ -106,6 +107,22 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="mt-4 text-sm text-gray-400">14-day free trial · All features included · Cancel any time</p>
+        </div>
+      </section>
+
+      {/* Product screenshot */}
+      <section className="bg-white pb-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
+            <Image
+              src="/screenshots/dashboard.png"
+              alt="SplitRE dashboard showing agent cap progress, broker revenue, and recent deals"
+              width={1440}
+              height={900}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
         </div>
       </section>
 
