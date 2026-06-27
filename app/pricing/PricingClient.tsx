@@ -215,28 +215,49 @@ export default function PricingClient() {
       </section>
 
       {/* ROI callout */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Does SplitRE pay for itself?</h2>
-          <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-            For a typical 5-agent brokerage closing 50 deals a year, the math works out like this:
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {[
-              { label: "Admin labor saved", value: "~50 hrs/yr" },
-              { label: "Commission errors prevented", value: "2 to 3/yr" },
-              { label: "Cost per error (10% slip on $11K GCI)", value: "~$1,100" },
-              { label: "Net annual savings", value: "$2,500 to $4,000" },
-            ].map(({ label, value }) => (
-              <div key={label} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
-                <div className="text-xl font-bold text-indigo-600 mb-1">{value}</div>
-                <div className="text-xs text-gray-500">{label}</div>
-              </div>
-            ))}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Does SplitRE pay for itself?</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">
+              Every deal that goes through SplitRE saves your brokerage roughly 30 minutes of manual admin — commission calculation, cap tracking, QuickBooks entry, and agent emails all handled automatically.
+            </p>
           </div>
-          <p className="text-gray-500 text-sm">
-            At $749/yr (Boutique annual), SplitRE returns{" "}
-            <strong className="text-gray-900">3.5× to 5× your subscription cost</strong> and pays for itself with the first commission error it prevents.
+
+          {/* Tiered savings table */}
+          <div className="overflow-hidden rounded-2xl border border-gray-200 mb-10">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-200">
+                  <th className="text-left px-6 py-4 font-semibold text-gray-700">Plan</th>
+                  <th className="text-left px-6 py-4 font-semibold text-gray-700">Team size</th>
+                  <th className="text-left px-6 py-4 font-semibold text-gray-700">Hours saved / month</th>
+                  <th className="text-left px-6 py-4 font-semibold text-gray-700">Value saved / year</th>
+                  <th className="text-left px-6 py-4 font-semibold text-gray-700">Plan cost / year</th>
+                  <th className="text-left px-6 py-4 font-semibold text-indigo-600">ROI</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { plan: "Boutique", size: "1–5 agents", hours: "~2 hrs", value: "~$1,800", cost: "$898", roi: "2×", highlight: false },
+                  { plan: "Independent", size: "6–15 agents", hours: "~5 hrs", value: "~$4,500", cost: "$1,908", roi: "2.4×", highlight: false },
+                  { plan: "Brokerage", size: "16–50 agents", hours: "~13 hrs", value: "~$11,700", cost: "$3,948", roi: "3×", highlight: true },
+                ].map(({ plan, size, hours, value, cost, roi, highlight }) => (
+                  <tr key={plan} className={highlight ? "bg-indigo-50" : "bg-white"}>
+                    <td className="px-6 py-4 font-semibold text-gray-900">{plan}</td>
+                    <td className="px-6 py-4 text-gray-600">{size}</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">{hours}</td>
+                    <td className={`px-6 py-4 font-semibold ${highlight ? "text-indigo-700" : "text-gray-900"}`}>{value}</td>
+                    <td className="px-6 py-4 text-gray-500">{cost}</td>
+                    <td className={`px-6 py-4 font-bold text-lg ${highlight ? "text-indigo-600" : "text-gray-700"}`}>{roi}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-center text-xs text-gray-400">
+            Based on ~30 min saved per deal, broker time valued at $75/hr, annual billing pricing, and NAR median deal volume per agent. Errors prevented not included.
           </p>
         </div>
       </section>
