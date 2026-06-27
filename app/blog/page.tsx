@@ -5,6 +5,7 @@ import { getAllPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog",
   description: "Real estate brokerage accounting, commission calculations, QuickBooks Online guides, and best practices for independent brokerages.",
+  alternates: { canonical: "https://splitre.app/blog" },
 };
 
 export default function BlogPage() {

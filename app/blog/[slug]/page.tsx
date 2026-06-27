@@ -16,11 +16,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.title,
     description: post.excerpt,
     keywords: post.keywords,
+    alternates: { canonical: `https://splitre.app/blog/${slug}` },
     openGraph: {
       type: "article",
       title: post.title,
       description: post.excerpt,
       publishedTime: post.date,
+      url: `https://splitre.app/blog/${slug}`,
     },
   };
 }

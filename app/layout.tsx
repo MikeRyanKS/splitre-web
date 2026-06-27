@@ -37,6 +37,13 @@ export const metadata: Metadata = {
       "Automate commission calculations, cap tracking, and QuickBooks sync for your independent real estate brokerage. No per-agent fees. Starts at $89/mo.",
     url: "https://splitre.app",
     locale: "en_US",
+    images: [
+      {
+        url: "/screenshots/dashboard.png",
+        width: 1200,
+        alt: "SplitRE commission management dashboard",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -44,6 +51,7 @@ export const metadata: Metadata = {
     title: "SplitRE — Commission Management for Real Estate Brokerages",
     description:
       "Replace your commission spreadsheets. Automated calculations, cap tracking, and one-click QuickBooks sync. From $89/mo.",
+    images: ["/screenshots/dashboard.png"],
   },
   robots: {
     index: true,
@@ -75,7 +83,7 @@ const organizationSchema = {
   name: "Keplify LLC",
   legalName: "Keplify LLC",
   url: "https://splitre.app",
-  logo: "https://splitre.app/logo.png",
+  logo: "https://splitre.app/logo.svg",
   foundingDate: "2024",
   foundingLocation: {
     "@type": "Place",

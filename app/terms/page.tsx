@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const EFFECTIVE_DATE = "June 15, 2026";
 const COMPANY = "Keplify LLC";
-const ADDRESS = "8 The Green #20261, Dover, DE 19901";
+const ADDRESS = "8 The Green, Suite 20261, Dover, DE 19901";
 const LEGAL_EMAIL = "legal@splitre.app";
 const BILLING_EMAIL = "billing@splitre.app";
 const APP_NAME = "SplitRE";
@@ -523,7 +523,7 @@ export default function TermsPage() {
             <p>For legal notices or disputes:</p>
             <address className="not-italic mt-3 text-gray-700">
               <strong>{COMPANY}</strong><br />
-              8 The Green #20261<br />
+              8 The Green, Suite 20261<br />
               Dover, DE 19901<br />
               United States<br />
               Email: <a href={`mailto:${LEGAL_EMAIL}`} className="text-indigo-600 hover:underline">{LEGAL_EMAIL}</a><br />

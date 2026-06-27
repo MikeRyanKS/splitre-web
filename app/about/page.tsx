@@ -39,7 +39,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-indigo-100">
             <div className="space-y-6">
               {[
-                { stat: "40 to 80 hrs", label: "saved per month on commission admin" },
+                { stat: "~50 hrs/yr", label: "saved on commission admin for a 5-agent brokerage" },
                 { stat: "80%", label: "of brokerages pay agents incorrectly at least once per year" },
                 { stat: "9%", label: "annual agent attrition tied to payment errors" },
               ].map(({ stat, label }) => (
