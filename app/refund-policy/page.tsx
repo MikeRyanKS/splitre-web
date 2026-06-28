@@ -168,9 +168,93 @@ export default function RefundPolicyPage() {
             </p>
           </section>
 
-          {/* ─── 5. Disputes ─── */}
+          {/* ─── 5. Plan Changes ─── */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Chargebacks and payment disputes</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Plan changes</h2>
+
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">5.1 Upgrades</h3>
+            <p>
+              When you upgrade to a higher plan tier or switch from monthly to annual billing, the
+              change takes effect immediately. You are charged a prorated amount for the remainder
+              of your current billing period at the new plan rate, with a credit applied for unused
+              days on your previous plan. The net charge appears on your card on the day of the
+              upgrade.
+            </p>
+
+            <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">5.2 Downgrades</h3>
+            <p>
+              When you downgrade to a lower plan tier, or switch from annual to monthly billing,
+              the change is <strong>scheduled to take effect at the end of your current billing
+              period</strong>. You retain full access to your current plan until that date.
+            </p>
+            <p className="mt-3">
+              <strong>No refund or credit is issued for unused time on your current plan when
+              you schedule a downgrade.</strong> The amount you paid for the current period is
+              fully earned at the time of payment and is not subject to pro-ration when a
+              downgrade is requested mid-cycle.
+            </p>
+            <p className="mt-3">
+              You may cancel a scheduled downgrade at any time before it takes effect by going to
+              Settings › Billing in the app.
+            </p>
+
+            <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">5.3 Agent limits on downgrade</h3>
+            <p>
+              If your current number of active agents exceeds the limit of your new plan, you will
+              be notified at the time you schedule the downgrade. You have until the end of your
+              current billing period to deactivate excess agents. Any active agents that remain
+              over the new plan limit when the downgrade takes effect will be automatically locked
+              (access suspended) on that date. Locked agents remain in your account and can be
+              reactivated by deactivating other agents or upgrading your plan.
+            </p>
+          </section>
+
+          {/* ─── 6. Failed Payments ─── */}
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Failed payments and account suspension</h2>
+
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">6.1 Payment retry period</h3>
+            <p>
+              If a payment fails, {APP_NAME} will automatically retry the charge up to four times
+              over the following seven days. Your account remains fully active during this retry
+              window. You will receive an email notification when the first failure occurs.
+            </p>
+
+            <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">6.2 Grace period</h3>
+            <p>
+              If all retries fail, your account enters a grace period:
+            </p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li><strong>Monthly plans:</strong> 3-day grace period</li>
+              <li><strong>Annual plans:</strong> 7-day grace period</li>
+            </ul>
+            <p className="mt-3">
+              During the grace period, your account is accessible in read-only mode. You can view
+              existing deals and agents and export your data, but new deal creation is disabled.
+              You will receive a final notice email at the start of the grace period stating the
+              date your account will be locked.
+            </p>
+
+            <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">6.3 Account lock and data retention</h3>
+            <p>
+              If payment is not resolved by the end of the grace period, your account is locked.
+              You will not be able to access the application but you may still log in to download
+              your data for <strong>30 calendar days</strong> from the date of the lock. After
+              that 30-day window, all brokerage data is permanently deleted. We will email you
+              the exact deletion date when your account is locked.
+            </p>
+
+            <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">6.4 Restoring a locked account</h3>
+            <p>
+              At any point before the 30-day data retention window expires, you can restore your
+              account by updating your payment method in the billing portal. Once payment is
+              processed, your account is unlocked immediately and all data is preserved.
+            </p>
+          </section>
+
+          {/* ─── 7. Disputes ─── */}
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Chargebacks and payment disputes</h2>
             <p>
               If you have a billing concern, please email{" "}
               <a href={`mailto:${BILLING_EMAIL}`} className="text-indigo-600 hover:underline">{BILLING_EMAIL}</a>{" "}
@@ -181,9 +265,9 @@ export default function RefundPolicyPage() {
             </p>
           </section>
 
-          {/* ─── 6. Changes ─── */}
+          {/* ─── 8. Changes ─── */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Changes to this policy</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Changes to this policy</h2>
             <p>
               We may update this policy from time to time. When we do, we will update the
               effective date above and notify active subscribers by email at least 14 days
@@ -192,9 +276,9 @@ export default function RefundPolicyPage() {
             </p>
           </section>
 
-          {/* ─── 7. Contact ─── */}
+          {/* ─── 9. Contact ─── */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Contact us</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Contact us</h2>
             <p>For billing and refund inquiries:</p>
             <div className="mt-3 p-4 bg-gray-50 rounded-lg text-sm">
               <p className="font-semibold text-gray-900">{COMPANY}</p>

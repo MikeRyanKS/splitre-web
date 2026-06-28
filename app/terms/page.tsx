@@ -126,27 +126,44 @@ export default function TermsPage() {
               or government levies applicable to your subscription.
             </p>
 
-            <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.3 Billing Failures</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.3 Billing Failures and Dunning</h3>
             <p>
-              If a scheduled payment fails, we will notify you by email at the address on file
-              and retry the charge up to three times over 7 calendar days. If payment is not
-              collected within 7 days of the initial failure, your access to the Service will be
-              suspended. Your data will be preserved during any suspension period. You may
-              reactivate access at any time by updating your payment method and paying any
-              outstanding balance through the billing portal at{" "}
+              If a scheduled payment fails, we will notify you by email and retry the charge
+              automatically up to four times over approximately 7 calendar days. Your account
+              remains fully active during this retry window.
+            </p>
+            <p className="mt-3">
+              If all retries fail, your account enters a grace period during which your account
+              is accessible in read-only mode (you may view data and export, but not create new
+              deals):
+            </p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li><strong>Monthly plans:</strong> 3-day grace period</li>
+              <li><strong>Annual plans:</strong> 7-day grace period</li>
+            </ul>
+            <p className="mt-3">
+              If payment is not resolved by the end of the grace period, your account is locked.
+              All brokerage data is preserved for <strong>30 calendar days</strong> from the lock
+              date, during which you may log in to export your data. After 30 days, all brokerage
+              data is permanently deleted. You may restore access at any time before data deletion
+              by updating your payment method through the billing portal at{" "}
               <strong>app.splitre.app &rsaquo; Settings &rsaquo; Billing</strong>.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.4 Plan Changes</h3>
             <p>
-              <strong>Upgrades:</strong> Upgrading your subscription plan takes effect immediately.
-              You will be charged a prorated amount for the remainder of your current billing
-              period based on the price difference between your old and new plan.
+              <strong>Upgrades:</strong> Upgrading to a higher plan tier, or switching from monthly
+              to annual billing, takes effect immediately. You will be charged a prorated amount for
+              the remainder of your current billing period, with a credit applied for unused days
+              on your previous plan.
             </p>
             <p className="mt-3">
-              <strong>Downgrades:</strong> Downgrading your subscription plan takes effect at the
-              start of your next billing cycle. You will retain access to your current plan
-              features until the end of the paid period.
+              <strong>Downgrades:</strong> Downgrading to a lower plan tier, or switching from
+              annual to monthly billing, is <strong>scheduled to take effect at the end of your
+              current billing period</strong>. You retain full access to your current plan until
+              that date. <strong>No refund or credit is issued for unused time on your current
+              plan when you schedule a downgrade.</strong> You may cancel a scheduled downgrade
+              at any time before it takes effect through Settings &rsaquo; Billing.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.5 Price Changes</h3>
@@ -175,18 +192,17 @@ export default function TermsPage() {
               and retain their full commission and cap history.
             </p>
             <p className="mt-3">
-              If the number of active agents on your account exceeds the limit for your current
-              plan, we will notify you by email and display an in-application warning. You will
-              have <strong>7 calendar days</strong> from the date of that notification to either
-              (a) upgrade your plan to a tier that accommodates your agent count, or (b) reduce
-              your active agent count to within your plan limit. During this 7-day grace period,
-              full Service functionality is preserved.
+              If you schedule a plan downgrade and your current active agent count exceeds the
+              new plan&rsquo;s limit, you will be notified at the time of scheduling. You have
+              until the end of your current billing period to deactivate excess agents. Any agents
+              still over the new limit when the downgrade takes effect will be automatically
+              locked (access suspended) on that date. Locked agents retain all their commission
+              and cap history and can be reactivated by deactivating other agents or upgrading
+              your plan.
             </p>
             <p className="mt-3">
-              If you have not taken corrective action within 7 days, the ability to add new
-              deals or new agents may be restricted until the overage is resolved. Existing deal
-              data and agent records will remain accessible and intact. We will provide a reminder
-              notice at day 5 of the grace period.
+              Locked agents do not count toward your active agent limit. Deactivating one active
+              agent will allow you to unlock one locked agent within the app.
             </p>
           </section>
 
