@@ -30,7 +30,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">What we&apos;re trying to do</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Independent real estate brokerages run on trust. The trust agents place in their broker to pay them correctly and on time. When that breaks, agents leave. The average brokerage loses about 9% of its agents every year to payment disputes, and most of those disputes start with a spreadsheet error.
+              Independent real estate brokerages run on trust. The trust agents place in their broker to pay them correctly and on time. When that breaks, agents leave. 80% of brokerages pay at least one agent incorrectly per year — and most of those errors start with a spreadsheet.
             </p>
             <p className="text-gray-700 leading-relaxed">
               Our goal is simple: make commission accuracy something you take for granted, not something you worry about. A 5-agent boutique deserves the same financial precision that large franchises pay enterprise software to achieve.
@@ -39,9 +39,9 @@ export default function AboutPage() {
           <div className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-indigo-100">
             <div className="space-y-6">
               {[
-                { stat: "~50 hrs/yr", label: "saved on commission admin for a 5-agent brokerage" },
+                { stat: "~120 hrs/yr", label: "saved on commission admin for a 10-agent brokerage" },
                 { stat: "80%", label: "of brokerages pay agents incorrectly at least once per year" },
-                { stat: "9%", label: "annual agent attrition tied to payment errors" },
+                { stat: "5× to 13×", label: "average ROI on annual subscription cost, depending on team size" },
               ].map(({ stat, label }) => (
                 <div key={stat}>
                   <div className="text-3xl font-extrabold text-indigo-600">{stat}</div>
