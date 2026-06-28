@@ -239,9 +239,9 @@ export default function PricingClient() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { plan: "Boutique", size: "1–5 agents", hours: "~2 hrs", value: "~$1,800", cost: "$898", roi: "2×", highlight: false },
-                  { plan: "Independent", size: "6–15 agents", hours: "~5 hrs", value: "~$4,500", cost: "$1,908", roi: "2.4×", highlight: false },
-                  { plan: "Brokerage", size: "16–50 agents", hours: "~13 hrs", value: "~$11,700", cost: "$3,948", roi: "3×", highlight: true },
+                  { plan: "Boutique", size: "1–5 agents", hours: "~2 hrs", value: "~$1,800", cost: "$749", roi: "2.4×", highlight: false },
+                  { plan: "Independent", size: "6–15 agents", hours: "~5 hrs", value: "~$4,500", cost: "$1,599", roi: "2.8×", highlight: false },
+                  { plan: "Brokerage", size: "16–50 agents", hours: "~13 hrs", value: "~$11,700", cost: "$2,799", roi: "4.2×", highlight: true },
                 ].map(({ plan, size, hours, value, cost, roi, highlight }) => (
                   <tr key={plan} className={highlight ? "bg-indigo-50" : "bg-white"}>
                     <td className="px-6 py-4 font-semibold text-gray-900">{plan}</td>
