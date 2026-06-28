@@ -47,13 +47,13 @@ export default function Nav() {
 
         {mobileOpen && (
           <div className="md:hidden py-4 border-t border-gray-100 space-y-2">
-            <Link href="/features" className="block py-2 text-gray-700 font-medium">Features</Link>
-            <Link href="/pricing" className="block py-2 text-gray-700 font-medium">Pricing</Link>
-            <Link href="/blog" className="block py-2 text-gray-700 font-medium">Blog</Link>
-            <Link href="/about" className="block py-2 text-gray-700 font-medium">About</Link>
+            <Link href="/features" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Features</Link>
+            <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Pricing</Link>
+            <Link href="/blog" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Blog</Link>
+            <Link href="/about" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">About</Link>
             <div className="pt-2 flex flex-col gap-2">
-              <Link href="https://app.splitre.app/login" className="block py-2 text-gray-700 font-medium">Sign in</Link>
-              <Link href="https://app.splitre.app/signup" className="bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg text-center">Start free trial</Link>
+              <Link href="https://app.splitre.app/login" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Sign in</Link>
+              <Link href="https://app.splitre.app/signup" onClick={() => setMobileOpen(false)} className="bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg text-center">Start free trial</Link>
             </div>
           </div>
         )}
