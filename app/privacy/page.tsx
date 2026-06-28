@@ -136,7 +136,7 @@ export default function PrivacyPage() {
               to use your data only to perform services on our behalf.
             </p>
             <div className="mt-4 overflow-x-auto">
-              <table className="w-full text-sm border-collapse">
+              <table className="w-full min-w-[480px] text-sm border-collapse">
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="text-left py-2 pr-4 font-semibold text-gray-800">Provider</th>

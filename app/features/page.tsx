@@ -64,7 +64,7 @@ export default function FeaturesPage() {
 
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-6">What SplitRE actually does</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">What SplitRE actually does</h1>
           <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week, from commission calculations to QuickBooks entries.</p>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function FeaturesPage() {
 
       {/* Commission calculation engine */}
       <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <div className="inline-block bg-indigo-100 text-indigo-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Commission Engine</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Calculation you can trust</h2>
@@ -123,7 +123,7 @@ export default function FeaturesPage() {
 
       {/* QuickBooks sync */}
       <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <Image
               src="/screenshots/deals.png"
@@ -159,7 +159,7 @@ export default function FeaturesPage() {
 
       {/* Agent management */}
       <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <div className="inline-block bg-violet-100 text-violet-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Agent Management</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Every agent, always accurate</h2>

@@ -19,7 +19,7 @@ export default function AboutPage() {
     <>
       <section className="bg-white py-24 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-6">We got tired of the spreadsheet too</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">We got tired of the spreadsheet too</h1>
           <p className="text-xl text-gray-600">SplitRE exists because the people who built it lived the problem. Midnight recalculations, agent payment errors, a bookkeeper who dreaded month-end.</p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export default function AboutPage() {
               Our goal is simple: make commission accuracy something you take for granted, not something you worry about. A 5-agent boutique deserves the same financial precision that large franchises pay enterprise software to achieve.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-indigo-100">
+          <div className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-indigo-100">
             <div className="space-y-6">
               {[
                 { stat: "~50 hrs/yr", label: "saved on commission admin for a 5-agent brokerage" },
@@ -79,7 +79,7 @@ export default function AboutPage() {
               { title: "Built for small teams", desc: "We don't build for Fortune 500 companies. Every feature is designed for a broker who wears many hats and doesn't have time for complexity." },
               { title: "Your data stays yours", desc: "We never sell or share your brokerage data. You can export everything at any time. If you leave, your history leaves with you." },
             ].map(({ title, desc }) => (
-              <div key={title} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <div key={title} className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-gray-100">
                 <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

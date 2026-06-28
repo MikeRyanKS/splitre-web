@@ -85,7 +85,7 @@ export default function HomePage() {
             <span className="w-2 h-2 bg-indigo-500 rounded-full" />
             Built for independent US real estate brokerages
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
             Stop Doing Commissions<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">in Spreadsheets</span>
           </h1>
@@ -137,8 +137,8 @@ export default function HomePage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-5 text-center">What SplitRE actually automates per deal</p>
-          <div className="overflow-hidden rounded-2xl border border-gray-200">
-            <table className="w-full text-sm">
+          <div className="overflow-x-auto rounded-2xl border border-gray-200">
+            <table className="w-full min-w-[580px] text-sm">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="text-left px-5 py-3 font-semibold text-gray-600">Task</th>
@@ -178,7 +178,7 @@ export default function HomePage() {
 
       {/* Problem / Solution */}
       <section className="py-24 px-4 bg-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               The spreadsheet problem every independent broker knows
@@ -200,7 +200,7 @@ export default function HomePage() {
             </Link>
           </div>
           {/* Mock deal breakdown card */}
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 shadow-sm">
+          <div className="bg-gray-50 rounded-2xl p-5 md:p-8 border border-gray-200 shadow-sm">
             <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-5">Live Deal Preview</div>
             <div className="space-y-2.5 text-sm">
               <div className="flex justify-between">
@@ -263,7 +263,7 @@ export default function HomePage() {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Everything in one place
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -327,7 +327,7 @@ export default function HomePage() {
                 desc: "Share a read-only deal link with an agent or their attorney. No login required. Everything they need to verify the split, deductions, and QuickBooks sync status.",
               },
             ].map(({ color, iconColor, icon, title, desc }) => (
-              <div key={title} className="bg-white rounded-2xl p-8 border border-gray-100">
+              <div key={title} className="bg-white rounded-2xl p-5 md:p-8 border border-gray-100">
                 <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center mb-4`}>
                   <svg className={`w-6 h-6 ${iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {icon}
@@ -345,7 +345,7 @@ export default function HomePage() {
       <section className="py-24 px-4 bg-indigo-50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">From deal to books in three steps</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">From deal to books in three steps</h2>
             <p className="text-lg text-gray-600">What used to take 45 minutes now takes under two.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -381,7 +381,7 @@ export default function HomePage() {
       {/* Who it's for */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Works for brokerages of every size</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Works for brokerages of every size</h2>
           <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
             A 3-agent boutique and a 40-agent independent brokerage get the exact same tool. Your plan tier reflects your team size, not your feature set.
           </p>
@@ -403,7 +403,7 @@ export default function HomePage() {
                 pain: "Multiple commission plan structures, cap migration for mid-year hires, and a bookkeeper who needs a clean QBO audit trail. SplitRE handles all of it.",
               },
             ].map(({ who, size, pain }) => (
-              <div key={who} className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
+              <div key={who} className="bg-gray-50 rounded-2xl p-5 md:p-7 border border-gray-100">
                 <div className="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-1">{size}</div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{who}</h3>
                 <p
@@ -419,7 +419,7 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">What brokers are saying</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16">What brokers are saying</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -438,7 +438,7 @@ export default function HomePage() {
                 role: "Broker/Owner, 12 agents",
               },
             ].map(({ quote, name, role }) => (
-              <div key={name} className="bg-white rounded-2xl p-8 border border-gray-100">
+              <div key={name} className="bg-white rounded-2xl p-5 md:p-8 border border-gray-100">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -460,7 +460,7 @@ export default function HomePage() {
       {/* Pricing CTA */}
       <section className="py-24 px-4 bg-gradient-to-br from-indigo-600 to-violet-700 text-white text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4">Plans starting at $89/month</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Plans starting at $89/month</h2>
           <p className="text-indigo-100 text-lg mb-3">
             All plans include every feature. Pay annually and save around 30%.
           </p>

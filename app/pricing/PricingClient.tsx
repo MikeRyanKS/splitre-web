@@ -92,7 +92,7 @@ export default function PricingClient() {
       {/* Header */}
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
           <p className="text-xl text-gray-600 mb-2">No per-agent fees. No feature paywalls. No surprise charges.</p>
           <p className="text-indigo-600 font-semibold">14-day free trial on all plans, no credit card required.</p>
         </div>
@@ -131,7 +131,7 @@ export default function PricingClient() {
             return (
               <div
                 key={plan.name}
-                className={`rounded-2xl p-8 border-2 relative flex flex-col ${
+                className={`rounded-2xl p-5 md:p-8 border-2 relative flex flex-col ${
                   plan.popular ? "border-indigo-600 shadow-xl shadow-indigo-100" : "border-gray-200"
                 }`}
               >
@@ -225,8 +225,8 @@ export default function PricingClient() {
           </div>
 
           {/* Tiered savings table */}
-          <div className="overflow-hidden rounded-2xl border border-gray-200 mb-10">
-            <table className="w-full text-sm">
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 mb-10">
+            <table className="w-full min-w-[640px] text-sm">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="text-left px-6 py-4 font-semibold text-gray-700">Plan</th>
