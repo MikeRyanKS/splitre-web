@@ -111,18 +111,25 @@ export default function HomePage() {
       </section>
 
       {/* ROI bar */}
-      <section className="bg-indigo-600 py-10 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
-          {[
-            { stat: "~50 hrs/yr", label: "saved on commission admin for a 5-agent brokerage" },
-            { stat: "5× to 8× ROI", label: "average return on the annual subscription cost" },
-            { stat: "$2,200+/yr", label: "in prevented commission errors per brokerage" },
-          ].map(({ stat, label }) => (
-            <div key={stat}>
-              <div className="text-3xl font-extrabold mb-1">{stat}</div>
-              <div className="text-indigo-200 text-sm">{label}</div>
-            </div>
-          ))}
+      <section className="bg-indigo-600 py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white mb-6">
+            {[
+              { stat: "~120 hrs/yr", label: "saved on commission admin for a 10-agent brokerage" },
+              { stat: "5× to 13× ROI", label: "average return on your annual subscription cost" },
+              { stat: "$9,000/yr", label: "in reclaimed broker time for a 10-agent brokerage" },
+            ].map(({ stat, label }) => (
+              <div key={stat}>
+                <div className="text-3xl font-extrabold mb-1">{stat}</div>
+                <div className="text-indigo-200 text-sm">{label}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-indigo-100 text-sm">
+            Brokerages with 50+ agents save up to{" "}
+            <span className="font-bold text-white">$36,000/yr</span>{" "}
+            in reclaimed admin time — SplitRE is the commission management software that pays for itself many times over, at every team size.
+          </p>
         </div>
       </section>
 
