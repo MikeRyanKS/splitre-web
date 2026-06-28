@@ -239,9 +239,9 @@ export default function PricingClient() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { plan: "Boutique", size: "1–5 agents", hours: "~2 hrs", value: "~$1,800", cost: "$749", roi: "2.4×", highlight: false },
-                  { plan: "Independent", size: "6–15 agents", hours: "~5 hrs", value: "~$4,500", cost: "$1,599", roi: "2.8×", highlight: false },
-                  { plan: "Brokerage", size: "16–50 agents", hours: "~13 hrs", value: "~$11,700", cost: "$2,799", roi: "4.2×", highlight: true },
+                  { plan: "Boutique", size: "1–5 agents", hours: "~4 hrs", value: "~$3,600", cost: "$749", roi: "~5×", highlight: false },
+                  { plan: "Independent", size: "6–15 agents", hours: "~10 hrs", value: "~$9,000", cost: "$1,599", roi: "~5.6×", highlight: false },
+                  { plan: "Brokerage", size: "16–50 agents", hours: "~25 hrs", value: "~$22,500", cost: "$2,799", roi: "~8×", highlight: true },
                 ].map(({ plan, size, hours, value, cost, roi, highlight }) => (
                   <tr key={plan} className={highlight ? "bg-indigo-50" : "bg-white"}>
                     <td className="px-6 py-4 font-semibold text-gray-900">{plan}</td>
@@ -257,7 +257,7 @@ export default function PricingClient() {
           </div>
 
           <p className="text-center text-xs text-gray-400">
-            Based on ~30 min saved per deal, broker time valued at $75/hr, annual billing pricing, and NAR median deal volume per agent. Errors prevented not included.
+            Based on ~1 hr saved per deal (conservative estimate including calculation, QBO entry, cap tracking, and agent communications), broker time valued at $75/hr, annual billing pricing, and NAR median deal volume per agent. Errors prevented not included.
           </p>
         </div>
       </section>

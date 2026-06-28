@@ -115,7 +115,7 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
           {[
             { stat: "~50 hrs/yr", label: "saved on commission admin for a 5-agent brokerage" },
-            { stat: "3.5× to 5× ROI", label: "average return on the annual subscription cost" },
+            { stat: "5× to 8× ROI", label: "average return on the annual subscription cost" },
             { stat: "$2,200+/yr", label: "in prevented commission errors per brokerage" },
           ].map(({ stat, label }) => (
             <div key={stat}>
@@ -143,10 +143,11 @@ export default function HomePage() {
               <tbody className="divide-y divide-gray-100">
                 {[
                   { task: "Look up agent's plan, check cap position", manual: "3–5 min", with: "0 (auto-loaded)", saved: "~4 min" },
-                  { task: "Calculate split (especially tiered/capped/E&O)", manual: "8–15 min", with: "30 sec (confirm button)", saved: "~10 min" },
+                  { task: "Calculate split — custom plans, tiered/capped, E&O, bonuses, extra deductions", manual: "15–40 min", with: "30 sec (confirm button)", saved: "~25 min" },
                   { task: "Update cap tracking spreadsheet", manual: "3–5 min", with: "0 (auto-ledger)", saved: "~4 min" },
+                  { task: "Agent communications — share breakdown, answer questions, send corrections", manual: "10–20 min", with: "0 (auto-emailed with breakdown)", saved: "~10 min" },
                   { task: "Enter invoice + bill in QuickBooks", manual: "10–15 min", with: "1 click, ~30 sec", saved: "~12 min" },
-                  { task: "Prepare + email agent commission statement", manual: "5–8 min", with: "0 (auto-emailed)", saved: "~6 min" },
+                  { task: "Prepare + email agent commission statement", manual: "5–8 min", with: "0 (auto-generated)", saved: "~6 min" },
                 ].map(({ task, manual, with: w, saved }) => (
                   <tr key={task} className="bg-white hover:bg-gray-50">
                     <td className="px-5 py-3 text-gray-700">{task}</td>
@@ -157,14 +158,14 @@ export default function HomePage() {
                 ))}
                 <tr className="bg-gray-50 border-t-2 border-gray-200">
                   <td className="px-5 py-3 font-bold text-gray-900">Total per deal</td>
-                  <td className="px-5 py-3 font-semibold text-gray-700">~29–48 min</td>
-                  <td className="px-5 py-3 font-semibold text-gray-700">~3–4 min</td>
-                  <td className="px-5 py-3 font-bold text-indigo-600">~26–44 min</td>
+                  <td className="px-5 py-3 font-semibold text-gray-700">~46–93 min</td>
+                  <td className="px-5 py-3 font-semibold text-gray-700">~3–5 min</td>
+                  <td className="px-5 py-3 font-bold text-indigo-600">~43–88 min</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p className="text-center text-xs text-gray-400 mt-4">Call it conservatively <strong className="text-gray-500">~30 minutes saved per deal.</strong></p>
+          <p className="text-center text-xs text-gray-400 mt-4">Call it conservatively <strong className="text-gray-500">~1 hour saved per deal.</strong></p>
         </div>
       </section>
 
