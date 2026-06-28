@@ -3,6 +3,19 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const CHECKOUT_URL = "https://pvxduycjxnvccputddbq.supabase.co/functions/v1/stripe-checkout-public";
+
+async function startDirectCheckout(plan: string, interval: string) {
+  const res = await fetch(CHECKOUT_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ plan, interval }),
+  });
+  const data = await res.json() as { url?: string; error?: string };
+  if (data.url) window.location.href = data.url;
+  else throw new Error(data.error ?? "Checkout unavailable");
+}
+
 const plans = [
   {
     name: "Boutique",
@@ -86,6 +99,19 @@ const faqs = [
 
 export default function PricingClient() {
   const [interval, setInterval] = useState<"monthly" | "annual">("annual");
+  const [buyLoading, setBuyLoading] = useState<string | null>(null);
+  const [buyError, setBuyError] = useState<string | null>(null);
+
+  async function handleBuyNow(planName: string) {
+    setBuyLoading(planName);
+    setBuyError(null);
+    try {
+      await startDirectCheckout(planName.toLowerCase(), interval);
+    } catch {
+      setBuyError("Something went wrong. Please try again.");
+      setBuyLoading(null);
+    }
+  }
 
   return (
     <>
@@ -172,12 +198,17 @@ export default function PricingClient() {
                   Start free trial
                 </Link>
 
-                <Link
-                  href={`https://app.splitre.app/signup?plan=${plan.name.toLowerCase()}&interval=${interval}&checkout=1`}
-                  className="block w-full text-center font-semibold py-3 rounded-xl mt-2 mb-3 transition-colors bg-gray-900 text-white hover:bg-gray-700"
+                <button
+                  onClick={() => handleBuyNow(plan.name)}
+                  disabled={buyLoading === plan.name}
+                  className="block w-full text-center font-semibold py-3 rounded-xl mt-2 mb-3 transition-colors bg-gray-900 text-white hover:bg-gray-700 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Subscribe now
-                </Link>
+                  {buyLoading === plan.name ? "Redirecting…" : "Subscribe now"}
+                </button>
+
+                {buyError && buyLoading === null && (
+                  <p className="text-xs text-red-500 text-center -mt-2 mb-2">{buyError}</p>
+                )}
 
                 <p className="flex items-center justify-center gap-1.5 text-xs text-gray-400 mb-5">
                   <svg className="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
