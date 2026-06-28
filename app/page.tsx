@@ -110,22 +110,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Product screenshot */}
-      <section className="bg-white pb-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
-            <Image
-              src="/screenshots/dashboard.png"
-              alt="SplitRE dashboard showing agent cap progress, broker revenue, and recent deals"
-              width={1440}
-              height={900}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ROI bar */}
       <section className="bg-indigo-600 py-10 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
@@ -139,6 +123,48 @@ export default function HomePage() {
               <div className="text-indigo-200 text-sm">{label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Automation breakdown table */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-5 text-center">What SplitRE actually automates per deal</p>
+          <div className="overflow-hidden rounded-2xl border border-gray-200">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-200">
+                  <th className="text-left px-5 py-3 font-semibold text-gray-600">Task</th>
+                  <th className="text-left px-5 py-3 font-semibold text-gray-600">Manual time</th>
+                  <th className="text-left px-5 py-3 font-semibold text-gray-600">With SplitRE</th>
+                  <th className="text-left px-5 py-3 font-semibold text-indigo-600">Saved</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { task: "Look up agent's plan, check cap position", manual: "3–5 min", with: "0 (auto-loaded)", saved: "~4 min" },
+                  { task: "Calculate split (especially tiered/capped/E&O)", manual: "8–15 min", with: "30 sec (confirm button)", saved: "~10 min" },
+                  { task: "Update cap tracking spreadsheet", manual: "3–5 min", with: "0 (auto-ledger)", saved: "~4 min" },
+                  { task: "Enter invoice + bill in QuickBooks", manual: "10–15 min", with: "1 click, ~30 sec", saved: "~12 min" },
+                  { task: "Prepare + email agent commission statement", manual: "5–8 min", with: "0 (auto-emailed)", saved: "~6 min" },
+                ].map(({ task, manual, with: w, saved }) => (
+                  <tr key={task} className="bg-white hover:bg-gray-50">
+                    <td className="px-5 py-3 text-gray-700">{task}</td>
+                    <td className="px-5 py-3 text-gray-500">{manual}</td>
+                    <td className="px-5 py-3 text-gray-500">{w}</td>
+                    <td className="px-5 py-3 font-semibold text-indigo-600">{saved}</td>
+                  </tr>
+                ))}
+                <tr className="bg-gray-50 border-t-2 border-gray-200">
+                  <td className="px-5 py-3 font-bold text-gray-900">Total per deal</td>
+                  <td className="px-5 py-3 font-semibold text-gray-700">~29–48 min</td>
+                  <td className="px-5 py-3 font-semibold text-gray-700">~3–4 min</td>
+                  <td className="px-5 py-3 font-bold text-indigo-600">~26–44 min</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-4">Call it conservatively <strong className="text-gray-500">~30 minutes saved per deal.</strong></p>
         </div>
       </section>
 
@@ -205,6 +231,22 @@ export default function HomePage() {
             <button className="mt-5 w-full bg-indigo-600 text-white text-sm font-semibold py-2.5 rounded-lg">
               Confirm &amp; sync to QuickBooks →
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Product screenshot */}
+      <section className="bg-white pb-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
+            <Image
+              src="/screenshots/dashboard.png"
+              alt="SplitRE dashboard showing agent cap progress, broker revenue, and recent deals"
+              width={1440}
+              height={900}
+              className="w-full h-auto"
+              priority
+            />
           </div>
         </div>
       </section>
