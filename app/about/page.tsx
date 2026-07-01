@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContactModal from "@/components/ContactModal";
+import ContactInline from "@/components/ContactInline";
 
 export const metadata: Metadata = {
   title: "About SplitRE — Commission Software Built for Independent Brokerages",
@@ -65,7 +65,7 @@ export default function AboutPage() {
             Cap tracking lives in a separate tab, if it exists at all. When an agent hits their cap mid-deal, someone usually catches it late. And syncing any of this to QuickBooks is a manual process that bookkeepers dread.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            SplitRE replaces all of it with a single tool that calculates correctly by construction, tracks caps automatically, and syncs to QuickBooks Online in one click.
+            SplitRE replaces all of it with a single tool that calculates correctly by construction, tracks caps automatically, notifies agents the moment a deal is confirmed, and exports a clean file your bookkeeper can drop straight into QuickBooks.
           </p>
         </div>
       </section>
@@ -96,12 +96,12 @@ export default function AboutPage() {
 
       {/* Contact */}
       <section className="py-16 px-4 bg-indigo-50">
-        <div className="max-w-xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">Get in touch</h2>
-          <p className="text-gray-600 mb-4">Questions, feedback, or want to talk through a commission structure?</p>
-          <ContactModal type="support" trigger={
-            <span className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors cursor-pointer">Send us a message</span>
-          } />
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-sm border border-indigo-100 p-8 md:p-10">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Get in touch</h2>
+            <p className="text-gray-500 text-sm mb-8">Questions, feedback, or want to talk through a commission structure?</p>
+            <ContactInline />
+          </div>
         </div>
       </section>
 

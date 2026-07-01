@@ -41,7 +41,9 @@ export default function ContactModal({ type = "support", trigger }: Props) {
     setStatus("idle");
   }
 
-  const toLabel = type === "sales" ? "sales@splitre.app" : "support@splitre.app";
+  const subtitle = type === "sales"
+    ? "Our sales team will reach out as soon as possible."
+    : "We typically respond within 2 business days.";
   const title = type === "sales" ? "Enterprise & Custom Pricing" : "Get in touch";
   const placeholder = type === "sales"
     ? "Tell us about your brokerage — number of agents, offices, or any specific needs."
@@ -70,7 +72,7 @@ export default function ContactModal({ type = "support", trigger }: Props) {
             </button>
 
             <h2 className="text-xl font-bold text-gray-900 mb-1">{title}</h2>
-            <p className="text-sm text-gray-500 mb-6">We&apos;ll reply to <strong>{toLabel}</strong></p>
+            <p className="text-sm text-gray-500 mb-6">{subtitle}</p>
 
             {status === "sent" ? (
               <div className="text-center py-8">
@@ -79,8 +81,8 @@ export default function ContactModal({ type = "support", trigger }: Props) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <p className="font-semibold text-gray-900 mb-1">Message sent!</p>
-                <p className="text-sm text-gray-500">We&apos;ll get back to you shortly.</p>
+                <p className="font-semibold text-gray-900 mb-1">Message received!</p>
+                <p className="text-sm text-gray-500">We&apos;ve sent a confirmation to your email. Our team will be in touch within 2 business days.</p>
                 <button onClick={close} className="mt-6 text-sm text-indigo-600 hover:underline">Close</button>
               </div>
             ) : (
@@ -119,7 +121,7 @@ export default function ContactModal({ type = "support", trigger }: Props) {
                   />
                 </div>
                 {status === "error" && (
-                  <p className="text-sm text-red-600">Something went wrong. Please try again or email us directly at {toLabel}</p>
+                  <p className="text-sm text-red-600">Something went wrong. Please try again.</p>
                 )}
                 <button
                   type="submit"

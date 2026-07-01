@@ -61,7 +61,7 @@ const allFeatures = [
   "QuickBooks-ready CSV export for your bookkeeper",
   "PDF agent earnings statements",
   "Shareable deal breakdown links",
-  "Automatic agent email notifications",
+  "Automated agent notifications on deal confirmation and amendments",
   "Email alerts (cap reached, deal confirmed)",
   "Bulk deal & agent import from CSV",
   "14-day free trial",

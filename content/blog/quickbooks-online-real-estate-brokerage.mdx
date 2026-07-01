@@ -1,106 +1,77 @@
 ---
-title: "QuickBooks Online for Real Estate Brokerages: A Practical Guide"
+title: "QuickBooks Online for Real Estate Brokerages: A Practical Setup Guide"
 date: "2026-04-10"
-excerpt: "Setting up QBO correctly for a real estate brokerage is different from most small businesses. Here's how to structure your chart of accounts, handle agent payments, and keep your bookkeeper happy."
+excerpt: "QBO's default setup isn't built for brokerages. Here's how to structure your chart of accounts, handle agent payments correctly, and keep 1099 prep from becoming a nightmare."
 readTime: "7 min read"
-keywords: ["QuickBooks real estate brokerage", "QBO commission tracking", "QuickBooks Online brokerage setup"]
+keywords: ["QuickBooks real estate brokerage", "QBO commission tracking", "QuickBooks Online brokerage setup", "real estate brokerage bookkeeping"]
 ---
 
-QuickBooks Online is the bookkeeping backbone of most independent real estate brokerages. But the default QBO setup is designed for a generic small business — not a brokerage that collects commission from closings, splits it with agents, pays E&O fees, and files 1099s for 20+ independent contractors.
+QuickBooks Online powers the books at most independent real estate brokerages. It's reliable, it connects to your bank, and your bookkeeper already knows it. The problem is that QBO is designed for a generic small business — not one that collects commission from closings, splits it with independent contractors, runs pre-split deductions, and files 1099-NECs for 20 agents at year end.
 
-Getting QBO right for a real estate brokerage requires intentional setup. Here's how to do it.
+Getting QBO right for a real estate brokerage requires intentional setup. The default chart of accounts won't cut it, and the standard payment workflows don't map cleanly to how commissions actually work. Here's what to do instead.
 
-## Chart of Accounts: Start Here
+## Build the Right Chart of Accounts First
 
-The chart of accounts (COA) is the foundation. If it's set up wrong, every report will be misleading. For a real estate brokerage, you need at minimum:
+The chart of accounts is the foundation of everything. If it's wrong, every report is misleading, and fixing it later is painful.
 
-**Income accounts**:
-- Gross Commission Income (or "GCI") — total commission earned before any splits
-- Referral Income — commissions received for referring clients to other agents/brokerages
-- Desk Fee Income — if you charge desk fees
+For a real estate brokerage, you need at minimum:
 
-**Cost of Revenue / Agent Payments**:
-- Agent Commission Expense — the portion of GCI paid to agents
-- Referral Fee Expense — commissions paid out for referrals received
+**Income accounts:** Gross Commission Income (GCI) — the full commission before any splits — plus separate accounts for Referral Income and Desk Fee Income if those apply. The critical discipline here: GCI goes in at the gross number, not the broker's net. If you only record what the brokerage keeps, your revenue is understated, your agent payments are untraceable, and 1099 prep becomes a reconstruction project.
 
-**Operating Expenses**:
-- E&O Insurance (or expense the per-deal deduction through here)
-- Transaction Coordinator Fees
-- MLS Fees
-- Marketing
+**Cost of revenue:** Agent Commission Expense (the agent's portion of each deal) and Referral Fee Expense (commissions paid out for referrals received).
 
-**Liability (if applicable)**:
-- Agent Commission Payable — if you hold commissions before disbursing
+**Operating expenses:** E&O insurance, MLS fees, transaction coordinator costs, marketing, and office overhead. If you collect a per-deal E&O fee from agents, record those either as a separate income line (E&O Recovery Income) or as an offset against your E&O Expense — pick one and stay consistent.
 
-The critical discipline: GCI goes to income gross, and agent payouts go to expense. Do not record only the broker's net. This inflates your income reports and makes 1099 preparation far more difficult.
+**Liabilities:** Agent Commission Payable, if there's any lag between when you receive the commission and when you disburse to the agent.
 
-## Invoices vs. Bills: The QBO Agent Payment Question
+Take an afternoon and get this right before entering a single transaction. Every shortcut in setup turns into reconciliation time later.
 
-One of the most common QBO questions from brokerage bookkeepers: do I use invoices or bills to pay agents?
+## How to Record Agent Payments in QBO
 
-**The short answer**: Use **bills** (or write checks/direct expense) when paying agents their commission portion.
+This is the question most brokerage bookkeepers eventually ask, and the answer matters for both accuracy and 1099 compliance.
 
-Here's why: Agents are vendors in QuickBooks. They receive payments from you. You are not issuing them an invoice (that implies they owe you money). Instead, you record:
+Agents are **vendors** in QuickBooks. They receive payments from you. You do not invoice them — you pay them. That means:
 
-1. **Income**: A sales receipt or invoice when the brokerage receives the commission from the closing.
-2. **Expense/Bill**: A bill or check payment to the agent for their portion.
+When the brokerage receives the commission from the closing, record it as a deposit with the income account set to Gross Commission Income. Then, for the agent's portion, record a **bill or direct expense** to the agent (vendor) with the account set to Agent Commission Expense.
 
-For 1099 purposes, the total paid to each agent (vendor) flows into your 1099 prep report at year end. This only works correctly if agents are set up as vendors and paid via the expense/bill workflow.
+The difference between the deposit and the total agent payout — after all deductions — is the broker's net. This is your actual revenue from the deal, and it appears correctly in your P&L because you've recorded both sides of the transaction.
 
-## The Per-Deal Accounting Workflow
+If instead you record only the net, your income looks smaller than it is, you lose visibility into your gross volume, and you can't produce a proper 1099 for your agents at year end. The gross/expense structure is worth the extra step.
 
-Here's the workflow for a typical deal in QBO:
+## Setting Up Agents as 1099 Vendors
 
-**Step 1 — Commission received from escrow**:
-Record a bank deposit with income account = Gross Commission Income.
+Every agent who is an independent contractor needs to be set up correctly as a vendor before you enter their first payment.
 
-**Step 2 — E&O and other deductions**:
-If you collect E&O from the agent's portion, record this as a reduction to the agent's payout, or as a separate income line (Agent E&O Recovery). The latter keeps your E&O expense separate from the offset.
+In QBO, open the Vendors section and create a profile for each agent. The fields that matter most: check the box to **track payments for 1099**, and enter their tax ID (SSN or EIN) from the W-9 they provided. Set up direct deposit (ACH) if your bank supports it — it streamlines disbursement and creates a cleaner payment trail.
 
-**Step 3 — Agent payout**:
-Record a bill or check to the agent (vendor) for their net commission. Account = Agent Commission Expense.
+Do this before the first payment, not at year end. QBO's 1099 report only captures payments made through properly configured vendor records. Payments entered elsewhere don't flow into the report automatically, and manually reconstructing them is exactly as unpleasant as it sounds.
 
-**Step 4 — Reconcile**:
-The difference between the deposit and the payout (plus any deductions) equals the broker's net — your actual brokerage revenue from the deal.
+## The Per-Deal Workflow
 
-Done correctly, this means every closing appears as a complete, traceable event in QBO with no manual journal entries required.
+For a typical closing, the full QBO workflow looks like this:
 
-## Setting Up Agents as Vendors
+**Step 1 — Commission received:** Record a bank deposit with the income account set to GCI.
 
-Go to the Vendors section in QBO and create a profile for each agent. The critical fields:
+**Step 2 — Agent payout:** Record a bill or check to the agent (vendor) for their net commission, using Agent Commission Expense.
 
-- **Track payments for 1099**: Yes — check this box for every agent who is an independent contractor.
-- **Tax ID**: Collect W-9s from every agent. Enter their SSN or EIN here.
-- **Payment method**: Set up direct deposit (ACH) if possible to streamline disbursement.
+**Step 3 — Deductions:** E&O fees and other pre-split deductions either reduce the agent's bill amount or are recorded as separate income lines, depending on your preference.
 
-At year end, QBO will generate 1099-NEC forms for every agent paid more than $600. This only works if agents are properly set up as 1099-eligible vendors and all payments flow through their vendor record.
+**Step 4 — Reconcile:** The net difference is the broker keep. It should match your P&L without any additional journal entries.
 
-## The Problem with Manual QBO Entry
+For a brokerage closing 15 to 20 deals a month, that's 45 to 80 individual QBO entries. At 30+ deals, the volume becomes a genuine bottleneck — and that's before factoring in the risk of an entry going to the wrong account, a split being applied incorrectly, or a deduction hitting twice.
 
-Every deal requires three to five QBO entries (deposit, splits, deductions, agent payment). For a brokerage closing 10 deals a month, that's 30–50 manual QBO transactions. For a 30-agent brokerage doing 80 deals a month, it's 240–400 transactions.
+## Getting Commission Data Into QBO Without Re-Entering Everything
 
-At that volume, the bottleneck isn't whether your bookkeeper knows QBO — it's the sheer number of manual entries and the likelihood of errors. A deal entered with the wrong split, a deduction applied twice, or an agent payment posted to the wrong account can cascade into reconciliation headaches that take hours to untangle.
+The cleaner approach is to calculate commissions in a dedicated tool and export the accounting data rather than entering everything by hand.
 
-## Syncing Commission Software to QBO
+SplitRE generates a QuickBooks-ready CSV export for every batch of deals — formatted with closing dates, property addresses, agents, GCI amounts, agent net payouts, broker net revenue, and memo lines that map directly to QBO invoices and bills. You hand the file to your bookkeeper, they import it into QBO, and the manual re-keying step is gone entirely.
 
-The cleanest approach is to calculate commissions in a purpose-built tool and sync transactions to QBO automatically. A good sync should:
-
-- Create the deposit/income entry automatically
-- Create the agent bill/expense automatically
-- Apply the correct account codes based on deal type
-- Be previewable before execution (dry run)
-- Be reversible if there's an error
-
-When commission calculations and QBO entries happen in the same workflow, you eliminate the translation step — the manual re-entry of a number calculated elsewhere. That translation step is where most errors originate.
+The benefit isn't just speed. When commission calculations and QBO entries happen from the same source data, the translation errors disappear. The number that comes out of the commission calculation is the number that goes into the books — not a number that someone typed from a PDF while splitting their attention three ways.
 
 ## A Note on QBO Versions
 
-SplitRE integrates with QuickBooks Online (not Desktop). It's compatible with QBO Simple Start, Essentials, Plus, and Advanced. The Advanced plan (or the Accountant version) gives you the most flexibility in chart of accounts customization, but QBO Essentials is sufficient for most brokerages under 30 agents.
+QuickBooks Online Simple Start, Essentials, Plus, and Advanced all support the workflow described here. Most brokerages under 30 agents do fine with Essentials. The Advanced plan is worth considering if you want more flexibility in chart of accounts structure or need more granular class tracking. QBO Desktop is a separate product with a different sync story — if you're still on Desktop and thinking about moving, the Online version's ability to connect to commission tools and bank feeds is a significant operational improvement.
 
-If you're currently on QuickBooks Desktop and considering a move, QBO is worth it for the API integrations alone — the ability to sync commission tools, payroll systems, and bank feeds in real time is a major operational upgrade.
+## The Bottom Line
 
-## Getting Started
-
-If you're setting up QBO from scratch for your brokerage, spend an afternoon getting the chart of accounts right before you enter a single transaction. Every shortcut you take in setup creates debt you'll pay in reconciliation time later. Set up agents as 1099 vendors, use the income/expense split correctly, and make sure your bank feeds are reconciling monthly.
-
-Then, once the structure is right, explore syncing your commission calculations to QBO directly. The time savings are real and the error reduction is significant.
+None of this is especially complicated once the structure is right. GCI goes in as income, agent payouts go out as expenses, agents are set up as 1099 vendors before the first payment, and the chart of accounts reflects how your brokerage actually makes money. Build that foundation carefully, and your bookkeeper will thank you every month — especially in January.

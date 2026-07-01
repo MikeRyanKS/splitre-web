@@ -154,7 +154,7 @@ export default function HomePage() {
                   { task: "Calculate split — custom plans, tiered/capped, E&O, bonuses, extra deductions", manual: "15–40 min", with: "30 sec (confirm button)", saved: "~25 min" },
                   { task: "Update cap tracking spreadsheet", manual: "3–5 min", with: "0 (auto-ledger)", saved: "~4 min" },
                   { task: "Agent communications — share breakdown, answer questions, send corrections", manual: "10–20 min", with: "0 (auto-emailed with breakdown)", saved: "~10 min" },
-                  { task: "Enter invoice + bill in QuickBooks", manual: "10–15 min", with: "1 click, ~30 sec", saved: "~12 min" },
+                  { task: "Prepare bookkeeper-ready CSV for accounting", manual: "10–15 min", with: "1 click, ~30 sec", saved: "~12 min" },
                   { task: "Prepare + email agent commission statement", manual: "5–8 min", with: "0 (auto-generated)", saved: "~6 min" },
                 ].map(({ task, manual, with: w, saved }) => (
                   <tr key={task} className="bg-white hover:bg-gray-50">
