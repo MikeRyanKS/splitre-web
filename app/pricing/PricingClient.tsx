@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import ContactModal from "@/components/ContactModal";
 
 const CHECKOUT_URL = "https://pvxduycjxnvccputddbq.supabase.co/functions/v1/stripe-checkout-public";
 
@@ -52,24 +53,24 @@ const plans = [
 const allFeatures = [
   "Unlimited deals and transactions",
   "Commission calculation engine",
+  "Commission plan templates — one plan, many agents",
   "Tiered splits, flat fees, referral deductions",
   "Annual cap tracking and automatic cap flip",
   "Mid-year cap migration for new hires",
   "Per-agent plan overrides",
-  "QuickBooks Online sync (Invoice and Bill)",
-  "Sync preview before committing",
-  "Sync log and undo capability",
+  "QuickBooks-ready CSV export for your bookkeeper",
   "PDF agent earnings statements",
-  "CSV data export",
   "Shareable deal breakdown links",
-  "Email alerts (cap reached, QBO failure)",
+  "Automatic agent email notifications",
+  "Email alerts (cap reached, deal confirmed)",
+  "Bulk deal & agent import from CSV",
   "14-day free trial",
 ];
 
 const faqs = [
   {
     q: "Do all plans include the same features?",
-    a: "Yes. Every SplitRE plan includes every feature: QuickBooks sync, cap tracking, PDF statements, deal share links, and everything else. The only difference between plans is the number of active agents your brokerage can have. No features are locked behind higher tiers.",
+    a: "Yes. Every SplitRE plan includes every feature: QuickBooks-ready CSV export, cap tracking, PDF statements, agent email notifications, deal share links, and everything else. The only difference between plans is the number of active agents your brokerage can have. No features are locked behind higher tiers.",
   },
   {
     q: "What counts toward my agent limit?",
@@ -84,8 +85,8 @@ const faqs = [
     a: "Annual plans are billed once per year at the discounted rate, saving you roughly 30% compared to monthly. You can cancel before your renewal date and you won't be charged again.",
   },
   {
-    q: "Which QuickBooks plan does SplitRE support?",
-    a: "SplitRE works with QuickBooks Online (Simple Start, Essentials, Plus, and Advanced). It does not support QuickBooks Desktop. If you're not on QBO yet, you can still use SplitRE and export a CSV for your bookkeeper instead.",
+    q: "How does the QuickBooks-ready CSV export work?",
+    a: "Every deal produces a row in the export with the closing date, property address, agent, GCI (commission income), agent net payout, broker net revenue, and pre-formatted memo lines for QuickBooks invoices and bills. Select any deals, click Export, and hand the file to your bookkeeper — no re-keying, no live connection to manage.",
   },
   {
     q: "What happens at the end of my free trial?",
@@ -264,8 +265,8 @@ export default function PricingClient() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Does SplitRE pay for itself?</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Every deal that goes through SplitRE saves your brokerage roughly 30 minutes of manual admin — commission calculation, cap tracking, QuickBooks entry, and agent emails all handled automatically.
+            <p className="text-gray-600 max-w-xl mx-auto">
+              Every deal that goes through SplitRE saves roughly <strong>60 minutes</strong> of manual admin — commission calculation, cap tracking, agent notification emails, and a bookkeeper-ready export, all handled automatically.
             </p>
           </div>
 
@@ -316,12 +317,11 @@ export default function PricingClient() {
               Franchise groups, multi-office brokerages, or white-label needs? Let&apos;s talk.
             </p>
           </div>
-          <a
-            href="mailto:support@splitre.app"
-            className="shrink-0 bg-gray-900 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors"
-          >
-            Contact us
-          </a>
+          <ContactModal type="sales" trigger={
+            <span className="shrink-0 bg-gray-900 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+              Contact us
+            </span>
+          } />
         </div>
       </section>
 

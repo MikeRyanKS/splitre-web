@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "SplitRE — Commission Management Software for Real Estate Brokerages",
   description:
-    "SplitRE replaces commission spreadsheets for independent real estate brokerages. Automated split calculations, agent cap tracking, and one-click QuickBooks Online sync. Starts at $89/mo.",
+    "SplitRE replaces commission spreadsheets for independent real estate brokerages. Automated split calculations, agent cap tracking, automatic agent notifications, and a QuickBooks-ready CSV export for your bookkeeper. Plans from $62/mo.",
   alternates: { canonical: "https://splitre.app" },
 };
 
@@ -15,20 +15,21 @@ const softwareSchema = {
   name: "SplitRE",
   applicationCategory: "BusinessApplication",
   description:
-    "Commission management software for independent real estate brokerages. Automates split calculations, cap tracking, and QuickBooks Online sync.",
+    "Commission management software for independent real estate brokerages. Automates split calculations, cap tracking, agent notifications, and QuickBooks-ready CSV export.",
   featureList: [
     "Automated commission split calculations",
     "Annual agent cap tracking with automatic cap flip",
-    "One-click QuickBooks Online sync",
+    "QuickBooks-ready CSV export for bookkeepers",
+    "Automatic agent email notifications on confirmed and amended deals",
     "PDF agent earnings statements",
     "Tiered commission split support",
     "Per-agent commission plan overrides",
+    "Bulk deal and agent import from CSV",
     "Shareable deal breakdown links",
-    "CSV data export",
   ],
   offers: {
     "@type": "AggregateOffer",
-    lowPrice: "89",
+    lowPrice: "62",
     highPrice: "329",
     priceCurrency: "USD",
     offerCount: "3",
@@ -60,8 +61,8 @@ const howToSchema = {
     },
     {
       "@type": "HowToStep",
-      name: "Sync to QuickBooks",
-      text: "One click posts the Invoice and Bill to QuickBooks Online. Your bookkeeper sees clean, categorized entries with no manual re-keying.",
+      name: "Export for your bookkeeper",
+      text: "Select deals and click Export CSV for QuickBooks. Your bookkeeper gets a clean, pre-formatted file with GCI, agent payout, broker net, and memo lines ready to enter — no re-keying required.",
     },
   ],
 };
@@ -90,7 +91,7 @@ export default function HomePage() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">in Spreadsheets</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            SplitRE calculates every agent split automatically, tracks annual caps in real time, and syncs confirmed deals to QuickBooks Online in one click.
+            SplitRE calculates every agent split automatically, tracks annual caps in real time, notifies agents instantly, and exports a QuickBooks-ready file for your bookkeeper — no spreadsheets, no re-keying.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -184,7 +185,7 @@ export default function HomePage() {
               The spreadsheet problem every independent broker knows
             </h2>
             <p className="text-gray-600 mb-4">
-              You copy last month&apos;s spreadsheet, update the numbers by hand, hope the cap balance is right, then manually key the same transaction into QuickBooks. One typo in a formula and an agent gets underpaid. Or worse, overpaid, and now you have a conversation you don&apos;t want to have.
+              You copy last month&apos;s spreadsheet, update the numbers by hand, hope the cap balance is right, then call or text the agent to tell them what they&apos;re getting paid, and manually re-key everything into QuickBooks. One typo in a formula and an agent gets underpaid — or worse, overpaid — and now you have a conversation you don&apos;t want to have.
             </p>
             <p className="text-gray-600 mb-6">
               For a 5-agent brokerage closing 50 deals a year, that works out to roughly 37 to 50 hours of manual admin and 2 to 3 commission errors that cost an average of $1,100 each to sort out.
@@ -237,7 +238,7 @@ export default function HomePage() {
               </div>
             </div>
             <button className="mt-5 w-full bg-indigo-600 text-white text-sm font-semibold py-2.5 rounded-lg">
-              Confirm &amp; sync to QuickBooks →
+              Confirm Deal →
             </button>
           </div>
         </div>
@@ -278,8 +279,8 @@ export default function HomePage() {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 ),
-                title: "Accurate commission calculations",
-                desc: "Define your commission plans once. Percentage splits, tiered splits, flat post-cap fees, E&O, transaction fees, referral deductions. Every deal calculates from those rules automatically.",
+                title: "Commission plan templates",
+                desc: "Create one plan and assign it to as many agents as you want. No duplicating per agent. Senior agents, standard agents, new agents — each gets their own template. Override any rule individually without touching the plan.",
               },
               {
                 color: "bg-violet-100",
@@ -294,37 +295,37 @@ export default function HomePage() {
                 color: "bg-emerald-100",
                 iconColor: "text-emerald-600",
                 icon: (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 ),
-                title: "One-click QuickBooks sync",
-                desc: "Preview the QBO Invoice and Bill before committing. One click posts both to QuickBooks Online. Your bookkeeper sees clean, categorized entries with nothing left to re-key.",
+                title: "QuickBooks-ready CSV export",
+                desc: "Select deals, click Export. Your bookkeeper gets a clean file with GCI, agent payout, broker net, and pre-formatted QuickBooks memo lines. No live connection to break, no OAuth tokens to expire — just a file that works.",
               },
               {
                 color: "bg-amber-100",
                 iconColor: "text-amber-600",
                 icon: (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 ),
-                title: "PDF agent earnings statements",
-                desc: "Generate a professional annual earnings PDF for any agent in seconds. Handy for mortgage applications, tax prep, or just keeping agents in the loop on their YTD income.",
+                title: "Automatic agent notifications",
+                desc: "When a deal is confirmed or amended, SplitRE emails the agent their full commission breakdown automatically. No more phone calls asking what they're getting paid — it's already in their inbox.",
               },
               {
                 color: "bg-sky-100",
                 iconColor: "text-sky-600",
                 icon: (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                 ),
-                title: "Per-agent plan overrides",
-                desc: "One agent negotiated a better split? Override the plan at the agent level without touching anyone else. The change applies only to that agent's deals going forward.",
+                title: "Import existing deals — hit the ground running",
+                desc: "Already have deals in a spreadsheet? Upload a CSV and SplitRE imports your history in minutes. Cap balances carry forward, agents auto-match by email, and any failed rows export for easy correction.",
               },
               {
                 color: "bg-rose-100",
                 iconColor: "text-rose-600",
                 icon: (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 ),
-                title: "Shareable deal breakdowns",
-                desc: "Share a read-only deal link with an agent or their attorney. No login required. Everything they need to verify the split, deductions, and QuickBooks sync status.",
+                title: "PDF agent earnings statements",
+                desc: "Generate a professional annual earnings PDF for any agent in seconds. Useful for mortgage applications, tax prep, or end-of-year summaries — without touching a spreadsheet.",
               },
             ].map(({ color, iconColor, icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl p-5 md:p-8 border border-gray-100">
@@ -345,8 +346,8 @@ export default function HomePage() {
       <section className="py-24 px-4 bg-indigo-50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">From deal to books in three steps</h2>
-            <p className="text-lg text-gray-600">What used to take 45 minutes now takes under two.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">From deal to done in three steps</h2>
+            <p className="text-lg text-gray-600">What used to take 60 minutes now takes under two.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -357,13 +358,13 @@ export default function HomePage() {
               },
               {
                 step: "2",
-                title: "Review and confirm",
-                desc: "See the exact split, every deduction, and the updated cap balance before committing anything. Change your mind? Edit and recalculate instantly.",
+                title: "Confirm — agent is notified",
+                desc: "Review the exact split, every deduction, and updated cap balance. Confirm, and SplitRE automatically emails the agent their full commission breakdown.",
               },
               {
                 step: "3",
-                title: "Sync to QuickBooks",
-                desc: "One click posts the Invoice and Bill to QuickBooks Online. Your bookkeeper sees clean entries with nothing left to do.",
+                title: "Export for your bookkeeper",
+                desc: "Select any deals and click Export CSV for QuickBooks. Your bookkeeper gets a pre-formatted file — GCI, agent payout, broker net, and memo lines — ready to enter without re-keying a thing.",
               },
             ].map(({ step, title, desc }) => (
               <div key={step} className="text-center">
@@ -395,12 +396,12 @@ export default function HomePage() {
               {
                 who: "Growing independents",
                 size: "6 to 25 agents",
-                pain: "You&apos;ve outgrown the spreadsheet but can&apos;t justify enterprise software. Your bookkeeper manually re-keys every closing into QuickBooks. Nobody enjoys that.",
+                pain: "You&apos;ve outgrown the spreadsheet but can&apos;t justify enterprise software. Agents are calling to ask what they were paid. Your bookkeeper re-keys every closing by hand. SplitRE fixes all of that.",
               },
               {
                 who: "Established brokerages",
                 size: "26 or more agents",
-                pain: "Multiple commission plan structures, cap migration for mid-year hires, and a bookkeeper who needs a clean QBO audit trail. SplitRE handles all of it.",
+                pain: "Multiple commission plan structures, cap migration for mid-year hires, and a bookkeeper who needs clean export files every month. SplitRE handles all of it — they get a ready-to-import CSV.",
               },
             ].map(({ who, size, pain }) => (
               <div key={who} className="bg-gray-50 rounded-2xl p-5 md:p-7 border border-gray-100">
@@ -428,7 +429,7 @@ export default function HomePage() {
                 role: "Broker/Owner, 18 agents",
               },
               {
-                quote: "The QuickBooks sync alone saves my bookkeeper three hours a week. The cap tracking is what really sold me. It's bulletproof.",
+                quote: "The CSV export alone saves my bookkeeper hours every month. She gets exactly what she needs — no back and forth, no re-keying. The cap tracking is what really sold me though. It's bulletproof.",
                 name: "Marcus D.",
                 role: "Managing Broker, 31 agents",
               },
@@ -460,7 +461,7 @@ export default function HomePage() {
       {/* Pricing CTA */}
       <section className="py-24 px-4 bg-gradient-to-br from-indigo-600 to-violet-700 text-white text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Plans starting at $89/month</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Plans from $62/month</h2>
           <p className="text-indigo-100 text-lg mb-3">
             All plans include every feature. Pay annually and save around 30%.
           </p>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactModal from "@/components/ContactModal";
 
 export const metadata: Metadata = {
   title: "About SplitRE — Commission Software Built for Independent Brokerages",
@@ -98,7 +99,9 @@ export default function AboutPage() {
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">Get in touch</h2>
           <p className="text-gray-600 mb-4">Questions, feedback, or want to talk through a commission structure?</p>
-          <a href="mailto:support@splitre.app" className="text-indigo-600 font-semibold hover:underline text-lg">support@splitre.app</a>
+          <ContactModal type="support" trigger={
+            <span className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors cursor-pointer">Send us a message</span>
+          } />
         </div>
       </section>
 

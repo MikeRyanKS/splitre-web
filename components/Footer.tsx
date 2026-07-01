@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ContactModal from "./ContactModal";
 
 export default function Footer() {
   return (
@@ -33,7 +34,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-              <li><a href="mailto:support@splitre.app" className="hover:text-white transition-colors">Contact</a></li>
+              <li><ContactModal type="support" trigger={<span className="hover:text-white transition-colors cursor-pointer">Contact</span>} /></li>
             </ul>
           </div>
 
