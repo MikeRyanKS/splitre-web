@@ -31,10 +31,10 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">What we&apos;re trying to do</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Independent real estate brokerages run on trust. The trust agents place in their broker to pay them correctly and on time. When that breaks, agents leave. 80% of brokerages pay at least one agent incorrectly per year — and most of those errors start with a spreadsheet.
+              Independent real estate brokerages run on trust. The trust agents place in their broker to pay them correctly and on time. When that breaks, agents leave. 80% of brokerages pay at least one agent incorrectly per year, and most of those errors start with a spreadsheet.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              We want commission accuracy to be something you take for granted — not something you double-check after every closing. A 5-agent boutique should have the same financial precision that large franchise groups pay enterprise software for.
+              We want commission accuracy to be something you take for granted, not something you double-check after every closing. A 5-agent boutique should have the same financial precision that large franchise groups pay enterprise software for.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-indigo-100">
@@ -118,15 +118,15 @@ export default function AboutPage() {
           <ul className="mt-2 space-y-1 text-sm">
             <li>
               <Link href="/terms" className="text-indigo-600 hover:underline">Terms of Service</Link>
-              {" "}— governs your use of the SplitRE application and website
+              {" "}(governs your use of the SplitRE application and website)
             </li>
             <li>
               <Link href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</Link>
-              {" "}— describes how we collect, use, and protect your data, including CCPA rights
+              {" "}(how we collect, use, and protect your data, including CCPA rights)
             </li>
             <li>
               <Link href="/refund-policy" className="text-indigo-600 hover:underline">Refund / Cancellation Policy</Link>
-              {" "}— our 7-day refund window and data export terms
+              {" "}(7-day refund window and data export terms)
             </li>
           </ul>
         </div>

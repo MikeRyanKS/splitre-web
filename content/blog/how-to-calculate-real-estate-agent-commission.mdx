@@ -8,19 +8,19 @@ keywords: ["real estate agent commission calculator", "how to calculate commissi
 
 Commission math looks easy from the outside. A percentage of a sale price, split between agent and broker. How complicated can it be?
 
-Reasonably complicated, as it turns out — and the complication is almost entirely in the edge cases. The basic calculation takes about 30 seconds. Handling a cap crossing mid-deal, applying a tiered split correctly, or accounting for a referral fee that comes off the top before anything else gets split: those are the moments where spreadsheets fail and agents end up with the wrong number on their statement.
+Reasonably complicated, as it turns out, and the complication is almost entirely in the edge cases. The basic calculation takes about 30 seconds. Handling a cap crossing mid-deal, applying a tiered split correctly, or accounting for a referral fee that comes off the top before anything else gets split: those are the moments where spreadsheets fail and agents end up with the wrong number on their statement.
 
 This guide works through every layer of the calculation, from the straightforward to the genuinely tricky.
 
 ## Start With Gross Commission Income
 
-Gross Commission Income — GCI — is the total commission earned on the transaction before any splits or deductions. Everything else flows from this number.
+Gross Commission Income (GCI) is the total commission earned on the transaction before any splits or deductions. Everything else flows from this number.
 
 **GCI = Sale Price × Commission Rate**
 
 For a $485,000 home at a 3% commission rate, GCI is $14,550. If the brokerage represented only one side of the transaction, that's typically half the total commission, since the other half goes to the cooperating brokerage.
 
-GCI is your starting point. Don't skip this step or work backward from the agent's expected payout — it makes the math harder and the records messier.
+GCI is your starting point. Don't skip this step or work backward from the agent's expected payout, since it makes the math harder and the records messier.
 
 ## Pre-Split Deductions
 
@@ -28,7 +28,7 @@ Most brokerages take certain deductions off the top before the agent split is ca
 
 The most common ones are **E&O insurance** (a per-deal fee, often $100–$300, that funds the brokerage's professional liability coverage), **franchise fees** for brokerages affiliated with a national brand (typically 5–8% of GCI), and **transaction coordinator fees** if the brokerage passes those through before splitting.
 
-After pre-split deductions, you have the net commission — the number that actually gets divided between agent and broker.
+After pre-split deductions, you have the net commission: the number that actually gets divided between agent and broker.
 
 For the $485,000 example: subtract a $200 E&O fee from $14,550, and the net commission is $14,350.
 
@@ -38,9 +38,9 @@ The split defines what percentage goes to the agent and what stays with the brok
 
 A **fixed split** is the simplest: the agent always earns a set percentage. At 70/30, $14,350 in net commission becomes $10,045 to the agent and $4,305 to the broker.
 
-A **tiered split** changes the percentage based on the agent's cumulative production within the plan year. An agent might start at 60%, move to 70% after $60,000 in total GCI, and reach 80% after $120,000. Each deal has to be calculated at the correct tier — which requires knowing where the agent stands in their cumulative total before you start.
+A **tiered split** changes the percentage based on the agent's cumulative production within the plan year. An agent might start at 60%, move to 70% after $60,000 in total GCI, and reach 80% after $120,000. Each deal has to be calculated at the correct tier, which requires knowing where the agent stands in their cumulative total before you start.
 
-A **graduated-to-cap** structure is probably the most common in independent brokerages. The agent earns at a split until they've paid the broker a fixed annual maximum — the cap — at which point they keep 100% of every subsequent deal.
+A **graduated-to-cap** structure is probably the most common in independent brokerages. The agent earns at a split until they've paid the broker a fixed annual maximum (the cap), at which point they keep 100% of every subsequent deal.
 
 ## How the Cap Works
 
@@ -48,7 +48,7 @@ The cap is the maximum amount an agent pays to the broker in a plan year. Once t
 
 If an agent is on a 70/30 split with a $20,000 annual cap, the broker takes 30% of each deal until the broker's cumulative collection reaches $20,000. The math tells you when this happens: $20,000 ÷ 0.30 ≈ $66,667 in net commission paid. Once the agent has generated that much in net commission, they're capped.
 
-The cap balance is simply the running total of what the broker has collected so far in the plan year. It has to be accurate before every deal — because the moment you enter a deal with a wrong balance, the calculation is wrong, and the error follows the agent's records forward.
+The cap balance is simply the running total of what the broker has collected so far in the plan year. It has to be accurate before every deal. The moment you enter a deal with a wrong balance, the calculation is wrong, and the error follows the agent's records forward.
 
 ## Cap Crossings: The Hard Part
 
@@ -64,13 +64,13 @@ Without the cap, the broker would take 30% of $14,100, which is $4,230. But the 
 Agent total: $3,500 + $9,100 = **$12,600**
 Broker total: **$1,500**
 
-Getting this right requires catching that a crossing is happening, knowing the exact remaining balance, and doing the split in two parts. In a spreadsheet, this is easy to miss — especially if you're processing several deals in a batch at the end of the month.
+Getting this right requires catching that a crossing is happening, knowing the exact remaining balance, and doing the split in two parts. In a spreadsheet, this is easy to miss, especially when you're processing several deals in a batch at the end of the month.
 
 ## Referral Fees
 
 If another agent referred the client, a referral fee typically comes off the agent's gross commission (not the net) before the internal split is applied. Referral fees are usually 20–25% and go to the referring party first.
 
-The order matters: collect the referral fee, then subtract pre-split deductions, then apply the internal split. If you apply the split first and deduct the referral fee from the agent's portion, you'll get the wrong number — and the bookkeeper will notice.
+The order matters: collect the referral fee, then subtract pre-split deductions, then apply the internal split. If you apply the split first and deduct the referral fee from the agent's portion, you'll get the wrong number. The bookkeeper will notice.
 
 ## Doing the full calculation correctly
 
@@ -79,7 +79,7 @@ A reliable commission workflow for any individual deal looks like this:
 1. Confirm the sale price and commission rate, calculate GCI
 2. Subtract pre-split deductions (E&O, franchise fees, referral fees)
 3. Check the agent's current cap balance for the plan year
-4. Apply the split at the correct tier — or split the deal at the cap crossing point
+4. Apply the split at the correct tier, or split the deal at the cap crossing point
 5. Calculate the agent payout and broker keep
 6. Record the transaction and update the agent's cap balance
 
@@ -87,4 +87,4 @@ Steps 3, 4, and 5 are where errors happen. They require current information (the
 
 Purpose-built commission software handles all three automatically. The cap balance updates when you confirm a deal, not when you remember to update it. The crossing is calculated correctly every time. The split tier is applied based on the actual cumulative total.
 
-That doesn't take your judgment out of the process. You still review the deal and approve the numbers before anything is committed. It just means the arithmetic is correct when you do — not a number someone typed in a hurry.
+That doesn't take your judgment out of the process. You still review the deal and approve the numbers before anything is committed. It just means the arithmetic is correct when you do, not a number someone typed in a hurry.

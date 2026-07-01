@@ -86,7 +86,7 @@ const faqs = [
   },
   {
     q: "How does the QuickBooks-ready CSV export work?",
-    a: "Every deal produces a row in the export with the closing date, property address, agent, GCI (commission income), agent net payout, broker net revenue, and pre-formatted memo lines for QuickBooks invoices and bills. Select any deals, click Export, and hand the file to your bookkeeper — no re-keying, no live connection to manage.",
+    a: "Every deal produces a row in the export with the closing date, property address, agent, GCI (commission income), agent net payout, broker net revenue, and pre-formatted memo lines for QuickBooks invoices and bills. Select any deals, click Export, and hand the file to your bookkeeper. No re-keying, no live connection to manage.",
   },
   {
     q: "What happens at the end of my free trial?",
@@ -215,7 +215,7 @@ export default function PricingClient() {
                   <svg className="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
-                  7-day money-back guarantee — no questions asked
+                  7-day money-back guarantee, no questions asked
                 </p>
 
                 <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
@@ -266,7 +266,7 @@ export default function PricingClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Does SplitRE pay for itself?</h2>
             <p className="text-gray-600 max-w-xl mx-auto">
-              Every deal that goes through SplitRE saves roughly <strong>60 minutes</strong> of manual admin — commission calculation, cap tracking, agent notification emails, and a bookkeeper-ready export, all handled automatically.
+              Every deal that goes through SplitRE saves roughly <strong>60 minutes</strong> of manual admin: commission calculation, cap tracking, agent notification emails, and bookkeeper export, all handled automatically.
             </p>
           </div>
 

@@ -40,7 +40,7 @@ const faqSchema = {
       name: "How does the QuickBooks-ready CSV export work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Select any confirmed deals on the Deals page and click Export CSV for QuickBooks. The downloaded file includes the date, property address, agent name, sale price, commission %, GCI (gross commission income), agent net payout, broker net revenue, and pre-formatted memo lines for QuickBooks invoices and bills. Hand the file to your bookkeeper — no live connection needed, works with QuickBooks Online and Desktop.",
+        text: "Select any confirmed deals on the Deals page and click Export CSV for QuickBooks. The downloaded file includes the date, property address, agent name, sale price, commission %, GCI (gross commission income), agent net payout, broker net revenue, and pre-formatted memo lines for QuickBooks invoices and bills. Hand the file to your bookkeeper. No live connection needed; works with QuickBooks Online and Desktop.",
       },
     },
     {
@@ -73,7 +73,7 @@ export default function FeaturesPage() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">What SplitRE actually does</h1>
-          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week — from commission calculations and cap tracking to agent notifications and bookkeeper exports.</p>
+          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week: commission calculations, cap tracking, agent notifications, and bookkeeper exports.</p>
         </div>
       </section>
 
@@ -172,7 +172,7 @@ export default function FeaturesPage() {
           <div>
             <div className="inline-block bg-amber-100 text-amber-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Agent Notifications</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Agents get their breakdown before they ask</h2>
-            <p className="text-gray-600 mb-6">Confirm a deal and SplitRE emails the agent their full commission breakdown straight away — net payout, GCI, every deduction, their current cap position. If the deal gets amended later, they get an updated email. The &quot;what am I getting paid?&quot; call just stops happening.</p>
+            <p className="text-gray-600 mb-6">Confirm a deal and SplitRE emails the agent their full commission breakdown straight away: net payout, GCI, every deduction, their current cap position. If the deal gets amended later, they get an updated email. The &quot;what am I getting paid?&quot; call just stops happening.</p>
             <ul className="space-y-3">
               {[
                 "Instant email on deal confirmation",
@@ -230,8 +230,8 @@ export default function FeaturesPage() {
           </div>
           <div className="order-1 md:order-2">
             <div className="inline-block bg-sky-100 text-sky-700 rounded-full px-3 py-1 text-sm font-medium mb-4">CSV Import</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Import your history — hit the ground running</h2>
-            <p className="text-gray-600 mb-6">Already have deals or agents in a spreadsheet? Upload a CSV and SplitRE walks you through the import — column mapping, row-by-row validation, a preview before anything is committed. Cap balances carry forward from wherever your agents are in the year. You&apos;re not starting from zero.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Import your history and hit the ground running</h2>
+            <p className="text-gray-600 mb-6">Already have deals or agents in a spreadsheet? Upload a CSV and SplitRE walks you through it: column mapping, row-by-row validation, a preview before anything is committed. Cap balances carry forward from wherever your agents are in the year. You&apos;re not starting from zero.</p>
             <ul className="space-y-3">
               {[
                 "Import agents from any CSV — auto-maps common column names",

@@ -62,7 +62,7 @@ const howToSchema = {
     {
       "@type": "HowToStep",
       name: "Export for your bookkeeper",
-      text: "Select deals and click Export CSV for QuickBooks. Your bookkeeper gets a clean, pre-formatted file with GCI, agent payout, broker net, and memo lines ready to enter — no re-keying required.",
+      text: "Select deals and click Export CSV for QuickBooks. Your bookkeeper gets a clean, pre-formatted file with GCI, agent payout, broker net, and memo lines. No re-keying required.",
     },
   ],
 };
@@ -185,7 +185,7 @@ export default function HomePage() {
               The spreadsheet problem every independent broker knows
             </h2>
             <p className="text-gray-600 mb-4">
-              You copy last month&apos;s spreadsheet, update the numbers by hand, hope the cap balance is right, then call or text the agent to tell them what they&apos;re getting paid, and manually re-key everything into QuickBooks. One typo in a formula and an agent gets underpaid — or worse, overpaid — and now you have a conversation you don&apos;t want to have.
+              You copy last month&apos;s spreadsheet, update the numbers by hand, hope the cap balance is right, then call or text the agent to tell them what they&apos;re getting paid, and manually re-key everything into QuickBooks. One typo in a formula and an agent gets underpaid, or worse overpaid, and now you have a conversation you don&apos;t want to have.
             </p>
             <p className="text-gray-600 mb-6">
               For a 5-agent brokerage closing 50 deals a year, that works out to roughly 37 to 50 hours of manual admin and 2 to 3 commission errors that cost an average of $1,100 each to sort out.
@@ -289,7 +289,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 ),
                 title: "Automatic cap tracking",
-                desc: "Cap balances update the moment you confirm a deal. When an agent crosses their cap, the split flips to 100% automatically — including the crossing calculation on the deal that put them over.",
+                desc: "Cap balances update the moment you confirm a deal. When an agent crosses their cap, the split flips to 100% automatically, including the crossing calculation on the deal that put them over.",
               },
               {
                 color: "bg-emerald-100",
@@ -298,7 +298,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 ),
                 title: "QuickBooks-ready CSV export",
-                desc: "Select deals, click Export. Your bookkeeper gets a clean file with GCI, agent payout, broker net, and pre-formatted QuickBooks memo lines. No live connection to break, no OAuth tokens to expire — just a file that works.",
+                desc: "Select deals, click Export. Your bookkeeper gets a clean file with GCI, agent payout, broker net, and pre-formatted QuickBooks memo lines. No live connection to break, no tokens to expire. Just a file that works.",
               },
               {
                 color: "bg-amber-100",
@@ -307,7 +307,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 ),
                 title: "Automatic agent notifications",
-                desc: "When a deal is confirmed or amended, SplitRE emails the agent their full commission breakdown automatically. No more phone calls asking what they're getting paid — it's already in their inbox.",
+                desc: "When a deal is confirmed or amended, SplitRE emails the agent their full commission breakdown automatically. The agent already has the full breakdown in their inbox before they think to ask.",
               },
               {
                 color: "bg-sky-100",
@@ -315,7 +315,7 @@ export default function HomePage() {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                 ),
-                title: "Import existing deals — hit the ground running",
+                title: "Import existing deals and hit the ground running",
                 desc: "Already have deals in a spreadsheet? Upload a CSV and SplitRE pulls in your history in minutes. Cap balances carry forward from wherever your agents are in the year. Failed rows export separately so you can fix them without hunting.",
               },
               {
@@ -325,7 +325,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 ),
                 title: "PDF agent earnings statements",
-                desc: "Generate a professional annual earnings PDF for any agent in seconds. Useful for mortgage applications, tax prep, or end-of-year summaries — without touching a spreadsheet.",
+                desc: "Generate a professional annual earnings PDF for any agent in seconds. Useful for mortgage applications, tax prep, or end-of-year summaries, without touching a spreadsheet.",
               },
             ].map(({ color, iconColor, icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl p-5 md:p-8 border border-gray-100">
@@ -364,7 +364,7 @@ export default function HomePage() {
               {
                 step: "3",
                 title: "Export for your bookkeeper",
-                desc: "Select any deals and click Export CSV for QuickBooks. Your bookkeeper gets a pre-formatted file — GCI, agent payout, broker net, and memo lines — ready to enter without re-keying a thing.",
+                desc: "Select any deals and click Export CSV for QuickBooks. Your bookkeeper gets a pre-formatted file with GCI, agent payout, broker net, and memo lines. Ready to enter without re-keying.",
               },
             ].map(({ step, title, desc }) => (
               <div key={step} className="text-center">
@@ -401,7 +401,7 @@ export default function HomePage() {
               {
                 who: "Established brokerages",
                 size: "26 or more agents",
-                pain: "Multiple commission plan structures, cap migration for mid-year hires, and a bookkeeper who needs clean export files every month. SplitRE handles all of it — they get a ready-to-import CSV.",
+                pain: "Multiple commission plan structures, cap migration for mid-year hires, and a bookkeeper who needs clean export files every month. SplitRE handles all of it. They get a ready-to-import CSV.",
               },
             ].map(({ who, size, pain }) => (
               <div key={who} className="bg-gray-50 rounded-2xl p-5 md:p-7 border border-gray-100">
