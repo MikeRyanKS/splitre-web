@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | SplitRE",
   },
   description:
-    "SplitRE automates real estate commission calculations, agent cap tracking, and QuickBooks Online sync for independent brokerages. Replace spreadsheets and pay agents correctly, every time. Plans from $89/mo.",
+    "SplitRE automates real estate commission calculations, agent cap tracking, and bookkeeper-ready CSV exports for independent brokerages. Replace spreadsheets and pay agents correctly, every time. Plans from $89/mo.",
   metadataBase: new URL("https://splitre.app"),
   applicationName: "SplitRE",
   authors: [{ name: "Keplify LLC", url: "https://splitre.app" }],
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     siteName: "SplitRE",
     title: "SplitRE — Commission Management Software for Real Estate Brokerages",
     description:
-      "Automate commission calculations, cap tracking, and QuickBooks sync for your independent real estate brokerage. No per-agent fees. Starts at $89/mo.",
+      "Automate commission calculations, cap tracking, and bookkeeper CSV exports for your independent real estate brokerage. No per-agent fees. Starts at $89/mo.",
     url: "https://splitre.app",
     locale: "en_US",
     images: [
       {
-        url: "/screenshots/dashboard.png",
+        url: "/screenshots/splitre-real-estate-brokerage-dashboard.png",
         width: 1200,
-        alt: "SplitRE commission management dashboard",
+        alt: "SplitRE real estate commission management dashboard showing agent cap progress and broker revenue",
       },
     ],
   },
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     site: "@splitre",
     title: "SplitRE — Commission Management for Real Estate Brokerages",
     description:
-      "Replace your commission spreadsheets. Automated calculations, cap tracking, and one-click QuickBooks sync. From $89/mo.",
-    images: ["/screenshots/dashboard.png"],
+      "Replace your commission spreadsheets. Automated calculations, cap tracking, and bookkeeper-ready CSV exports. From $89/mo.",
+    images: ["/screenshots/splitre-real-estate-brokerage-dashboard.png"],
   },
   robots: {
     index: true,

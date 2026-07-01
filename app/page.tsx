@@ -249,7 +249,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
             <Image
-              src="/screenshots/dashboard.png"
+              src="/screenshots/splitre-real-estate-brokerage-dashboard.png"
               alt="SplitRE dashboard showing agent cap progress, broker revenue, and recent deals"
               width={1440}
               height={900}

@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           <div className="sm:col-span-2">
             <Link href="/" className="flex items-center gap-2.5">
-              <Image src="/icon.svg" alt="" width={28} height={28} />
+              <Image src="/icon.svg" alt="SplitRE commission management software" width={28} height={28} />
               <span className="text-xl font-extrabold text-white tracking-tight">
                 Split<span className="text-indigo-400">RE</span>
               </span>

@@ -82,7 +82,7 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
             <Image
-              src="/screenshots/dashboard.png"
+              src="/screenshots/splitre-real-estate-brokerage-dashboard.png"
               alt="SplitRE dashboard — cap progress for 6 agents, $74,428 YTD broker revenue, recent deals"
               width={1440}
               height={900}
@@ -119,7 +119,7 @@ export default function FeaturesPage() {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <Image
-              src="/screenshots/deal_entry.png"
+              src="/screenshots/splitre-commission-deal-entry-calculator.png"
               alt="SplitRE deal entry form showing live payout preview with broker cut, agent gross, and net payout"
               width={1440}
               height={900}
@@ -134,8 +134,8 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <Image
-              src="/screenshots/deals.png"
-              alt="SplitRE deals list with export button"
+              src="/screenshots/splitre-deals-list-csv-export.png"
+              alt="SplitRE deals list showing commission totals, agent payouts, and one-click CSV export for bookkeeper"
               width={1440}
               height={900}
               className="w-full h-auto"
@@ -278,7 +278,7 @@ export default function FeaturesPage() {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <Image
-              src="/screenshots/agents.png"
+              src="/screenshots/splitre-agent-cap-tracking-dashboard.png"
               alt="SplitRE agents page showing cap progress bars for 6 agents across two commission plans"
               width={1440}
               height={900}
