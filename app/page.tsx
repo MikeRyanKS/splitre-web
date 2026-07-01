@@ -91,7 +91,7 @@ export default function HomePage() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">in Spreadsheets</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            SplitRE calculates every agent split automatically, tracks annual caps in real time, notifies agents instantly, and exports a QuickBooks-ready file for your bookkeeper — no spreadsheets, no re-keying.
+            SplitRE calculates every agent split automatically, keeps cap balances current in real time, emails agents their breakdown the moment you confirm, and hands your bookkeeper a QuickBooks-ready CSV. No spreadsheets. No re-keying.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -129,7 +129,7 @@ export default function HomePage() {
           <p className="text-center text-indigo-100 text-sm">
             Brokerages with 50+ agents save up to{" "}
             <span className="font-bold text-white">$36,000/yr</span>{" "}
-            in reclaimed admin time — SplitRE is the commission management software that pays for itself many times over, at every team size.
+            in reclaimed admin time. At that scale the ROI is obvious. But even a 3-agent shop running one deal a week gets there fast.
           </p>
         </div>
       </section>
@@ -268,7 +268,7 @@ export default function HomePage() {
               Everything in one place
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From deal entry to QuickBooks, the whole process lives in SplitRE. Nothing to re-key, nothing to reconcile at month end.
+              Enter a deal, confirm it, and SplitRE handles the rest. The agent gets their breakdown. Your bookkeeper gets the file. Month-end isn't a project anymore.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -280,7 +280,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 ),
                 title: "Commission plan templates",
-                desc: "Create one plan and assign it to as many agents as you want. No duplicating per agent. Senior agents, standard agents, new agents — each gets their own template. Override any rule individually without touching the plan.",
+                desc: "Create one plan and assign it to as many agents as you want. When someone negotiates a different split, set an override at the agent level. The plan stays clean.",
               },
               {
                 color: "bg-violet-100",
@@ -289,7 +289,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 ),
                 title: "Automatic cap tracking",
-                desc: "Cap balances update with every confirmed deal. When an agent crosses their annual cap, the split flips to 100% on its own. No manual intervention, no catching it mid-deal.",
+                desc: "Cap balances update the moment you confirm a deal. When an agent crosses their cap, the split flips to 100% automatically — including the crossing calculation on the deal that put them over.",
               },
               {
                 color: "bg-emerald-100",
@@ -316,7 +316,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                 ),
                 title: "Import existing deals — hit the ground running",
-                desc: "Already have deals in a spreadsheet? Upload a CSV and SplitRE imports your history in minutes. Cap balances carry forward, agents auto-match by email, and any failed rows export for easy correction.",
+                desc: "Already have deals in a spreadsheet? Upload a CSV and SplitRE pulls in your history in minutes. Cap balances carry forward from wherever your agents are in the year. Failed rows export separately so you can fix them without hunting.",
               },
               {
                 color: "bg-rose-100",

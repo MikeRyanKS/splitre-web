@@ -303,7 +303,7 @@ export default function PricingClient() {
           </div>
 
           <p className="text-center text-xs text-gray-400">
-            Based on ~1 hr saved per deal (conservative estimate including calculation, QBO entry, cap tracking, and agent communications), broker time valued at $75/hr, annual billing pricing, and NAR median deal volume per agent. Errors prevented not included.
+            Based on ~1 hr saved per deal (conservative estimate including calculation, bookkeeper CSV export, cap tracking, and agent communications), broker time valued at $75/hr, annual billing pricing, and NAR median deal volume per agent. Errors prevented not included.
           </p>
         </div>
       </section>

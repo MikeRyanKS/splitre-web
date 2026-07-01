@@ -98,7 +98,7 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <div className="inline-block bg-indigo-100 text-indigo-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Commission Engine</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Calculation you can trust</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">The math is always right</h2>
             <p className="text-gray-600 mb-6">SplitRE handles every plan structure your brokerage uses: percentage splits, tiered splits, flat fees, E&amp;O deductions, and transaction fees. Set up the rules once and every deal calculates correctly from that point on.</p>
             <ul className="space-y-3">
               {[
@@ -144,7 +144,7 @@ export default function FeaturesPage() {
           <div className="order-1 md:order-2">
             <div className="inline-block bg-emerald-100 text-emerald-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Bookkeeper Export</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">QuickBooks-ready in one click</h2>
-            <p className="text-gray-600 mb-6">Select any deals and click <strong>Export CSV for QuickBooks</strong>. Your bookkeeper gets a clean, pre-formatted file — no live connection to break, no OAuth tokens to expire, no re-keying.</p>
+            <p className="text-gray-600 mb-6">Select any deals and click <strong>Export CSV for QuickBooks</strong>. Your bookkeeper gets a pre-formatted file with everything in place. No live connection to manage, no tokens to expire, and no call from them asking what any of the numbers mean.</p>
             <ul className="space-y-3">
               {[
                 "GCI (commission income) — enter as an Invoice in QBO",
@@ -171,8 +171,8 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div>
             <div className="inline-block bg-amber-100 text-amber-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Agent Notifications</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Agents find out automatically</h2>
-            <p className="text-gray-600 mb-6">Every time a deal is confirmed or amended, SplitRE emails the agent their full commission breakdown. No phone calls, no texts asking &quot;what am I getting paid?&quot; — the answer is already waiting in their inbox.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Agents get their breakdown before they ask</h2>
+            <p className="text-gray-600 mb-6">Confirm a deal and SplitRE emails the agent their full commission breakdown straight away — net payout, GCI, every deduction, their current cap position. If the deal gets amended later, they get an updated email. The &quot;what am I getting paid?&quot; call just stops happening.</p>
             <ul className="space-y-3">
               {[
                 "Instant email on deal confirmation",
@@ -231,7 +231,7 @@ export default function FeaturesPage() {
           <div className="order-1 md:order-2">
             <div className="inline-block bg-sky-100 text-sky-700 rounded-full px-3 py-1 text-sm font-medium mb-4">CSV Import</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Import your history — hit the ground running</h2>
-            <p className="text-gray-600 mb-6">Already have deals or agents in a spreadsheet? Upload a CSV and SplitRE maps, validates, and imports your existing data in minutes — so you&apos;re not starting from zero.</p>
+            <p className="text-gray-600 mb-6">Already have deals or agents in a spreadsheet? Upload a CSV and SplitRE walks you through the import — column mapping, row-by-row validation, a preview before anything is committed. Cap balances carry forward from wherever your agents are in the year. You&apos;re not starting from zero.</p>
             <ul className="space-y-3">
               {[
                 "Import agents from any CSV — auto-maps common column names",
@@ -257,8 +257,8 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <div className="inline-block bg-violet-100 text-violet-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Agent Management</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Every agent, always accurate</h2>
-            <p className="text-gray-600 mb-6">Manage your entire roster from one dashboard. Cap progress at a glance, commission plan assignments, and mid-year plan migrations handled without recalculating anything by hand.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Your whole roster, one dashboard</h2>
+            <p className="text-gray-600 mb-6">See cap progress for every agent at a glance. Change commission plans, handle mid-year hires, migrate an agent to a new plan after they hit a production milestone. Nothing requires a manual recalculation.</p>
             <ul className="space-y-3">
               {[
                 "Per-agent cap progress dashboard",
@@ -293,12 +293,12 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Deal History</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Every deal, permanently on record</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">A searchable history of every confirmed deal with full audit trails, CSV export, and PDF agent summaries for year-end or disputes.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">A complete paper trail, automatically</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Search any deal in seconds. Export a date range for your accountant. Pull a PDF statement for an agent who needs it for a mortgage application or a dispute. It&apos;s all there, exactly as it was calculated.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: "🗂️", title: "Confirmed deal log", desc: "Every closed deal stored permanently with full calculation details." },
+              { icon: "🗂️", title: "Confirmed deal log", desc: "Every confirmed deal on record with the full breakdown as it was calculated." },
               { icon: "📥", title: "CSV export", desc: "Export any date range to CSV for your accountant or custom reports." },
               { icon: "📄", title: "PDF agent summaries", desc: "Generate a clean commission statement for any agent, any period." },
             ].map(({ icon, title, desc }) => (
@@ -315,8 +315,8 @@ export default function FeaturesPage() {
       {/* CTA */}
       <section className="py-20 px-4 bg-indigo-600 text-white text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Ready to eliminate commission errors?</h2>
-          <p className="text-indigo-100 mb-8">Start your 14-day free trial. No credit card, no commitment.</p>
+          <h2 className="text-3xl font-bold mb-4">Try it on one month&apos;s deals</h2>
+          <p className="text-indigo-100 mb-8">Start your 14-day free trial and run a deal you&apos;ve already processed. Compare the math. No credit card needed.</p>
           <Link href="https://app.splitre.app/signup" className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors inline-block">
             Start free trial
           </Link>

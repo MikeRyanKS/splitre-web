@@ -34,7 +34,7 @@ export default function AboutPage() {
               Independent real estate brokerages run on trust. The trust agents place in their broker to pay them correctly and on time. When that breaks, agents leave. 80% of brokerages pay at least one agent incorrectly per year — and most of those errors start with a spreadsheet.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Our goal is simple: make commission accuracy something you take for granted, not something you worry about. A 5-agent boutique deserves the same financial precision that large franchises pay enterprise software to achieve.
+              We want commission accuracy to be something you take for granted — not something you double-check after every closing. A 5-agent boutique should have the same financial precision that large franchise groups pay enterprise software for.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-indigo-100">
@@ -62,7 +62,7 @@ export default function AboutPage() {
             The typical independent brokerage tracks commissions in Excel or Google Sheets. Those spreadsheets get copied from last month, modified by hand, and emailed to an agent or a bookkeeper who may or may not be working from the same version.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Cap tracking lives in a separate tab, if it exists at all. When an agent hits their cap mid-deal, someone usually catches it late. And syncing any of this to QuickBooks is a manual process that bookkeepers dread.
+            Cap tracking lives in a separate tab, if it exists at all. When an agent hits their cap mid-deal, someone usually catches it late. And getting any of this into QuickBooks means the bookkeeper re-keying every number by hand, because the spreadsheet doesn&apos;t export to anything useful.
           </p>
           <p className="text-gray-700 leading-relaxed">
             SplitRE replaces all of it with a single tool that calculates correctly by construction, tracks caps automatically, notifies agents the moment a deal is confirmed, and exports a clean file your bookkeeper can drop straight into QuickBooks.
@@ -77,7 +77,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: "Accuracy first", desc: "An incorrect commission payment is not a minor inconvenience. It erodes the relationship between broker and agent. We treat accuracy as non-negotiable." },
-              { title: "Built for small teams", desc: "We don't build for Fortune 500 companies. Every feature is designed for a broker who wears many hats and doesn't have time for complexity." },
+              { title: "Built for small teams", desc: "We don't build for Fortune 500 companies. The product is designed for a broker who's also the office manager, the IT department, and occasionally the receptionist. If a feature takes more than a few clicks, we rethink it." },
               { title: "Your data stays yours", desc: "We never sell or share your brokerage data. You can export everything at any time. If you leave, your history leaves with you." },
             ].map(({ title, desc }) => (
               <div key={title} className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-gray-100">
