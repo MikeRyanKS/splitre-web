@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | SplitRE",
   },
   description:
-    "SplitRE automates real estate commission calculations, agent cap tracking, and bookkeeper-ready CSV exports for independent brokerages. Replace spreadsheets and pay agents correctly, every time. Plans from $89/mo.",
+    "SplitRE automates real estate commission calculations, agent cap tracking, and bookkeeper-ready CSV exports for independent brokerages. Replace spreadsheets and pay agents correctly, every time. Plans from $62/mo (annual).",
   metadataBase: new URL("https://splitre.app"),
   applicationName: "SplitRE",
   authors: [{ name: "Keplify LLC", url: "https://splitre.app" }],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "SplitRE",
     title: "SplitRE — Commission Management Software for Real Estate Brokerages",
     description:
-      "Automate commission calculations, cap tracking, and bookkeeper CSV exports for your independent real estate brokerage. No per-agent fees. Starts at $89/mo.",
+      "Automate commission calculations, cap tracking, and bookkeeper CSV exports for your independent real estate brokerage. No per-agent fees. Starts at $62/mo (annual).",
     url: "https://splitre.app",
     locale: "en_US",
     images: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     site: "@splitre",
     title: "SplitRE — Commission Management for Real Estate Brokerages",
     description:
-      "Replace your commission spreadsheets. Automated calculations, cap tracking, and bookkeeper-ready CSV exports. From $89/mo.",
+      "Replace your commission spreadsheets. Automated calculations, cap tracking, and bookkeeper-ready CSV exports. From $62/mo (annual).",
     images: ["/screenshots/splitre-real-estate-brokerage-dashboard.png"],
   },
   robots: {
