@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.20",
     "gray-matter": "^4.0.3",
     "next": "16.2.9",
     "next-mdx-remote": "^6.0.0",
