@@ -148,9 +148,9 @@ export default function RefundPolicyPage() {
             </p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>All deal records (CSV)</li>
-              <li>Agent roster and commission plans (CSV)</li>
-              <li>Earnings statements (PDF)</li>
-              <li>QuickBooks sync history (CSV)</li>
+              <li>Agent roster (CSV)</li>
+              <li>Cap progress history (CSV)</li>
+              <li>Commission plan definitions (JSON)</li>
             </ul>
             <p className="mt-3">
               After the 30-day window closes, all brokerage data is permanently and

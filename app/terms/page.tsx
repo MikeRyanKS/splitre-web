@@ -235,8 +235,8 @@ export default function TermsPage() {
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">7.1 Ownership</h3>
             <p>
               You retain full ownership of all data, records, and content you upload or create
-              within the Service, including commission plans, agent profiles, deal records, and
-              QuickBooks sync logs (&ldquo;Customer Data&rdquo;). We do not claim any ownership
+              within the Service, including commission plans, agent profiles, and deal records
+              (&ldquo;Customer Data&rdquo;). We do not claim any ownership
               interest in your Customer Data.
             </p>
 

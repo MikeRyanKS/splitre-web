@@ -4,7 +4,7 @@ import PricingClient from "./PricingClient";
 export const metadata: Metadata = {
   title: "Pricing — Real Estate Commission Management Software",
   description:
-    "SplitRE plans start at $62/mo (Boutique annual, up to 5 agents) through $233/mo (Brokerage, unlimited agents). All plans include every feature — cap tracking, QuickBooks-ready CSV export, PDF statements. Save ~30% annually.",
+    "SplitRE plans start at $62/mo (Boutique annual, up to 5 agents) through $233/mo (Brokerage, unlimited agents). All plans include every feature — cap tracking, QuickBooks-ready CSV export, one-click PDF downloads. Save ~30% annually.",
   alternates: { canonical: "https://splitre.app/pricing" },
   openGraph: {
     title: "SplitRE Pricing — Commission Management for Every Brokerage Size",

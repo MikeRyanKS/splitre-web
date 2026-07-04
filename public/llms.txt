@@ -10,10 +10,9 @@ SplitRE is a web application that automates commission calculations, annual cap 
 - Tracks each agent's annual gross commission income (GCI) toward their cap in real time
 - Automatically flips agent splits to 100% (or a flat post-cap fee) when they cross their annual cap
 - Exports confirmed deals as a QuickBooks-ready CSV, with pre-formatted invoice and bill descriptions, for import into QuickBooks Online
-- Generates a shareable, printable commission breakdown for each confirmed deal via a public share link
+- Lets a broker email a confirmed deal's commission breakdown to the agent, download it as a PDF, or copy a share link to it, each with a single click
 - Allows per-agent commission plan overrides without affecting brokerage-wide plans
 - Supports mid-year cap migration for agents who join during a cap year
-- Provides shareable read-only deal breakdown links for agents and attorneys
 
 ## Who it is for
 
@@ -51,7 +50,7 @@ Full help docs, indexed by topic: https://splitre.app/docs
 - Importing Agents and Deals via CSV: https://splitre.app/docs/importing-agents-and-deals-via-csv — column-by-column import reference
 - Entering and Managing Deals: https://splitre.app/docs/entering-and-managing-deals — draft, confirm, amend, void lifecycle
 - Setting Up Agent Caps: https://splitre.app/docs/setting-up-agent-caps — cap opening balances and the cap ledger
-- Sharing and Exporting Deals: https://splitre.app/docs/sharing-and-exporting-deals — share links, printable breakdowns, QuickBooks CSV export
+- Sharing and Exporting Deals: https://splitre.app/docs/sharing-and-exporting-deals — email, PDF download, share link, QuickBooks CSV export
 - Exporting Your Brokerage Data: https://splitre.app/docs/exporting-your-brokerage-data — full account backup
 - Glossary: https://splitre.app/docs/glossary — definitions for GCI, cap, splittable amount, breakdown snapshot, and other SplitRE-specific terms
 - Managing Billing and Subscription: https://splitre.app/docs/managing-billing-and-subscription — tiers, limits, refunds, cancellation

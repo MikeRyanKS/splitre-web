@@ -53,9 +53,8 @@ export default function PrivacyPage() {
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">1.2 Brokerage data you enter</h3>
             <p>
               Commission plans, agent profiles (names, license numbers, split percentages,
-              annual cap amounts), deal records (property addresses, sale prices, gross
-              commission income, buyer/seller sides), earnings statements, and
-              QuickBooks Online sync logs are stored on your behalf. This is your data;
+              annual cap amounts), and deal records (property addresses, sale prices, gross
+              commission income, buyer/seller sides) are stored on your behalf. This is your data;
               we act as a data processor, not a data controller, of anything you enter
               about your agents and transactions.
             </p>
@@ -99,12 +98,12 @@ export default function PrivacyPage() {
             <ul className="list-disc pl-5 mt-3 space-y-2">
               <li>Provide, operate, and maintain the Service</li>
               <li>Process your subscription payments through Stripe</li>
-              <li>Sync deal and commission data to QuickBooks Online at your direction</li>
+              <li>Generate QuickBooks Online-ready CSV exports of your deal and commission data at your direction</li>
               <li>
                 Send transactional emails you have opted into by using the Service:
-                deal-confirmed notifications, cap-reached alerts, QuickBooks sync
-                failure warnings, and billing receipts. These emails are sent from
-                noreply@splitre.app and are necessary for the Service to function.
+                deal-confirmed notifications, cap-reached alerts, and billing receipts.
+                These emails are sent from noreply@splitre.app and are necessary for the
+                Service to function.
               </li>
               <li>
                 Send product update and marketing emails to active subscribers. You may

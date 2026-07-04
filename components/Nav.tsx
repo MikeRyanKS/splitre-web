@@ -23,6 +23,7 @@ export default function Nav() {
             <Link href="/pricing" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Pricing</Link>
             <Link href="/blog" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Blog</Link>
             <Link href="/docs" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Help Docs</Link>
+            <Link href="/docs/faq" className="text-gray-600 hover:text-gray-900 font-medium text-sm">FAQ</Link>
             <Link href="/about" className="text-gray-600 hover:text-gray-900 font-medium text-sm">About</Link>
           </div>
 
@@ -52,6 +53,7 @@ export default function Nav() {
             <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Pricing</Link>
             <Link href="/blog" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Blog</Link>
             <Link href="/docs" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Help Docs</Link>
+            <Link href="/docs/faq" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">FAQ</Link>
             <Link href="/about" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">About</Link>
             <div className="pt-2 flex flex-col gap-2">
               <Link href="https://app.splitre.app/login" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Sign in</Link>

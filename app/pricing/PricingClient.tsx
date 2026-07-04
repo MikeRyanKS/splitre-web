@@ -59,8 +59,7 @@ const allFeatures = [
   "Mid-year cap migration for new hires",
   "Per-agent plan overrides",
   "QuickBooks-ready CSV export for your bookkeeper",
-  "PDF agent earnings statements",
-  "Shareable deal breakdown links",
+  "One-click PDF download and shareable links for confirmed deals",
   "Automated agent notifications on deal confirmation and amendments",
   "Email alerts (cap reached, deal confirmed)",
   "Bulk deal & agent import from CSV",
@@ -70,7 +69,7 @@ const allFeatures = [
 const faqs = [
   {
     q: "Do all plans include the same features?",
-    a: "Yes. Every SplitRE plan includes every feature: QuickBooks-ready CSV export, cap tracking, PDF statements, agent email notifications, deal share links, and everything else. The only difference between plans is the number of active agents your brokerage can have. No features are locked behind higher tiers.",
+    a: "Yes. Every SplitRE plan includes every feature: QuickBooks-ready CSV export, cap tracking, one-click PDF downloads and share links for confirmed deals, agent email notifications, and everything else. The only difference between plans is the number of active agents your brokerage can have. No features are locked behind higher tiers.",
   },
   {
     q: "What counts toward my agent limit?",

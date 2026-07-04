@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SplitRE Features — Built for How Brokerages Actually Work",
     description:
-      "Commission calculation engine, real-time cap tracking, automatic agent notifications, QuickBooks-ready CSV export, per-agent plan overrides, and PDF earnings statements.",
+      "Commission calculation engine, real-time cap tracking, automatic agent notifications, QuickBooks-ready CSV export, per-agent plan overrides, and one-click PDF downloads.",
     url: "https://splitre.app/features",
   },
 };
@@ -294,13 +294,13 @@ export default function FeaturesPage() {
           <div className="text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Deal History</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">A complete paper trail, automatically</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Search any deal in seconds. Export a date range for your accountant. Pull a PDF statement for an agent who needs it for a mortgage application or a dispute. It&apos;s all there, exactly as it was calculated.</p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Search any deal in seconds. Export a date range for your accountant. Download a single deal&apos;s breakdown as a PDF for an agent who needs it for a mortgage application or a dispute. It&apos;s all there, exactly as it was calculated.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { icon: "🗂️", title: "Confirmed deal log", desc: "Every confirmed deal on record with the full breakdown as it was calculated." },
               { icon: "📥", title: "CSV export", desc: "Export any date range to CSV for your accountant or custom reports." },
-              { icon: "📄", title: "PDF agent summaries", desc: "Generate a clean commission statement for any agent, any period." },
+              { icon: "📄", title: "One-click PDF download", desc: "Download or share any confirmed deal's commission breakdown in one click." },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="bg-gray-50 rounded-xl p-6">
                 <div className="text-2xl mb-3">{icon}</div>

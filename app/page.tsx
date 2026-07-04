@@ -21,7 +21,7 @@ const softwareSchema = {
     "Annual agent cap tracking with automatic cap flip",
     "QuickBooks-ready CSV export for bookkeepers",
     "Automatic agent email notifications on confirmed and amended deals",
-    "PDF agent earnings statements",
+    "One-click PDF download for confirmed deals",
     "Tiered commission split support",
     "Per-agent commission plan overrides",
     "Bulk deal and agent import from CSV",
@@ -324,8 +324,8 @@ export default function HomePage() {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 ),
-                title: "PDF agent earnings statements",
-                desc: "Generate a professional annual earnings PDF for any agent in seconds. Useful for mortgage applications, tax prep, or end-of-year summaries, without touching a spreadsheet.",
+                title: "One-click PDF download",
+                desc: "Download any confirmed deal's commission breakdown as a PDF in one click. Useful for a mortgage application, a dispute, or an agent's own records, without touching a spreadsheet.",
               },
             ].map(({ color, iconColor, icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl p-5 md:p-8 border border-gray-100">
