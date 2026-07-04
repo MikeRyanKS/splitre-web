@@ -2,22 +2,22 @@
 
 > Commission management software for independent US real estate brokerages.
 
-SplitRE is a web application that automates commission calculations, annual cap tracking, and QuickBooks Online sync for real estate brokerages. It is built and operated by Keplify LLC, a Delaware-incorporated company.
+SplitRE is a web application that automates commission calculations, annual cap tracking, and bookkeeper-ready exports for real estate brokerages. It is built and operated by Keplify LLC, a Delaware-incorporated company.
 
 ## What SplitRE does
 
 - Calculates agent commission splits from rule-based commission plans (percentage splits, tiered splits, flat post-cap fees, E&O and transaction fee deductions, referral deductions)
 - Tracks each agent's annual gross commission income (GCI) toward their cap in real time
-- Automatically flips agent splits to 100% when they cross their annual cap
-- Syncs confirmed deals to QuickBooks Online as Invoices and Bills with one click
-- Generates PDF agent earnings statements
+- Automatically flips agent splits to 100% (or a flat post-cap fee) when they cross their annual cap
+- Exports confirmed deals as a QuickBooks-ready CSV, with pre-formatted invoice and bill descriptions, for import into QuickBooks Online
+- Generates a shareable, printable commission breakdown for each confirmed deal via a public share link
 - Allows per-agent commission plan overrides without affecting brokerage-wide plans
 - Supports mid-year cap migration for agents who join during a cap year
 - Provides shareable read-only deal breakdown links for agents and attorneys
 
 ## Who it is for
 
-Independent US real estate brokerages, typically 1–50 agents. Suitable for boutique broker-owners replacing spreadsheets, growing independents who need a QuickBooks-connected back office, and established brokerages with multiple commission plan structures.
+Independent US real estate brokerages, typically 1–50 agents. Suitable for boutique broker-owners replacing spreadsheets, growing independents who need a QuickBooks-ready back office, and established brokerages with multiple commission plan structures.
 
 ## Pricing
 
@@ -40,6 +40,22 @@ All plans include a 14-day free trial with no credit card required.
 - Terms of Service: https://splitre.app/terms
 - App login: https://app.splitre.app/login
 - Start free trial: https://app.splitre.app/signup
+
+## Documentation
+
+Full help docs, indexed by topic: https://splitre.app/docs
+
+- Getting Started with SplitRE: https://splitre.app/docs/getting-started — the three things every brokerage sets up first, and the order to do them in
+- Creating a Commission Plan: https://splitre.app/docs/creating-commission-plans — splits, caps, deductions, and the 3-stage calculation
+- Adding Agents: https://splitre.app/docs/adding-agents — one at a time or bulk CSV import
+- Importing Agents and Deals via CSV: https://splitre.app/docs/importing-agents-and-deals-via-csv — column-by-column import reference
+- Entering and Managing Deals: https://splitre.app/docs/entering-and-managing-deals — draft, confirm, amend, void lifecycle
+- Setting Up Agent Caps: https://splitre.app/docs/setting-up-agent-caps — cap opening balances and the cap ledger
+- Sharing and Exporting Deals: https://splitre.app/docs/sharing-and-exporting-deals — share links, printable breakdowns, QuickBooks CSV export
+- Exporting Your Brokerage Data: https://splitre.app/docs/exporting-your-brokerage-data — full account backup
+- Glossary: https://splitre.app/docs/glossary — definitions for GCI, cap, splittable amount, breakdown snapshot, and other SplitRE-specific terms
+- Managing Billing and Subscription: https://splitre.app/docs/managing-billing-and-subscription — tiers, limits, refunds, cancellation
+- Frequently Asked Questions: https://splitre.app/docs/faq — trial, pricing, data security, QuickBooks, agent access
 
 ## Company
 
