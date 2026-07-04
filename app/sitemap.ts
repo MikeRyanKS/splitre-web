@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/blog";
+import { getAllDocSlugs } from "@/lib/docs";
 
 export const dynamic = "force-static";
 
@@ -30,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/blog`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/docs`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "weekly",
       priority: 0.8,
@@ -67,5 +74,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPages];
+  const docPages: MetadataRoute.Sitemap = getAllDocSlugs().map((slug) => ({
+    url: `${BASE_URL}/docs/${slug}`,
+    lastModified: LAST_MODIFIED,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...blogPages, ...docPages];
 }

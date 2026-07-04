@@ -1,0 +1,55 @@
+---
+title: "Importing Agents and Deals via CSV"
+category: "Core How-Tos"
+order: 3
+excerpt: "Exact column-by-column guide to the agent and deal import wizards — what's required, what's optional, and what happens at each step."
+readTime: "5 min read"
+keywords: ["csv import real estate", "bulk import agents", "bulk import deals", "brokerage data migration"]
+---
+
+Both import wizards — [Import Agents](https://app.splitre.app/settings/import-agents) and [Import Deals](https://app.splitre.app/settings/import-deals) — follow the same four steps: **Upload → Map columns → Preview → Import**. Nothing is created in SplitRE until you confirm the Preview step, so it's safe to upload a file just to see how it maps.
+
+## Importing agents
+
+Go to [Import Agents](https://app.splitre.app/settings/import-agents).
+
+| Field | Required? |
+|---|---|
+| Agent name | Required |
+| Email | Required |
+| Prior cap collected this year ($) | Optional |
+
+Use "Prior cap collected this year" for any agent who's joining mid-year, or migrating from another system where they already had a running cap balance — this keeps their cap tracking accurate from their very first SplitRE deal. If left blank, it defaults to $0.
+
+## Importing deals
+
+Go to [Import Deals](https://app.splitre.app/settings/import-deals).
+
+| Field | Required? |
+|---|---|
+| Agent name | Required |
+| Agent email | Optional |
+| Street address | Required |
+| City | Optional |
+| State (2-letter code) | Optional |
+| Zip code | Optional |
+| Sale price | Required |
+| Commission % | Required |
+| Referral % | Optional |
+| Relocation % | Optional |
+| Bonus amount ($) | Optional |
+| Closing date | Optional |
+
+If you include an agent email that doesn't match an existing agent, SplitRE creates that agent automatically as part of the import — you don't need to import agents first, though doing so lets you set their commission plan and cap balance ahead of time.
+
+Closing date determines which calendar year a deal counts against for cap purposes — not the date you import it. Leave it blank and it defaults to today.
+
+## After import
+
+Imported deals land as **drafts**. Review them on [Deals](https://app.splitre.app/deals) and confirm each one when you're ready — see [Entering and Managing Deals](/docs/entering-and-managing-deals) for what confirming does.
+
+## Related
+
+- [Adding Agents](/docs/adding-agents)
+- [Entering and Managing Deals](/docs/entering-and-managing-deals)
+- [Setting Up Agent Caps](/docs/setting-up-agent-caps)

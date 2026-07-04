@@ -1,0 +1,32 @@
+---
+title: "Setting Up Agent Caps"
+category: "Core How-Tos"
+order: 5
+excerpt: "How to set a cap opening balance for agents joining mid-year, and how the cap ledger tracks progress the rest of the time."
+readTime: "3 min read"
+keywords: ["real estate agent cap", "cap opening balance", "brokerage cap tracking"]
+---
+
+The cap is the maximum amount your brokerage collects from an agent in a calendar year — see [Creating a Commission Plan](/docs/creating-commission-plans) for how it factors into the calculation itself. This guide covers the one-time setup step: telling SplitRE how much of that cap an agent has already used.
+
+## Cap opening balance
+
+If an agent joins mid-year, or you're migrating from another system where they already had deals collected against their cap this year, you need to set their **cap opening balance** — otherwise SplitRE will think they're starting from $0 and they'll be under-capped for the rest of the year.
+
+1. Go to [Agents](https://app.splitre.app/agents) and click the agent's row to open their drawer.
+2. Find the **Cap Opening Balance** field — it's described there as the amount of broker cut already collected for this agent before they were added to SplitRE.
+3. Enter the dollar amount and click **Save**. If they don't have a prior balance, use **Set to zero**.
+
+You can also reach a more detailed cap setup flow from that agent's own profile page (via the **Cap setup** button).
+
+## How the cap ledger works after that
+
+Once the opening balance is set, SplitRE tracks the running total automatically — every confirmed deal for that agent adds a row to their cap ledger, with the cumulative total (opening balance + everything collected since) checked against the cap limit before each deal's broker cut is calculated. When the cumulative total reaches the cap, the agent gets 100% (or a flat post-cap fee, if the plan defines one) on every deal for the rest of that calendar year.
+
+The cap year resets every January 1st, based on each deal's closing date — not the date it happens to be confirmed.
+
+## Related
+
+- [Creating a Commission Plan](/docs/creating-commission-plans)
+- [Adding Agents](/docs/adding-agents)
+- Deeper dive: [The Real Estate Commission Cap, Explained](/blog/real-estate-commission-cap-explained)

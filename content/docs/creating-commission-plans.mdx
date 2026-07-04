@@ -1,0 +1,56 @@
+---
+title: "Creating a Commission Plan"
+category: "Core How-Tos"
+order: 1
+excerpt: "Splits, caps, and deductions — how SplitRE's commission plans work, and how to set one up for your brokerage."
+readTime: "6 min read"
+keywords: ["commission plan setup", "real estate commission split", "brokerage cap setup"]
+---
+
+A commission plan is the reusable template that determines how every deal assigned to it gets calculated. Set it up once, assign agents to it, and every deal they close is split automatically the same way.
+
+Go to [Commission Plans](https://app.splitre.app/plans) to create or edit a plan.
+
+## How a deal is calculated
+
+SplitRE runs every deal through three stages, in order:
+
+1. **Off the top** — franchise fee %, referral %, relocation %, and any flat or percentage deductions defined on the plan are subtracted from the GCI first. What's left is the **splittable amount**.
+2. **The split** — your plan's agent/broker split percentage is applied to the splittable amount. If the agent has already hit their annual cap, the broker's cut is capped (or replaced with a flat post-cap fee, if your plan defines one).
+3. **Agent deductions** — things that come out of the agent's share specifically: E&O insurance, transaction fees, desk fees, training/mentor fees, or custom deductions. What's left is the **agent's net payout**.
+
+## Plan rule types
+
+When building a plan, you'll combine these rule types:
+
+- **Split** — the agent/broker percentage split (e.g. 70/30). Must add up to 100%.
+- **Cap** — the maximum dollar amount the brokerage collects from an agent in a calendar year. Once hit, the agent keeps everything (or pays only a flat post-cap fee) for the rest of the year.
+- **Flat deduction** — a fixed dollar amount taken off the top or from the agent's share.
+- **Percentage deduction** — a percentage of GCI taken off the top (e.g. a franchise royalty).
+- **Counter gate** — an extra fee that only applies to an agent's first N deals (for example, a mentorship fee on their first 3 closings). This counts deals in the order they're confirmed, not the order they closed — see the note below.
+- **Team split** — for agents who split commission within a team, rather than 1:1 with the brokerage.
+
+## A worked example
+
+Agent on a 70/30 split, $20,000 annual cap, no deductions yet used this year:
+
+- Deal GCI: $10,000
+- Broker's cut at 30%: $3,000 → agent nets $7,000
+- Running total collected from this agent so far this year: $3,000 (well under the $20,000 cap)
+
+If that same agent had already had $18,500 collected from them this year, the broker's cut on this deal would be capped at $1,500 (the remaining room under the cap), not the full $3,000 — and the agent would net $8,500 instead.
+
+## Per-agent overrides without a new plan
+
+If one agent needs a slightly different split, cap, or extra deduction, you don't need to duplicate the whole plan — set a **plan override** for that agent from their row on [Agents](https://app.splitre.app/agents). Deal-specific one-offs (a referral fee or bonus that only applies to a single closing) are set as a **deal override** when entering that deal, and get frozen into that deal's record once it's confirmed.
+
+## A known limitation: counter gates and backdated deals
+
+Counter gates count an agent's deals in the order they're **confirmed**, not the order they closed. If you confirm deals out of chronological order (for example, importing older deals after newer ones are already confirmed), the counter-gate fee may not land on the deal you'd expect. Keep deal confirmation roughly in closing-date order if you're relying on a counter gate.
+
+## Related
+
+- [Adding Agents](/docs/adding-agents)
+- [Setting Up Agent Caps](/docs/setting-up-agent-caps)
+- [Glossary](/docs/glossary) — quick definitions for GCI, split, splittable amount, and more
+- Deeper dive: [The Real Estate Commission Cap, Explained](/blog/real-estate-commission-cap-explained)
