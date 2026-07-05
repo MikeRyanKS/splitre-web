@@ -6,11 +6,11 @@ import ContactModal from "@/components/ContactModal";
 
 const CHECKOUT_URL = "https://pvxduycjxnvccputddbq.supabase.co/functions/v1/stripe-checkout-public";
 
-async function startDirectCheckout(plan: string, interval: string) {
+async function startDirectCheckout(plan: string, interval: string, couponCode: string) {
   const res = await fetch(CHECKOUT_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ plan, interval }),
+    body: JSON.stringify({ plan, interval, coupon_code: couponCode || undefined }),
   });
   const data = await res.json() as { url?: string; error?: string };
   if (data.url) window.location.href = data.url;
@@ -99,6 +99,7 @@ const faqs = [
 
 export default function PricingClient() {
   const [interval, setInterval] = useState<"monthly" | "annual">("annual");
+  const [couponCode, setCouponCode] = useState("");
   const [buyLoading, setBuyLoading] = useState<string | null>(null);
   const [buyError, setBuyError] = useState<string | null>(null);
 
@@ -106,9 +107,9 @@ export default function PricingClient() {
     setBuyLoading(planName);
     setBuyError(null);
     try {
-      await startDirectCheckout(planName.toLowerCase(), interval);
-    } catch {
-      setBuyError("Something went wrong. Please try again.");
+      await startDirectCheckout(planName.toLowerCase(), interval, couponCode);
+    } catch (err) {
+      setBuyError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
       setBuyLoading(null);
     }
   }
@@ -147,6 +148,17 @@ export default function PricingClient() {
             </span>
           </button>
         </div>
+      </section>
+
+      {/* Coupon code */}
+      <section className="pb-6 px-4 text-center">
+        <input
+          type="text"
+          value={couponCode}
+          onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
+          placeholder="Have a coupon code?"
+          className="w-full max-w-[220px] rounded-lg border border-gray-200 px-3 py-2 text-sm text-center uppercase focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
       </section>
 
       {/* Plan cards */}
