@@ -33,6 +33,7 @@ export default function DemoClient() {
   const [capUsed, setCapUsed] = useState(0);
   const [eoFee, setEoFee] = useState(150);
   const [txnFee, setTxnFee] = useState(395);
+  const [franchisePct, setFranchisePct] = useState(0);
 
   const [showAdjustments, setShowAdjustments] = useState(false);
   const [referralPct, setReferralPct] = useState(0);
@@ -56,11 +57,12 @@ export default function DemoClient() {
     const list: RuleNode[] = [
       { type: "split", id: "split", agent_pct: agentPct, broker_pct: 100 - agentPct },
     ];
+    if (franchisePct > 0) list.push({ type: "percentage_deduction", id: "franchise", label: "Franchise Royalty Fee", pct: franchisePct, stage: 1 });
     if (capLimit > 0) list.push({ type: "cap", id: "cap", limit: capLimit });
     if (eoFee > 0) list.push({ type: "flat_deduction", id: "eo", label: "E&O Insurance Fee", amount: eoFee, stage: 3 });
     if (txnFee > 0) list.push({ type: "flat_deduction", id: "txn", label: "Transaction / Compliance Fee", amount: txnFee, stage: 3 });
     return list;
-  }, [agentPct, capLimit, eoFee, txnFee]);
+  }, [agentPct, franchisePct, capLimit, eoFee, txnFee]);
 
   const breakdown = useMemo(
     () =>
@@ -181,6 +183,9 @@ export default function DemoClient() {
                     onChange={(e) => setAgentPct(Number(e.target.value))}
                     className="w-full accent-indigo-600"
                   />
+                </Field>
+                <Field label="Franchise royalty fee % (optional — e.g. Keller Williams, RE/MAX)">
+                  <PctInput value={franchisePct} onChange={setFranchisePct} step={0.5} />
                 </Field>
                 <div className="grid grid-cols-2 gap-3">
                   <Field label="Annual cap limit">
