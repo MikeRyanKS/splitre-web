@@ -8,7 +8,7 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm print:hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2.5">
@@ -21,6 +21,7 @@ export default function Nav() {
           <div className="hidden md:flex items-center gap-8">
             <Link href="/features" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Features</Link>
             <Link href="/pricing" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Pricing</Link>
+            <Link href="/demo" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Try Demo</Link>
             <Link href="/blog" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Blog</Link>
             <Link href="/docs" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Help Docs</Link>
             <Link href="/docs/faq" className="text-gray-600 hover:text-gray-900 font-medium text-sm">FAQ</Link>
@@ -51,6 +52,7 @@ export default function Nav() {
           <div className="md:hidden py-4 border-t border-gray-100 space-y-2">
             <Link href="/features" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Features</Link>
             <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Pricing</Link>
+            <Link href="/demo" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Try Demo</Link>
             <Link href="/blog" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Blog</Link>
             <Link href="/docs" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Help Docs</Link>
             <Link href="/docs/faq" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">FAQ</Link>

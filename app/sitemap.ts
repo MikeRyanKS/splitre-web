@@ -1,15 +1,14 @@
 import type { MetadataRoute } from "next";
-import { getAllSlugs } from "@/lib/blog";
+import { getAllPosts } from "@/lib/blog";
 import { getAllDocSlugs } from "@/lib/docs";
 
 export const dynamic = "force-static";
 
 const BASE_URL = "https://splitre.app";
-const LAST_MODIFIED = new Date("2026-06-14");
+// Reviewed date for static + docs pages (bump when the marketing pages change).
+const LAST_MODIFIED = new Date("2026-07-14");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const slugs = getAllSlugs();
-
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
@@ -67,9 +66,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const blogPages: MetadataRoute.Sitemap = slugs.map((slug) => ({
-    url: `${BASE_URL}/blog/${slug}`,
-    lastModified: LAST_MODIFIED,
+  const blogPages: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

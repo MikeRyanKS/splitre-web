@@ -122,6 +122,9 @@ export default function PricingClient() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
           <p className="text-xl text-gray-600 mb-2">No per-agent fees. No feature paywalls. No surprise charges.</p>
           <p className="text-indigo-600 font-semibold">14-day free trial on all plans, no credit card required.</p>
+          <Link href="/demo" className="inline-block mt-4 text-sm text-gray-500 underline hover:text-gray-700">
+            Not ready to sign up? Try the calculator free →
+          </Link>
         </div>
       </section>
 

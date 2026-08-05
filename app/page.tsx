@@ -93,7 +93,7 @@ export default function HomePage() {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
             SplitRE calculates every agent split automatically, keeps cap balances current in real time, emails agents their breakdown the moment you confirm, and hands your bookkeeper a QuickBooks-ready CSV. No spreadsheets. No re-keying.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
               href="https://app.splitre.app/signup"
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-indigo-200"
@@ -101,13 +101,16 @@ export default function HomePage() {
               Start free, no credit card
             </Link>
             <Link
-              href="/features"
-              className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold px-8 py-4 rounded-xl text-lg transition-colors"
+              href="/demo"
+              className="border border-indigo-200 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold px-8 py-4 rounded-xl text-lg transition-colors"
             >
-              See how it works
+              Try the free demo →
             </Link>
           </div>
-          <p className="mt-4 text-sm text-gray-400">14-day free trial · All features included · Cancel any time</p>
+          <p className="mt-4 text-sm text-gray-400">
+            14-day free trial · All features included · Cancel any time ·{" "}
+            <Link href="/demo" className="underline hover:text-gray-600">try a deal now, no signup needed</Link>
+          </p>
         </div>
       </section>
 
@@ -190,15 +193,20 @@ export default function HomePage() {
             <p className="text-gray-600 mb-6">
               For a 5-agent brokerage closing 50 deals a year, that works out to roughly 37 to 50 hours of manual admin and 2 to 3 commission errors that cost an average of $1,100 each to sort out.
             </p>
-            <Link
-              href="https://app.splitre.app/signup"
-              className="inline-flex items-center gap-2 bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-700 transition-colors"
-            >
-              Fix it with SplitRE
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href="https://app.splitre.app/signup"
+                className="inline-flex items-center gap-2 bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-700 transition-colors"
+              >
+                Fix it with SplitRE
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link href="/demo" className="text-indigo-600 font-semibold hover:underline">
+                Or try a deal free, no signup →
+              </Link>
+            </div>
           </div>
           {/* Mock deal breakdown card */}
           <div className="bg-gray-50 rounded-2xl p-5 md:p-8 border border-gray-200 shadow-sm">
@@ -237,9 +245,12 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <button className="mt-5 w-full bg-indigo-600 text-white text-sm font-semibold py-2.5 rounded-lg">
-              Confirm Deal →
-            </button>
+            <Link
+              href="/demo"
+              className="mt-5 block w-full text-center bg-indigo-600 text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-indigo-700 transition-colors"
+            >
+              Try This Calculation Free →
+            </Link>
           </div>
         </div>
       </section>
@@ -468,21 +479,27 @@ export default function HomePage() {
           <p className="text-indigo-200 text-sm mb-8">
             For a 5-agent brokerage, SplitRE pays for itself the first time it catches a commission error.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/pricing"
-              className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors"
-            >
-              View pricing
-            </Link>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
               href="https://app.splitre.app/signup"
-              className="border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
+              className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors"
             >
               Start free trial
             </Link>
+            <Link
+              href="/demo"
+              className="border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
+            >
+              Try the free demo →
+            </Link>
+            <Link
+              href="/pricing"
+              className="text-indigo-100 font-semibold px-4 py-4 hover:text-white transition-colors underline"
+            >
+              View pricing
+            </Link>
           </div>
-          <p className="mt-4 text-sm text-indigo-300">14-day free trial · No credit card required</p>
+          <p className="mt-4 text-sm text-indigo-300">14-day free trial · No credit card required · Demo needs no signup at all</p>
         </div>
       </section>
     </>
