@@ -45,7 +45,7 @@ export default function ReceiptCard({
           <p className="text-white text-[11px] font-semibold uppercase tracking-wider">
             {brokerageName || "Your Brokerage"} · Demo Deal
           </p>
-          <h1 className="mt-2 text-white text-xl font-bold">{address || "123 Main St"}</h1>
+          <p className="mt-2 text-white text-xl font-bold">{address || "123 Main St"}</p>
           <p className="mt-1 text-indigo-50 text-sm">
             {agentName || "Agent Name"} &nbsp;·&nbsp; {dateLabel}
           </p>

@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 
 const BASE_URL = "https://splitre.app";
 // Reviewed date for static + docs pages (bump when the marketing pages change).
-const LAST_MODIFIED = new Date("2026-07-14");
+const LAST_MODIFIED = new Date("2026-08-05");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -24,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/pricing`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/real-estate-commission-split-calculator`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.9,

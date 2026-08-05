@@ -101,7 +101,7 @@ export default function HomePage() {
               Start free, no credit card
             </Link>
             <Link
-              href="/demo"
+              href="/real-estate-commission-split-calculator"
               className="border border-indigo-200 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold px-8 py-4 rounded-xl text-lg transition-colors"
             >
               Try the free demo →
@@ -109,7 +109,7 @@ export default function HomePage() {
           </div>
           <p className="mt-4 text-sm text-gray-400">
             14-day free trial · All features included · Cancel any time ·{" "}
-            <Link href="/demo" className="underline hover:text-gray-600">try a deal now, no signup needed</Link>
+            <Link href="/real-estate-commission-split-calculator" className="underline hover:text-gray-600">try a deal now, no signup needed</Link>
           </p>
         </div>
       </section>
@@ -203,7 +203,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
-              <Link href="/demo" className="text-indigo-600 font-semibold hover:underline">
+              <Link href="/real-estate-commission-split-calculator" className="text-indigo-600 font-semibold hover:underline">
                 Or try a deal free, no signup →
               </Link>
             </div>
@@ -246,7 +246,7 @@ export default function HomePage() {
               </div>
             </div>
             <Link
-              href="/demo"
+              href="/real-estate-commission-split-calculator"
               className="mt-5 block w-full text-center bg-indigo-600 text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-indigo-700 transition-colors"
             >
               Try This Calculation Free →
@@ -487,7 +487,7 @@ export default function HomePage() {
               Start free trial
             </Link>
             <Link
-              href="/demo"
+              href="/real-estate-commission-split-calculator"
               className="border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
             >
               Try the free demo →
