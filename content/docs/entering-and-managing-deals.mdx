@@ -23,6 +23,7 @@ When a deal is ready to be finalized, click **Confirm & Email Agent**. This:
 
 - Locks the deal's numbers into a permanent breakdown snapshot (edits after this point require an amendment, not a direct edit).
 - Recalculates the commission server-side — the numbers you see in the preview are double-checked, not just trusted from your browser.
+- Assigns the deal a sequential **Deal #**, shown in its own column on the Deals list — a stable reference that doesn't repeat or change even if the address does (the same property can close more than once over the years).
 - Updates the agent's cap ledger for the year.
 - Emails the agent their commission breakdown.
 
@@ -32,12 +33,12 @@ An agent can never be confirmed into a negative payout — SplitRE blocks any co
 
 Need to fix a confirmed deal? Open it and click **Amend**, which takes you to an amendment form. Saving it (**Save Amendment**) creates a new deal record linked back to the original — the original stays in your history for an audit trail, and the amendment's numbers are what count going forward for cap and reporting purposes.
 
-## Void
+## Removing a deal
 
-To reverse a deal entirely:
+What "removing" means depends on whether the deal was ever confirmed:
 
-- On a **draft**, click **Void** — it's removed without affecting cap totals (it never counted toward them).
-- On a **confirmed** deal, open it and click **Void the deal**, then **Confirm void**. This reverses its contribution to the agent's cap ledger for the year.
+- A **draft** was never a real transaction, so it can be deleted outright: open it and click **Delete draft**, then confirm. This permanently removes the record — it never counted toward cap totals, so nothing else is affected.
+- A **confirmed** deal is a financial record — it's voided, never deleted, so there's always a trail of what actually happened. Open it and click **Void the deal**, then **Confirm void**. This reverses its contribution to the agent's cap ledger for the year and emails both you and the agent, since it's changing a record they may be relying on.
 
 ## Related
 
