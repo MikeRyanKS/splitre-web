@@ -44,7 +44,7 @@ const plans = [
     annual: 2028,
     annualPerMonth: 169,
     annualSavings: 360,
-    agentLimit: "31+ agents",
+    agentLimit: "Unlimited agents",
     desc: "For established brokerages with multiple plan structures and a bookkeeper.",
     popular: false,
   },

@@ -184,7 +184,7 @@ export default function TermsPage() {
             <ul className="list-disc pl-5 mt-3 space-y-1">
               <li><strong>Boutique:</strong> Up to 10 active agents</li>
               <li><strong>Independent:</strong> Up to 30 active agents</li>
-              <li><strong>Brokerage:</strong> 31 or more active agents</li>
+              <li><strong>Brokerage:</strong> Unlimited active agents</li>
             </ul>
             <p className="mt-3">
               &ldquo;Active agents&rdquo; means any agent profile on your account that is not
