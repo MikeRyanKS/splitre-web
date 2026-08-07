@@ -121,8 +121,8 @@ export default function FeaturesPage() {
             <Image
               src="/screenshots/splitre-commission-deal-entry-calculator.png"
               alt="SplitRE Close a Deal form showing a live payout preview with cap progress, broker cut, and agent net payout updating as the deal is entered"
-              width={1915}
-              height={932}
+              width={1919}
+              height={856}
               className="w-full h-auto"
             />
           </div>
@@ -231,8 +231,8 @@ export default function FeaturesPage() {
               <Image
                 src="/screenshots/splitre-agent-confirmation-email.png"
                 alt="Real SplitRE commission-confirmed email showing the full breakdown and agent net payout"
-                width={547}
-                height={592}
+                width={546}
+                height={512}
                 className="w-full h-auto"
               />
             </div>
