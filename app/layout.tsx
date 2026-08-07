@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       {
         url: "/screenshots/splitre-real-estate-brokerage-dashboard.png",
         width: 1200,
-        alt: "SplitRE real estate commission management dashboard showing agent cap progress and broker revenue",
+        alt: "SplitRE real estate commission management dashboard showing agent cap progress bars and broker revenue",
       },
     ],
   },

@@ -83,9 +83,9 @@ export default function FeaturesPage() {
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
             <Image
               src="/screenshots/splitre-real-estate-brokerage-dashboard.png"
-              alt="SplitRE dashboard — cap progress for 6 agents, $74,428 YTD broker revenue, recent deals"
-              width={1440}
-              height={900}
+              alt="SplitRE dashboard showing agent cap progress bars, draft deals, YTD broker revenue, and recent deals"
+              width={1906}
+              height={921}
               className="w-full h-auto"
               priority
             />
@@ -120,11 +120,46 @@ export default function FeaturesPage() {
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <Image
               src="/screenshots/splitre-commission-deal-entry-calculator.png"
-              alt="SplitRE deal entry form showing live payout preview with broker cut, agent gross, and net payout"
-              width={1440}
-              height={900}
+              alt="SplitRE Close a Deal form showing a live payout preview with cap progress, broker cut, and agent net payout updating as the deal is entered"
+              width={1915}
+              height={932}
               className="w-full h-auto"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Commission plan templates */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <Image
+              src="/screenshots/splitre-commission-plan-setup.png"
+              alt="SplitRE Commission Plans list showing multiple named plans, each applied across a different number of agents"
+              width={1911}
+              height={932}
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="order-1 md:order-2">
+            <div className="inline-block bg-fuchsia-100 text-fuchsia-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Commission Plan Templates</div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">One plan, many agents</h2>
+            <p className="text-gray-600 mb-6">Set up a commission plan once — a split, a cap, whatever deductions apply — and assign it to every agent who uses it. A senior agent plan, a franchise-fee plan, a plan for new hires: keep as many as your brokerage actually needs, each one editable in one place instead of re-entering the same rules per agent.</p>
+            <ul className="space-y-3">
+              {[
+                "Named, reusable plan templates",
+                "Any number of plans, each applied to as many agents as you want",
+                "Per-agent overrides without touching the shared plan",
+                "See agent count and rule count for every plan at a glance",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -135,9 +170,9 @@ export default function FeaturesPage() {
           <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <Image
               src="/screenshots/splitre-deals-list-csv-export.png"
-              alt="SplitRE deals list showing commission totals, agent payouts, and one-click CSV export for bookkeeper"
-              width={1440}
-              height={900}
+              alt="SplitRE deals list with 19 confirmed deals selected and a one-click Export CSV for QuickBooks action"
+              width={1912}
+              height={920}
               className="w-full h-auto"
             />
           </div>
@@ -191,18 +226,15 @@ export default function FeaturesPage() {
             </ul>
           </div>
           <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-            <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Agent receives</div>
-            <div className="border border-gray-100 rounded-xl p-5 bg-gray-50 text-sm">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-7 h-7 bg-indigo-600 rounded-md flex items-center justify-center text-white text-xs font-bold">S</div>
-                <span className="font-semibold text-gray-900">SplitRE · Deal Confirmed</span>
-              </div>
-              <p className="text-gray-700 mb-3">A deal has been confirmed for <strong>Jennifer Rodriguez</strong>.</p>
-              <div className="space-y-1.5 text-xs text-gray-600">
-                <div className="flex justify-between"><span>Property</span><span className="font-medium text-gray-900">888 Rainey St #204, Austin TX</span></div>
-                <div className="flex justify-between"><span>GCI</span><span className="font-medium text-gray-900">$14,750</span></div>
-                <div className="flex justify-between"><span>Agent Net</span><span className="font-bold text-indigo-600">$10,325</span></div>
-              </div>
+            <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">What the agent receives</div>
+            <div className="rounded-xl overflow-hidden border border-gray-100">
+              <Image
+                src="/screenshots/splitre-agent-confirmation-email.png"
+                alt="Real SplitRE commission-confirmed email showing the full breakdown and agent net payout"
+                width={547}
+                height={592}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -211,22 +243,14 @@ export default function FeaturesPage() {
       {/* Import */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div className="order-2 md:order-1 bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm text-sm">
-            <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Import preview</div>
-            {[
-              { name: "Jennifer Rodriguez", status: "ready", note: "Matched by email" },
-              { name: "Marcus Williams", status: "ready", note: "Auto-created from CSV" },
-              { name: "Sarah Johnson", status: "warn", note: "Same name, different email — will import" },
-              { name: "David Chen", status: "skip", note: "Email already exists — skipped" },
-            ].map(({ name, status, note }) => (
-              <div key={name} className={`flex items-center gap-3 px-3 py-2.5 rounded-lg mb-2 ${status === "ready" ? "bg-emerald-50 border border-emerald-100" : status === "warn" ? "bg-amber-50 border border-amber-100" : "bg-red-50 border border-red-100"}`}>
-                <div className={`w-2 h-2 rounded-full flex-shrink-0 ${status === "ready" ? "bg-emerald-500" : status === "warn" ? "bg-amber-500" : "bg-red-400"}`} />
-                <div>
-                  <div className="font-medium text-gray-900">{name}</div>
-                  <div className="text-xs text-gray-500">{note}</div>
-                </div>
-              </div>
-            ))}
+          <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <Image
+              src="/screenshots/splitre-import-deals-csv.png"
+              alt="SplitRE CSV import column-mapping step showing 113 rows detected and matched to deal fields"
+              width={1913}
+              height={858}
+              className="w-full h-auto"
+            />
           </div>
           <div className="order-1 md:order-2">
             <div className="inline-block bg-sky-100 text-sky-700 rounded-full px-3 py-1 text-sm font-medium mb-4">CSV Import</div>
