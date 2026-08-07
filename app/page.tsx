@@ -114,26 +114,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ROI bar */}
-      <section className="bg-indigo-600 py-12 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white mb-6">
-            {[
-              { stat: "~30 hrs/yr", label: "saved on commission admin for a small brokerage (up to 10 agents)" },
-              { stat: "2.6× to 7.4× ROI", label: "average return on your annual subscription cost" },
-              { stat: "$900/yr", label: "in reclaimed admin time for a small brokerage (up to 10 agents)" },
-            ].map(({ stat, label }) => (
-              <div key={stat}>
-                <div className="text-3xl font-extrabold mb-1">{stat}</div>
-                <div className="text-indigo-200 text-sm">{label}</div>
-              </div>
-            ))}
+      {/* ROI bar — small brokerages (risk) vs. growing brokerages (hours) */}
+      <section className="bg-indigo-600 py-16 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
+          {/* Small brokerages — the risk of one mistake */}
+          <div className="text-white">
+            <div className="text-xs font-semibold text-indigo-200 uppercase tracking-wider mb-3">For small brokerages</div>
+            <div className="text-3xl font-extrabold mb-2">$20K–$50K</div>
+            <p className="text-indigo-100 text-sm mb-4">
+              is what it costs to replace one producing agent — recruiting, onboarding, and the deals that don&apos;t close while their seat is empty. For a small brokerage, that agent can be a third of the business.
+            </p>
+            <p className="text-indigo-100 text-sm">
+              At <span className="font-bold text-white">$348/yr</span>, SplitRE only has to prevent <span className="font-bold text-white">one</span> commission mistake, <span className="font-bold text-white">once</span>, to pay for itself for the next <span className="font-bold text-white">57 years</span>.
+            </p>
           </div>
-          <p className="text-center text-indigo-100 text-sm">
-            Brokerages with 31+ agents save up to{" "}
-            <span className="font-bold text-white">$15,000/yr</span>{" "}
-            in reclaimed admin time. At that scale the ROI is obvious. But even a 3-agent shop running one deal a week gets there fast.
-          </p>
+
+          {/* Growing brokerages — hours and ROI at scale */}
+          <div className="text-white md:border-l md:border-indigo-400/30 md:pl-8">
+            <div className="text-xs font-semibold text-indigo-200 uppercase tracking-wider mb-3">For growing brokerages</div>
+            <div className="grid grid-cols-3 gap-3 text-center mb-4">
+              {[
+                { stat: "~30 hrs/yr", label: "saved at 10 agents" },
+                { stat: "2.6×–7.4×", label: "ROI on subscription" },
+                { stat: "$900/yr", label: "reclaimed at 10 agents" },
+              ].map(({ stat, label }) => (
+                <div key={stat}>
+                  <div className="text-xl font-extrabold mb-1">{stat}</div>
+                  <div className="text-indigo-200 text-xs">{label}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-indigo-100 text-sm">
+              Brokerages with 31+ agents save up to <span className="font-bold text-white">$15,000/yr</span> in reclaimed admin time — the bigger the team, the more obvious the ROI.
+            </p>
+          </div>
         </div>
       </section>
 
