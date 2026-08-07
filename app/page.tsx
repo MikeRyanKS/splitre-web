@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "SplitRE — Commission Management Software for Real Estate Brokerages",
   description:
-    "SplitRE replaces commission spreadsheets for independent real estate brokerages. Automated split calculations, agent cap tracking, automatic agent notifications, and a QuickBooks-ready CSV export for your bookkeeper. Plans from $62/mo.",
+    "SplitRE replaces commission spreadsheets for independent real estate brokerages. Automated split calculations, agent cap tracking, automatic agent notifications, and a QuickBooks-ready CSV export for your bookkeeper. Plans from $29/mo.",
   alternates: { canonical: "https://splitre.app" },
 };
 
@@ -29,8 +29,8 @@ const softwareSchema = {
   ],
   offers: {
     "@type": "AggregateOffer",
-    lowPrice: "62",
-    highPrice: "329",
+    lowPrice: "29",
+    highPrice: "199",
     priceCurrency: "USD",
     offerCount: "3",
   },
@@ -119,9 +119,9 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white mb-6">
             {[
-              { stat: "~120 hrs/yr", label: "saved on commission admin for a 10-agent brokerage" },
-              { stat: "5× to 13× ROI", label: "average return on your annual subscription cost" },
-              { stat: "$9,000/yr", label: "in reclaimed broker time for a 10-agent brokerage" },
+              { stat: "~30 hrs/yr", label: "saved on commission admin for a small brokerage (up to 10 agents)" },
+              { stat: "2.6× to 7.4× ROI", label: "average return on your annual subscription cost" },
+              { stat: "$900/yr", label: "in reclaimed admin time for a small brokerage (up to 10 agents)" },
             ].map(({ stat, label }) => (
               <div key={stat}>
                 <div className="text-3xl font-extrabold mb-1">{stat}</div>
@@ -130,8 +130,8 @@ export default function HomePage() {
             ))}
           </div>
           <p className="text-center text-indigo-100 text-sm">
-            Brokerages with 50+ agents save up to{" "}
-            <span className="font-bold text-white">$36,000/yr</span>{" "}
+            Brokerages with 31+ agents save up to{" "}
+            <span className="font-bold text-white">$15,000/yr</span>{" "}
             in reclaimed admin time. At that scale the ROI is obvious. But even a 3-agent shop running one deal a week gets there fast.
           </p>
         </div>
@@ -191,7 +191,7 @@ export default function HomePage() {
               You copy last month&apos;s spreadsheet, update the numbers by hand, hope the cap balance is right, then call or text the agent to tell them what they&apos;re getting paid, and manually re-key everything into QuickBooks. One typo in a formula and an agent gets underpaid, or worse overpaid, and now you have a conversation you don&apos;t want to have.
             </p>
             <p className="text-gray-600 mb-6">
-              For a 5-agent brokerage closing 50 deals a year, that works out to roughly 37 to 50 hours of manual admin and 2 to 3 commission errors that cost an average of $1,100 each to sort out.
+              For a small brokerage, one of those typos isn&apos;t a rounding error — it&apos;s the reason a top producer walks. Replacing an agent costs a brokerage $20,000 to $50,000 once you count recruiting, onboarding, and the deals that stall while the seat sits empty. SplitRE exists to make sure that mistake never happens.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
@@ -395,23 +395,23 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Works for brokerages of every size</h2>
           <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-            A 3-agent boutique and a 40-agent independent brokerage get the exact same tool. Your plan tier reflects your team size, not your feature set.
+            A 3-agent boutique and a 25-agent independent brokerage get the exact same tool. Your plan tier reflects your team size, not your feature set.
           </p>
           <div className="grid md:grid-cols-3 gap-6 text-left">
             {[
               {
                 who: "Boutique broker-owners",
-                size: "1 to 5 agents",
+                size: "1 to 10 agents",
                 pain: "You&apos;re doing commissions yourself in a spreadsheet you copy every month. One wrong formula and you&apos;re explaining an underpayment to your top producer.",
               },
               {
                 who: "Growing independents",
-                size: "6 to 25 agents",
+                size: "11 to 30 agents",
                 pain: "You&apos;ve outgrown the spreadsheet but can&apos;t justify enterprise software. Agents are calling to ask what they were paid. Your bookkeeper re-keys every closing by hand. SplitRE fixes all of that.",
               },
               {
                 who: "Established brokerages",
-                size: "26 or more agents",
+                size: "31 or more agents",
                 pain: "Multiple commission plan structures, cap migration for mid-year hires, and a bookkeeper who needs clean export files every month. SplitRE handles all of it. They get a ready-to-import CSV.",
               },
             ].map(({ who, size, pain }) => (
@@ -472,9 +472,9 @@ export default function HomePage() {
       {/* Pricing CTA */}
       <section className="py-24 px-4 bg-gradient-to-br from-indigo-600 to-violet-700 text-white text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Plans from $62/month</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Plans from $29/month</h2>
           <p className="text-indigo-100 text-lg mb-3">
-            All plans include every feature. Pay annually and save around 30%.
+            All plans include every feature. Pay annually and save up to 17%.
           </p>
           <p className="text-indigo-200 text-sm mb-8">
             For a 5-agent brokerage, SplitRE pays for itself the first time it catches a commission error.

@@ -40,9 +40,9 @@ export default function AboutPage() {
           <div className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-indigo-100">
             <div className="space-y-6">
               {[
-                { stat: "~120 hrs/yr", label: "saved on commission admin for a 10-agent brokerage" },
+                { stat: "~30 hrs/yr", label: "saved on commission admin for a small brokerage (up to 10 agents)" },
                 { stat: "80%", label: "of brokerages pay agents incorrectly at least once per year" },
-                { stat: "5× to 13×", label: "average ROI on annual subscription cost, depending on team size" },
+                { stat: "2.6× to 7.4×", label: "average ROI on annual subscription cost, depending on team size" },
               ].map(({ stat, label }) => (
                 <div key={stat}>
                   <div className="text-3xl font-extrabold text-indigo-600">{stat}</div>

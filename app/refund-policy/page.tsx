@@ -73,8 +73,8 @@ export default function RefundPolicyPage() {
               the reason for the refund, so they cannot be included in the refund amount.
             </p>
             <p className="mt-3">
-              Example: if you paid $89.00 and a refund is approved, you would receive
-              approximately $85.82 back ($89.00 minus ~$2.88 in Stripe processing fees
+              Example: if you paid $35.00 and a refund is approved, you would receive
+              approximately $33.68 back ($35.00 minus ~$1.32 in Stripe processing fees
               on a typical US card transaction). The exact fee deducted will be stated
               in your refund confirmation email.
             </p>

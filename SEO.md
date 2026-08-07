@@ -60,7 +60,7 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 ### Pricing (`splitre.app/pricing`)
 - Meta title: "Pricing — Real Estate Commission Management Software"
 - Primary: `real estate commission software pricing`, `brokerage back office software cost`
-- Note: include dollar amounts in meta description (Boutique $89/mo, Independent $189/mo, Brokerage $329/mo) — Google surfaces prices in snippets
+- Note: include dollar amounts in meta description (Boutique $35/mo, Independent $75/mo, Brokerage $199/mo) — Google surfaces prices in snippets
 
 ### Features (`splitre.app/features`)
 - Primary: `commission split calculator`, `real estate cap tracking`, `QuickBooks real estate brokerage`
@@ -123,13 +123,13 @@ Both pages reference Keplify LLC as the operating entity (Delaware LLC). Terms i
 
 ## ROI / trust copy (for use in content)
 
-Real numbers validated for a 5-agent brokerage closing 50 deals/year:
-- ~50 hrs/yr admin labor saved (at $40/hr = $2,000 value)
-- 2–3 commission errors prevented per year
-- Average commission error: ~10% slip on $11K GCI = ~$1,100/error
-- Net annual savings: $2,500–$4,000
-- At $749/yr (Boutique annual): **3.5×–5× ROI**
-- "Pays for itself with the first commission error it prevents"
+Real numbers for a Boutique-tier brokerage (up to 10 agents):
+- ~2.5 hrs/mo admin labor saved (at $30/hr = ~$900/yr value)
+- Plan cost: $348/yr (Boutique annual) → **~2.6× ROI from time savings alone**
+- Replacing a producing agent costs a brokerage $20,000–$50,000 once you count recruiting, onboarding, and the deals that stall while the seat is empty — that's the real argument for small shops, not per-error dollar amounts
+- "One prevented commission error covers ~57 years of SplitRE at $348/yr"
+
+Time-value figures scale by tier — see the pricing page's time-savings table (Independent: ~10 hrs/mo at $40/hr = ~$4,800/yr, $780/yr cost, ~6.2× ROI; Brokerage: ~25 hrs/mo at $50/hr = ~$15,000/yr, $2,028/yr cost, ~7.4× ROI).
 
 ---
 

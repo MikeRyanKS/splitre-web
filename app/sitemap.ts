@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 
 const BASE_URL = "https://splitre.app";
 // Reviewed date for static + docs pages (bump when the marketing pages change).
-const LAST_MODIFIED = new Date("2026-08-05");
+const LAST_MODIFIED = new Date("2026-08-07");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

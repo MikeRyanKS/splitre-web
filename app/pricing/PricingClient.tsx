@@ -20,31 +20,31 @@ async function startDirectCheckout(plan: string, interval: string, couponCode: s
 const plans = [
   {
     name: "Boutique",
-    monthly: 89,
-    annual: 749,
-    annualPerMonth: 62,
-    annualSavings: 319,
-    agentLimit: "Up to 5 agents",
+    monthly: 35,
+    annual: 348,
+    annualPerMonth: 29,
+    annualSavings: 72,
+    agentLimit: "Up to 10 agents",
     desc: "For small owner-operated brokerages replacing their first spreadsheet.",
     popular: false,
   },
   {
     name: "Independent",
-    monthly: 189,
-    annual: 1599,
-    annualPerMonth: 133,
-    annualSavings: 669,
-    agentLimit: "Up to 25 agents",
+    monthly: 75,
+    annual: 780,
+    annualPerMonth: 65,
+    annualSavings: 120,
+    agentLimit: "Up to 30 agents",
     desc: "For growing independents who need clean books and a reliable cap ledger.",
     popular: true,
   },
   {
     name: "Brokerage",
-    monthly: 329,
-    annual: 2799,
-    annualPerMonth: 233,
-    annualSavings: 1149,
-    agentLimit: "Unlimited agents",
+    monthly: 199,
+    annual: 2028,
+    annualPerMonth: 169,
+    annualSavings: 360,
+    agentLimit: "31+ agents",
     desc: "For established brokerages with multiple plan structures and a bookkeeper.",
     popular: false,
   },
@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     q: "How does the annual plan work?",
-    a: "Annual plans are billed once per year at the discounted rate, saving you roughly 30% compared to monthly. You can cancel before your renewal date and you won't be charged again.",
+    a: "Annual plans are billed once per year at the discounted rate, saving you up to 17% compared to monthly (the exact discount varies by tier). You can cancel before your renewal date and you won't be charged again.",
   },
   {
     q: "How does the QuickBooks-ready CSV export work?",
@@ -147,7 +147,7 @@ export default function PricingClient() {
           >
             Annual
             <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
-              Save ~30%
+              Save up to 17%
             </span>
           </button>
         </div>
@@ -274,39 +274,64 @@ export default function PricingClient() {
         </div>
       </section>
 
-      {/* ROI callout */}
+      {/* Error-prevention lead block */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl border border-gray-200 bg-white px-6 py-10 sm:px-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              At $29 a month, SplitRE costs less than one team lunch
+            </h2>
+            <div className="space-y-4 text-gray-600 max-w-2xl mx-auto">
+              <p>
+                When your team is small, the risk isn&apos;t wasted hours — it&apos;s a single mistake. Pay one top producer wrong, and you&apos;re not fixing a spreadsheet; you&apos;re trying to keep them from leaving. Replacing a producing agent costs a brokerage <strong className="text-gray-900">$20,000–$50,000</strong> once you count recruiting, onboarding, and the deals that don&apos;t close while their seat is empty.
+              </p>
+              <p>For a small brokerage, that agent might be a third of your business.</p>
+              <p>
+                At <strong className="text-gray-900">$348 a year</strong>, SplitRE has to prevent <em>one</em> commission error, <em>one time</em>, to cover itself for the next <strong className="text-gray-900">57 years</strong> — and that&apos;s on the low end of what losing an agent costs. It&apos;s small enough to sit on your card and never think about, and precise enough that you never pay an agent wrong again. That&apos;s the whole trade.
+              </p>
+              <p className="text-center text-indigo-600 font-semibold pt-2">
+                Start your free 14-day trial — no credit card required. No meetings, no migration project, no sales call.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ROI / time-savings table */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Does SplitRE pay for itself?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What you save in admin time</h2>
             <p className="text-gray-600 max-w-xl mx-auto">
-              Every deal that goes through SplitRE saves roughly <strong>60 minutes</strong> of manual admin: commission calculation, cap tracking, agent notification emails, and bookkeeper export, all handled automatically.
+              Even before it prevents a single error, SplitRE gives you back the hours you currently spend on commission admin every month.
             </p>
           </div>
 
           {/* Tiered savings table */}
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 mb-10">
-            <table className="w-full min-w-[640px] text-sm">
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 mb-6">
+            <table className="w-full min-w-[720px] text-sm">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="text-left px-6 py-4 font-semibold text-gray-700">Plan</th>
                   <th className="text-left px-6 py-4 font-semibold text-gray-700">Team size</th>
                   <th className="text-left px-6 py-4 font-semibold text-gray-700">Hours saved / month</th>
-                  <th className="text-left px-6 py-4 font-semibold text-gray-700">Value saved / year</th>
+                  <th className="text-left px-6 py-4 font-semibold text-gray-700">Admin rate</th>
+                  <th className="text-left px-6 py-4 font-semibold text-gray-700">Time value / year</th>
                   <th className="text-left px-6 py-4 font-semibold text-gray-700">Plan cost / year</th>
-                  <th className="text-left px-6 py-4 font-semibold text-indigo-600">ROI</th>
+                  <th className="text-left px-6 py-4 font-semibold text-indigo-600">Return</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { plan: "Boutique", size: "1–5 agents", hours: "~4 hrs", value: "~$3,600", cost: "$749", roi: "~5×", highlight: false },
-                  { plan: "Independent", size: "6–25 agents", hours: "~10 hrs", value: "~$9,000", cost: "$1,599", roi: "~5.6×", highlight: false },
-                  { plan: "Brokerage", size: "26+ agents", hours: "~25 hrs", value: "~$22,500+", cost: "$2,799", roi: "~8–13×", highlight: true },
-                ].map(({ plan, size, hours, value, cost, roi, highlight }) => (
+                  { plan: "Boutique", size: "1–10 agents", hours: "~2.5 hrs", rate: "$30/hr", value: "~$900", cost: "$348", roi: "~2.6×", highlight: false },
+                  { plan: "Independent", size: "11–30 agents", hours: "~10 hrs", rate: "$40/hr", value: "~$4,800", cost: "$780", roi: "~6.2×", highlight: false },
+                  { plan: "Brokerage", size: "31+ agents", hours: "~25 hrs", rate: "$50/hr", value: "~$15,000", cost: "$2,028", roi: "~7.4×", highlight: true },
+                ].map(({ plan, size, hours, rate, value, cost, roi, highlight }) => (
                   <tr key={plan} className={highlight ? "bg-indigo-50" : "bg-white"}>
                     <td className="px-6 py-4 font-semibold text-gray-900">{plan}</td>
                     <td className="px-6 py-4 text-gray-600">{size}</td>
                     <td className="px-6 py-4 text-gray-900 font-medium">{hours}</td>
+                    <td className="px-6 py-4 text-gray-600">{rate}</td>
                     <td className={`px-6 py-4 font-semibold ${highlight ? "text-indigo-700" : "text-gray-900"}`}>{value}</td>
                     <td className="px-6 py-4 text-gray-500">{cost}</td>
                     <td className={`px-6 py-4 font-bold text-lg ${highlight ? "text-indigo-600" : "text-gray-700"}`}>{roi}</td>
@@ -316,8 +341,20 @@ export default function PricingClient() {
             </table>
           </div>
 
+          <div className="max-w-2xl mx-auto space-y-2 mb-6">
+            <p className="text-center text-xs text-gray-400 italic">
+              All returns above use the annual plan price. Monthly billing costs slightly more per year and lowers these ratios proportionally — the annual figures are the honest baseline to quote.
+            </p>
+            <p className="text-center text-xs text-gray-400 italic">
+              Admin rate rises with tier on purpose: in a small shop the owner does the commission admin themselves, valued modestly. Larger brokerages pay a real admin or office manager to do it, so every hour saved is a dollar off payroll.
+            </p>
+            <p className="text-center text-xs text-gray-400 italic">
+              And this table only counts time — deliberately conservatively. For a small brokerage, time was never the real reason to switch. The mispayment you don&apos;t make is (see the block above).
+            </p>
+          </div>
+
           <p className="text-center text-xs text-gray-400">
-            Based on ~1 hr saved per deal (conservative estimate including calculation, bookkeeper CSV export, cap tracking, and agent communications), broker time valued at $75/hr, annual billing pricing, and NAR median deal volume per agent. Errors prevented not included.
+            Time value uses a deliberately conservative admin hourly rate that scales with brokerage size — reflecting that small-shop owners do this work themselves (valued modestly), while larger brokerages pay dedicated admin staff. Error-prevention figures reflect the industry-documented cost of losing a producer to a payment dispute; your results depend on your deal volume and commission complexity.
           </p>
         </div>
       </section>
