@@ -114,7 +114,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ROI bar — small brokerages (risk) vs. growing brokerages (hours) */}
+      {/* ROI bar — small brokerages (risk) vs. large brokerages (hours) */}
       <section className="bg-indigo-600 py-16 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
           {/* Small brokerages — the risk of one mistake */}
@@ -129,14 +129,14 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Growing brokerages — hours and ROI at scale */}
+          {/* Large brokerages — hours and ROI at scale */}
           <div className="text-white md:border-l md:border-indigo-400/30 md:pl-8">
-            <div className="text-xs font-semibold text-indigo-200 uppercase tracking-wider mb-3">For growing brokerages</div>
+            <div className="text-xs font-semibold text-indigo-200 uppercase tracking-wider mb-3">For large brokerages</div>
             <div className="grid grid-cols-3 gap-3 text-center mb-4">
               {[
-                { stat: "~30 hrs/yr", label: "saved at 10 agents" },
-                { stat: "2.6×–7.4×", label: "ROI on subscription" },
-                { stat: "$900/yr", label: "reclaimed at 10 agents" },
+                { stat: "~300 hrs/yr", label: "saved at 31+ agents" },
+                { stat: "~7.4×", label: "ROI on subscription" },
+                { stat: "$15,000/yr", label: "reclaimed at 31+ agents" },
               ].map(({ stat, label }) => (
                 <div key={stat}>
                   <div className="text-xl font-extrabold mb-1">{stat}</div>
@@ -145,7 +145,7 @@ export default function HomePage() {
               ))}
             </div>
             <p className="text-indigo-100 text-sm">
-              Brokerages with 31+ agents save up to <span className="font-bold text-white">$15,000/yr</span> in reclaimed admin time — the bigger the team, the more obvious the ROI.
+              At 31+ agents, the manual admin load is a real job — SplitRE turns it back into a button click.
             </p>
           </div>
         </div>
@@ -274,10 +274,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
             <Image
-              src="/screenshots/splitre-real-estate-brokerage-dashboard.png"
-              alt="SplitRE dashboard showing agent cap progress bars, draft deals, YTD broker revenue, and recent deals"
-              width={1906}
-              height={921}
+              src="/screenshots/splitre-commission-deal-entry-calculator.png"
+              alt="SplitRE Close a Deal form showing a live payout preview with cap progress, broker cut, and agent net payout updating as the deal is entered"
+              width={1919}
+              height={856}
               className="w-full h-auto"
               priority
             />
