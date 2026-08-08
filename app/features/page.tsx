@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 
 export const metadata: Metadata = {
   title: "Features — Commission Calculation, Cap Tracking & Bookkeeper-Ready CSV Export",
@@ -81,7 +81,7 @@ export default function FeaturesPage() {
       <section className="bg-gray-50 pb-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
-            <Image
+            <ZoomableScreenshot
               src="/screenshots/splitre-real-estate-brokerage-dashboard.png"
               alt="SplitRE dashboard showing agent cap progress bars, draft deals, YTD broker revenue, and recent deals"
               width={1906}
@@ -118,7 +118,7 @@ export default function FeaturesPage() {
             </ul>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-            <Image
+            <ZoomableScreenshot
               src="/screenshots/splitre-commission-deal-entry-calculator.png"
               alt="SplitRE Close a Deal form showing a live payout preview with cap progress, broker cut, and agent net payout updating as the deal is entered"
               width={1919}
@@ -133,7 +133,7 @@ export default function FeaturesPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-            <Image
+            <ZoomableScreenshot
               src="/screenshots/splitre-commission-plan-setup.png"
               alt="SplitRE Commission Plans list showing multiple named plans, each applied across a different number of agents"
               width={1911}
@@ -168,7 +168,7 @@ export default function FeaturesPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-            <Image
+            <ZoomableScreenshot
               src="/screenshots/splitre-deals-list-csv-export.png"
               alt="SplitRE deals list with 19 confirmed deals selected and a one-click Export CSV for QuickBooks action"
               width={1912}
@@ -228,7 +228,7 @@ export default function FeaturesPage() {
           <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
             <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">What the agent receives</div>
             <div className="rounded-xl overflow-hidden border border-gray-100">
-              <Image
+              <ZoomableScreenshot
                 src="/screenshots/splitre-agent-confirmation-email.png"
                 alt="Real SplitRE commission-confirmed email showing the full breakdown and agent net payout"
                 width={546}
@@ -244,7 +244,7 @@ export default function FeaturesPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-            <Image
+            <ZoomableScreenshot
               src="/screenshots/splitre-import-deals-csv.png"
               alt="SplitRE CSV import column-mapping step showing 113 rows detected and matched to deal fields"
               width={1913}
@@ -301,7 +301,7 @@ export default function FeaturesPage() {
             </ul>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-            <Image
+            <ZoomableScreenshot
               src="/screenshots/splitre-agent-cap-tracking-dashboard.png"
               alt="SplitRE agents page showing cap progress bars for 6 agents across two commission plans"
               width={1440}

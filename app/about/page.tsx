@@ -38,17 +38,21 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-indigo-100">
-            <div className="space-y-6">
-              {[
-                { stat: "~30 hrs/yr", label: "saved on commission admin for a small brokerage (up to 10 agents)" },
-                { stat: "80%", label: "of brokerages pay agents incorrectly at least once per year" },
-                { stat: "2.6× to 7.4×", label: "average ROI on annual subscription cost, depending on team size" },
-              ].map(({ stat, label }) => (
-                <div key={stat}>
-                  <div className="text-3xl font-extrabold text-indigo-600">{stat}</div>
-                  <div className="text-sm text-gray-600 mt-1">{label}</div>
-                </div>
-              ))}
+            <div>
+              <div className="text-3xl font-extrabold text-indigo-600">80%</div>
+              <div className="text-sm text-gray-600 mt-1">of brokerages pay agents incorrectly at least once per year</div>
+            </div>
+
+            <div className="border-t border-gray-100 mt-6 pt-6">
+              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">For small brokerages</div>
+              <div className="text-2xl font-extrabold text-indigo-600">$20K–$50K</div>
+              <div className="text-sm text-gray-600 mt-1">cost of replacing one producing agent lost to a bad commission experience — often a third of the business</div>
+            </div>
+
+            <div className="border-t border-gray-100 mt-6 pt-6">
+              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">For large brokerages</div>
+              <div className="text-2xl font-extrabold text-indigo-600">~7.4× ROI</div>
+              <div className="text-sm text-gray-600 mt-1">~300 hrs/yr and $15,000/yr reclaimed in admin time at 31+ agents</div>
             </div>
           </div>
         </div>
