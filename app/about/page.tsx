@@ -5,7 +5,7 @@ import ContactInline from "@/components/ContactInline";
 export const metadata: Metadata = {
   title: "About SplitRE — Commission Software Built for Independent Brokerages",
   description:
-    "SplitRE is built by Keplify LLC, a Delaware-incorporated company. Our mission: make commission accuracy a given for every independent real estate brokerage, from boutique to established.",
+    "SplitRE is independent brokerage software built by Keplify LLC, a Delaware-incorporated company. Our mission: make commission accuracy a given for every independent real estate brokerage, from boutique to established.",
   alternates: { canonical: "https://splitre.app/about" },
   openGraph: {
     title: "About SplitRE — Why We Built a Better Commission Tool",
@@ -34,7 +34,7 @@ export default function AboutPage() {
               Independent real estate brokerages run on trust. The trust agents place in their broker to pay them correctly and on time. When that breaks, agents leave. 80% of brokerages pay at least one agent incorrectly per year, and most of those errors start with a spreadsheet.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              We want commission accuracy to be something you take for granted, not something you double-check after every closing. A 5-agent boutique should have the same financial precision that large franchise groups pay enterprise software for.
+              We want commission accuracy to be something you take for granted, not something you double-check after every closing. A 5-agent boutique should have the same financial precision that large franchise groups pay enterprise software for — which is exactly why we built independent brokerage software instead of chasing enterprise contracts.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-indigo-100">

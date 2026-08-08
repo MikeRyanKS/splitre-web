@@ -5,7 +5,7 @@ import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 export const metadata: Metadata = {
   title: "Features — Commission Calculation, Cap Tracking & Bookkeeper-Ready CSV Export",
   description:
-    "SplitRE handles every commission structure your brokerage uses: percentage splits, tiered splits, flat fees, E&O deductions, automatic cap tracking, agent notifications, and QuickBooks-ready CSV export. Built for independent real estate brokerages.",
+    "SplitRE is commission calculation software for brokerages: percentage splits, tiered splits, flat fees, E&O deductions, real estate cap tracking, agent notifications, and QuickBooks-ready CSV export. Built for independent real estate brokerages.",
   alternates: { canonical: "https://splitre.app/features" },
   openGraph: {
     title: "SplitRE Features — Built for How Brokerages Actually Work",
@@ -73,7 +73,7 @@ export default function FeaturesPage() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">What SplitRE actually does</h1>
-          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week: commission calculations, cap tracking, agent notifications, and bookkeeper exports.</p>
+          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week: commission calculations, cap tracking, agent notifications, and bookkeeper exports. It&apos;s real estate brokerage back office software built entirely around commissions, not a CRM with commissions bolted on.</p>
         </div>
       </section>
 
@@ -99,7 +99,7 @@ export default function FeaturesPage() {
           <div>
             <div className="inline-block bg-indigo-100 text-indigo-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Commission Engine</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">The math is always right</h2>
-            <p className="text-gray-600 mb-6">SplitRE handles every plan structure your brokerage uses: percentage splits, tiered splits, flat fees, E&amp;O deductions, and transaction fees. Set up the rules once and every deal calculates correctly from that point on.</p>
+            <p className="text-gray-600 mb-6">SplitRE is agent commission tracking and calculation software built for how brokerages actually structure plans: percentage splits, tiered splits, flat fees, E&amp;O deductions, and transaction fees. Set up the rules once and every deal calculates correctly from that point on.</p>
             <ul className="space-y-3">
               {[
                 "Live deal preview before confirming",
@@ -116,6 +116,9 @@ export default function FeaturesPage() {
                 </li>
               ))}
             </ul>
+            <Link href="/real-estate-commission-split-calculator" className="inline-block mt-6 text-indigo-600 font-semibold hover:underline">
+              Try the free commission split calculator →
+            </Link>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <ZoomableScreenshot
@@ -179,7 +182,7 @@ export default function FeaturesPage() {
           <div className="order-1 md:order-2">
             <div className="inline-block bg-emerald-100 text-emerald-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Bookkeeper Export</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">QuickBooks-ready in one click</h2>
-            <p className="text-gray-600 mb-6">Select any deals and click <strong>Export CSV for QuickBooks</strong>. Your bookkeeper gets a pre-formatted file with everything in place. No live connection to manage, no tokens to expire, and no call from them asking what any of the numbers mean.</p>
+            <p className="text-gray-600 mb-6">Select any deals and click <strong>Export CSV for QuickBooks</strong>. Your bookkeeper gets a pre-formatted file with everything in place — built specifically for QuickBooks real estate brokerage workflows, not a generic accounting export. No live connection to manage, no tokens to expire, and no call from them asking what any of the numbers mean.</p>
             <ul className="space-y-3">
               {[
                 "GCI (commission income) — enter as an Invoice in QBO",

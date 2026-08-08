@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
-import { getAllDocSlugs, getAllDocs, getDoc, slugifyCategory } from "@/lib/docs";
+import { getAllDocSlugs, getAllDocs, getDoc, getFaqEntries, slugifyCategory } from "@/lib/docs";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export async function generateStaticParams() {
@@ -59,20 +59,55 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
+    // Article, not TechArticle — Google's structured-data docs don't list
+    // TechArticle as eligible for rich results, so it was earning nothing.
+    "@type": "Article",
     headline: doc.title,
     description: doc.excerpt,
+    author: {
+      "@type": "Organization",
+      name: "SplitRE",
+      url: "https://splitre.app",
+    },
     publisher: {
       "@type": "Organization",
       name: "SplitRE",
       url: "https://splitre.app",
     },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://splitre.app/docs/${slug}`,
+    },
     keywords: doc.keywords.join(", "),
   };
+
+  // The FAQ doc's 16 Q&As are the highest-leverage schema gap on the site —
+  // FAQPage is eligible for rich results and /features + the calculator page
+  // already have it. Entries are parsed straight from doc.content so the
+  // schema can never drift from what MDXRemote actually renders below.
+  const faqEntries = slug === "faq" ? getFaqEntries(doc.content) : [];
+  const faqJsonLd =
+    faqEntries.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqEntries.map((entry) => ({
+            "@type": "Question",
+            name: entry.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: entry.answer,
+            },
+          })),
+        }
+      : null;
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
 
       <article className="py-16 px-4">
         <div className="max-w-3xl mx-auto">

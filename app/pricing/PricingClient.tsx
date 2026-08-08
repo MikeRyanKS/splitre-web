@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
+import { plans } from "@/lib/pricing";
 
 const CHECKOUT_URL = "https://pvxduycjxnvccputddbq.supabase.co/functions/v1/stripe-checkout-public";
 
@@ -16,39 +17,6 @@ async function startDirectCheckout(plan: string, interval: string, couponCode: s
   if (data.url) window.location.href = data.url;
   else throw new Error(data.error ?? "Checkout unavailable");
 }
-
-const plans = [
-  {
-    name: "Boutique",
-    monthly: 35,
-    annual: 348,
-    annualPerMonth: 29,
-    annualSavings: 72,
-    agentLimit: "Up to 10 agents",
-    desc: "For small owner-operated brokerages replacing their first spreadsheet.",
-    popular: false,
-  },
-  {
-    name: "Independent",
-    monthly: 75,
-    annual: 780,
-    annualPerMonth: 65,
-    annualSavings: 120,
-    agentLimit: "Up to 30 agents",
-    desc: "For growing independents who need clean books and a reliable cap ledger.",
-    popular: true,
-  },
-  {
-    name: "Brokerage",
-    monthly: 199,
-    annual: 2028,
-    annualPerMonth: 169,
-    annualSavings: 360,
-    agentLimit: "Unlimited agents",
-    desc: "For established brokerages with multiple plan structures and a bookkeeper.",
-    popular: false,
-  },
-];
 
 const allFeatures = [
   "Unlimited deals and transactions",
@@ -120,7 +88,7 @@ export default function PricingClient() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
-          <p className="text-xl text-gray-600 mb-2">No per-agent fees. No feature paywalls. No surprise charges.</p>
+          <p className="text-xl text-gray-600 mb-2">No per-agent fees. No feature paywalls. No surprise charges — real estate brokerage back office software with the cost of a single flat plan, not a per-seat bill that grows every time you hire.</p>
           <p className="text-indigo-600 font-semibold">14-day free trial on all plans, no credit card required.</p>
           <Link href="/real-estate-commission-split-calculator" className="inline-block mt-4 text-sm text-gray-500 underline hover:text-gray-700">
             Not ready to sign up? Try the calculator free →

@@ -100,6 +100,35 @@ export function getDocHeadings(content: string): DocHeading[] {
   return headings;
 }
 
+export interface FaqEntry {
+  question: string;
+  answer: string;
+}
+
+// Schema.org Answer.text expects plain text, and it must match what
+// MDXRemote actually renders visibly — so markdown link syntax is
+// collapsed to its link text rather than kept as `[text](url)`.
+function stripMarkdownLinks(text: string): string {
+  return text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+}
+
+// Extracts Q&A pairs from an MDX doc's ## headings for FAQPage JSON-LD.
+// Only headings ending in "?" count as questions, so non-Q&A sections
+// (e.g. "## Related") are skipped automatically.
+export function getFaqEntries(content: string): FaqEntry[] {
+  const sections = content.split(/^##\s+/m).slice(1);
+  const entries: FaqEntry[] = [];
+  for (const section of sections) {
+    const newlineIndex = section.indexOf("\n");
+    if (newlineIndex === -1) continue;
+    const heading = section.slice(0, newlineIndex).trim();
+    if (!heading.endsWith("?")) continue;
+    const answer = stripMarkdownLinks(section.slice(newlineIndex + 1).trim()).replace(/\s+/g, " ");
+    entries.push({ question: heading, answer });
+  }
+  return entries;
+}
+
 export interface NavArticle {
   slug: string;
   title: string;

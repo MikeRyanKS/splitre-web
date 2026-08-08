@@ -9,6 +9,7 @@ export interface BlogPost {
   excerpt: string;
   readTime: string;
   keywords: string[];
+  related: string[];
   content: string;
 }
 
@@ -28,6 +29,7 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
       excerpt: data.excerpt as string,
       readTime: data.readTime as string,
       keywords: (data.keywords as string[]) || [],
+      related: (data.related as string[]) || [],
     };
   });
 
@@ -46,6 +48,7 @@ export function getPost(slug: string): BlogPost | null {
     excerpt: data.excerpt as string,
     readTime: data.readTime as string,
     keywords: (data.keywords as string[]) || [],
+    related: (data.related as string[]) || [],
     content,
   };
 }

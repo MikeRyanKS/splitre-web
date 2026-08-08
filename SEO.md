@@ -41,12 +41,12 @@ Independent US real estate brokerages, 3–50 agents. Owner-operators and office
 
 | Competitor | Positioning gap |
 |---|---|
-| Paperless Pipeline | Priced by transaction volume — we're flat-rate |
-| Brokermint | Per-agent fees — we don't charge per agent |
+| Paperless Pipeline | Priced by transaction volume, commission tracking is a separate paid module — we're flat-rate with everything included |
+| Brokermint (rebranded **BoldTrail BackOffice** in 2024 by parent Inside Real Estate — still commonly searched under the old name) | Per-agent/seat pricing, quote-only — we publish flat per-tier pricing |
 | dotloop | CRM-heavy, no cap tracking — we focus on commissions |
 | kvCORE | Enterprise pricing — we're priced for independents |
 
-Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real estate commission software cheaper than Brokermint`
+Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real estate commission software cheaper than Brokermint`. Addressed in [SplitRE vs. Paperless Pipeline vs. Brokermint](https://splitre.app/blog/best-commission-split-software-for-brokerages) — verified current pricing/model via each competitor's own site before publishing.
 
 ---
 
@@ -66,13 +66,17 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 - Primary: `commission split calculator`, `real estate cap tracking`, `QuickBooks real estate brokerage`
 - Target one H2 per major feature with its exact keyword
 
-### Blog (future)
-Suggested posts ranked by keyword opportunity:
-1. "How to Track Agent Caps Without a Spreadsheet" → `real estate cap tracking`
-2. "QuickBooks Online for Real Estate Brokerages: A Practical Setup Guide" → `QuickBooks real estate brokerage`
-3. "Tiered Commission Splits Explained (and How to Automate Them)" → `tiered commission split brokerage`
-4. "Paperless Pipeline vs SplitRE: Which Is Right for Your Brokerage?" → `Paperless Pipeline alternative`
-5. "What Is a Commission Cap? A Guide for Brokerage Owners" → `real estate agent cap management`
+### Blog (8 posts live)
+1. "Why Your Commission Spreadsheet Is Costing You More Than You Think" (`eliminate-commission-spreadsheets`) → `real estate commission spreadsheet`
+2. "Real Estate Brokerage Accounting: What Every Broker Needs to Know" (`real-estate-brokerage-accounting-basics`) → `real estate brokerage accounting`
+3. "QuickBooks Online for Real Estate Brokerages: A Practical Setup Guide" (`quickbooks-online-real-estate-brokerage`) → `QuickBooks real estate brokerage`
+4. "The Real Estate Commission Cap: What Every Broker Needs to Know" (`real-estate-commission-cap-explained`) → `commission cap real estate`
+5. "How to Calculate Real Estate Agent Commission (The Right Way)" (`how-to-calculate-real-estate-agent-commission`) → `real estate agent commission calculator`
+6. "SplitRE vs. Paperless Pipeline vs. Brokermint" (`best-commission-split-software-for-brokerages`) → `Paperless Pipeline alternative`, `Brokermint alternative`
+7. "How the NAR Settlement Changed Commission Tracking for Brokerages" (`nar-settlement-commission-changes`) → `NAR settlement real estate`
+8. "Tiered Commission Splits Explained" (`tiered-commission-splits-explained`) → `tiered commission split brokerage` — honest about the gap: SplitRE's plan rules are a fixed split + cap-graduation, not multi-tier production splits; positions the cap as a simpler alternative rather than claiming a feature that doesn't exist
+
+`related` frontmatter hand-picks each post's 2 related posts (not "most recent 2" — see `lib/blog.ts`); all posts cross-link into `/docs` and back, plus into `/pricing`, `/features`, and the calculator. Blog posts render through `rehypeSlug` (same as docs) so every `##` heading has a stable anchor for deep-linking between posts.
 
 ---
 
@@ -93,17 +97,28 @@ Suggested posts ranked by keyword opportunity:
 | Page | Schema types |
 |---|---|
 | Layout (all pages) | `Organization` — Keplify LLC, Delaware, contact, sameAs social links |
-| Homepage | `SoftwareApplication` (with `featureList`) + `HowTo` (3-step deal process) |
+| Homepage | `SoftwareApplication` (with `featureList`, `AggregateOffer`) + `HowTo` (3-step deal process) |
 | Features | `FAQPage` — 4 Q&As targeting high-intent searches (cap tracking, tiered splits, QBO, per-agent overrides) |
+| Calculator (`/real-estate-commission-split-calculator`) | `WebApplication` (with `Offer`) + `FAQPage` — 8 Q&As |
+| Pricing (`/pricing`) | `Product` with a per-tier `Offer` array (name, price, description for Boutique/Independent/Brokerage) |
+| Every blog post | `BlogPosting` — headline, image, author/publisher, `dateModified`, `mainEntityOfPage` |
+| Every docs article | `Article` (not `TechArticle` — Google doesn't recognize that type for rich results) |
+| Docs FAQ (`/docs/faq`) | `FAQPage` — all 16 Q&As, parsed straight from the MDX content so schema can never drift from the visible page |
 
-Schema types eligible for Google AI Overviews and rich results: `HowTo`, `FAQPage`, `SoftwareApplication`.
+Schema types eligible for Google AI Overviews and rich results: `HowTo`, `FAQPage`, `SoftwareApplication`, `BlogPosting`, `Article`, `Product`.
 
 ## AI search optimization (generative AI / LLM)
 
-- **`robots.ts`**: Explicit allow rules for `GPTBot` (ChatGPT), `ClaudeBot` (Anthropic), `PerplexityBot`, `Meta-ExternalAgent`, `CCBot` (Common Crawl / LLM training), `bingbot` (Copilot)
-- **`public/llms.txt`**: Emerging standard for AI systems — plain-text summary of what SplitRE does, who it's for, pricing, and key URLs. Used by ChatGPT, Perplexity, and others to understand a site without crawling every page
+- **`robots.ts`**: Explicit allow rules for `GPTBot` (ChatGPT), `ClaudeBot` (Anthropic), `PerplexityBot`, `Meta-ExternalAgent`, `CCBot` (Common Crawl / LLM training), `Google-Extended` (Gemini / AI Overviews — distinct from plain `Googlebot`), `Applebot-Extended` (Apple Intelligence / Siri), `Bytespider` (ByteDance LLM training), `bingbot` (Copilot)
+- **`public/llms.txt`**: Emerging standard for AI systems — plain-text summary of what SplitRE does, who it's for, pricing, and key URLs. Google's own May 2026 guidance calls this unnecessary for their systems specifically, but other AI crawlers may still reference it — kept accurate, not treated as a growth lever
 - All content written in direct, factual prose (E-E-A-T signals) that AI systems can excerpt accurately
 - FAQ and HowTo schema provide structured Q&A that feeds directly into AI Overview answers
+- Every blog post carries a "By the SplitRE team" byline linking to `/about` — a modest but real E-E-A-T authorship signal, previously absent
+- Answer-first structure: the calculator page's H1 + subhead and the docs FAQ's per-question answers already led with the direct answer; the cap-explainer post's opening was restructured so the actual definition of a commission cap is the first sentence, not buried after a narrative hook
+
+## Analytics
+
+No analytics currently live. Plan: Cloudflare Web Analytics (privacy-friendly beacon, no cookie banner, native to the existing Cloudflare Pages host) — pending a site token from the Cloudflare dashboard before the beacon script can be added to `layout.tsx`.
 
 ## Sitemap
 

@@ -42,6 +42,13 @@ All plans include a 14-day free trial with no credit card required.
 - App login: https://app.splitre.app/login
 - Start free trial: https://app.splitre.app/signup
 
+## Blog highlights
+
+- SplitRE vs. Paperless Pipeline vs. Brokermint (now BoldTrail BackOffice): https://splitre.app/blog/best-commission-split-software-for-brokerages — pricing model and cap-tracking comparison
+- How the NAR Settlement Changed Commission Tracking for Brokerages: https://splitre.app/blog/nar-settlement-commission-changes
+- The Real Estate Commission Cap, Explained: https://splitre.app/blog/real-estate-commission-cap-explained
+- Tiered Commission Splits Explained: https://splitre.app/blog/tiered-commission-splits-explained
+
 ## Documentation
 
 Full help docs, indexed by topic: https://splitre.app/docs

@@ -4,6 +4,7 @@ date: "2026-04-10"
 excerpt: "QBO's default setup isn't built for brokerages. Here's how to structure your chart of accounts, handle agent payments correctly, and keep 1099 prep from becoming a nightmare."
 readTime: "7 min read"
 keywords: ["QuickBooks real estate brokerage", "QBO commission tracking", "QuickBooks Online brokerage setup", "real estate brokerage bookkeeping"]
+related: ["real-estate-brokerage-accounting-basics", "eliminate-commission-spreadsheets"]
 ---
 
 QuickBooks Online powers the books at most independent real estate brokerages. It's reliable, it connects to your bank, and your bookkeeper already knows it. The problem is that QBO is designed for a generic small business, not one that collects commission from closings, splits it with independent contractors, runs pre-split deductions, and files 1099-NECs for 20 agents at year end.
@@ -16,7 +17,7 @@ The chart of accounts is the foundation of everything. If it's wrong, every repo
 
 For a real estate brokerage, you need at minimum:
 
-**Income accounts:** Gross Commission Income (GCI), the full commission before any splits, plus separate accounts for Referral Income and Desk Fee Income if those apply. The critical discipline here: GCI goes in at the gross number, not the broker's net. If you only record what the brokerage keeps, your revenue is understated, your agent payments are untraceable, and 1099 prep becomes a reconstruction project.
+**Income accounts:** Gross Commission Income (GCI), the full commission before any splits, plus separate accounts for Referral Income and Desk Fee Income if those apply. The critical discipline here: GCI goes in at the gross number, not the broker's net — see [Real Estate Brokerage Accounting: What Every Broker Needs to Know](/blog/real-estate-brokerage-accounting-basics) for why that matters beyond just this account.
 
 **Cost of revenue:** Agent Commission Expense (the agent's portion of each deal) and Referral Fee Expense (commissions paid out for referrals received).
 
@@ -44,7 +45,7 @@ Every agent who is an independent contractor needs to be set up correctly as a v
 
 In QBO, open the Vendors section and create a profile for each agent. The fields that matter most: check the box to **track payments for 1099**, and enter their tax ID (SSN or EIN) from the W-9 they provided. Set up direct deposit (ACH) if your bank supports it, since it streamlines disbursement and creates a cleaner payment trail.
 
-Do this before the first payment, not at year end. QBO's 1099 report only captures payments made through properly configured vendor records. Payments entered elsewhere don't flow into the report automatically, and manually reconstructing them is exactly as unpleasant as it sounds.
+Do this before the first payment, not at year end. QBO's 1099 report only captures payments made through properly configured vendor records. Payments entered elsewhere don't flow into the report automatically, and manually reconstructing them is exactly as unpleasant as it sounds. For the underlying 1099 rules — including the LLC/S-corp distinction — see [Real Estate Brokerage Accounting: What Every Broker Needs to Know](/blog/real-estate-brokerage-accounting-basics#1099-preparation).
 
 ## Walking through a typical closing
 
@@ -62,9 +63,9 @@ For a brokerage closing 15 to 20 deals a month, that's 45 to 80 individual QBO e
 
 ## Getting Commission Data Into QBO Without Re-Entering Everything
 
-The cleaner approach is to calculate commissions in a dedicated tool and export the accounting data rather than entering everything by hand.
+The cleaner approach is to calculate commissions in a dedicated tool and [export the accounting data rather than entering everything by hand](/docs/sharing-and-exporting-deals).
 
-SplitRE generates a QuickBooks-ready CSV export for every batch of deals, formatted with closing dates, property addresses, agents, GCI amounts, agent net payouts, broker net revenue, and memo lines that map directly to QBO invoices and bills. You hand the file to your bookkeeper, they import it into QBO, and the manual re-keying step is gone entirely.
+SplitRE generates a QuickBooks-ready CSV export for every batch of deals, formatted with closing dates, property addresses, agents, GCI amounts, agent net payouts, broker net revenue, and memo lines that map directly to QBO invoices and bills. You hand the file to your bookkeeper, they import it into QBO, and the manual re-keying step is gone entirely — no more [maintaining a parallel spreadsheet](/blog/eliminate-commission-spreadsheets) just to get numbers into your books.
 
 The benefit isn't just speed. When commission calculations and QBO entries happen from the same source data, the translation errors disappear. The number that comes out of the commission calculation is the number that goes into the books, not a number that someone typed from a PDF while splitting their attention three ways.
 
@@ -75,3 +76,5 @@ QuickBooks Online Simple Start, Essentials, Plus, and Advanced all support the w
 ## Getting started the right way
 
 None of this is especially complicated once the structure is right. GCI goes in as income, agent payouts go out as expenses, agents are set up as 1099 vendors before the first payment, and the chart of accounts reflects how your brokerage actually makes money. Build that foundation carefully, and your bookkeeper will thank you every month, especially in January.
+
+SplitRE calculates every deal and hands you a QuickBooks-ready export with one click — see [Pricing](/pricing) or [try the calculator](/real-estate-commission-split-calculator) on a real deal first.

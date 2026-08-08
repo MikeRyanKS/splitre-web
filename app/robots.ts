@@ -42,6 +42,23 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "CCBot",
         allow: "/",
       },
+      // Google's AI-only allowlist flag — separate from plain Googlebot above;
+      // controls use in Gemini / AI Overviews training and grounding, not
+      // classic search indexing.
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+      },
+      // Apple Intelligence / Siri — the AI-only counterpart to Applebot.
+      {
+        userAgent: "Applebot-Extended",
+        allow: "/",
+      },
+      // ByteDance (TikTok) crawler, used for LLM training.
+      {
+        userAgent: "Bytespider",
+        allow: "/",
+      },
       // Bing / Copilot
       {
         userAgent: "bingbot",

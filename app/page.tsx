@@ -5,7 +5,7 @@ import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 export const metadata: Metadata = {
   title: "SplitRE — Commission Management Software for Real Estate Brokerages",
   description:
-    "SplitRE replaces commission spreadsheets for independent real estate brokerages. Automated split calculations, agent cap tracking, automatic agent notifications, and a QuickBooks-ready CSV export for your bookkeeper. Plans from $29/mo.",
+    "SplitRE is real estate commission management software that replaces commission spreadsheets for independent brokerages. Automated split calculations, agent commission tracking, automatic notifications, and a QuickBooks-ready CSV export for your bookkeeper. Plans from $29/mo.",
   alternates: { canonical: "https://splitre.app" },
 };
 
@@ -109,7 +109,7 @@ export default function HomePage() {
           </div>
           <p className="mt-4 text-sm text-gray-400">
             14-day free trial · All features included · Cancel any time ·{" "}
-            <Link href="/real-estate-commission-split-calculator" className="underline hover:text-gray-600">try a deal now, no signup needed</Link>
+            <Link href="/real-estate-commission-split-calculator" className="underline hover:text-gray-600">try the commission split calculator, no signup needed</Link>
           </p>
         </div>
       </section>
@@ -205,7 +205,7 @@ export default function HomePage() {
               You copy last month&apos;s spreadsheet, update the numbers by hand, hope the cap balance is right, then call or text the agent to tell them what they&apos;re getting paid, and manually re-key everything into QuickBooks. One typo in a formula and an agent gets underpaid, or worse overpaid, and now you have a conversation you don&apos;t want to have.
             </p>
             <p className="text-gray-600 mb-6">
-              For a small brokerage, one of those typos isn&apos;t a rounding error — it&apos;s the reason a top producer walks. Replacing an agent costs a brokerage $20,000 to $50,000 once you count recruiting, onboarding, and the deals that stall while the seat sits empty. SplitRE exists to make sure that mistake never happens.
+              For a small brokerage, one of those typos isn&apos;t a rounding error — it&apos;s the reason a top producer walks. Replacing an agent costs a brokerage $20,000 to $50,000 once you count recruiting, onboarding, and the deals that stall while the seat sits empty. SplitRE is independent brokerage software built to make sure that mistake never happens.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
@@ -314,7 +314,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 ),
                 title: "Automatic cap tracking",
-                desc: "Cap balances update the moment you confirm a deal. When an agent crosses their cap, the split flips to 100% automatically, including the crossing calculation on the deal that put them over.",
+                desc: "Real estate cap tracking that updates the moment you confirm a deal. When an agent crosses their cap, the split flips to 100% automatically, including the crossing calculation on the deal that put them over.",
               },
               {
                 color: "bg-emerald-100",
@@ -323,7 +323,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 ),
                 title: "QuickBooks-ready CSV export",
-                desc: "Select deals, click Export. Your bookkeeper gets a clean file with GCI, agent payout, broker net, and pre-formatted QuickBooks memo lines. No live connection to break, no tokens to expire. Just a file that works.",
+                desc: "Select deals, click Export. Your bookkeeper gets a clean file with GCI, agent payout, broker net, and pre-formatted QuickBooks memo lines — built specifically for QuickBooks real estate brokerage bookkeeping, not a generic export. No live connection to break, no tokens to expire.",
               },
               {
                 color: "bg-amber-100",
