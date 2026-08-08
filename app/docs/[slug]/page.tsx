@@ -78,7 +78,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
         <div className="max-w-3xl mx-auto">
           <Breadcrumb
             items={[
-              { label: "Help Docs", href: "/docs" },
+              { label: "Help Documentation", href: "/docs" },
               { label: doc.category, href: `/docs#${slugifyCategory(doc.category)}` },
               { label: doc.title },
             ]}

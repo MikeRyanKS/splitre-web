@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getDocsByCategory, slugifyCategory } from "@/lib/docs";
 
 export const metadata: Metadata = {
-  title: "Help Docs",
+  title: "Help Documentation",
   description: "Step-by-step guides for setting up your brokerage, managing agents and deals, and getting the most out of SplitRE.",
   alternates: { canonical: "https://splitre.app/docs" },
 };
@@ -15,7 +15,7 @@ export default function DocsPage() {
     <>
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Help Docs</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Help Documentation</h1>
           <p className="text-xl text-gray-600">Step-by-step guides for setting up your brokerage and getting the most out of SplitRE.</p>
         </div>
       </section>
