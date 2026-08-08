@@ -88,7 +88,7 @@ export default function PricingClient() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
-          <p className="text-xl text-gray-600 mb-2">No per-agent fees. No feature paywalls. No surprise charges — real estate brokerage back office software with the cost of a single flat plan, not a per-seat bill that grows every time you hire.</p>
+          <p className="text-xl text-gray-600 mb-2">No feature paywalls. No surprise charges. One flat price for your agent-count tier — not a meter that climbs every time you add one more agent.</p>
           <p className="text-indigo-600 font-semibold">14-day free trial on all plans, no credit card required.</p>
           <Link href="/real-estate-commission-split-calculator" className="inline-block mt-4 text-sm text-gray-500 underline hover:text-gray-700">
             Not ready to sign up? Try the calculator free →

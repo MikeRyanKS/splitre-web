@@ -73,7 +73,7 @@ export default function FeaturesPage() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">What SplitRE actually does</h1>
-          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week: commission calculations, cap tracking, agent notifications, and bookkeeper exports. It&apos;s real estate brokerage back office software built entirely around commissions, not a CRM with commissions bolted on.</p>
+          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week: commission calculations, cap tracking, agent notifications, and bookkeeper exports. It&apos;s commission management software built specifically for how brokerages calculate and pay agents — not a CRM or transaction-management suite with commissions bolted on.</p>
         </div>
       </section>
 

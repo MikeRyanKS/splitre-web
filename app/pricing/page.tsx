@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SplitRE Pricing — Commission Management for Every Brokerage Size",
     description:
-      "Boutique from $29/mo · Independent from $65/mo · Brokerage from $169/mo. No per-agent fees, no feature paywalls. 14-day free trial.",
+      "Boutique from $29/mo · Independent from $65/mo · Brokerage from $169/mo. Flat tier pricing, no feature paywalls. 14-day free trial.",
     url: "https://splitre.app/pricing",
   },
 };

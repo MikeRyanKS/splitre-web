@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "SplitRE",
     title: "SplitRE — Commission Management Software for Real Estate Brokerages",
     description:
-      "Automate commission calculations, cap tracking, and bookkeeper CSV exports for your independent real estate brokerage. No per-agent fees. Starts at $29/mo (annual).",
+      "Automate commission calculations, cap tracking, and bookkeeper CSV exports for your independent real estate brokerage. Priced by agent-count tier, not a bill that climbs with every hire. Starts at $29/mo (annual).",
     url: "https://splitre.app",
     locale: "en_US",
     images: [
