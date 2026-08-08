@@ -313,17 +313,7 @@ export default function PricingClient() {
             <p className="text-center text-xs text-gray-400 italic">
               All returns above use the annual plan price. Monthly billing costs slightly more per year and lowers these ratios proportionally — the annual figures are the honest baseline to quote.
             </p>
-            <p className="text-center text-xs text-gray-400 italic">
-              Admin rate rises with tier on purpose: in a small shop the owner does the commission admin themselves, valued modestly. Larger brokerages pay a real admin or office manager to do it, so every hour saved is a dollar off payroll.
-            </p>
-            <p className="text-center text-xs text-gray-400 italic">
-              And this table only counts time — deliberately conservatively. For a small brokerage, time was never the real reason to switch. The mispayment you don&apos;t make is (see the block above).
-            </p>
           </div>
-
-          <p className="text-center text-xs text-gray-400">
-            Time value uses a deliberately conservative admin hourly rate that scales with brokerage size — reflecting that small-shop owners do this work themselves (valued modestly), while larger brokerages pay dedicated admin staff. Error-prevention figures reflect the industry-documented cost of losing a producer to a payment dispute; your results depend on your deal volume and commission complexity.
-          </p>
         </div>
       </section>
 
