@@ -133,9 +133,9 @@ export default function DemoClient() {
           <span className="w-2 h-2 bg-indigo-500 rounded-full" />
           No signup · No credit card · Runs entirely in your browser
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Try the SplitRE commission calculator</h1>
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Real Estate Commission Split Calculator</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Plug in a real deal and see the exact split, cap tracking, and fees — the same math and the same PDF you'd get inside SplitRE.
+          Calculate exactly what your agent and brokerage each take home — 70/30 and 80/20 splits, franchise royalty and referral fees, and annual cap tracking, handled automatically. Plug in a real deal and get the same math and PDF you'd get inside SplitRE.
         </p>
       </div>
 

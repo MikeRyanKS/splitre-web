@@ -83,18 +83,18 @@ export default function ReceiptCard({
           </table>
         </div>
 
-        {/* Footer */}
-        <div className="px-8 py-4 bg-gray-50 border-t border-gray-100 text-center">
-          <p className="text-[11px] text-gray-500">
-            Calculated accurately via{" "}
-            <a href="https://splitre.app" className="text-indigo-600 font-semibold hover:underline">
-              SplitRE.app
-            </a>
-            .
+        {/* Footer — the actual conversion pitch. "Nothing is saved" isn't a
+            reason to sign up; "you'll never do this by hand again" is. */}
+        <div className="px-8 py-5 bg-indigo-50 border-t border-indigo-100 text-center">
+          <p className="text-sm font-semibold text-gray-900">
+            You just did this math by hand. SplitRE does it automatically — every deal, every agent, all year — and tracks each agent&apos;s cap for you.
           </p>
-          <p className="mt-0.5 text-[11px] text-gray-400 italic">
-            Like what you see? Start your free 14-day trial — no credit card required.
-          </p>
+          <a
+            href="https://app.splitre.app/signup"
+            className="inline-block mt-2 text-sm font-bold text-indigo-600 hover:text-indigo-700 hover:underline"
+          >
+            Start your free 14-day trial → No credit card required
+          </a>
         </div>
       </div>
 
@@ -125,11 +125,8 @@ export default function ReceiptCard({
       </div>
 
       <p className="mt-3 text-center text-xs text-gray-400 print:hidden">
-        This is a live demo — nothing is saved.{" "}
-        <Link href="https://app.splitre.app/signup" className="text-indigo-600 hover:underline font-medium">
-          Start a free trial
-        </Link>{" "}
-        to save real deals, track agent caps, and export to QuickBooks.
+        Calculated accurately via{" "}
+        <Link href="https://splitre.app" className="hover:underline">SplitRE.app</Link>. This live demo doesn&apos;t save anything unless you download or email yourself a copy.
       </p>
     </div>
   );

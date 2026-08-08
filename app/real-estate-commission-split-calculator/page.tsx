@@ -4,14 +4,14 @@ import DemoClient from "./DemoClient";
 const CANONICAL_URL = "https://splitre.app/real-estate-commission-split-calculator";
 
 export const metadata: Metadata = {
-  title: "Free Real Estate Commission Split Calculator — Try SplitRE",
+  title: "Real Estate Commission Split Calculator (Free) — SplitRE",
   description:
-    "Calculate a real estate commission split free, right now — no signup, no credit card. Enter a sale price and split to see the exact agent payout, broker cut, and cap tracking, then download or email yourself the PDF.",
+    "Free real estate commission split calculator — instantly calculate agent and broker commission splits, annual cap tracking, franchise royalty fees, and referral deductions. See exact payouts for 70/30, 80/20, and capped commission plans. No signup, no credit card.",
   alternates: { canonical: CANONICAL_URL },
   openGraph: {
-    title: "Free Real Estate Commission Split Calculator — Try SplitRE",
+    title: "Real Estate Commission Split Calculator (Free) — SplitRE",
     description:
-      "See the exact agent split, cap tracking, and fees for a real deal — no signup required. Download or email yourself the PDF.",
+      "Calculate agent/broker commission splits, annual cap tracking, franchise and referral fees — instantly, for free. No signup required. Download or email yourself the PDF.",
     url: CANONICAL_URL,
   },
 };
@@ -29,13 +29,29 @@ const webAppSchema = {
     priceCurrency: "USD",
   },
   description:
-    "Free real estate commission split calculator with agent cap tracking. Calculate agent payouts, broker cuts, franchise fees, and E&O/transaction fee deductions instantly — no signup required.",
+    "Free real estate commission split calculator with annual agent cap tracking. Calculate agent and broker commission splits (70/30, 80/20, and more), franchise royalty fees, referral fees, and E&O/transaction fee deductions instantly — no signup required.",
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a real estate commission split?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A commission split is how a real estate brokerage divides the commission from a sale between itself and the agent who closed it. The brokerage collects the full commission from the transaction, then pays the agent their agreed share — commonly expressed as a ratio like 70/30 or 80/20, with the agent's number listed first.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I calculate a real estate agent's commission?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Multiply the sale price by the commission percentage to get the gross commission (GCI). Subtract any off-the-top fees — franchise royalty, referral, or relocation fees — to get the splittable amount. Apply the agent/broker split percentage to that amount, then subtract the agent's own fees (E&O, transaction fee) to arrive at their net payout. This calculator does all four steps automatically and shows each line item.",
+      },
+    },
     {
       "@type": "Question",
       name: "What is a typical real estate commission split?",
@@ -104,7 +120,7 @@ export default function CalculatorPage() {
 
       {/* B3 — How this is calculated */}
       <section className="max-w-3xl mx-auto px-4 py-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">How this is calculated</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">How real estate commission splits are calculated</h2>
         <p className="text-gray-600 leading-relaxed">
           Every commission runs through three stages. First, any off-the-top deductions
           come out of the gross commission — franchise royalty fees, referral fees, or
@@ -139,6 +155,39 @@ export default function CalculatorPage() {
           trust between a broker and their top producers. This calculator (and the
           full SplitRE app) handles that crossing calculation automatically, every
           time.
+        </p>
+      </section>
+
+      {/* Worked examples — concrete numbers for the split ratios people actually search for */}
+      <section className="max-w-3xl mx-auto px-4 pb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Common commission split examples</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="border border-gray-200 rounded-xl p-5">
+            <p className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-3">70/30 split, no franchise</p>
+            <dl className="space-y-1.5 text-sm">
+              <div className="flex justify-between"><dt className="text-gray-500">Sale price</dt><dd className="text-gray-900 font-medium">$400,000</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">Commission (3%)</dt><dd className="text-gray-900 font-medium">$12,000</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">Broker cut (30%)</dt><dd className="text-gray-900 font-medium">$3,600</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">Agent gross (70%)</dt><dd className="text-gray-900 font-medium">$8,400</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">E&amp;O + transaction fee</dt><dd className="text-red-600 font-medium">−$545</dd></div>
+              <div className="flex justify-between pt-1.5 mt-1.5 border-t border-gray-100"><dt className="font-semibold text-gray-900">Agent net payout</dt><dd className="font-bold text-indigo-600">$7,855</dd></div>
+            </dl>
+          </div>
+          <div className="border border-gray-200 rounded-xl p-5">
+            <p className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-3">80/20 split, 6% franchise fee</p>
+            <dl className="space-y-1.5 text-sm">
+              <div className="flex justify-between"><dt className="text-gray-500">Sale price</dt><dd className="text-gray-900 font-medium">$500,000</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">Commission (3%)</dt><dd className="text-gray-900 font-medium">$15,000</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">Franchise royalty (6%)</dt><dd className="text-red-600 font-medium">−$900</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">Broker cut (20%)</dt><dd className="text-gray-900 font-medium">$2,820</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">Agent gross (80%)</dt><dd className="text-gray-900 font-medium">$11,280</dd></div>
+              <div className="flex justify-between"><dt className="text-gray-500">E&amp;O + transaction fee</dt><dd className="text-red-600 font-medium">−$545</dd></div>
+              <div className="flex justify-between pt-1.5 mt-1.5 border-t border-gray-100"><dt className="font-semibold text-gray-900">Agent net payout</dt><dd className="font-bold text-indigo-600">$10,735</dd></div>
+            </dl>
+          </div>
+        </div>
+        <p className="text-gray-500 text-sm mt-4">
+          Both examples assume a $150 E&amp;O fee and a $395 transaction fee, and neither agent has hit their annual cap yet — plug your own numbers into the calculator above to see how a cap changes the math.
         </p>
       </section>
 
