@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 
 export const metadata: Metadata = {
   title: "SplitRE — Commission Management Software for Real Estate Brokerages",
@@ -273,7 +273,7 @@ export default function HomePage() {
       <section className="bg-white pb-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 ring-1 ring-black/5">
-            <Image
+            <ZoomableScreenshot
               src="/screenshots/splitre-commission-deal-entry-calculator.png"
               alt="SplitRE Close a Deal form showing a live payout preview with cap progress, broker cut, and agent net payout updating as the deal is entered"
               width={1919}
