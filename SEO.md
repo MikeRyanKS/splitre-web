@@ -118,7 +118,7 @@ Schema types eligible for Google AI Overviews and rich results: `HowTo`, `FAQPag
 
 ## Analytics
 
-No analytics currently live. Plan: Cloudflare Web Analytics (privacy-friendly beacon, no cookie banner, native to the existing Cloudflare Pages host) — pending a site token from the Cloudflare dashboard before the beacon script can be added to `layout.tsx`.
+Cloudflare Web Analytics is live for `splitre.app`, added via the dashboard in **Automatic setup** mode — Cloudflare injects the beacon into every response at the edge since Pages traffic is already proxied through their network, so no manual script tag in `layout.tsx` and no token in the codebase. Confirmed working (real page views, visits, and Core Web Vitals data flowing in the dashboard). Privacy-friendly, no cookie banner needed.
 
 ## Sitemap
 
