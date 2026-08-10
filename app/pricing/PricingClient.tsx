@@ -70,8 +70,13 @@ export default function PricingClient() {
   const [couponCode, setCouponCode] = useState("");
   const [buyLoading, setBuyLoading] = useState<string | null>(null);
   const [buyError, setBuyError] = useState<string | null>(null);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   async function handleBuyNow(planName: string) {
+    if (!agreedToTerms) {
+      setBuyError("Please agree to the Terms of Service and Privacy Policy to continue.");
+      return;
+    }
     setBuyLoading(planName);
     setBuyError(null);
     try {
@@ -132,6 +137,25 @@ export default function PricingClient() {
         />
       </section>
 
+      {/* Terms / auto-renewal consent — required before the direct "Subscribe now" buttons
+          below will do anything; "Start free trial" instead routes to signup, which has
+          its own checkbox in the app. */}
+      <section className="pb-6 px-4 text-center">
+        <label className="inline-flex items-start gap-2 text-xs text-gray-500 cursor-pointer select-none max-w-md mx-auto text-left">
+          <input
+            type="checkbox"
+            checked={agreedToTerms}
+            onChange={(e) => setAgreedToTerms(e.target.checked)}
+            className="h-4 w-4 mt-0.5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 shrink-0"
+          />
+          <span>
+            I agree to the <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a>
+            {" "}and <a href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</a>,
+            {" "}and understand this subscription renews automatically until I cancel.
+          </span>
+        </label>
+      </section>
+
       {/* Plan cards */}
       <section className="pb-20 px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
@@ -183,7 +207,7 @@ export default function PricingClient() {
 
                 <button
                   onClick={() => handleBuyNow(plan.name)}
-                  disabled={buyLoading === plan.name}
+                  disabled={buyLoading === plan.name || !agreedToTerms}
                   className="block w-full text-center font-semibold py-3 rounded-xl mt-2 mb-3 transition-colors bg-gray-900 text-white hover:bg-gray-700 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {buyLoading === plan.name ? "Redirecting…" : "Subscribe now"}
