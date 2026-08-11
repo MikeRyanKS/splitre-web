@@ -195,7 +195,7 @@ export default function PricingClient() {
                 <p className="text-sm font-semibold text-indigo-600 mb-6">{plan.agentLimit}</p>
 
                 <Link
-                  href="https://app.splitre.app/signup"
+                  href={`https://app.splitre.app/signup?plan=${plan.name.toLowerCase()}`}
                   className={`block w-full text-center font-semibold py-3 rounded-xl transition-colors ${
                     plan.popular
                       ? "bg-indigo-600 text-white hover:bg-indigo-700"
