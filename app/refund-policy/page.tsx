@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const EFFECTIVE_DATE = "August 10, 2026";
+const EFFECTIVE_DATE = "August 23, 2026";
 const COMPANY = "Keplify LLC";
 const BILLING_EMAIL = "billing@splitre.app";
 const LEGAL_EMAIL = "legal@splitre.app";
@@ -130,42 +130,43 @@ export default function RefundPolicyPage() {
               you already paid for.
             </p>
             <p className="mt-3">
-              <strong>At the end of that period, your account becomes locked</strong>, meaning you can no
-              longer log in to the application at all, including to export data, until you resubscribe.
+              <strong>At the end of that period, your account becomes locked</strong>: you can log in only to
+              export your data (Settings &rsaquo; Data Export) and to resubscribe — full read/write access
+              isn&apos;t available until you do.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">4.3 What happens to your data</h3>
             <p>
-              <strong>Your data is not deleted when you cancel, and there is no 30-day countdown on it.</strong>{" "}
-              It&apos;s retained indefinitely once you&apos;re locked out, and reactivating your subscription at
-              any time restores your account and all of your data exactly as you left it — deals, agents, cap
-              history, everything.
+              <strong>Your data is preserved for 30 calendar days after you&apos;re locked out, then
+              permanently and automatically deleted</strong> — the same timeline described in Section 6.3 for
+              an account locked due to non-payment. Reactivating your subscription any time before then
+              restores your account and all of your data exactly as you left it — deals, agents, cap history,
+              everything. We&apos;ll email you the exact deletion date when you&apos;re locked out, and again
+              as it approaches.
             </p>
             <p className="mt-3">
-              Because self-service export stops working the moment you&apos;re locked out,{" "}
-              <strong>export a copy of your data before your final billing period ends</strong> if
-              you&apos;re not planning to come back — go to{" "}
-              <strong>app.splitre.app &rsaquo; Settings &rsaquo; Data Export</strong> and download the
-              full export (deal records, agent roster, cap-progress history, and commission-plan
-              definitions) while you still have access. If you&apos;ve already been locked out and need a
-              copy, or want your data deleted rather than retained indefinitely, email{" "}
+              You don&apos;t need to rush an export before your final billing period ends —{" "}
+              <strong>app.splitre.app &rsaquo; Settings &rsaquo; Data Export</strong> stays reachable during
+              the 30-day locked window, so you can download the full export (deal records, agent roster,
+              cap-progress history, and commission-plan definitions) any time before deletion. If you&apos;d
+              rather have your data deleted sooner than the 30 days, or exported on your behalf, email{" "}
               <a href={`mailto:${LEGAL_EMAIL}`} className="text-indigo-600 hover:underline">{LEGAL_EMAIL}</a>{" "}
-              — we&apos;ll export or delete it for you within 30 days of a request we can verify comes from you.
+              — we&apos;ll act on a verified request from you within 30 days of receiving it.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">4.4 Reactivation</h3>
             <p>
-              Reactivate at any time by adding a payment method and choosing a plan again. Because voluntary
-              cancellation doesn&apos;t trigger deletion, there&apos;s no window to beat — your data is there
-              whenever you come back.
+              Reactivate any time within the 30-day window by adding a payment method and choosing a plan
+              again — your data is restored exactly as you left it. Once the 30-day window closes and your
+              data has actually been deleted, reactivating starts a brand-new account instead.
             </p>
 
-            <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">4.5 This is different from a locked account due to non-payment</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">4.5 Same treatment as a locked account due to non-payment</h3>
             <p>
               Section 6 below describes a <strong>separate</strong> situation — a payment that fails and is
-              never fixed — which does eventually lead to automatic data deletion after a defined grace period.
-              That is not what happens when you simply cancel; the two situations have different rules on
-              purpose.
+              never fixed — but the locked-account consequence is now the same one described above: the same
+              30-day retention window, the same read-only export access, and the same automatic deletion at
+              the end of it. Only what triggers the lock differs.
             </p>
           </section>
 
@@ -242,10 +243,9 @@ export default function RefundPolicyPage() {
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">6.3 Account lock and automatic deletion</h3>
             <p>
-              If payment is not resolved by the end of the grace period, your account is locked, and —
-              unlike a voluntary cancellation — this specifically starts a{" "}
-              <strong>30-calendar-day</strong> countdown: you can still log in only to download
-              your data or fix payment during that window, and after it closes, your data is{" "}
+              If payment is not resolved by the end of the grace period, your account is locked, starting the{" "}
+              <strong>30-calendar-day</strong> countdown described in Section 4.3: you can still log in only
+              to download your data or fix payment during that window, and after it closes, your data is{" "}
               <strong>permanently and automatically deleted</strong>. We will email you
               the exact deletion date when your account is locked.
             </p>

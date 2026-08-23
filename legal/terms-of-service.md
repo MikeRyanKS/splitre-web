@@ -1,6 +1,6 @@
 # SplitRE Terms of Service
 
-**Effective date:** August 10, 2026
+**Effective date:** August 23, 2026
 **Operated by:** Keplify LLC, a Delaware limited liability company — 8 The Green, Suite 20261, Dover, DE 19901, United States
 
 > This is the canonical source of the Terms of Service. `web/app/terms/page.tsx` must always match this document. If they ever diverge, this file is authoritative and the page should be corrected to match it.
@@ -83,7 +83,7 @@ If all retries fail, your account enters a grace period during which it is read-
 - **Monthly plans:** 3-day grace period
 - **Annual plans:** 7-day grace period
 
-If payment is not resolved by the end of the grace period, your account is **locked**. Locking is distinct from voluntary cancellation (Section 13) and has its own, separate data-retention consequence: your brokerage data is preserved for **30 calendar days** from the lock date, during which you may log in only to export your data and to restore access by updating your payment method. After that 30-day window, **all brokerage data is permanently and automatically deleted**. We will email you the exact deletion date when your account is locked, and again as it approaches.
+If payment is not resolved by the end of the grace period, your account is **locked**, with the same 30-day data-retention treatment described in Section 13.1: your brokerage data is preserved for **30 calendar days** from the lock date, during which you may log in only to export your data and to restore access by updating your payment method. After that 30-day window, **all brokerage data is permanently and automatically deleted**. We will email you the exact deletion date when your account is locked, and again as it approaches.
 
 ### 4.5 Plan changes
 
@@ -209,13 +209,13 @@ This Section governs two different things — **voluntary cancellation** (someth
 
 You may stop your subscription from renewing at any time, at no cost and with no minimum commitment, by switching off **Auto-renewal** in **app.splitre.app › Settings › Billing**, or by emailing billing@splitre.app. This takes effect as a cancellation of the *next* charge — you keep full, unrestricted access to the Service through the end of your current paid billing period, exactly as if you hadn't canceled.
 
-At the end of that period, your account becomes **locked**: read access to the application, including self-service data export, is no longer available until you resubscribe. **Your Customer Data is not deleted at this point and has no automatic deletion timer.** It is retained, and reactivating your subscription at any time restores full access to everything exactly as you left it.
+At the end of that period, your account becomes **locked**: you may log in only to export your data (Settings › Data Export) and to resubscribe — full read/write access to the Service is not available until you do. Your brokerage data is preserved for **30 calendar days** from the lock date. Reactivating your subscription at any time before then restores full access to everything exactly as you left it.
 
-Because self-service export is not available once locked, **export a copy of your data (Settings › Data Export) before your final billing period ends** if you don't plan to resubscribe. If you've already been locked out and want a copy of your data, or want it deleted rather than retained, contact legal@splitre.app — we will export or delete it for you within 30 days of a request we can verify is coming from an authorized account owner.
+After that 30-day window, **all brokerage data is permanently and automatically deleted**. We will email you the exact deletion date when your account is locked, and again as it approaches. If you want your data deleted sooner than the 30-day window, or exported on your behalf, contact legal@splitre.app — we will act on a verified request from an authorized account owner within 30 days of receiving it.
 
 ### 13.2 Suspension for non-payment
 
-If a payment fails and is never resolved, the separate process in Section 4.4 applies: a retry window, then a grace period, then locking with an **automatic 30-day deletion timer** that voluntary cancellation does not have. See Section 4.4 for the full sequence.
+If a payment fails and is never resolved, the separate process in Section 4.4 applies: a retry window, then a grace period, then locking with the same **automatic 30-day deletion timer** described in Section 13.1. See Section 4.4 for the full sequence.
 
 ### 13.3 Refunds
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://splitre.app/terms" },
 };
 
-const EFFECTIVE_DATE = "August 10, 2026";
+const EFFECTIVE_DATE = "August 23, 2026";
 const COMPANY = "Keplify LLC";
 const ADDRESS = "8 The Green, Suite 20261, Dover, DE 19901";
 const LEGAL_EMAIL = "legal@splitre.app";
@@ -211,12 +211,12 @@ export default function TermsPage() {
             </ul>
             <p className="mt-3">
               If payment is not resolved by the end of the grace period, your account is
-              <strong> locked</strong>. Locking is distinct from voluntary cancellation (Section 13) and has its
-              own, separate data-retention consequence: your brokerage data is preserved for{" "}
-              <strong>30 calendar days</strong> from the lock date, during which you may log in only to
-              export your data and to restore access by updating your payment method. After that
-              30-day window, <strong>all brokerage data is permanently and automatically deleted</strong>. We
-              will email you the exact deletion date when your account is locked, and again as it approaches.
+              <strong> locked</strong>, with the same 30-day data-retention treatment described in Section 13.1:
+              your brokerage data is preserved for <strong>30 calendar days</strong> from the lock date, during
+              which you may log in only to export your data and to restore access by updating your payment
+              method. After that 30-day window, <strong>all brokerage data is permanently and automatically
+              deleted</strong>. We will email you the exact deletion date when your account is locked, and
+              again as it approaches.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.5 Plan Changes</h3>
@@ -494,27 +494,27 @@ export default function TermsPage() {
               hadn&rsquo;t canceled.
             </p>
             <p className="mt-3">
-              At the end of that period, your account becomes <strong>locked</strong>: read access to the
-              application, including self-service data export, is no longer available until you resubscribe.{" "}
-              <strong>Your Customer Data is not deleted at this point and has no automatic deletion
-              timer.</strong> It is retained, and reactivating your subscription at any time restores full
-              access to everything exactly as you left it.
+              At the end of that period, your account becomes <strong>locked</strong>: you may log in only to
+              export your data (Settings &rsaquo; Data Export) and to resubscribe — full read/write access to
+              the Service is not available until you do. Your brokerage data is preserved for{" "}
+              <strong>30 calendar days</strong> from the lock date. Reactivating your subscription at any time
+              before then restores full access to everything exactly as you left it.
             </p>
             <p className="mt-3">
-              Because self-service export is not available once locked,{" "}
-              <strong>export a copy of your data (Settings &rsaquo; Data Export) before your final billing
-              period ends</strong> if you don&rsquo;t plan to resubscribe. If you&rsquo;ve already been locked
-              out and want a copy of your data, or want it deleted rather than retained, contact{" "}
+              After that 30-day window, <strong>all brokerage data is permanently and automatically
+              deleted</strong>. We will email you the exact deletion date when your account is locked, and
+              again as it approaches. If you want your data deleted sooner than the 30-day window, or exported
+              on your behalf, contact{" "}
               <a href={`mailto:${LEGAL_EMAIL}`} className="text-indigo-600 hover:underline">{LEGAL_EMAIL}</a>{" "}
-              — we will export or delete it for you within 30 days of a request we can verify is coming from an
-              authorized account owner.
+              — we will act on a verified request from an authorized account owner within 30 days of receiving it.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">13.2 Suspension for Non-Payment</h3>
             <p>
               If a payment fails and is never resolved, the separate process in Section 4.4 applies: a retry
-              window, then a grace period, then locking with an <strong>automatic 30-day deletion timer</strong>{" "}
-              that voluntary cancellation does not have. See Section 4.4 for the full sequence.
+              window, then a grace period, then locking with the same{" "}
+              <strong>automatic 30-day deletion timer</strong> described in Section 13.1. See Section 4.4 for
+              the full sequence.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">13.3 Refunds</h3>

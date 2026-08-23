@@ -1,6 +1,6 @@
 # SplitRE Refund / Cancellation Policy
 
-**Effective date:** August 10, 2026
+**Effective date:** August 23, 2026
 **Operated by:** Keplify LLC, a Delaware limited liability company — 8 The Green, Suite 20261, Dover, DE 19901, United States
 
 > This is the canonical source of the Refund / Cancellation Policy. `web/app/refund-policy/page.tsx` must always match this document; if they diverge, this file is authoritative.
@@ -59,21 +59,21 @@ Turn off **Auto-renewal** in **app.splitre.app › Settings › Billing**, or em
 
 Turning off auto-renewal does not end your current billing period early. You keep full, unrestricted access — creating deals, inviting agents, everything — through the last day you already paid for.
 
-**At the end of that period, your account becomes locked**, meaning you can no longer log in to the application at all, including to export data, until you resubscribe.
+**At the end of that period, your account becomes locked**: you can log in only to export your data (Settings › Data Export) and to resubscribe — full read/write access isn't available until you do.
 
 ### 4.3 What happens to your data
 
-**Your data is not deleted when you cancel, and there is no 30-day countdown on it.** It's retained indefinitely once you're locked out, and reactivating your subscription at any time restores your account and all of your data exactly as you left it — deals, agents, cap history, everything.
+**Your data is preserved for 30 calendar days after you're locked out, then permanently and automatically deleted** — the same timeline described in Section 6.3 for an account locked due to non-payment. Reactivating your subscription any time before then restores your account and all of your data exactly as you left it — deals, agents, cap history, everything. We'll email you the exact deletion date when you're locked out, and again as it approaches.
 
-Because self-service export stops working the moment you're locked out, **export a copy of your data before your final billing period ends** if you're not planning to come back — go to **app.splitre.app › Settings › Data Export** and download the full export (deal records, agent roster, cap-progress history, and commission-plan definitions) while you still have access. If you've already been locked out and need a copy, or want your data deleted rather than retained indefinitely, email legal@splitre.app — we'll export or delete it for you within 30 days of a request we can verify comes from you.
+You don't need to rush an export before your final billing period ends — **app.splitre.app › Settings › Data Export** stays reachable during the 30-day locked window, so you can download the full export (deal records, agent roster, cap-progress history, and commission-plan definitions) any time before deletion. If you'd rather have your data deleted sooner than the 30 days, or exported on your behalf, email legal@splitre.app — we'll act on a verified request from you within 30 days of receiving it.
 
 ### 4.4 Reactivation
 
-Reactivate at any time by adding a payment method and choosing a plan again. Because voluntary cancellation doesn't trigger deletion, there's no window to beat — your data is there whenever you come back.
+Reactivate any time within the 30-day window by adding a payment method and choosing a plan again — your data is restored exactly as you left it. Once the 30-day window closes and your data has actually been deleted, reactivating starts a brand-new account instead.
 
-### 4.5 This is different from a locked account due to non-payment
+### 4.5 Same treatment as a locked account due to non-payment
 
-Section 6 below describes a **separate** situation — a payment that fails and is never fixed — which *does* eventually lead to automatic data deletion after a defined grace period. That is not what happens when you simply cancel; the two situations have different rules on purpose.
+Section 6 below describes a **separate** situation — a payment that fails and is never fixed — but the locked-account consequence is now the same one described above: the same 30-day retention window, the same read-only export access, and the same automatic deletion at the end of it. Only what triggers the lock differs.
 
 ---
 
@@ -107,7 +107,7 @@ If all retries fail, your account enters a **grace period** — 3 days on monthl
 
 ### 6.3 Account lock and automatic deletion
 
-If payment still isn't resolved by the end of the grace period, your account is **locked**, and — unlike a voluntary cancellation — this specifically starts a **30-calendar-day** countdown: you can still log in only to export your data or fix payment during that window, and after it closes, your data is **permanently and automatically deleted**. We'll email you the exact deletion date when the lock happens.
+If payment still isn't resolved by the end of the grace period, your account is **locked**, starting the **30-calendar-day** countdown described in Section 4.3: you can still log in only to export your data or fix payment during that window, and after it closes, your data is **permanently and automatically deleted**. We'll email you the exact deletion date when the lock happens.
 
 ### 6.4 Restoring a locked account
 
