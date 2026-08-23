@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     q: "What happens at the end of my free trial?",
-    a: "If you don't add a payment method before your trial ends, your account is paused and your data is preserved for 30 days. Nothing gets deleted automatically. You can reactivate any time.",
+    a: "If you don't add a payment method before your trial ends, your account is paused and your data is kept for 30 days. Add a payment method any time in that window to pick up right where you left off — after 30 days, the data is permanently deleted.",
   },
   {
     q: "Is my brokerage data secure?",
@@ -70,13 +70,21 @@ export default function PricingClient() {
   const [couponCode, setCouponCode] = useState("");
   const [buyLoading, setBuyLoading] = useState<string | null>(null);
   const [buyError, setBuyError] = useState<string | null>(null);
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  // Consent lives in a confirmation modal shown after "Subscribe now" is clicked, not
+  // as a page-level checkbox gating the button — a checkbox this far down the page,
+  // easy to scroll past, read as "the button is broken" rather than "check this
+  // first". "Start free trial" is unaffected: it routes to signup, which has its own
+  // checkbox in the app.
+  const [pendingPlan, setPendingPlan] = useState<string | null>(null);
+  const [consentChecked, setConsentChecked] = useState(false);
+
+  function openConsentModal(planName: string) {
+    setBuyError(null);
+    setConsentChecked(false);
+    setPendingPlan(planName);
+  }
 
   async function handleBuyNow(planName: string) {
-    if (!agreedToTerms) {
-      setBuyError("Please agree to the Terms of Service and Privacy Policy to continue.");
-      return;
-    }
     setBuyLoading(planName);
     setBuyError(null);
     try {
@@ -137,25 +145,6 @@ export default function PricingClient() {
         />
       </section>
 
-      {/* Terms / auto-renewal consent — required before the direct "Subscribe now" buttons
-          below will do anything; "Start free trial" instead routes to signup, which has
-          its own checkbox in the app. */}
-      <section className="pb-6 px-4 text-center">
-        <label className="inline-flex items-start gap-2 text-xs text-gray-500 cursor-pointer select-none max-w-md mx-auto text-left">
-          <input
-            type="checkbox"
-            checked={agreedToTerms}
-            onChange={(e) => setAgreedToTerms(e.target.checked)}
-            className="h-4 w-4 mt-0.5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 shrink-0"
-          />
-          <span>
-            I agree to the <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a>
-            {" "}and <a href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</a>,
-            {" "}and understand this subscription renews automatically until I cancel.
-          </span>
-        </label>
-      </section>
-
       {/* Plan cards */}
       <section className="pb-20 px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
@@ -206,16 +195,12 @@ export default function PricingClient() {
                 </Link>
 
                 <button
-                  onClick={() => handleBuyNow(plan.name)}
-                  disabled={buyLoading === plan.name || !agreedToTerms}
+                  onClick={() => openConsentModal(plan.name)}
+                  disabled={buyLoading === plan.name}
                   className="block w-full text-center font-semibold py-3 rounded-xl mt-2 mb-3 transition-colors bg-gray-900 text-white hover:bg-gray-700 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {buyLoading === plan.name ? "Redirecting…" : "Subscribe now"}
+                  Subscribe now
                 </button>
-
-                {buyError && buyLoading === null && (
-                  <p className="text-xs text-red-500 text-center -mt-2 mb-2">{buyError}</p>
-                )}
 
                 <p className="flex items-center justify-center gap-1.5 text-xs text-gray-400 mb-5">
                   <svg className="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -386,6 +371,57 @@ export default function PricingClient() {
           </Link>
         </div>
       </section>
+
+      {/* Terms/Privacy consent — the final step before "Subscribe now" actually checks
+          out, shown only after a plan is picked (not a page-level checkbox easy to
+          scroll past and mistake for a broken button). */}
+      {pendingPlan && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
+          <div className="bg-white rounded-xl shadow-xl max-w-sm w-full p-6">
+            <h2 className="text-base font-semibold text-gray-900 mb-1">Confirm your plan</h2>
+            <p className="text-sm text-gray-500 mb-5">
+              {pendingPlan} · {interval === "annual" ? "Annual" : "Monthly"} billing
+            </p>
+
+            <label className="flex items-start gap-2 text-xs text-gray-600 cursor-pointer select-none mb-5 text-left">
+              <input
+                type="checkbox"
+                checked={consentChecked}
+                onChange={(e) => setConsentChecked(e.target.checked)}
+                autoFocus
+                className="h-4 w-4 mt-0.5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 shrink-0"
+              />
+              <span>
+                I agree to the <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a>
+                {" "}and <a href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</a>,
+                {" "}and understand this subscription renews automatically until I cancel.
+              </span>
+            </label>
+
+            {buyError && (
+              <div className="mb-4 rounded-lg bg-red-50 border border-red-100 px-3 py-2 text-xs text-red-700">
+                {buyError}
+              </div>
+            )}
+
+            <button
+              onClick={() => handleBuyNow(pendingPlan)}
+              disabled={!consentChecked || buyLoading === pendingPlan}
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {buyLoading === pendingPlan ? "Redirecting…" : "Continue to checkout"}
+            </button>
+
+            <button
+              onClick={() => setPendingPlan(null)}
+              disabled={buyLoading === pendingPlan}
+              className="w-full mt-2 py-2 text-sm text-gray-400 hover:text-gray-600 disabled:opacity-50"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
