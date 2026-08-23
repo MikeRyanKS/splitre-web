@@ -44,6 +44,8 @@ New accounts receive a 14-day free trial with complete access to every feature o
 
 At the end of the trial, if you have not added a payment method and chosen a paid plan, your account is automatically paused — you are not charged. We will send email reminders before the trial ends. A trial that converts to a paid subscription is an automatic renewal for purposes of Section 4.6 below, and by adding a payment method and selecting a plan you are giving the affirmative consent required by that section.
 
+**A paused trial gets the same 30-day data-retention treatment as a locked account under Section 13** — your data is preserved for 30 calendar days from the day the trial ends, during which you may log in only to export your data and to choose a plan, and choosing one within that window restores everything exactly as you left it. After 30 days, all brokerage data is permanently and automatically deleted. We will email you the exact deletion date.
+
 We may modify, shorten, or discontinue the free trial offer for prospective users at any time without notice. A trial already in progress will not be shortened without notice to the affected account.
 
 ---

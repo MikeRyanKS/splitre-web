@@ -16,7 +16,7 @@ Keplify LLC wants you to feel confident using SplitRE. This policy explains when
 
 ## 1. Free Trial
 
-All new accounts include a 14-day free trial. No credit card is required to start one. Your card is only charged when you actively add a payment method and choose a paid plan — and doing that is also your affirmative consent to automatic renewal under Section 3. If you do nothing during the trial, your account is paused automatically and you are not charged.
+All new accounts include a 14-day free trial. No credit card is required to start one. Your card is only charged when you actively add a payment method and choose a paid plan — and doing that is also your affirmative consent to automatic renewal under Section 3. If you do nothing during the trial, your account is paused automatically and you are not charged — your data is kept for 30 days from the pause date, then permanently deleted, same as a locked account (Section 6.3). Choosing a plan any time in those 30 days restores everything exactly as you left it.
 
 ---
 

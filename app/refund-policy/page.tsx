@@ -47,7 +47,9 @@ export default function RefundPolicyPage() {
               to start a trial. Your card is only charged when you actively add a payment method and choose a
               paid plan — and doing that is also your affirmative consent to automatic renewal under Section 3.
               If you do nothing during the trial period, your
-              account will be paused — you will not be charged.
+              account will be paused — you will not be charged — and your data is kept for 30 days from
+              the pause date, then permanently deleted, same as a locked account (Section 6.3). Choosing
+              a plan any time in those 30 days restores everything exactly as you left it.
             </p>
           </section>
 

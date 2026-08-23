@@ -121,6 +121,14 @@ export default function TermsPage() {
               section describes.
             </p>
             <p className="mt-3">
+              <strong>A paused trial gets the same 30-day data-retention treatment as a locked
+              account under Section 13</strong> — your data is preserved for 30 calendar days from
+              the day the trial ends, during which you may log in only to export your data and to
+              choose a plan, and choosing one within that window restores everything exactly as you
+              left it. After 30 days, all brokerage data is permanently and automatically deleted.
+              We will email you the exact deletion date.
+            </p>
+            <p className="mt-3">
               We reserve the right to modify, shorten, or discontinue the free trial offer at
               any time without notice to prospective users. Existing trials in progress will not
               be shortened without notice.
