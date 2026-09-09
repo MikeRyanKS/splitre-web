@@ -68,10 +68,10 @@ export async function requestDemoDeal(
       body: JSON.stringify({ email, first_name: firstName, action, deal }),
     });
     const data = await res.json();
-    if (!res.ok) return { ok: false, error: data.error ?? "Something went wrong — please try again." };
+    if (!res.ok) return { ok: false, error: data.error ?? "Something went wrong. Please try again." };
     if (data.limited) return { ok: true, limited: true };
     return { ok: true, limited: false, remaining: data.remaining };
   } catch {
-    return { ok: false, error: "Couldn't reach SplitRE — check your connection and try again." };
+    return { ok: false, error: "Couldn't reach SplitRE. Check your connection and try again." };
   }
 }
