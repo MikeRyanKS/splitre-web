@@ -122,7 +122,7 @@ export function calculateDeal(
       if (brokerShare > capHeadroom && capHeadroom > 0) {
         // Partial deal — cap hit mid-deal
         items.push({
-          label: `Cap hit — broker share reduced to cap headroom ($${capHeadroom.toLocaleString()})`,
+          label: `Cap hit: broker share reduced to cap headroom ($${capHeadroom.toLocaleString()})`,
           amount: 0,
           party: "broker",
         });
