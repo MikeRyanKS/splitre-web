@@ -6,12 +6,12 @@ const CANONICAL_URL = "https://splitre.app/real-estate-commission-split-calculat
 export const metadata: Metadata = {
   title: "Real Estate Commission Split Calculator (Free) — SplitRE",
   description:
-    "Free real estate commission split calculator — instantly calculate agent and broker commission splits, annual cap tracking, franchise royalty fees, and referral deductions. See exact payouts for 70/30, 80/20, and capped commission plans. No signup, no credit card.",
+    "Free real estate commission split calculator — calculate agent and broker commission splits, annual cap tracking, franchise royalty and referral fees, or split one deal between two or more co-listing agents, each with their own share and their own cap. Exact payouts for 70/30, 80/20, and capped plans. No signup, no credit card.",
   alternates: { canonical: CANONICAL_URL },
   openGraph: {
     title: "Real Estate Commission Split Calculator (Free) — SplitRE",
     description:
-      "Calculate agent/broker commission splits, annual cap tracking, franchise and referral fees — instantly, for free. No signup required. Download or email yourself the PDF.",
+      "Calculate agent/broker commission splits, annual cap tracking, franchise and referral fees — or split a deal between co-listing agents — instantly, for free. No signup required. Download or email yourself the PDF.",
     url: CANONICAL_URL,
   },
 };
@@ -29,7 +29,7 @@ const webAppSchema = {
     priceCurrency: "USD",
   },
   description:
-    "Free real estate commission split calculator with annual agent cap tracking. Calculate agent and broker commission splits (70/30, 80/20, and more), franchise royalty fees, referral fees, and E&O/transaction fee deductions instantly — no signup required.",
+    "Free real estate commission split calculator with annual agent cap tracking. Calculate agent and broker commission splits (70/30, 80/20, and more), franchise royalty fees, referral fees, and E&O/transaction fee deductions — or split one deal between two or more agents, each with their own GCI share and their own split. Runs instantly in your browser, no signup required.",
 };
 
 const faqSchema = {
@@ -196,6 +196,41 @@ export default function CalculatorPage() {
         </div>
         <p className="text-gray-500 text-sm mt-4">
           Both examples assume a $150 E&amp;O fee and a $395 transaction fee, and neither agent has hit their annual cap yet — plug your own numbers into the calculator above to see how a cap changes the math.
+        </p>
+      </section>
+
+      {/* Co-listing / split-deal explainer */}
+      <section className="max-w-3xl mx-auto px-4 pb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">How to split one deal between two agents</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          On a co-listing, a mentor-and-mentee deal, or an in-house transaction where the listing
+          agent and the buyer&apos;s agent both work at your brokerage, one commission has to be
+          divided between two (or more) of your own agents. The order of operations matters:
+        </p>
+        <ol className="list-decimal pl-5 space-y-2 text-gray-600 leading-relaxed mb-4">
+          <li>
+            <strong>Whole-deal deductions come off the top once.</strong> An outside referral fee, a
+            relocation-company cut, or a bonus is applied to the full gross commission before anything
+            is split between your agents — not deducted twice, once per agent.
+          </li>
+          <li>
+            <strong>Each agent takes a share of what&apos;s left.</strong> You decide the GCI share
+            percentage for each agent (a 50/50 co-listing, a 70/30 mentor split, whatever you
+            agreed).
+          </li>
+          <li>
+            <strong>Each agent&apos;s share then runs through their own split and their own cap.</strong>{" "}
+            Agent A might be on 70/30 and nowhere near their cap; Agent B might be on 80/20 and about
+            to cap out. One agent hitting their cap on this deal doesn&apos;t change what the other
+            one takes home.
+          </li>
+        </ol>
+        <p className="text-gray-600 leading-relaxed">
+          The calculator above does all of this — turn on <strong>&quot;Split between agents&quot;</strong>,
+          add each agent with their GCI share and their own split, and you&apos;ll see a separate
+          line-item breakdown and net payout for every agent, plus the combined totals. In the full
+          SplitRE app it stays a single deal with one Deal&nbsp;#, and the QuickBooks export writes
+          one row per agent so your bookkeeper can post each one cleanly.
         </p>
       </section>
 

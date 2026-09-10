@@ -34,6 +34,13 @@ Independent US real estate brokerages, 3–50 agents. Owner-operators and office
 | mid-year cap migration new agent hire | Very specific, zero competition |
 | tiered commission split brokerage | Feature search |
 | referral fee deduction commission software | Feature search |
+| real estate team commission cap | Feature search (Teams) |
+| shared commission cap | Feature search (Teams) |
+| team commission split tracking | Feature search (Teams) |
+| co-listing commission split | Feature search (co-agent deals) — calculator page + blog post |
+| split a real estate deal between two agents | Long-tail, high-intent — calculator page |
+| dual agency commission split calculator | Long-tail — calculator page (co-agent split covers the same math) |
+| mentor mentee commission split real estate | Long-tail — calculator page / co-agent deals |
 
 ---
 
@@ -65,6 +72,11 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 ### Features (`splitre.app/features`)
 - Primary: `commission split calculator`, `real estate cap tracking`, `QuickBooks real estate brokerage`
 - Target one H2 per major feature with its exact keyword
+- Now also covers **Teams / shared caps** (H2 "Run a team on one shared cap" → `real estate team commission cap`, `shared commission cap`) and **co-agent deals** (H2 "One deal, more than one agent" → `co-listing commission split`, `split a real estate deal between two agents`). Both stated as included in every tier.
+
+### Calculator (`splitre.app/real-estate-commission-split-calculator`)
+- Primary: `real estate commission split calculator`, `commission split calculator`
+- Now also targets multi-agent: the tool splits one deal between two or more agents, each with their own GCI share % and their own split. Metadata + `WebApplication` schema description say so; content section "How to split one deal between two agents" (numbered order-of-operations) targets `co-listing commission split`, `split a real estate deal between two agents`, `dual agency commission split calculator`, `mentor mentee commission split real estate`. FAQ #6 covers the co-listing question and is mirrored in the visible FAQ (schema/visible parity via `faqSchema.mainEntity.map`).
 
 ### Blog (8 posts live)
 1. "Why Your Commission Spreadsheet Is Costing You More Than You Think" (`eliminate-commission-spreadsheets`) → `real estate commission spreadsheet`
@@ -75,6 +87,8 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 6. "SplitRE vs. Paperless Pipeline vs. Brokermint" (`best-commission-split-software-for-brokerages`) → `Paperless Pipeline alternative`, `Brokermint alternative`
 7. "How the NAR Settlement Changed Commission Tracking for Brokerages" (`nar-settlement-commission-changes`) → `NAR settlement real estate`
 8. "Tiered Commission Splits Explained" (`tiered-commission-splits-explained`) → `tiered commission split brokerage` — honest about the gap: SplitRE's plan rules are a fixed split + cap-graduation, not multi-tier production splits; positions the cap as a simpler alternative rather than claiming a feature that doesn't exist
+9. "How to Calculate a Commission Split When Two Agents Co-List a Property" (`co-listing-commission-split`) → `co-listing commission split` — maps directly to the co-agent-deals feature; links to the calculator's "Split between agents" mode
+10. "Running a Real Estate Team on One Shared Commission Cap" (`real-estate-team-shared-commission-cap`) → `real estate team commission cap` — maps directly to the Teams feature; links to `/docs/teams` and `/features`
 
 `related` frontmatter hand-picks each post's 2 related posts (not "most recent 2" — see `lib/blog.ts`); all posts cross-link into `/docs` and back, plus into `/pricing`, `/features`, and the calculator. Blog posts render through `rehypeSlug` (same as docs) so every `##` heading has a stable anchor for deep-linking between posts.
 
@@ -98,8 +112,8 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 |---|---|
 | Layout (all pages) | `Organization` — Keplify LLC, Delaware, contact, sameAs social links |
 | Homepage | `SoftwareApplication` (with `featureList`, `AggregateOffer`) + `HowTo` (3-step deal process) |
-| Features | `FAQPage` — 4 Q&As targeting high-intent searches (cap tracking, tiered splits, QBO, per-agent overrides) |
-| Calculator (`/real-estate-commission-split-calculator`) | `WebApplication` (with `Offer`) + `FAQPage` — 8 Q&As |
+| Features | `FAQPage` — 7 Q&As (cap tracking, tiered splits, QBO, per-agent overrides, co-agent deals, shared team caps, CSV import) |
+| Calculator (`/real-estate-commission-split-calculator`) | `WebApplication` (with `Offer`) + `FAQPage` — 9 Q&As (incl. the co-listing / two-agent split question) |
 | Pricing (`/pricing`) | `Product` with a per-tier `Offer` array (name, price, description for Boutique/Independent/Brokerage) |
 | Every blog post | `BlogPosting` — headline, image, author/publisher, `dateModified`, `mainEntityOfPage` |
 | Every docs article | `Article` (not `TechArticle` — Google doesn't recognize that type for rich results) |

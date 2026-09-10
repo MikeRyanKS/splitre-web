@@ -24,6 +24,8 @@ const softwareSchema = {
     "One-click PDF download for confirmed deals",
     "Tiered commission split support",
     "Per-agent commission plan overrides",
+    "Co-agent deals: split one transaction across up to 6 agents, each with their own plan and cap",
+    "Shared team caps with an optional team lead",
     "Bulk deal and agent import from CSV",
     "Shareable deal breakdown links",
   ],
@@ -352,6 +354,24 @@ export default function HomePage() {
                 title: "One-click PDF download",
                 desc: "Download any confirmed deal's commission breakdown as a PDF in one click. Useful for a mortgage application, a dispute, or an agent's own records, without touching a spreadsheet.",
               },
+              {
+                color: "bg-fuchsia-100",
+                iconColor: "text-fuchsia-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                ),
+                title: "Split a deal between agents",
+                desc: "Co-listing, a mentor and mentee, or an in-house buyer-and-listing deal. Credit one transaction to up to six agents, each with a GCI share. Every agent's slice runs through their own plan and their own cap. Still one deal, one Deal #.",
+              },
+              {
+                color: "bg-teal-100",
+                iconColor: "text-teal-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                ),
+                title: "Shared team caps",
+                desc: "Run a group of agents on one combined annual cap instead of a cap each. Any member's commission draws the same pool, and everyone flips to 100% together when it's hit. Add an optional team lead who takes a set cut of team-deal commissions.",
+              },
             ].map(({ color, iconColor, icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl p-5 md:p-8 border border-gray-100">
                 <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center mb-4`}>
@@ -409,7 +429,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Works for brokerages of every size</h2>
           <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-            A 3-agent boutique and a 25-agent independent brokerage get the exact same tool. Your plan tier reflects your team size, not your feature set.
+            A 3-agent boutique and a 25-agent independent brokerage get the exact same tool — including shared team caps and co-agent deal splits. Your plan tier reflects your team size, not your feature set.
           </p>
           <div className="grid md:grid-cols-3 gap-6 text-left">
             {[

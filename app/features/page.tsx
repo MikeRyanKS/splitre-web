@@ -5,7 +5,7 @@ import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 export const metadata: Metadata = {
   title: "Features — Commission Calculation, Cap Tracking & Bookkeeper-Ready CSV Export",
   description:
-    "SplitRE is commission calculation software for brokerages: percentage splits, tiered splits, flat fees, E&O deductions, real estate cap tracking, agent notifications, and QuickBooks-ready CSV export. Built for independent real estate brokerages.",
+    "SplitRE is commission calculation software for brokerages: percentage and tiered splits, flat fees, E&O deductions, real estate cap tracking, shared team caps, co-agent deal splits, agent notifications, and QuickBooks-ready CSV export. Built for independent real estate brokerages.",
   alternates: { canonical: "https://splitre.app/features" },
   openGraph: {
     title: "SplitRE Features — Built for How Brokerages Actually Work",
@@ -57,6 +57,22 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes. Every agent can follow the brokerage-wide plan or have an individual override. If one agent negotiated a different split, you set the override at the agent level and it only applies to their deals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can two agents split one deal in SplitRE?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. A single deal can be credited to up to six agents, each with a GCI share percentage. Whole-deal deductions (outside referral, relocation, bonus) come off the top once, then each agent's share runs through their own commission plan and their own annual cap independently. It stays one deal with one Deal number, and the QuickBooks CSV export writes one row per agent.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can a real estate team share one commission cap?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. A team in SplitRE is one annual cap shared across several agents: commissions from any member draw down the same pool, and every member flips to a 100% split at the same moment the pool reaches the team cap. A team can also have an optional team lead who earns a set percentage of each member's commission on team deals. Teams are managed from the Teams tab, and every tier includes them.",
       },
     },
   ],
@@ -128,6 +144,76 @@ export default function FeaturesPage() {
               height={856}
               className="w-full h-auto"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Co-agent deals */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div>
+            <div className="inline-block bg-rose-100 text-rose-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Co-Listing &amp; Splits</div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">One deal, more than one agent</h2>
+            <p className="text-gray-600 mb-6">A co-listing, a mentor and mentee, or an in-house deal where the listing side and the buyer side are both your agents. Add up to six agents to a single deal, each with a GCI share percentage. Whole-deal deductions come off the top once, then each agent&apos;s share runs through their own plan and their own cap.</p>
+            <ul className="space-y-3">
+              {[
+                "Up to 6 agents on one deal, each with a GCI share %",
+                "Referral, relocation, and bonus deductions applied once, off the top",
+                "Each agent's share runs through their own split, fees, and annual cap",
+                "One agent hitting their cap doesn't change what the others take home",
+                "Still one deal, one Deal #, one row on the Deals list (\"Jordan + 1\")",
+                "QuickBooks CSV exports one clean row per agent",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Link href="/real-estate-commission-split-calculator" className="inline-block mt-6 text-indigo-600 font-semibold hover:underline">
+              Try a co-listing split in the free calculator →
+            </Link>
+          </div>
+          <div className="bg-gray-50 rounded-2xl p-5 md:p-7 border border-gray-200 shadow-sm">
+            <div className="flex items-center justify-between text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
+              <span>Co-agent deal preview</span>
+              <span className="text-gray-500 normal-case">GCI $21,600</span>
+            </div>
+            <div className="space-y-4 text-sm">
+              <div className="bg-white rounded-xl border border-gray-200 p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-semibold text-gray-900">Alex Rivera</span>
+                  <span className="text-xs text-gray-500">50% share · on a team</span>
+                </div>
+                <div className="space-y-1 text-gray-500">
+                  <div className="flex justify-between"><span>Agent gross (70/30)</span><span className="text-gray-900">$7,560</span></div>
+                  <div className="flex justify-between"><span>Team lead split (25%)</span><span className="text-red-500">−$1,890</span></div>
+                  <div className="flex justify-between"><span>E&amp;O fee</span><span className="text-red-500">−$150</span></div>
+                  <div className="flex justify-between font-semibold text-gray-900 pt-1 border-t border-gray-100 mt-1"><span>Net payout</span><span className="text-indigo-600">$5,520</span></div>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl border border-gray-200 p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-semibold text-gray-900">Sam Okafor</span>
+                  <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">Capped</span>
+                </div>
+                <div className="space-y-1 text-gray-500">
+                  <div className="flex justify-between"><span>Agent gross (100%, past cap)</span><span className="text-gray-900">$10,800</span></div>
+                  <div className="flex justify-between"><span>Broker cut</span><span className="text-gray-900">$0</span></div>
+                  <div className="flex justify-between"><span>E&amp;O fee</span><span className="text-red-500">−$150</span></div>
+                  <div className="flex justify-between font-semibold text-gray-900 pt-1 border-t border-gray-100 mt-1"><span>Net payout</span><span className="text-indigo-600">$10,650</span></div>
+                </div>
+              </div>
+              <div className="flex justify-between px-1 pt-1 text-gray-500">
+                <span>Total agent net</span><span className="font-semibold text-gray-900">$16,170</span>
+              </div>
+              <div className="flex justify-between px-1 text-gray-500">
+                <span>Total broker cut</span><span className="font-semibold text-gray-900">$3,240</span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-4">One deal, one Deal #. Each agent&apos;s share runs through their own plan and cap — Sam is already at 100% for the year, so no split is taken on his portion.</p>
           </div>
         </div>
       </section>
@@ -311,6 +397,62 @@ export default function FeaturesPage() {
               height={900}
               className="w-full h-auto"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Teams / shared cap */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div className="order-2 md:order-1 bg-gray-50 rounded-2xl p-5 md:p-7 border border-gray-200 shadow-sm">
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Team shared cap</span>
+              <span className="text-xs font-medium text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full">Team</span>
+            </div>
+            <p className="font-bold text-gray-900 text-lg">The West Side Team</p>
+            <p className="text-sm text-gray-500 mb-4">5 members · Lead: Jordan Blake (25%)</p>
+            <div className="mb-1 flex justify-between text-sm">
+              <span className="text-gray-500">Collected this year</span>
+              <span className="font-semibold text-gray-900">$28,400 <span className="text-gray-400 font-normal">/ $70,000</span></span>
+            </div>
+            <div className="bg-gray-200 rounded-full h-2.5 w-full mb-5">
+              <div className="bg-teal-500 h-2.5 rounded-full" style={{ width: "40%" }} />
+            </div>
+            <div className="space-y-2">
+              {[
+                { name: "Amanda Reyes", note: "3 deals · draws the pool" },
+                { name: "Chris Nolan", note: "2 deals · draws the pool" },
+                { name: "Dana Wu", note: "1 deal · draws the pool" },
+              ].map((m) => (
+                <div key={m.name} className="flex items-center justify-between bg-white rounded-lg border border-gray-100 px-3 py-2 text-sm">
+                  <span className="text-gray-900">{m.name}</span>
+                  <span className="text-gray-400 text-xs">{m.note}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-gray-400 mt-4">Every member flips to a 100% split the moment the shared pool hits $70,000 — no matter who got it there.</p>
+          </div>
+          <div className="order-1 md:order-2">
+            <div className="inline-block bg-teal-100 text-teal-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Teams</div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Run a team on one shared cap</h2>
+            <p className="text-gray-600 mb-6">Some brokerages cap a group of agents together instead of individually. A team is one annual cap shared across its members: any member&apos;s commission draws the same pool, and everyone flips to a 100% split the moment the pool reaches the team cap. Add an optional team lead who earns a set percentage of each member&apos;s commission on team deals.</p>
+            <ul className="space-y-3">
+              {[
+                "One shared annual cap for the whole team",
+                "Every member flips to 100% the moment the pool is hit",
+                "Optional team lead earns a set % of each member's team-deal commission",
+                "Per-deal switch to turn the lead's split off for a member's own sphere deal",
+                "Leave or disband a team without touching closed deals",
+                "Shared-cap progress bar on the dashboard and every team deal",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

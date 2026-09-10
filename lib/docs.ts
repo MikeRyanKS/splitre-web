@@ -129,6 +129,51 @@ export function getFaqEntries(content: string): FaqEntry[] {
   return entries;
 }
 
+export interface DocSearchEntry {
+  slug: string;
+  title: string;
+  category: string;
+  excerpt: string;
+  /** `slug` here is the rehype-slug heading anchor, so results can deep-link. */
+  headings: DocHeading[];
+  keywords: string[];
+  /** Plain-text body, markdown syntax stripped, whitespace collapsed. */
+  body: string;
+}
+
+// Strips the markdown/MDX syntax that would otherwise pollute a plain-text
+// search match (link URLs, heading hashes, list bullets, emphasis, code fences).
+function toPlainText(md: string): string {
+  return md
+    .replace(/```[\s\S]*?```/g, " ")        // fenced code
+    .replace(/`([^`]+)`/g, "$1")             // inline code
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")   // images
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1") // links -> link text
+    .replace(/^#{1,6}\s+/gm, "")             // heading hashes
+    .replace(/^[-*+]\s+/gm, "")              // list bullets
+    .replace(/^\d+\.\s+/gm, "")              // ordered list markers
+    .replace(/[*_~>]/g, "")                  // emphasis / blockquote marks
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// The whole docs corpus, small enough (a dozen short articles) to ship to the
+// browser as one JSON blob and filter client-side — no search service needed.
+export function getDocsSearchIndex(): DocSearchEntry[] {
+  return getAllDocs().map((d) => {
+    const full = getDoc(d.slug)!;
+    return {
+      slug: d.slug,
+      title: d.title,
+      category: d.category,
+      excerpt: d.excerpt,
+      headings: getDocHeadings(full.content),
+      keywords: d.keywords,
+      body: toPlainText(full.content),
+    };
+  });
+}
+
 export interface NavArticle {
   slug: string;
   title: string;
