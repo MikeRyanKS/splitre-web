@@ -17,7 +17,7 @@ Confirming a deal (see [Entering and Managing Deals](/docs/entering-and-managing
 
 Click the print icon to open a printable breakdown in a new tab (brokerage name, deal address, confirmation date, agent name, and the full commission numbers), then use **Download PDF** to save it via your browser's print dialog.
 
-Click the share icon to copy a link to that same breakdown straight to your clipboard — useful when you'd rather paste it into an email or text than send it from SplitRE directly. Right now, viewing that link requires being signed into your SplitRE account, so it works well for pasting into your own notes or a message to yourself, but an agent without a SplitRE login of their own won't be able to open it — email or the PDF download above are the reliable ways to get an agent their numbers today.
+Click the share icon to copy a link to that same breakdown straight to your clipboard. Anyone with the link can open it — no SplitRE login required — so it's a good way to send an agent their numbers directly, or to paste into an email or text yourself. The link is a long random token, not a guessable deal number, so only someone you send it to can view that one deal.
 
 ## Exporting confirmed deals for QuickBooks
 
@@ -26,7 +26,9 @@ To pull a batch of deals into your accounting software:
 1. On [Deals](https://app.splitre.app/deals), select the confirmed deals you want (voided deals can't be selected).
 2. Click **Export CSV for QuickBooks**.
 
-This downloads a CSV formatted for QuickBooks import, with columns for date, address (split into street/city/state/zip), agent, sale price, commission %, GCI, agent net, broker net, and pre-written QBO invoice/bill descriptions. It only includes the deals you selected — for a full data dump of everything in your brokerage, see [Exporting Your Brokerage Data](/docs/exporting-your-brokerage-data) instead.
+This downloads a CSV formatted for QuickBooks import, with columns for date, address (split into street/city/state/zip), agent, share %, sale price, commission %, GCI, agent net, broker net, and pre-written QBO invoice/bill descriptions. It only includes the deals you selected — for a full data dump of everything in your brokerage, see [Exporting Your Brokerage Data](/docs/exporting-your-brokerage-data) instead.
+
+A deal credited to more than one agent (see [Entering and Managing Deals](/docs/entering-and-managing-deals)) exports as **one row per agent**. Each row carries that agent's share %, their share of the deal's gross commission income, their agent net, and their broker net — so the rows still add up to the deal's totals, and each agent posts to your books as their own line.
 
 For help setting up your QuickBooks Online chart of accounts to receive this export correctly (income accounts, agent vendor records, 1099 tracking), see [QuickBooks Online for Real Estate Brokerages: A Practical Setup Guide](/blog/quickbooks-online-real-estate-brokerage).
 

@@ -252,3 +252,109 @@ function applyStage3(
 function round(n: number): number {
   return Math.round(n * 100) / 100;
 }
+
+// ─── Co-agent deals ─────────────────────────────────────────────────────────
+// One transaction credited to several agents, each with a GCI share %. Whole-deal
+// off-the-top (bonus, referral %, relocation %) is taken ONCE; then each agent's
+// share of what remains runs through calculateDeal against their own rules + cap
+// context. Simplified from the app's calculateMultiAgentDeal for the public demo
+// (no teams / shared pools here — each participant is independent).
+
+export type MultiAgentParticipant = {
+  name: string;
+  gci_share_pct: number;
+  rules: RuleNode[];
+  cap_limit: number;
+  cumulative_broker_cut: number;
+};
+
+export type MultiAgentParticipantResult = {
+  name: string;
+  gci_share_pct: number;
+  personal_gci: number;
+  breakdown: BreakdownResult;
+};
+
+export type MultiAgentBreakdownResult = {
+  deal_line_items: LineItem[]; // bonus / referral / relocation — taken once for the whole deal
+  line_items: LineItem[];      // deal lines, then each agent's lines with the agent name prefixed
+  gci_after_top: number;       // the pool that gets split
+  participants: MultiAgentParticipantResult[];
+  broker_cut: number;          // sum across participants
+  agent_net: number;           // sum across participants
+  cap_hit: boolean;            // did any participant hit their cap on this deal
+};
+
+export function calculateMultiAgentDeal(
+  gci: number,
+  dealOverrides: DealOverrides,
+  participants: MultiAgentParticipant[],
+): MultiAgentBreakdownResult {
+  const dealLineItems: LineItem[] = [];
+  let balance = gci;
+
+  const bonus = dealOverrides.bonus_amount ?? 0;
+  if (bonus > 0) {
+    balance += bonus;
+    dealLineItems.push({ label: "Bonus commission", amount: bonus, party: "agent" });
+  }
+  const grossBase = balance;
+
+  const referralPct = dealOverrides.referral_pct ?? 0;
+  if (referralPct > 0) {
+    const fee = round(grossBase * referralPct / 100);
+    balance -= fee;
+    dealLineItems.push({ label: `Outside referral fee (${referralPct}%)`, amount: -fee, party: "third_party" });
+  }
+  const relocationPct = dealOverrides.relocation_pct ?? 0;
+  if (relocationPct > 0) {
+    const fee = round(grossBase * relocationPct / 100);
+    balance -= fee;
+    dealLineItems.push({ label: `Relocation company fee (${relocationPct}%)`, amount: -fee, party: "third_party" });
+  }
+
+  const gciAfterTop = balance;
+
+  // Each participant's slice of the pool. The last position absorbs the rounding
+  // remainder so the slices sum EXACTLY to gciAfterTop.
+  const personalGcis: number[] = [];
+  let allocated = 0;
+  participants.forEach((p, i) => {
+    const slice = i < participants.length - 1
+      ? round(gciAfterTop * p.gci_share_pct / 100)
+      : round(gciAfterTop - allocated);
+    personalGcis.push(slice);
+    allocated += slice;
+  });
+
+  const results: MultiAgentParticipantResult[] = participants.map((p, i) => ({
+    name: p.name,
+    gci_share_pct: p.gci_share_pct,
+    personal_gci: personalGcis[i],
+    breakdown: calculateDeal(
+      personalGcis[i],
+      p.rules,
+      { cumulative_broker_cut: p.cumulative_broker_cut, cap_limit: p.cap_limit },
+      // bonus / referral / relocation were already taken above; only the primary
+      // (position 0) carries any ad-hoc other_deductions.
+      { other_deductions: i === 0 ? dealOverrides.other_deductions : undefined },
+    ),
+  }));
+
+  const lineItems: LineItem[] = [
+    ...dealLineItems,
+    ...results.flatMap((r) =>
+      r.breakdown.line_items.map((li) => ({ ...li, label: `${r.name}: ${li.label}` })),
+    ),
+  ];
+
+  return {
+    deal_line_items: dealLineItems,
+    line_items: lineItems,
+    gci_after_top: gciAfterTop,
+    participants: results,
+    broker_cut: round(results.reduce((s, r) => s + r.breakdown.broker_cut, 0)),
+    agent_net: round(results.reduce((s, r) => s + r.breakdown.agent_net, 0)),
+    cap_hit: results.some((r) => r.breakdown.cap_hit),
+  };
+}

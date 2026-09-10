@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { calculateDeal } from "@/lib/calculator";
+import { calculateDeal, calculateMultiAgentDeal, type MultiAgentParticipant } from "@/lib/calculator";
 import type { RuleNode } from "@/types/commission-plan";
 import { getStoredLead, requestDemoDeal, type DemoLeadResult } from "@/lib/demoLead";
 import ReceiptCard from "./ReceiptCard";
@@ -39,6 +39,17 @@ export default function DemoClient() {
   const [referralPct, setReferralPct] = useState(0);
   const [bonusAmount, setBonusAmount] = useState(0);
 
+  // Co-agent rows (position 1+). Empty ⇒ a normal single-agent deal. Each
+  // co-agent gets a GCI share % and their own agent split %; they run through
+  // the same cap limit and fees as the primary (a demo simplification — in the
+  // real app each agent has their own full commission plan and live cap).
+  const [coAgents, setCoAgents] = useState<{ id: number; name: string; sharePct: number; agentPct: number }[]>([]);
+  const [nextCoId, setNextCoId] = useState(1);
+  const isMulti = coAgents.length > 0;
+  const coShareSum = coAgents.reduce((s, c) => s + (c.sharePct || 0), 0);
+  const primarySharePct = Math.round((100 - coShareSum) * 100) / 100;
+  const sharesValid = isMulti ? primarySharePct > 0 && coAgents.every((c) => c.sharePct > 0) : true;
+
   // Lead-gate state.
   const [pendingAction, setPendingAction] = useState<PendingAction>(null);
   const [showLimitModal, setShowLimitModal] = useState(false);
@@ -53,39 +64,61 @@ export default function DemoClient() {
 
   const gci = Math.max(0, (salePrice * commissionPct) / 100);
 
-  const rules: RuleNode[] = useMemo(() => {
-    const list: RuleNode[] = [
-      { type: "split", id: "split", agent_pct: agentPct, broker_pct: 100 - agentPct },
-    ];
-    if (franchisePct > 0) list.push({ type: "percentage_deduction", id: "franchise", label: "Franchise Royalty Fee", pct: franchisePct, stage: 1 });
-    if (capLimit > 0) list.push({ type: "cap", id: "cap", limit: capLimit });
-    if (eoFee > 0) list.push({ type: "flat_deduction", id: "eo", label: "E&O Insurance Fee", amount: eoFee, stage: 3 });
-    if (txnFee > 0) list.push({ type: "flat_deduction", id: "txn", label: "Transaction / Compliance Fee", amount: txnFee, stage: 3 });
-    return list;
-  }, [agentPct, franchisePct, capLimit, eoFee, txnFee]);
-
-  const breakdown = useMemo(
-    () =>
-      calculateDeal(
-        gci,
-        rules,
-        { cumulative_broker_cut: capUsed, cap_limit: capLimit },
-        {
-          referral_pct: referralPct || undefined,
-          bonus_amount: bonusAmount || undefined,
-        }
-      ),
-    [gci, rules, capUsed, capLimit, referralPct, bonusAmount]
+  const rules: RuleNode[] = useMemo(
+    () => buildRules(agentPct, franchisePct, capLimit, eoFee, txnFee),
+    [agentPct, franchisePct, capLimit, eoFee, txnFee],
   );
+
+  const overrides = useMemo(
+    () => ({ referral_pct: referralPct || undefined, bonus_amount: bonusAmount || undefined }),
+    [referralPct, bonusAmount],
+  );
+
+  const single = useMemo(
+    () => calculateDeal(gci, rules, { cumulative_broker_cut: capUsed, cap_limit: capLimit }, overrides),
+    [gci, rules, capUsed, capLimit, overrides],
+  );
+
+  const multi = useMemo(() => {
+    if (!isMulti || !sharesValid) return null;
+    const participants: MultiAgentParticipant[] = [
+      { name: agentName || "Primary agent", gci_share_pct: primarySharePct, rules, cap_limit: capLimit, cumulative_broker_cut: capUsed },
+      ...coAgents.map((c) => ({
+        name: c.name || "Co-agent",
+        gci_share_pct: c.sharePct,
+        rules: buildRules(c.agentPct, franchisePct, capLimit, eoFee, txnFee),
+        cap_limit: capLimit,
+        cumulative_broker_cut: 0,
+      })),
+    ];
+    return calculateMultiAgentDeal(gci, overrides, participants);
+  }, [isMulti, sharesValid, gci, rules, overrides, agentName, primarySharePct, capLimit, capUsed, coAgents, franchisePct, eoFee, txnFee]);
+
+  // A single shape for the receipt / preview, whether or not the deal is split.
+  const breakdown = multi
+    ? {
+        line_items: multi.line_items,
+        agent_net: multi.agent_net,
+        broker_cut: multi.broker_cut,
+        new_cumulative_broker_cut: capUsed + multi.broker_cut,
+        cap_remaining: null as number | null,
+        cap_hit: multi.cap_hit,
+        gci_after_top: multi.gci_after_top,
+      }
+    : single;
 
   const dateLabel = closingDate
     ? new Date(closingDate + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
     : new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
+  const receiptAgentName = isMulti && sharesValid
+    ? `${agentName || "Primary agent"} + ${coAgents.length}`
+    : agentName;
+
   const dealPayload = {
     brokerage_name: brokerageName || "Your Brokerage",
     address: address || "123 Main St",
-    agent_name: agentName || "Agent Name",
+    agent_name: receiptAgentName || "Agent Name",
     closing_date: dateLabel,
     line_items: breakdown.line_items.map((i) => ({ label: i.label, amount: i.amount })),
     agent_net: breakdown.agent_net,
@@ -103,7 +136,7 @@ export default function DemoClient() {
     setRemaining(result.remaining);
     setPendingAction(null);
     if (action === "download") {
-      const parts = [address, agentName].filter(Boolean);
+      const parts = [address, receiptAgentName].filter(Boolean);
       if (parts.length > 0) {
         document.title = `${parts.join(" - ")} (Demo)`.replace(/[/\\:*?"<>|]/g, "-");
       }
@@ -135,7 +168,7 @@ export default function DemoClient() {
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Real Estate Commission Split Calculator</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Calculate exactly what your agent and brokerage each take home — 70/30 and 80/20 splits, franchise royalty and referral fees, and annual cap tracking, handled automatically. Plug in a real deal and get the same math and PDF you'd get inside SplitRE.
+          Calculate exactly what your agent and brokerage each take home — 70/30 and 80/20 splits, franchise royalty and referral fees, annual cap tracking, and deals split between two agents, handled automatically. Plug in a real deal and get the same math and PDF you'd get inside SplitRE.
         </p>
       </div>
 
@@ -174,7 +207,7 @@ export default function DemoClient() {
             <div className="pt-4 border-t border-gray-100">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Commission plan</p>
               <div className="space-y-3">
-                <Field label={`Agent split — ${agentPct}% / ${100 - agentPct}% broker`}>
+                <Field label={`${isMulti ? "Primary agent" : "Agent"} split — ${agentPct}% / ${100 - agentPct}% broker${isMulti ? ` · ${primarySharePct}% of GCI` : ""}`}>
                   <input
                     type="range"
                     min={40}
@@ -207,6 +240,67 @@ export default function DemoClient() {
             </div>
 
             <div className="pt-4 border-t border-gray-100">
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Split between agents (optional)</p>
+              {coAgents.map((c, idx) => (
+                <div key={c.id} className="mb-3 rounded-lg border border-gray-200 p-3 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-gray-600">Co-agent {idx + 1}</span>
+                    <button
+                      type="button"
+                      onClick={() => setCoAgents((prev) => prev.filter((x) => x.id !== c.id))}
+                      className="text-xs font-semibold text-gray-400 hover:text-red-500"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                  <Field label="Name (optional)">
+                    <input
+                      type="text"
+                      value={c.name}
+                      onChange={(e) => setCoAgents((prev) => prev.map((x) => (x.id === c.id ? { ...x, name: e.target.value } : x)))}
+                      placeholder="Casey Nguyen"
+                      className={inputClass}
+                    />
+                  </Field>
+                  <div className="grid grid-cols-2 gap-3">
+                    <Field label="GCI share %">
+                      <PctInput value={c.sharePct} onChange={(n) => setCoAgents((prev) => prev.map((x) => (x.id === c.id ? { ...x, sharePct: n } : x)))} step={5} />
+                    </Field>
+                    <Field label={`Split — ${c.agentPct}% agent`}>
+                      <input
+                        type="range"
+                        min={40}
+                        max={100}
+                        value={c.agentPct}
+                        onChange={(e) => setCoAgents((prev) => prev.map((x) => (x.id === c.id ? { ...x, agentPct: Number(e.target.value) } : x)))}
+                        className="w-full accent-indigo-600"
+                      />
+                    </Field>
+                  </div>
+                </div>
+              ))}
+              {coAgents.length < 5 && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setCoAgents((prev) => [...prev, { id: nextCoId, name: "", sharePct: prev.length === 0 ? 50 : 20, agentPct: 70 }]);
+                    setNextCoId((n) => n + 1);
+                  }}
+                  className="text-xs font-semibold text-indigo-600 hover:text-indigo-700"
+                >
+                  + Add another agent
+                </button>
+              )}
+              {isMulti && (
+                <p className="mt-2 text-xs text-gray-500">
+                  {sharesValid
+                    ? `Shares total 100%. The referral, relocation, and bonus come off the top once; then each agent's share runs through their own split, and the cap + fees above are applied to each.`
+                    : `Shares must add up to 100% — right now they total ${(coShareSum + Math.max(0, primarySharePct)).toFixed(0)}%.`}
+                </p>
+              )}
+            </div>
+
+            <div className="pt-4 border-t border-gray-100">
               <button
                 type="button"
                 onClick={() => setShowAdjustments((v) => !v)}
@@ -235,7 +329,17 @@ export default function DemoClient() {
               <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Gross commission</span>
               <span className="font-bold text-gray-900">{fmt(gci)}</span>
             </div>
-            {capLimit > 0 && (
+            {multi && sharesValid && (
+              <div className="mt-3 space-y-1.5">
+                {multi.participants.map((p, i) => (
+                  <div key={i} className="flex justify-between items-center text-xs">
+                    <span className="text-gray-500">{p.name || (i === 0 ? "Primary agent" : "Co-agent")} · {p.gci_share_pct}% of GCI{p.breakdown.cap_hit ? " · capped" : ""}</span>
+                    <span className="font-semibold text-gray-900">{fmt(p.breakdown.agent_net)} net</span>
+                  </div>
+                ))}
+              </div>
+            )}
+            {!multi && capLimit > 0 && (
               <div className="bg-amber-50 border border-amber-100 rounded-lg px-3 py-2.5 mt-3">
                 <div className="text-xs font-semibold text-amber-700">
                   Cap progress: {fmt(Math.min(breakdown.new_cumulative_broker_cut, capLimit))} / {fmt(capLimit)}
@@ -253,7 +357,7 @@ export default function DemoClient() {
           <ReceiptCard
             brokerageName={brokerageName}
             address={address}
-            agentName={agentName}
+            agentName={receiptAgentName}
             dateLabel={dateLabel}
             lineItems={breakdown.line_items}
             agentNet={breakdown.agent_net}
@@ -285,6 +389,17 @@ export default function DemoClient() {
       {showLimitModal && <LimitReachedModal onClose={() => setShowLimitModal(false)} />}
     </div>
   );
+}
+
+function buildRules(agentPct: number, franchisePct: number, capLimit: number, eoFee: number, txnFee: number): RuleNode[] {
+  const list: RuleNode[] = [
+    { type: "split", id: "split", agent_pct: agentPct, broker_pct: 100 - agentPct },
+  ];
+  if (franchisePct > 0) list.push({ type: "percentage_deduction", id: "franchise", label: "Franchise Royalty Fee", pct: franchisePct, stage: 1 });
+  if (capLimit > 0) list.push({ type: "cap", id: "cap", limit: capLimit });
+  if (eoFee > 0) list.push({ type: "flat_deduction", id: "eo", label: "E&O Insurance Fee", amount: eoFee, stage: 3 });
+  if (txnFee > 0) list.push({ type: "flat_deduction", id: "txn", label: "Transaction / Compliance Fee", amount: txnFee, stage: 3 });
+  return list;
 }
 
 const inputClass = "w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent";

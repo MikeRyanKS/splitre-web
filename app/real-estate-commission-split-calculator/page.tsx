@@ -78,6 +78,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "How do you calculate a commission split between two agents on one deal?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "On a co-listing or a deal where two of your agents are involved, take the whole-deal deductions — outside referral, relocation, bonus — off the top once, then give each agent a share of what's left. Each agent's share then runs through their own commission split and their own annual cap independently: one agent hitting their cap doesn't change what the other takes home. Use the \"Split between agents\" section of the calculator above to see each agent's payout.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Is this the same calculation the real SplitRE app uses?",
       acceptedAnswer: {
         "@type": "Answer",

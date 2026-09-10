@@ -45,6 +45,10 @@ The calendar-year window (resets every January 1) used for cap tracking, determi
 
 The date a deal closed, editable by the broker and defaulting to today. It determines which cap year a deal counts against. See [Entering and Managing Deals](/docs/entering-and-managing-deals).
 
+### Co-agent Deal
+
+One transaction credited to two or more agents (up to six), each with a GCI **share %**. Whole-deal deductions come off the top once; then each agent's share runs through their own commission plan and their own annual cap. It stays one deal with one Deal #. See [Entering and Managing Deals](/docs/entering-and-managing-deals).
+
 ### Commission Plan
 
 The reusable template that defines how a deal is calculated for any agent assigned to it: the split, the cap, and any deductions. See [Creating a Commission Plan](/docs/creating-commission-plans).
@@ -89,9 +93,13 @@ The agent/broker percentage division applied to the splittable amount — for ex
 
 What's left of the GCI after off-the-top deductions (franchise fee, referral %, relocation %, flat/percentage deductions) are subtracted — this is the number the split percentage is actually applied to. See [Creating a Commission Plan](/docs/creating-commission-plans).
 
+### Team
+
+A group of agents who share one annual cap: commissions from any member draw down the same pool, and every member flips to a 100% split at the same moment — when the pool reaches the team's cap. A team can also have an optional **team lead** who earns a set % of each member's commission on team deals. Teams are managed from the Teams tab, not the commission plan editor. See [Setting Up Agent Caps](/docs/setting-up-agent-caps).
+
 ### Team Split
 
-A commission plan rule type for agents who split commission within a team, rather than 1:1 against the brokerage.
+The cut a team lead earns from each team member's commission on team deals — a set percentage, taken either from the member's post-split share or from the full commission (a team setting; the member's take-home is the same either way). Configured on the team, not as a commission plan rule. See [Setting Up Agent Caps](/docs/setting-up-agent-caps).
 
 ### Voided
 

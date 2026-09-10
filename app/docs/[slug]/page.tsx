@@ -81,7 +81,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
     keywords: doc.keywords.join(", "),
   };
 
-  // The FAQ doc's 16 Q&As are the highest-leverage schema gap on the site —
+  // The FAQ doc's Q&As are the highest-leverage schema gap on the site —
   // FAQPage is eligible for rich results and /features + the calculator page
   // already have it. Entries are parsed straight from doc.content so the
   // schema can never drift from what MDXRemote actually renders below.
