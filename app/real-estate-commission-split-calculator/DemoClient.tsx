@@ -365,6 +365,18 @@ export default function DemoClient() {
             remaining={remaining}
             onDownloadClick={() => handleReceiptAction("download")}
             onEmailClick={() => handleReceiptAction("email")}
+            dealLineItems={multi ? multi.deal_line_items : undefined}
+            participants={
+              multi
+                ? multi.participants.map((p, i) => ({
+                    name: p.name || (i === 0 ? "Primary agent" : "Co-agent"),
+                    sharePct: p.gci_share_pct,
+                    personalGci: p.personal_gci,
+                    lineItems: p.breakdown.line_items,
+                    agentNet: p.breakdown.agent_net,
+                  }))
+                : undefined
+            }
           />
 
           {checkingReturning && <p className="text-center text-xs text-gray-400 mt-2 print:hidden">Checking…</p>}

@@ -4,6 +4,14 @@ import Link from "next/link";
 
 export type ReceiptLineItem = { label: string; amount: number };
 
+export type ReceiptParticipant = {
+  name: string;
+  sharePct: number;
+  personalGci: number;
+  lineItems: ReceiptLineItem[];
+  agentNet: number;
+};
+
 type Props = {
   brokerageName: string;
   address: string;
@@ -15,10 +23,29 @@ type Props = {
   remaining: number | null;
   onDownloadClick: () => void;
   onEmailClick: () => void;
+  // Co-agent deal: the off-the-top lines taken once, then a section per agent.
+  // When present, `lineItems` is ignored in favour of these grouped sections.
+  dealLineItems?: ReceiptLineItem[];
+  participants?: ReceiptParticipant[];
 };
 
 function fmt(n: number) {
   return n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function LineRows({ items }: { items: ReceiptLineItem[] }) {
+  return (
+    <>
+      {items.map((item, i) => (
+        <tr key={`${item.label}-${i}`}>
+          <td className="py-2 text-gray-500">{item.label}</td>
+          <td className={`py-2 text-right font-medium ${item.amount < 0 ? "text-red-600" : "text-gray-900"}`}>
+            {item.amount < 0 ? `-${fmt(Math.abs(item.amount))}` : fmt(item.amount)}
+          </td>
+        </tr>
+      ))}
+    </>
+  );
 }
 
 // Deliberately mirrors src/pages/Share.tsx's card + BreakdownTable — same
@@ -36,7 +63,10 @@ export default function ReceiptCard({
   remaining,
   onDownloadClick,
   onEmailClick,
+  dealLineItems,
+  participants,
 }: Props) {
+  const isMulti = !!participants && participants.length > 0;
   return (
     <div>
       <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 print:shadow-none print:rounded-none print:border-0">
@@ -56,27 +86,52 @@ export default function ReceiptCard({
           <p className="text-[11px] font-semibold text-gray-500 uppercase tracking-wide mb-3 pb-2 border-b border-gray-100">
             Commission Breakdown
           </p>
-          <table className="w-full text-sm">
-            <tbody className="divide-y divide-gray-100">
-              {lineItems.map((item, i) => (
-                <tr key={`${item.label}-${i}`}>
-                  <td className="py-2 text-gray-500">{item.label}</td>
-                  <td className={`py-2 text-right font-medium ${item.amount < 0 ? "text-red-600" : "text-gray-900"}`}>
-                    {item.amount < 0 ? `-${fmt(Math.abs(item.amount))}` : fmt(item.amount)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
 
-          <table className="w-full text-sm border-t-2 border-indigo-600 mt-3">
+          {isMulti ? (
+            <div className="space-y-6">
+              {dealLineItems && dealLineItems.length > 0 && (
+                <div>
+                  <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-1">Off the top (whole deal)</p>
+                  <table className="w-full text-sm">
+                    <tbody className="divide-y divide-gray-100">
+                      <LineRows items={dealLineItems} />
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {participants!.map((p, i) => (
+                <div key={i}>
+                  <p className="text-[11px] font-semibold text-indigo-600 uppercase tracking-wide mb-1 pb-1.5 border-b border-gray-100">
+                    {p.name} &nbsp;·&nbsp; {p.sharePct}% share &nbsp;·&nbsp; personal GCI {fmt(p.personalGci)}
+                  </p>
+                  <table className="w-full text-sm">
+                    <tbody className="divide-y divide-gray-100">
+                      <LineRows items={p.lineItems} />
+                      <tr>
+                        <td className="pt-2 font-semibold text-gray-900">Net payout</td>
+                        <td className="pt-2 text-right font-semibold text-indigo-600">{fmt(p.agentNet)}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <table className="w-full text-sm">
+              <tbody className="divide-y divide-gray-100">
+                <LineRows items={lineItems} />
+              </tbody>
+            </table>
+          )}
+
+          <table className="w-full text-sm border-t-2 border-indigo-600 mt-4">
             <tbody>
               <tr>
-                <td className="pt-3 font-bold text-gray-900 text-[15px]">Agent Net Payout</td>
+                <td className="pt-3 font-bold text-gray-900 text-[15px]">{isMulti ? "Total Agent Net Payout" : "Agent Net Payout"}</td>
                 <td className="pt-3 text-right font-bold text-indigo-600 text-lg">{fmt(agentNet)}</td>
               </tr>
               <tr>
-                <td className="pt-1 text-gray-500 text-[13px]">Broker Cut</td>
+                <td className="pt-1 text-gray-500 text-[13px]">{isMulti ? "Total Broker Cut" : "Broker Cut"}</td>
                 <td className="pt-1 text-right text-gray-500 text-[13px]">{fmt(brokerCut)}</td>
               </tr>
             </tbody>
