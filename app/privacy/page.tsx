@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "SplitRE Privacy Policy — how Keplify LLC collects, uses, and protects your brokerage data. Your data is never sold or shared with third parties.",
+    "SplitRE Privacy Policy: how Keplify LLC collects, uses, and protects your brokerage data. Your data is never sold or shared with third parties.",
   alternates: { canonical: "https://splitre.app/privacy" },
   robots: { index: true, follow: true },
 };
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
               commission income, buyer/seller sides) are stored on your behalf. This is your data.
               With respect to anything you enter about your agents and transactions, we act as a
               <strong> service provider / processor</strong>, not as the party that decides why and how it&apos;s
-              collected — see Section 9 for what that means under US state privacy law, and Section 7 of our{" "}
+              collected. See Section 9 for what that means under US state privacy law, and Section 7 of our{" "}
               <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a> for the
               contractual terms that go with it.
             </p>
@@ -179,7 +179,7 @@ export default function PrivacyPage() {
                   </tr>
                   <tr>
                     <td className="py-2 pr-4 font-medium">Intuit Inc. (QuickBooks Online)</td>
-                    <td className="py-2 pr-4">Accounting sync — accessed only using your own OAuth credentials at your instruction</td>
+                    <td className="py-2 pr-4">Accounting sync, accessed only using your own OAuth credentials at your instruction</td>
                     <td className="py-2">United States</td>
                   </tr>
                 </tbody>
@@ -236,7 +236,7 @@ export default function PrivacyPage() {
             <p className="mt-3">
               <strong>If you voluntarily cancel</strong> (turn off auto-renewal and let your subscription run to
               the end of its billing period), your account is locked at that point but{" "}
-              <strong>your data is not automatically deleted</strong> — it&apos;s retained, and reactivating your
+              <strong>your data is not automatically deleted</strong>. It is retained, and reactivating your
               subscription restores everything. Because self-service export isn&apos;t available once locked,
               export your data before your final billing period ends if you don&apos;t plan to come back. See our{" "}
               <a href="/refund-policy" className="text-indigo-600 hover:underline">Refund / Cancellation Policy</a>{" "}
@@ -278,7 +278,7 @@ export default function PrivacyPage() {
             <p>
               Some browsers send a "Do Not Track" (DNT) signal to websites. Because there
               is no common industry standard for responding to DNT signals, we do not
-              currently alter our data collection practices in response to DNT signals — but as stated
+              currently alter our data collection practices in response to DNT signals. As stated
               throughout this Policy, we do not sell or share personal information or engage in cross-site
               behavioral advertising regardless of any signal, so there is nothing DNT would meaningfully change.
             </p>
@@ -286,7 +286,7 @@ export default function PrivacyPage() {
               We do honor the <strong>Global Privacy Control (GPC)</strong> signal, where technically
               detectable, as a valid opt-out-of-sale/sharing preference signal under the CCPA and equivalent
               state laws. Because we do not sell or share personal information in the first place, honoring GPC
-              has no practical effect on how your data is treated — you are already opted out.
+              has no practical effect on how your data is treated: you are already opted out.
             </p>
           </section>
 
@@ -308,7 +308,7 @@ export default function PrivacyPage() {
               If you are a California resident, the California Consumer Privacy Act (CCPA),
               as amended by the California Privacy Rights Act (CPRA), grants you the
               rights below. This applies whether you are the brokerage account holder or an individual whose
-              information was entered into the Service <em>by</em> a brokerage — for example, an agent.
+              information was entered into the Service <em>by</em> a brokerage, for example an agent.
             </p>
             <p className="mt-3">
               <strong>Note on roles:</strong> where your brokerage entered information about you (an agent)
@@ -338,7 +338,7 @@ export default function PrivacyPage() {
               </li>
               <li>
                 <strong>Right to Opt Out of Sale or Sharing.</strong> We do not sell or
-                share your personal information for cross-context behavioral advertising —
+                share your personal information for cross-context behavioral advertising, so
                 there is nothing to opt out of, and we honor Global Privacy Control signals as described in
                 Section 7 as a matter of policy regardless.
               </li>
@@ -373,16 +373,16 @@ export default function PrivacyPage() {
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">Categories of personal information collected</h3>
             <p>In the preceding 12 months, we have collected the following CCPA categories:</p>
             <ul className="list-disc pl-5 mt-3 space-y-2">
-              <li><strong>Identifiers</strong> — name, email address, IP address, account ID</li>
-              <li><strong>Commercial information</strong> — subscription plan, billing history, transaction records you enter</li>
-              <li><strong>Internet or network activity</strong> — server logs, feature usage, error reports</li>
-              <li><strong>Professional or employment-related information</strong> — brokerage name, agent data entered by a brokerage</li>
+              <li><strong>Identifiers:</strong> name, email address, IP address, account ID</li>
+              <li><strong>Commercial information:</strong> subscription plan, billing history, transaction records you enter</li>
+              <li><strong>Internet or network activity:</strong> server logs, feature usage, error reports</li>
+              <li><strong>Professional or employment-related information:</strong> brokerage name, agent data entered by a brokerage</li>
             </ul>
             <p className="mt-3">
               We do not collect Social Security numbers, financial account credentials,
               biometric data, precise geolocation, health information, or the contents of
               private communications, except that a brokerage may choose to enter an agent&apos;s license
-              number or income figures as part of ordinary commission tracking — this is professional/commercial
+              number or income figures as part of ordinary commission tracking. This is professional or commercial
               information, not a sensitive category we independently seek out. We do not use or disclose
               sensitive personal information for any purpose requiring an additional CCPA notice beyond what&apos;s
               described here.
@@ -393,8 +393,8 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Other US state privacy rights</h2>
             <p>
-              As of 2026, roughly twenty US states — including Virginia, Colorado, Connecticut, Utah, Texas,
-              and others — have their own comprehensive consumer privacy laws. They differ in detail, but they
+              As of 2026, roughly twenty US states (including Virginia, Colorado, Connecticut, Utah, Texas,
+              and others) have their own comprehensive consumer privacy laws. They differ in detail, but they
               share a common core, and if you are a resident of one of these states, you generally have rights
               similar to the California rights in Section 9: to know what personal information we hold about
               you, to access or obtain a copy of it, to correct inaccuracies, to request deletion, to opt out

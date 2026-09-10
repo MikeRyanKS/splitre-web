@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "SplitRE Terms of Service — your legal agreement with Keplify LLC governing use of the SplitRE commission management platform.",
+    "SplitRE Terms of Service: your legal agreement with Keplify LLC governing use of the SplitRE commission management platform.",
   alternates: { canonical: "https://splitre.app/terms" },
 };
 
@@ -22,7 +22,7 @@ export default function TermsPage() {
         <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Terms of Service</h1>
         <p className="text-sm text-gray-500 mb-1">Effective date: {EFFECTIVE_DATE}</p>
         <p className="text-sm text-gray-500 mb-10">
-          Operated by {COMPANY} &mdash; {ADDRESS}
+          Operated by {COMPANY}, {ADDRESS}
         </p>
 
         <div className="space-y-10 text-gray-700 leading-relaxed">
@@ -37,10 +37,10 @@ export default function TermsPage() {
               access to and use of {APP_NAME} at {APP_URL} and splitre.app (collectively, the &ldquo;Service&rdquo;).
             </p>
             <p className="mt-3">
-              <strong>You accept these Terms — and our{" "}
+              <strong>You accept these Terms (together with our{" "}
               <a href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</a> and{" "}
               <a href="/refund-policy" className="text-indigo-600 hover:underline">Refund / Cancellation Policy</a>,
-              which are incorporated by reference — by doing any of the following:</strong> creating an account;
+              which are incorporated by reference) by doing any of the following:</strong> creating an account;
               checking a box or clicking a button presented alongside a link to these Terms during signup or
               checkout; starting a free trial; entering payment information; or otherwise accessing or using the
               Service in any way. Each is an independent, sufficient act of acceptance. If you do not agree, do not
@@ -68,8 +68,8 @@ export default function TermsPage() {
               {APP_NAME} is a web-based software application that automates real estate commission
               calculations, annual agent cap tracking, and CSV export formatted for QuickBooks
               Online (&ldquo;QBO&rdquo;) for independent real estate brokerages operating in the
-              United States. The Service is offered on a subscription basis in three tiers — Boutique,
-              Independent, and Brokerage, described in Section 4. All tiers include every feature;
+              United States. The Service is offered on a subscription basis in three tiers (Boutique,
+              Independent, and Brokerage), described in Section 4. All tiers include every feature;
               tiers differ only in the number of active agents permitted.
             </p>
             <p className="mt-3">
@@ -114,7 +114,7 @@ export default function TermsPage() {
             </p>
             <p className="mt-3">
               At the end of the trial period, if you have not provided a valid payment method
-              and selected a subscription plan, your account is automatically paused — you are not
+              and selected a subscription plan, your account is automatically paused and you are not
               charged. We will send you email reminders before the trial ends. A trial that converts
               to a paid subscription is an automatic renewal for purposes of Section 4.3 below, and by
               adding a payment method and selecting a plan you are giving the affirmative consent that
@@ -122,7 +122,7 @@ export default function TermsPage() {
             </p>
             <p className="mt-3">
               <strong>A paused trial gets the same 30-day data-retention treatment as a locked
-              account under Section 13</strong> — your data is preserved for 30 calendar days from
+              account under Section 13.</strong> Your data is preserved for 30 calendar days from
               the day the trial ends, during which you may log in only to export your data and to
               choose a plan, and choosing one within that window restores everything exactly as you
               left it. After 30 days, all brokerage data is permanently and automatically deleted.
@@ -175,12 +175,12 @@ export default function TermsPage() {
               or government levies applicable to your subscription other than our own income taxes.
             </p>
 
-            <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.3 Automatic Renewal — Required Disclosures</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.3 Automatic Renewal: Required Disclosures</h3>
             <p>
               <strong>This is an automatically renewing subscription.</strong> Unless you turn off
               auto-renewal before the end of your current billing period, your subscription
-              automatically renews at the end of that period — every 30 days for monthly plans, or
-              every 12 months for annual plans — and we charge your payment method on file the
+              automatically renews at the end of that period (every 30 days for monthly plans, or
+              every 12 months for annual plans), and we charge your payment method on file the
               then-current price for your plan and billing frequency, with no further action
               required from you.
             </p>
@@ -189,7 +189,7 @@ export default function TermsPage() {
                 <strong>To stop automatic renewal:</strong> switch off the <strong>Auto-renewal</strong> toggle
                 at any time in <strong>app.splitre.app &rsaquo; Settings &rsaquo; Billing</strong>. This takes
                 effect immediately as a matter of record, but your plan stays fully active and billing does not
-                stop until the end of your current billing period — see Section 13.
+                stop until the end of your current billing period. See Section 13.
               </li>
               <li>
                 <strong>Reminder:</strong> we send an email reminder that your subscription is set to renew, at
@@ -252,8 +252,8 @@ export default function TermsPage() {
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.6 Price Changes and Renewal Notices</h3>
             <p>
               We reserve the right to adjust subscription prices. We will provide at least 30 days&rsquo;
-              — and no fewer than 7 days&rsquo; — written notice of any price increase to active subscribers
-              before it takes effect, sent to your account email, stating the new price and how to cancel if
+              written notice (and in no case fewer than 7 days&rsquo; notice) of any price increase to active
+              subscribers before it takes effect, sent to your account email, stating the new price and how to cancel if
               you do not want to be charged at the new rate. Separately, and regardless of whether a price
               change is occurring, we send an annual reminder to active subscribers that their subscription
               renews automatically, consistent with California&rsquo;s Automatic Renewal Law and equivalent
@@ -326,7 +326,7 @@ export default function TermsPage() {
               your agents (such as names, license numbers, or income data), you are
               responsible for ensuring you have the legal right to collect and process that
               information and for complying with all applicable privacy, employment, and independent-contractor
-              laws that apply to <em>you</em> as the brokerage — including any state-specific requirements
+              laws that apply to <em>you</em> as the brokerage, including any state-specific requirements
               around the timing, itemization, and documentation of commission payments to your agents.
               {" "}{APP_NAME} is a calculation and record-keeping tool; it does not determine, and is not
               responsible for, whether your commission structures or payment practices comply with the law
@@ -485,7 +485,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">13. Cancellation, Suspension, and Data Retention</h2>
             <p>
-              This Section governs two different things — <strong>voluntary cancellation</strong> (something
+              This Section governs two different things: <strong>voluntary cancellation</strong> (something
               you choose to do) and <strong>suspension for non-payment</strong> (something that happens if a
               payment fails and is never fixed). They have different consequences. Read the one that applies
               to you.
@@ -497,13 +497,13 @@ export default function TermsPage() {
               commitment, by switching off <strong>Auto-renewal</strong> in{" "}
               <strong>app.splitre.app &rsaquo; Settings &rsaquo; Billing</strong>, or by emailing{" "}
               <a href={`mailto:${BILLING_EMAIL}`} className="text-indigo-600 hover:underline">{BILLING_EMAIL}</a>.
-              This takes effect as a cancellation of the <em>next</em> charge — you keep full, unrestricted access
+              This takes effect as a cancellation of the <em>next</em> charge. You keep full, unrestricted access
               to the Service through the end of your current paid billing period, exactly as if you
               hadn&rsquo;t canceled.
             </p>
             <p className="mt-3">
               At the end of that period, your account becomes <strong>locked</strong>: you may log in only to
-              export your data (Settings &rsaquo; Data Export) and to resubscribe — full read/write access to
+              export your data (Settings &rsaquo; Data Export) and to resubscribe. Full read/write access to
               the Service is not available until you do. Your brokerage data is preserved for{" "}
               <strong>30 calendar days</strong> from the lock date. Reactivating your subscription at any time
               before then restores full access to everything exactly as you left it.
@@ -513,8 +513,8 @@ export default function TermsPage() {
               deleted</strong>. We will email you the exact deletion date when your account is locked, and
               again as it approaches. If you want your data deleted sooner than the 30-day window, or exported
               on your behalf, contact{" "}
-              <a href={`mailto:${LEGAL_EMAIL}`} className="text-indigo-600 hover:underline">{LEGAL_EMAIL}</a>{" "}
-              — we will act on a verified request from an authorized account owner within 30 days of receiving it.
+              <a href={`mailto:${LEGAL_EMAIL}`} className="text-indigo-600 hover:underline">{LEGAL_EMAIL}</a>.
+              {" "}We will act on a verified request from an authorized account owner within 30 days of receiving it.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">13.2 Suspension for Non-Payment</h3>

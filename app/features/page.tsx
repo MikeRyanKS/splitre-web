@@ -3,12 +3,12 @@ import Link from "next/link";
 import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 
 export const metadata: Metadata = {
-  title: "Features — Commission Calculation, Cap Tracking & Bookkeeper-Ready CSV Export",
+  title: "Features: Commission Calculation, Cap Tracking, and Bookkeeper-Ready CSV Export",
   description:
     "SplitRE is commission calculation software for brokerages: percentage and tiered splits, flat fees, E&O deductions, real estate cap tracking, shared team caps, co-agent deal splits, agent notifications, and QuickBooks-ready CSV export. Built for independent real estate brokerages.",
   alternates: { canonical: "https://splitre.app/features" },
   openGraph: {
-    title: "SplitRE Features — Built for How Brokerages Actually Work",
+    title: "SplitRE Features: Built for How Brokerages Actually Work",
     description:
       "Commission calculation engine, real-time cap tracking, automatic agent notifications, QuickBooks-ready CSV export, per-agent plan overrides, and one-click PDF downloads.",
     url: "https://splitre.app/features",
@@ -89,7 +89,7 @@ export default function FeaturesPage() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">What SplitRE actually does</h1>
-          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week: commission calculations, cap tracking, agent notifications, and bookkeeper exports. It&apos;s commission management software built specifically for how brokerages calculate and pay agents — not a CRM or transaction-management suite with commissions bolted on.</p>
+          <p className="text-xl text-gray-600">Every feature exists to cut the manual work that eats your week: commission calculations, cap tracking, agent notifications, and bookkeeper exports. It&apos;s commission management software built specifically for how brokerages calculate and pay agents. It is not a CRM or a transaction-management suite with commissions bolted on.</p>
         </div>
       </section>
 
@@ -213,7 +213,7 @@ export default function FeaturesPage() {
                 <span>Total broker cut</span><span className="font-semibold text-gray-900">$3,240</span>
               </div>
             </div>
-            <p className="text-xs text-gray-400 mt-4">One deal, one Deal #. Each agent&apos;s share runs through their own plan and cap — Sam is already at 100% for the year, so no split is taken on his portion.</p>
+            <p className="text-xs text-gray-400 mt-4">One deal, one Deal #. Each agent&apos;s share runs through their own plan and cap. Sam is already at 100% for the year, so no split is taken on his portion.</p>
           </div>
         </div>
       </section>
@@ -233,7 +233,7 @@ export default function FeaturesPage() {
           <div className="order-1 md:order-2">
             <div className="inline-block bg-fuchsia-100 text-fuchsia-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Commission Plan Templates</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">One plan, many agents</h2>
-            <p className="text-gray-600 mb-6">Set up a commission plan once — a split, a cap, whatever deductions apply — and assign it to every agent who uses it. A senior agent plan, a franchise-fee plan, a plan for new hires: keep as many as your brokerage actually needs, each one editable in one place instead of re-entering the same rules per agent.</p>
+            <p className="text-gray-600 mb-6">Set up a commission plan once (a split, a cap, whatever deductions apply) and assign it to every agent who uses it. A senior agent plan, a franchise-fee plan, a plan for new hires: keep as many as your brokerage actually needs, each one editable in one place instead of re-entering the same rules per agent.</p>
             <ul className="space-y-3">
               {[
                 "Named, reusable plan templates",
@@ -268,13 +268,13 @@ export default function FeaturesPage() {
           <div className="order-1 md:order-2">
             <div className="inline-block bg-emerald-100 text-emerald-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Bookkeeper Export</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">QuickBooks-ready in one click</h2>
-            <p className="text-gray-600 mb-6">Select any deals and click <strong>Export CSV for QuickBooks</strong>. Your bookkeeper gets a pre-formatted file with everything in place — built specifically for QuickBooks real estate brokerage workflows, not a generic accounting export. No live connection to manage, no tokens to expire, and no call from them asking what any of the numbers mean.</p>
+            <p className="text-gray-600 mb-6">Select any deals and click <strong>Export CSV for QuickBooks</strong>. Your bookkeeper gets a pre-formatted file with everything in place, built specifically for QuickBooks real estate brokerage workflows rather than a generic accounting export. No live connection to manage, no tokens to expire, and no call from them asking what any of the numbers mean.</p>
             <ul className="space-y-3">
               {[
-                "GCI (commission income) — enter as an Invoice in QBO",
-                "Agent net payout — enter as a Bill in QBO",
-                "Broker net revenue — the margin, for your records",
-                "Pre-formatted QuickBooks Invoice & Bill memo lines",
+                "GCI (commission income): enter as an Invoice in QBO",
+                "Agent net payout: enter as a Bill in QBO",
+                "Broker net revenue: the margin, kept for your records",
+                "Pre-formatted QuickBooks Invoice and Bill memo lines",
                 "Property address, agent, date, sale price, commission %",
                 "Works with QuickBooks Desktop too, not just QBO",
               ].map((item) => (
@@ -302,7 +302,7 @@ export default function FeaturesPage() {
                 "Instant email on deal confirmation",
                 "Email on amendments with updated breakdown",
                 "Shareable deal link in every notification",
-                "Professional branded layout — looks like your brokerage sent it",
+                "Professional branded layout that looks like your brokerage sent it",
                 "No agent login required to view their breakdown",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -347,11 +347,11 @@ export default function FeaturesPage() {
             <p className="text-gray-600 mb-6">Already have deals or agents in a spreadsheet? Upload a CSV and SplitRE walks you through it: column mapping, row-by-row validation, a preview before anything is committed. Cap balances carry forward from wherever your agents are in the year. You&apos;re not starting from zero.</p>
             <ul className="space-y-3">
               {[
-                "Import agents from any CSV — auto-maps common column names",
+                "Import agents from any CSV, with common column names auto-mapped",
                 "Import historical deals with cap balances carried forward",
                 "Auto-creates agents from deal import if email is provided",
                 "Row-by-row preview shows exactly what will import and why",
-                "Failed rows export as a fixable CSV — no hunting through a list",
+                "Failed rows export as a fixable CSV, no hunting through a list",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -430,7 +430,7 @@ export default function FeaturesPage() {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-gray-400 mt-4">Every member flips to a 100% split the moment the shared pool hits $70,000 — no matter who got it there.</p>
+            <p className="text-xs text-gray-400 mt-4">Every member flips to a 100% split the moment the shared pool hits $70,000, no matter who got it there.</p>
           </div>
           <div className="order-1 md:order-2">
             <div className="inline-block bg-teal-100 text-teal-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Teams</div>

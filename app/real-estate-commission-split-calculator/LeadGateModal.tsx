@@ -45,7 +45,7 @@ export default function LeadGateModal({ action, deal, onClose, onResolved }: Pro
         </h2>
         <p className="mt-1.5 text-sm text-gray-500">
           {action === "download"
-            ? "Enter your name and email — we'll open your PDF right away. No account needed."
+            ? "Enter your name and email and we'll open your PDF right away. No account needed."
             : "We'll send this breakdown straight to your inbox. No account needed."}
         </p>
 

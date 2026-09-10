@@ -1,7 +1,7 @@
 # SplitRE Privacy Policy
 
 **Effective date:** August 10, 2026
-**Operated by:** Keplify LLC, a Delaware limited liability company — 8 The Green, Suite 20261, Dover, DE 19901, United States
+**Operated by:** Keplify LLC, a Delaware limited liability company, 8 The Green, Suite 20261, Dover, DE 19901, United States
 
 > This is the canonical source of the Privacy Policy. `web/app/privacy/page.tsx` must always match this document; if they diverge, this file is authoritative.
 > This document is not legal advice and has not been reviewed by a licensed attorney. Have it reviewed by counsel before or shortly after publication, and re-check it whenever a subprocessor, data practice, or applicable law changes.
@@ -20,11 +20,11 @@ By using the Service you agree to the practices described in this Policy, which 
 
 ### 1.1 Account and billing information
 
-When you sign up or manage your subscription, we collect your full name, email address, brokerage name, and billing details. Payment card numbers are processed directly by Stripe, Inc. and are never stored on our servers — we retain only the last four digits, card type, and expiration date as returned by Stripe, for display purposes.
+When you sign up or manage your subscription, we collect your full name, email address, brokerage name, and billing details. Payment card numbers are processed directly by Stripe, Inc. and are never stored on our servers. We retain only the last four digits, card type, and expiration date as returned by Stripe, for display purposes.
 
 ### 1.2 Brokerage data you enter
 
-Commission plans, agent profiles (names, license numbers, split percentages, annual cap amounts), and deal records (property addresses, sale prices, gross commission income, buyer/seller sides) are stored on your behalf. This is your data. With respect to anything you enter about your agents and transactions, we act as a **service provider / processor**, not as the party that decides why and how it's collected — see Section 9 for what that means under US state privacy law and Section 7 of our [Terms of Service](/terms) for the contractual terms that go with it.
+Commission plans, agent profiles (names, license numbers, split percentages, annual cap amounts), and deal records (property addresses, sale prices, gross commission income, buyer/seller sides) are stored on your behalf. This is your data. With respect to anything you enter about your agents and transactions, we act as a **service provider / processor**, not as the party that decides why and how it's collected. See Section 9 for what that means under US state privacy law, and Section 7 of our [Terms of Service](/terms) for the contractual terms that go with it.
 
 ### 1.3 Usage and log data
 
@@ -52,7 +52,7 @@ We use the information we collect to:
 - Process your subscription payments through Stripe;
 - Generate QuickBooks Online-ready CSV exports of your deal and commission data at your direction;
 - Send transactional emails necessary for the Service to function (deal-confirmed notifications, cap-reached alerts, billing receipts, auto-renewal and cancellation confirmations), sent from noreply@splitre.app or billing@splitre.app;
-- Send product-update and marketing emails to active subscribers — you may opt out at any time via the unsubscribe link in any such email, or by emailing legal@splitre.app, without affecting transactional emails about your account;
+- Send product-update and marketing emails to active subscribers. You may opt out at any time via the unsubscribe link in any such email, or by emailing legal@splitre.app, without affecting transactional emails about your account;
 - Respond to support requests and enforce our Terms of Service;
 - Detect, investigate, and prevent fraud, abuse, or security incidents;
 - Analyze aggregate, de-identified usage patterns to improve existing features and prioritize new ones; and
@@ -89,7 +89,7 @@ We implement the following safeguards:
 - Stripe handles all payment data; we never receive or store raw card numbers; and
 - We perform regular dependency audits and apply security patches promptly.
 
-No system is perfectly secure. If you discover a vulnerability, report it to legal@splitre.app — we do not publicly disclose a security issue until a fix is in place.
+No system is perfectly secure. If you discover a vulnerability, report it to legal@splitre.app. We do not publicly disclose a security issue until a fix is in place.
 
 **Breach notification.** If we experience a security incident that compromises your personal information in a way that triggers a notification obligation under applicable law, we will notify affected customers without unreasonable delay and consistent with the timing and content requirements of the law that applies (which varies by state, but is generally "without unreasonable delay," and in some states subject to a specific outer limit such as 30 or 45 days).
 
@@ -99,7 +99,7 @@ No system is perfectly secure. If you discover a vulnerability, report it to leg
 
 **While your subscription is active**, we retain your account data for as long as the account exists.
 
-**If you voluntarily cancel** (turn off auto-renewal and let your subscription run to the end of its billing period), your account is locked at that point but **your data is not automatically deleted** — it's retained, and reactivating your subscription restores everything. Because self-service export isn't available once locked, export your data before your final billing period ends if you don't plan to come back. See our [Refund / Cancellation Policy](/refund-policy) for the full mechanics.
+**If you voluntarily cancel** (turn off auto-renewal and let your subscription run to the end of its billing period), your account is locked at that point but **your data is not automatically deleted**. It is retained, and reactivating your subscription restores everything. Because self-service export isn't available once locked, export your data before your final billing period ends if you don't plan to come back. See our [Refund / Cancellation Policy](/refund-policy) for the full mechanics.
 
 **If a payment fails and is never resolved** through the retry-and-grace-period process described in our Terms of Service, your account is locked and, separately from the voluntary-cancellation case above, **your data is automatically and permanently deleted 30 calendar days after that lock**, with reminder emails sent before deletion.
 
@@ -115,9 +115,9 @@ Marketing emails from us include a functioning unsubscribe mechanism, our postal
 
 ## 7. Do Not Track and Global Privacy Control
 
-Some browsers send a "Do Not Track" (DNT) signal. Because there is no common industry standard for responding to DNT, we do not alter our data collection in response to it — but as stated throughout this Policy, we do not sell or share personal information or engage in cross-site behavioral advertising regardless of any signal, so there is nothing DNT would meaningfully change.
+Some browsers send a "Do Not Track" (DNT) signal. Because there is no common industry standard for responding to DNT, we do not alter our data collection in response to it. As stated throughout this Policy, we do not sell or share personal information or engage in cross-site behavioral advertising regardless of any signal, so there is nothing DNT would meaningfully change.
 
-We do honor the **Global Privacy Control (GPC)** signal, where technically detectable, as a valid opt-out-of-sale/sharing preference signal under the CCPA and equivalent state laws. Because we do not sell or share personal information in the first place, honoring GPC has no practical effect on how your data is treated — you are already opted out.
+We do honor the **Global Privacy Control (GPC)** signal, where technically detectable, as a valid opt-out-of-sale/sharing preference signal under the CCPA and equivalent state laws. Because we do not sell or share personal information in the first place, honoring GPC has no practical effect on how your data is treated: you are already opted out.
 
 ---
 
@@ -129,12 +129,12 @@ Our website and application may link to third-party sites (QuickBooks Online, th
 
 ## 9. California Privacy Rights (CCPA / CPRA)
 
-If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act ("**CCPA**"), gives you the rights below. This applies whether you are the brokerage account holder or an individual whose information was entered into the Service *by* a brokerage — for example, an agent. **Note on roles:** where your brokerage entered information about you (an agent) into SplitRE, your brokerage is the party that decided to collect and use that information, and we process it on the brokerage's behalf as a service provider. You may submit a rights request to us directly, and we will either honor it or route it to the brokerage as appropriate; you may also have rights directly against your brokerage as the entity that controls that decision.
+If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act ("**CCPA**"), gives you the rights below. This applies whether you are the brokerage account holder or an individual whose information was entered into the Service *by* a brokerage, for example an agent. **Note on roles:** where your brokerage entered information about you (an agent) into SplitRE, your brokerage is the party that decided to collect and use that information, and we process it on the brokerage's behalf as a service provider. You may submit a rights request to us directly, and we will either honor it or route it to the brokerage as appropriate; you may also have rights directly against your brokerage as the entity that controls that decision.
 
 - **Right to Know.** The categories of personal information we've collected about you, the categories of sources, the business purpose for collecting it, the categories of third parties we share it with, and the specific pieces we hold.
 - **Right to Delete.** Deletion of personal information we've collected from you, subject to exceptions (information required to complete a transaction, or to comply with a legal obligation).
 - **Right to Correct.** Correction of inaccurate personal information we hold about you.
-- **Right to Opt Out of Sale or Sharing.** We do not sell personal information or share it for cross-context behavioral advertising — there is nothing to opt out of, and we honor GPC signals as described in Section 7 as a matter of policy regardless.
+- **Right to Opt Out of Sale or Sharing.** We do not sell personal information or share it for cross-context behavioral advertising, so there is nothing to opt out of, and we honor GPC signals as described in Section 7 as a matter of policy regardless.
 - **Right to Limit Use of Sensitive Personal Information.** We do not use sensitive personal information for purposes beyond providing the Service.
 - **Right to Non-Discrimination.** We will not discriminate against you for exercising any of these rights.
 - **Right to Appeal.** If we decline a request, you may appeal by replying to our decision email; we will respond to the appeal within 45 days.
@@ -143,12 +143,12 @@ If you are a California resident, the California Consumer Privacy Act, as amende
 
 **Categories of personal information collected in the preceding 12 months:**
 
-- **Identifiers** — name, email address, IP address, account ID
-- **Commercial information** — subscription plan, billing history, transaction records you enter
-- **Internet or network activity** — server logs, feature usage, error reports
-- **Professional or employment-related information** — brokerage name, agent data entered by a brokerage
+- **Identifiers:** name, email address, IP address, account ID
+- **Commercial information:** subscription plan, billing history, transaction records you enter
+- **Internet or network activity:** server logs, feature usage, error reports
+- **Professional or employment-related information:** brokerage name, agent data entered by a brokerage
 
-We do not collect Social Security numbers, financial account credentials, biometric data, precise geolocation, health information, or the contents of private communications, except that a brokerage may choose to enter an agent's license number or income figures as part of ordinary commission tracking — this is professional/commercial information, not a sensitive category we independently seek out.
+We do not collect Social Security numbers, financial account credentials, biometric data, precise geolocation, health information, or the contents of private communications, except that a brokerage may choose to enter an agent's license number or income figures as part of ordinary commission tracking. This is professional or commercial information, not a sensitive category we independently seek out.
 
 We do not use or disclose sensitive personal information for any purpose requiring an additional CCPA notice beyond what's described here.
 
@@ -156,7 +156,7 @@ We do not use or disclose sensitive personal information for any purpose requiri
 
 ## 10. Other US State Privacy Rights
 
-As of 2026, roughly twenty US states — including Virginia, Colorado, Connecticut, Utah, Texas, and others — have their own comprehensive consumer privacy laws. They differ in detail, but they share a common core, and if you are a resident of one of these states, you generally have rights similar to the California rights in Section 9: to know what personal information we hold about you, to access or obtain a copy of it, to correct inaccuracies, to request deletion, to opt out of the sale of personal information or its use for targeted advertising, and to appeal a denied request. We do not sell personal information or use it for targeted advertising under any of these laws' definitions.
+As of 2026, roughly twenty US states (including Virginia, Colorado, Connecticut, Utah, Texas, and others) have their own comprehensive consumer privacy laws. They differ in detail, but they share a common core, and if you are a resident of one of these states, you generally have rights similar to the California rights in Section 9: to know what personal information we hold about you, to access or obtain a copy of it, to correct inaccuracies, to request deletion, to opt out of the sale of personal information or its use for targeted advertising, and to appeal a denied request. We do not sell personal information or use it for targeted advertising under any of these laws' definitions.
 
 To exercise a right under any of these laws, email legal@splitre.app with your state of residence and the right you wish to exercise; we will verify your identity and respond within the timeframe the applicable law requires (generally 45 days, sometimes extendable).
 

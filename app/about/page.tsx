@@ -3,12 +3,12 @@ import Link from "next/link";
 import ContactInline from "@/components/ContactInline";
 
 export const metadata: Metadata = {
-  title: "About SplitRE — Commission Software Built for Independent Brokerages",
+  title: "About SplitRE: Commission Software Built for Independent Brokerages",
   description:
     "SplitRE is independent brokerage software built by Keplify LLC, a Delaware-incorporated company. Our mission: make commission accuracy a given for every independent real estate brokerage, from boutique to established.",
   alternates: { canonical: "https://splitre.app/about" },
   openGraph: {
-    title: "About SplitRE — Why We Built a Better Commission Tool",
+    title: "About SplitRE: Why We Built a Better Commission Tool",
     description:
       "The problem every independent broker knows: spreadsheets that break, cap balances that are always wrong, and a bookkeeper who dreads month-end. We built SplitRE to fix it.",
     url: "https://splitre.app/about",
@@ -34,7 +34,7 @@ export default function AboutPage() {
               Independent real estate brokerages run on trust. The trust agents place in their broker to pay them correctly and on time. When that breaks, agents leave. 80% of brokerages pay at least one agent incorrectly per year, and most of those errors start with a spreadsheet.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              We want commission accuracy to be something you take for granted, not something you double-check after every closing. A 5-agent boutique should have the same financial precision that large franchise groups pay enterprise software for — which is exactly why we built independent brokerage software instead of chasing enterprise contracts.
+              We want commission accuracy to be something you take for granted, not something you double-check after every closing. A 5-agent boutique should have the same financial precision that large franchise groups pay enterprise software for. That is exactly why we built independent brokerage software instead of chasing enterprise contracts.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-5 md:p-8 shadow-sm border border-indigo-100">
@@ -45,13 +45,13 @@ export default function AboutPage() {
 
             <div className="border-t border-gray-100 mt-6 pt-6">
               <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">For small brokerages</div>
-              <div className="text-2xl font-extrabold text-indigo-600">$20K–$50K</div>
-              <div className="text-sm text-gray-600 mt-1">cost of replacing one producing agent lost to a bad commission experience — often a third of the business</div>
+              <div className="text-2xl font-extrabold text-indigo-600">$20K to $50K</div>
+              <div className="text-sm text-gray-600 mt-1">cost of replacing one producing agent lost to a bad commission experience, often a third of the business</div>
             </div>
 
             <div className="border-t border-gray-100 mt-6 pt-6">
               <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">For large brokerages</div>
-              <div className="text-2xl font-extrabold text-indigo-600">~7.4× ROI</div>
+              <div className="text-2xl font-extrabold text-indigo-600">~7.4x ROI</div>
               <div className="text-sm text-gray-600 mt-1">~300 hrs/yr and $15,000/yr reclaimed in admin time at 31+ agents</div>
             </div>
           </div>

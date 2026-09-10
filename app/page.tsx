@@ -3,7 +3,7 @@ import Link from "next/link";
 import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 
 export const metadata: Metadata = {
-  title: "SplitRE — Commission Management Software for Real Estate Brokerages",
+  title: "SplitRE: Commission Management Software for Real Estate Brokerages",
   description:
     "SplitRE is real estate commission management software that replaces commission spreadsheets for independent brokerages. Automated split calculations, agent commission tracking, automatic notifications, and a QuickBooks-ready CSV export for your bookkeeper. Plans from $29/mo.",
   alternates: { canonical: "https://splitre.app" },
@@ -116,22 +116,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ROI bar — small brokerages (risk) vs. large brokerages (hours) */}
+      {/* ROI bar: small brokerages (risk) vs. large brokerages (hours) */}
       <section className="bg-indigo-600 py-16 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
-          {/* Small brokerages — the risk of one mistake */}
+          {/* Small brokerages: the risk of one mistake */}
           <div className="text-white">
             <div className="text-xs font-semibold text-indigo-200 uppercase tracking-wider mb-3">For small brokerages</div>
-            <div className="text-3xl font-extrabold mb-2">$20K–$50K</div>
+            <div className="text-3xl font-extrabold mb-2">$20K to $50K</div>
             <p className="text-indigo-100 text-sm mb-4">
-              is what it costs to replace one producing agent — recruiting, onboarding, and the deals that don&apos;t close while their seat is empty. For a small brokerage, that agent can be a third of the business.
+              is what it costs to replace one producing agent: recruiting, onboarding, and the deals that don&apos;t close while their seat is empty. For a small brokerage, that agent can be a third of the business.
             </p>
             <p className="text-indigo-100 text-sm">
               At <span className="font-bold text-white">$348/yr</span>, SplitRE only has to prevent <span className="font-bold text-white">one</span> commission mistake, <span className="font-bold text-white">once</span>, to pay for itself for the next <span className="font-bold text-white">57 years</span>.
             </p>
           </div>
 
-          {/* Large brokerages — hours and ROI at scale */}
+          {/* Large brokerages: hours and ROI at scale */}
           <div className="text-white md:border-l md:border-indigo-400/30 md:pl-8">
             <div className="text-xs font-semibold text-indigo-200 uppercase tracking-wider mb-3">For large brokerages</div>
             <div className="grid grid-cols-3 gap-3 text-center mb-4">
@@ -147,7 +147,7 @@ export default function HomePage() {
               ))}
             </div>
             <p className="text-indigo-100 text-sm">
-              At 31+ agents, the manual admin load is a real job — SplitRE turns it back into a button click.
+              At 31+ agents, the manual admin load is a real job. SplitRE turns it back into a button click.
             </p>
           </div>
         </div>
@@ -169,12 +169,12 @@ export default function HomePage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { task: "Look up agent's plan, check cap position", manual: "3–5 min", with: "0 (auto-loaded)", saved: "~4 min" },
-                  { task: "Calculate split — custom plans, tiered/capped, E&O, bonuses, extra deductions", manual: "15–40 min", with: "30 sec (confirm button)", saved: "~25 min" },
-                  { task: "Update cap tracking spreadsheet", manual: "3–5 min", with: "0 (auto-ledger)", saved: "~4 min" },
-                  { task: "Agent communications — share breakdown, answer questions, send corrections", manual: "10–20 min", with: "0 (auto-emailed with breakdown)", saved: "~10 min" },
-                  { task: "Prepare bookkeeper-ready CSV for accounting", manual: "10–15 min", with: "1 click, ~30 sec", saved: "~12 min" },
-                  { task: "Prepare + email agent commission statement", manual: "5–8 min", with: "0 (auto-generated)", saved: "~6 min" },
+                  { task: "Look up agent's plan, check cap position", manual: "3 to 5 min", with: "0 (auto-loaded)", saved: "~4 min" },
+                  { task: "Calculate split: custom plans, tiered/capped, E&O, bonuses, extra deductions", manual: "15 to 40 min", with: "30 sec (confirm button)", saved: "~25 min" },
+                  { task: "Update cap tracking spreadsheet", manual: "3 to 5 min", with: "0 (auto-ledger)", saved: "~4 min" },
+                  { task: "Agent communications: share breakdown, answer questions, send corrections", manual: "10 to 20 min", with: "0 (auto-emailed with breakdown)", saved: "~10 min" },
+                  { task: "Prepare bookkeeper-ready CSV for accounting", manual: "10 to 15 min", with: "1 click, ~30 sec", saved: "~12 min" },
+                  { task: "Prepare and email agent commission statement", manual: "5 to 8 min", with: "0 (auto-generated)", saved: "~6 min" },
                 ].map(({ task, manual, with: w, saved }) => (
                   <tr key={task} className="bg-white hover:bg-gray-50">
                     <td className="px-5 py-3 text-gray-700">{task}</td>
@@ -185,9 +185,9 @@ export default function HomePage() {
                 ))}
                 <tr className="bg-gray-50 border-t-2 border-gray-200">
                   <td className="px-5 py-3 font-bold text-gray-900">Total per deal</td>
-                  <td className="px-5 py-3 font-semibold text-gray-700">~46–93 min</td>
-                  <td className="px-5 py-3 font-semibold text-gray-700">~3–5 min</td>
-                  <td className="px-5 py-3 font-bold text-indigo-600">~43–88 min</td>
+                  <td className="px-5 py-3 font-semibold text-gray-700">~46 to 93 min</td>
+                  <td className="px-5 py-3 font-semibold text-gray-700">~3 to 5 min</td>
+                  <td className="px-5 py-3 font-bold text-indigo-600">~43 to 88 min</td>
                 </tr>
               </tbody>
             </table>
@@ -207,7 +207,7 @@ export default function HomePage() {
               You copy last month&apos;s spreadsheet, update the numbers by hand, hope the cap balance is right, then call or text the agent to tell them what they&apos;re getting paid, and manually re-key everything into QuickBooks. One typo in a formula and an agent gets underpaid, or worse overpaid, and now you have a conversation you don&apos;t want to have.
             </p>
             <p className="text-gray-600 mb-6">
-              For a small brokerage, one of those typos isn&apos;t a rounding error — it&apos;s the reason a top producer walks. Replacing an agent costs a brokerage $20,000 to $50,000 once you count recruiting, onboarding, and the deals that stall while the seat sits empty. SplitRE is independent brokerage software built to make sure that mistake never happens.
+              For a small brokerage, one of those typos isn&apos;t a rounding error. It&apos;s the reason a top producer walks. Replacing an agent costs a brokerage $20,000 to $50,000 once you count recruiting, onboarding, and the deals that stall while the seat sits empty. SplitRE is independent brokerage software built to make sure that mistake never happens.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
@@ -325,7 +325,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 ),
                 title: "QuickBooks-ready CSV export",
-                desc: "Select deals, click Export. Your bookkeeper gets a clean file with GCI, agent payout, broker net, and pre-formatted QuickBooks memo lines — built specifically for QuickBooks real estate brokerage bookkeeping, not a generic export. No live connection to break, no tokens to expire.",
+                desc: "Select deals, click Export. Your bookkeeper gets a clean file with GCI, agent payout, broker net, and pre-formatted QuickBooks memo lines, built specifically for QuickBooks real estate brokerage bookkeeping rather than a generic export. No live connection to break, no tokens to expire.",
               },
               {
                 color: "bg-amber-100",
@@ -403,7 +403,7 @@ export default function HomePage() {
               },
               {
                 step: "2",
-                title: "Confirm — agent is notified",
+                title: "Confirm, and the agent is notified",
                 desc: "Review the exact split, every deduction, and updated cap balance. Confirm, and SplitRE automatically emails the agent their full commission breakdown.",
               },
               {
@@ -429,7 +429,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Works for brokerages of every size</h2>
           <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-            A 3-agent boutique and a 25-agent independent brokerage get the exact same tool — including shared team caps and co-agent deal splits. Your plan tier reflects your team size, not your feature set.
+            A 3-agent boutique and a 25-agent independent brokerage get the exact same tool, shared team caps and co-agent deal splits included. Your plan tier reflects your team size, not your feature set.
           </p>
           <div className="grid md:grid-cols-3 gap-6 text-left">
             {[
@@ -474,7 +474,7 @@ export default function HomePage() {
                 role: "Broker/Owner, 18 agents",
               },
               {
-                quote: "The CSV export alone saves my bookkeeper hours every month. She gets exactly what she needs — no back and forth, no re-keying. The cap tracking is what really sold me though. It's bulletproof.",
+                quote: "The CSV export alone saves my bookkeeper hours every month. She gets exactly what she needs, with no back and forth and no re-keying. The cap tracking is what really sold me though. It's bulletproof.",
                 name: "Marcus D.",
                 role: "Managing Broker, 31 agents",
               },

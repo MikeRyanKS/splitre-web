@@ -12,7 +12,7 @@ type Props = {
   priority?: boolean;
 };
 
-// Click-to-enlarge for product screenshots — the thumbnails are sized to fit
+// Click-to-enlarge for product screenshots. The thumbnails are sized to fit
 // the page layout, but visitors deciding whether to sign up want to read the
 // actual numbers on screen, which means seeing the image close to native
 // resolution rather than squeezed into a 2-column grid cell.

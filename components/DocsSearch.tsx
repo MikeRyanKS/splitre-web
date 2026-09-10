@@ -59,7 +59,7 @@ function scoreEntry(e: DocSearchEntry, terms: string[]): { score: number; anchor
   }
 
   if (termsMatched === 0) return { score: 0 };
-  // Big bonus for covering more of the query — an article matching every word
+  // Big bonus for covering more of the query: an article matching every word
   // of "co-agent deal export" should clearly beat one that only matched "deal".
   score += termsMatched === terms.length ? 20 : (termsMatched - 1) * 6;
   return { score, anchor };
@@ -145,7 +145,7 @@ export default function DocsSearch({ index }: { index: DocSearchEntry[] }) {
           }}
           onFocus={() => setOpen(true)}
           onKeyDown={onKeyDown}
-          placeholder="Search the guides — caps, teams, QuickBooks export, co-agent deals…"
+          placeholder="Search the guides: caps, teams, QuickBooks export, co-agent deals"
           aria-label="Search help documentation"
           className="w-full rounded-2xl border border-gray-300 bg-white pl-12 pr-4 py-4 text-base text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
         />

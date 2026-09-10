@@ -48,9 +48,9 @@ function LineRows({ items }: { items: ReceiptLineItem[] }) {
   );
 }
 
-// Deliberately mirrors src/pages/Share.tsx's card + BreakdownTable — same
+// Deliberately mirrors src/pages/Share.tsx's card + BreakdownTable (same
 // header layout, same line-item formatting, same bold Agent Net Payout /
-// Broker Cut divider — so a demo PDF looks identical to a real confirmed
+// Broker Cut divider) so a demo PDF looks identical to a real confirmed
 // deal's PDF, per the "should look exactly like the real app" requirement.
 export default function ReceiptCard({
   brokerageName,
@@ -138,11 +138,11 @@ export default function ReceiptCard({
           </table>
         </div>
 
-        {/* Footer — the actual conversion pitch. "Nothing is saved" isn't a
+        {/* Footer: the actual conversion pitch. "Nothing is saved" isn't a
             reason to sign up; "you'll never do this by hand again" is. */}
         <div className="px-8 py-5 bg-indigo-50 border-t border-indigo-100 text-center">
           <p className="text-sm font-semibold text-gray-900">
-            You just did this math by hand. SplitRE does it automatically — every deal, every agent, all year — and tracks each agent&apos;s cap for you.
+            You just did this math by hand. SplitRE does it automatically for every deal, every agent, all year, and tracks each agent&apos;s cap for you.
           </p>
           <a
             href="https://app.splitre.app/signup"

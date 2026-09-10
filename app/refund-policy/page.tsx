@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Refund / Cancellation Policy",
   description:
-    "SplitRE refund and cancellation policy — 7-day refunds, no long-term contracts, and how automatic renewal and data retention actually work.",
+    "SplitRE refund and cancellation policy: 7-day refunds, no long-term contracts, and how automatic renewal and data retention actually work.",
   alternates: { canonical: "https://splitre.app/refund-policy" },
   robots: { index: true, follow: true },
 };
@@ -34,7 +34,7 @@ export default function RefundPolicyPage() {
             </p>
             <p className="mt-3 font-medium">
               This subscription renews automatically. Section 3 below explains that plainly, before anything
-              about refunds — that&apos;s deliberate, and consistent with California&apos;s Automatic Renewal Law
+              about refunds. That is deliberate, and consistent with California&apos;s Automatic Renewal Law
               and similar laws in other states.
             </p>
           </section>
@@ -45,9 +45,9 @@ export default function RefundPolicyPage() {
             <p>
               All new accounts include a 14-day free trial. No credit card is required
               to start a trial. Your card is only charged when you actively add a payment method and choose a
-              paid plan — and doing that is also your affirmative consent to automatic renewal under Section 3.
+              paid plan, and doing that is also your affirmative consent to automatic renewal under Section 3.
               If you do nothing during the trial period, your
-              account will be paused — you will not be charged — and your data is kept for 30 days from
+              account will be paused (you will not be charged) and your data is kept for 30 days from
               the pause date, then permanently deleted, same as a locked account (Section 6.3). Choosing
               a plan any time in those 30 days restores everything exactly as you left it.
             </p>
@@ -83,17 +83,17 @@ export default function RefundPolicyPage() {
             <ul className="list-disc pl-5 mt-2 space-y-2">
               <li>Requests made more than 7 calendar days after the applicable payment date</li>
               <li>Accounts suspended or terminated for violations of our Terms of Service</li>
-              <li>Partial-period refunds for unused time within a billing period we&apos;ve already fully earned (we do not pro-rate — see Section 5 for how downgrades are handled instead)</li>
+              <li>Partial-period refunds for unused time within a billing period we&apos;ve already fully earned (we do not pro-rate; see Section 5 for how downgrades are handled instead)</li>
               <li>Add-ons or one-time fees, if any are introduced in the future and stated as non-refundable at the time of purchase</li>
             </ul>
           </section>
 
           {/* ─── 3. Automatic Renewal ─── */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Automatic renewal — what you&apos;re agreeing to</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Automatic renewal: what you&apos;re agreeing to</h2>
             <p>
-              <strong>Your subscription renews automatically at the end of every billing period — every 30 days
-              on a monthly plan, or every 12 months on an annual plan — at the price shown for your plan at{" "}
+              <strong>Your subscription renews automatically at the end of every billing period (every 30 days
+              on a monthly plan, or every 12 months on an annual plan) at the price shown for your plan at{" "}
               <a href="/pricing" className="text-indigo-600 hover:underline">splitre.app/pricing</a>, charged to
               the payment method on file, until you turn it off.</strong> By adding a payment method and
               choosing a plan (including converting a free trial to a paid plan), you affirmatively agree to
@@ -107,7 +107,7 @@ export default function RefundPolicyPage() {
             <p className="mt-3">
               <strong>Reminders:</strong> we send an email reminder before your subscription renews, at least
               once a year regardless of billing frequency, and separately before any price increase (Section 6
-              of our <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a>) — so a
+              of our <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a>), so a
               renewal charge should never be a surprise.
             </p>
           </section>
@@ -122,51 +122,51 @@ export default function RefundPolicyPage() {
               <strong>app.splitre.app &rsaquo; Settings &rsaquo; Billing</strong>, or email{" "}
               <a href={`mailto:${BILLING_EMAIL}`} className="text-indigo-600 hover:underline">{BILLING_EMAIL}</a>{" "}
               and we&apos;ll do it for you within 1 business day. Either way, this stops the <em>next</em>{" "}
-              charge — see 4.2 for what happens to your current period.
+              charge. See 4.2 for what happens to your current period.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">4.2 What happens to your access</h3>
             <p>
               Turning off auto-renewal does not end your current billing period early. You keep full,
-              unrestricted access — creating deals, inviting agents, everything — through the last day
+              unrestricted access (creating deals, inviting agents, everything) through the last day
               you already paid for.
             </p>
             <p className="mt-3">
               <strong>At the end of that period, your account becomes locked</strong>: you can log in only to
-              export your data (Settings &rsaquo; Data Export) and to resubscribe — full read/write access
+              export your data (Settings &rsaquo; Data Export) and to resubscribe. Full read/write access
               isn&apos;t available until you do.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">4.3 What happens to your data</h3>
             <p>
               <strong>Your data is preserved for 30 calendar days after you&apos;re locked out, then
-              permanently and automatically deleted</strong> — the same timeline described in Section 6.3 for
+              permanently and automatically deleted</strong>, the same timeline described in Section 6.3 for
               an account locked due to non-payment. Reactivating your subscription any time before then
-              restores your account and all of your data exactly as you left it — deals, agents, cap history,
+              restores your account and all of your data exactly as you left it: deals, agents, cap history,
               everything. We&apos;ll email you the exact deletion date when you&apos;re locked out, and again
               as it approaches.
             </p>
             <p className="mt-3">
-              You don&apos;t need to rush an export before your final billing period ends —{" "}
-              <strong>app.splitre.app &rsaquo; Settings &rsaquo; Data Export</strong> stays reachable during
+              You don&apos;t need to rush an export before your final billing period ends. The{" "}
+              <strong>app.splitre.app &rsaquo; Settings &rsaquo; Data Export</strong> page stays reachable during
               the 30-day locked window, so you can download the full export (deal records, agent roster,
               cap-progress history, and commission-plan definitions) any time before deletion. If you&apos;d
               rather have your data deleted sooner than the 30 days, or exported on your behalf, email{" "}
-              <a href={`mailto:${LEGAL_EMAIL}`} className="text-indigo-600 hover:underline">{LEGAL_EMAIL}</a>{" "}
-              — we&apos;ll act on a verified request from you within 30 days of receiving it.
+              <a href={`mailto:${LEGAL_EMAIL}`} className="text-indigo-600 hover:underline">{LEGAL_EMAIL}</a>.
+              {" "}We&apos;ll act on a verified request from you within 30 days of receiving it.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">4.4 Reactivation</h3>
             <p>
               Reactivate any time within the 30-day window by adding a payment method and choosing a plan
-              again — your data is restored exactly as you left it. Once the 30-day window closes and your
+              again, and your data is restored exactly as you left it. Once the 30-day window closes and your
               data has actually been deleted, reactivating starts a brand-new account instead.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">4.5 Same treatment as a locked account due to non-payment</h3>
             <p>
-              Section 6 below describes a <strong>separate</strong> situation — a payment that fails and is
-              never fixed — but the locked-account consequence is now the same one described above: the same
+              Section 6 below describes a <strong>separate</strong> situation (a payment that fails and is
+              never fixed), but the locked-account consequence is now the same one described above: the same
               30-day retention window, the same read-only export access, and the same automatic deletion at
               the end of it. Only what triggers the lock differs.
             </p>
@@ -217,7 +217,7 @@ export default function RefundPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Failed payments and account suspension</h2>
             <p>
-              This section — unlike Section 4 — is about a payment that didn&apos;t go through, not a choice
+              This section, unlike Section 4, is about a payment that didn&apos;t go through, not a choice
               to cancel.
             </p>
 

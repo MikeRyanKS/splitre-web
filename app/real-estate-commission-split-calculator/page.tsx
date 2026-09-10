@@ -4,14 +4,14 @@ import DemoClient from "./DemoClient";
 const CANONICAL_URL = "https://splitre.app/real-estate-commission-split-calculator";
 
 export const metadata: Metadata = {
-  title: "Real Estate Commission Split Calculator (Free) — SplitRE",
+  title: "Real Estate Commission Split Calculator (Free)",
   description:
-    "Free real estate commission split calculator — calculate agent and broker commission splits, annual cap tracking, franchise royalty and referral fees, or split one deal between two or more co-listing agents, each with their own share and their own cap. Exact payouts for 70/30, 80/20, and capped plans. No signup, no credit card.",
+    "Free real estate commission split calculator. Work out agent and broker commission splits, annual cap tracking, franchise royalty and referral fees, or split one deal between two or more co-listing agents, each with their own share and their own cap. Exact payouts for 70/30, 80/20, and capped plans. No signup, no credit card.",
   alternates: { canonical: CANONICAL_URL },
   openGraph: {
-    title: "Real Estate Commission Split Calculator (Free) — SplitRE",
+    title: "Real Estate Commission Split Calculator (Free) from SplitRE",
     description:
-      "Calculate agent/broker commission splits, annual cap tracking, franchise and referral fees — or split a deal between co-listing agents — instantly, for free. No signup required. Download or email yourself the PDF.",
+      "Calculate agent and broker commission splits, annual cap tracking, franchise and referral fees, or split a deal between co-listing agents. Instant, free, and no signup required. Download or email yourself the PDF.",
     url: CANONICAL_URL,
   },
 };
@@ -29,7 +29,7 @@ const webAppSchema = {
     priceCurrency: "USD",
   },
   description:
-    "Free real estate commission split calculator with annual agent cap tracking. Calculate agent and broker commission splits (70/30, 80/20, and more), franchise royalty fees, referral fees, and E&O/transaction fee deductions — or split one deal between two or more agents, each with their own GCI share and their own split. Runs instantly in your browser, no signup required.",
+    "Free real estate commission split calculator with annual agent cap tracking. Calculate agent and broker commission splits (70/30, 80/20, and more), franchise royalty fees, referral fees, and E&O/transaction fee deductions, or split one deal between two or more agents, each with their own GCI share and their own split. Runs instantly in your browser, no signup required.",
 };
 
 const faqSchema = {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: "What is a real estate commission split?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A commission split is how a real estate brokerage divides the commission from a sale between itself and the agent who closed it. The brokerage collects the full commission from the transaction, then pays the agent their agreed share — commonly expressed as a ratio like 70/30 or 80/20, with the agent's number listed first.",
+        text: "A commission split is how a real estate brokerage divides the commission from a sale between itself and the agent who closed it. The brokerage collects the full commission from the transaction, then pays the agent their agreed share. This share is commonly expressed as a ratio like 70/30 or 80/20, with the agent's number listed first.",
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: "How do I calculate a real estate agent's commission?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Multiply the sale price by the commission percentage to get the gross commission (GCI). Subtract any off-the-top fees — franchise royalty, referral, or relocation fees — to get the splittable amount. Apply the agent/broker split percentage to that amount, then subtract the agent's own fees (E&O, transaction fee) to arrive at their net payout. This calculator does all four steps automatically and shows each line item.",
+        text: "Multiply the sale price by the commission percentage to get the gross commission (GCI). Subtract any off-the-top fees (franchise royalty, referral, or relocation fees) to get the splittable amount. Apply the agent/broker split percentage to that amount, then subtract the agent's own fees (E&O, transaction fee) to arrive at their net payout. This calculator does all four steps automatically and shows each line item.",
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: "What happens when an agent hits their cap mid-deal?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "When a deal would push the brokerage's cut past an agent's remaining cap room for the year, only the amount up to the cap goes to the brokerage — the rest of that deal goes to the agent at 100%. Getting this crossing calculation right is one of the most common places manual spreadsheets get commission math wrong.",
+        text: "When a deal would push the brokerage's cut past an agent's remaining cap room for the year, only the amount up to the cap goes to the brokerage. The rest of that deal goes to the agent at 100%. Getting this crossing calculation right is one of the most common places manual spreadsheets get commission math wrong.",
       },
     },
     {
@@ -81,7 +81,7 @@ const faqSchema = {
       name: "How do you calculate a commission split between two agents on one deal?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "On a co-listing or a deal where two of your agents are involved, take the whole-deal deductions — outside referral, relocation, bonus — off the top once, then give each agent a share of what's left. Each agent's share then runs through their own commission split and their own annual cap independently: one agent hitting their cap doesn't change what the other takes home. Use the \"Split between agents\" section of the calculator above to see each agent's payout.",
+        text: "On a co-listing or a deal where two of your agents are involved, take the whole-deal deductions (outside referral, relocation, bonus) off the top once, then give each agent a share of what's left. Each agent's share then runs through their own commission split and their own annual cap independently: one agent hitting their cap doesn't change what the other takes home. Use the \"Split between agents\" section of the calculator above to see each agent's payout.",
       },
     },
     {
@@ -89,7 +89,7 @@ const faqSchema = {
       name: "Is this the same calculation the real SplitRE app uses?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. This calculator runs the same three-stage commission engine — deductions off the top, the agent/broker split with cap tracking, then agent-side fees like E&O — that SplitRE runs automatically on every confirmed deal.",
+        text: "Yes. This calculator runs the same three-stage commission engine that SplitRE runs automatically on every confirmed deal: deductions off the top, the agent/broker split with cap tracking, then agent-side fees like E&O.",
       },
     },
     {
@@ -126,23 +126,23 @@ export default function CalculatorPage() {
       />
       <DemoClient />
 
-      {/* B3 — How this is calculated */}
+      {/* B3: How this is calculated */}
       <section className="max-w-3xl mx-auto px-4 py-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">How real estate commission splits are calculated</h2>
         <p className="text-gray-600 leading-relaxed">
           Every commission runs through three stages. First, any off-the-top deductions
-          come out of the gross commission — franchise royalty fees, referral fees, or
-          flat fees — leaving what we call the splittable amount. Second, the
+          come out of the gross commission (franchise royalty fees, referral fees, or
+          flat fees), leaving what we call the splittable amount. Second, the
           agent/broker split is applied to that splittable amount, based on the agreed
           percentage, unless the agent has hit their annual cap, in which case the
           split changes automatically (see below). Third, agent-side deductions come
-          out of the agent&apos;s remaining share — E&amp;O insurance, transaction or
-          compliance fees, desk fees, or other one-off adjustments — to arrive at the
+          out of the agent&apos;s remaining share (E&amp;O insurance, transaction or
+          compliance fees, desk fees, or other one-off adjustments) to arrive at the
           agent&apos;s final net payout.
         </p>
       </section>
 
-      {/* B4 — Cap-crossing explainer */}
+      {/* B4: Cap-crossing explainer */}
       <section className="max-w-3xl mx-auto px-4 pb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">What happens when an agent hits their cap</h2>
         <p className="text-gray-600 leading-relaxed mb-4">
@@ -155,18 +155,18 @@ export default function CalculatorPage() {
           The hard part is the deal that crosses the cap mid-transaction. Say an agent
           is on a 70/30 split with an $18,000 annual cap, and has already generated
           $17,000 of that cap so far this year. A new deal would normally send $2,000
-          to the brokerage — but only $1,000 of cap room is left. The correct
+          to the brokerage, but only $1,000 of cap room is left. The correct
           calculation splits that one deal: the brokerage collects the remaining
           $1,000, and the agent gets the rest of their share at 100%, not 70%. Miss
           this, and either the brokerage overcollects past the agent&apos;s contractual
-          cap, or the agent gets shorted — both are the kind of error that erodes
+          cap or the agent gets shorted. Both are the kind of error that erodes
           trust between a broker and their top producers. This calculator (and the
           full SplitRE app) handles that crossing calculation automatically, every
           time.
         </p>
       </section>
 
-      {/* Worked examples — concrete numbers for the split ratios people actually search for */}
+      {/* Worked examples: concrete numbers for the split ratios people actually search for */}
       <section className="max-w-3xl mx-auto px-4 pb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Common commission split examples</h2>
         <div className="grid sm:grid-cols-2 gap-4">
@@ -195,7 +195,7 @@ export default function CalculatorPage() {
           </div>
         </div>
         <p className="text-gray-500 text-sm mt-4">
-          Both examples assume a $150 E&amp;O fee and a $395 transaction fee, and neither agent has hit their annual cap yet — plug your own numbers into the calculator above to see how a cap changes the math.
+          Both examples assume a $150 E&amp;O fee and a $395 transaction fee, and neither agent has hit their annual cap yet. Plug your own numbers into the calculator above to see how a cap changes the math.
         </p>
       </section>
 
@@ -211,7 +211,7 @@ export default function CalculatorPage() {
           <li>
             <strong>Whole-deal deductions come off the top once.</strong> An outside referral fee, a
             relocation-company cut, or a bonus is applied to the full gross commission before anything
-            is split between your agents — not deducted twice, once per agent.
+            is split between your agents. It is not deducted twice, once per agent.
           </li>
           <li>
             <strong>Each agent takes a share of what&apos;s left.</strong> You decide the GCI share
@@ -226,7 +226,7 @@ export default function CalculatorPage() {
           </li>
         </ol>
         <p className="text-gray-600 leading-relaxed">
-          The calculator above does all of this — turn on <strong>&quot;Split between agents&quot;</strong>,
+          The calculator above does all of this. Turn on <strong>&quot;Split between agents&quot;</strong>,
           add each agent with their GCI share and their own split, and you&apos;ll see a separate
           line-item breakdown and net payout for every agent, plus the combined totals. In the full
           SplitRE app it stays a single deal with one Deal&nbsp;#, and the QuickBooks export writes
@@ -234,7 +234,7 @@ export default function CalculatorPage() {
         </p>
       </section>
 
-      {/* B5 — FAQ (text matches the FAQPage schema above exactly) */}
+      {/* B5: FAQ (text matches the FAQPage schema above exactly) */}
       <section className="max-w-3xl mx-auto px-4 pb-20">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
         <div className="space-y-6">

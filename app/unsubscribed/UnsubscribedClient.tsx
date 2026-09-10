@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 // Reads ?status= client-side (rather than Next's useSearchParams) so this
-// stays a plain static-exported page with no Suspense-boundary requirement —
-// this page only ever needs to reflect one query param.
+// stays a plain static-exported page with no Suspense-boundary requirement.
+// This page only ever needs to reflect one query param.
 export default function UnsubscribedClient() {
   const [status, setStatus] = useState<"ok" | "invalid" | "checking">("checking");
 

@@ -38,8 +38,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-// Offsets the anchor jump so the sticky top nav doesn't cover the heading —
-// matches the docs page's same fix, needed now that posts are deep-linkable.
+// Offsets the anchor jump so the sticky top nav doesn't cover the heading.
+// Matches the docs page's same fix, needed now that posts are deep-linkable.
 function Heading2({ children, ...props }: HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h2 className="scroll-mt-24" {...props}>
@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = getPost(slug);
   if (!post) notFound();
 
-  // Hand-picked via frontmatter `related` rather than "most recent 2" — with
+  // Hand-picked via frontmatter `related` rather than "most recent 2". With
   // only 5 posts, recency has nothing to do with topical relevance, and a
   // curated pairing (e.g. the two calculation-heavy posts, the two accounting
   // posts) is far more likely to keep a reader on a related topic than

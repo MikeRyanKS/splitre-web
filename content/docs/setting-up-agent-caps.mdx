@@ -7,27 +7,27 @@ readTime: "3 min read"
 keywords: ["real estate agent cap", "cap opening balance", "brokerage cap tracking"]
 ---
 
-The cap is the maximum amount your brokerage collects from an agent in a calendar year — see [Creating a Commission Plan](/docs/creating-commission-plans) for how it factors into the calculation itself. This guide covers the one-time setup step: telling SplitRE how much of that cap an agent has already used.
+The cap is the maximum amount your brokerage collects from an agent in a calendar year. See [Creating a Commission Plan](/docs/creating-commission-plans) for how it factors into the calculation itself. This guide covers the one-time setup step: telling SplitRE how much of that cap an agent has already used.
 
 ## Cap opening balance
 
-If an agent joins mid-year, or you're migrating from another system where they already had deals collected against their cap this year, you need to set their **cap opening balance** — otherwise SplitRE will think they're starting from $0 and they'll be under-capped for the rest of the year.
+If an agent joins mid-year, or you're migrating from another system where they already had deals collected against their cap this year, you need to set their **cap opening balance**. Otherwise SplitRE will think they're starting from $0 and they'll be under-capped for the rest of the year.
 
 1. Go to [Agents](https://app.splitre.app/agents) and click the agent's row to open their drawer.
-2. Find the **Cap Opening Balance** field — it's described there as the amount of broker cut already collected for this agent before they were added to SplitRE.
+2. Find the **Cap Opening Balance** field. It's described there as the amount of broker cut already collected for this agent before they were added to SplitRE.
 3. Enter the dollar amount and click **Save**. If they don't have a prior balance, use **Set to zero**.
 
 ## How the cap ledger works after that
 
-Once the opening balance is set, SplitRE tracks the running total automatically — every confirmed deal for that agent adds a row to their cap ledger, with the cumulative total (opening balance + everything collected since) checked against the cap limit before each deal's broker cut is calculated. When the cumulative total reaches the cap, the agent gets 100% (or a flat post-cap fee, if the plan defines one) on every deal for the rest of that calendar year.
+Once the opening balance is set, SplitRE tracks the running total automatically. Every confirmed deal for that agent adds a row to their cap ledger, with the cumulative total (opening balance plus everything collected since) checked against the cap limit before each deal's broker cut is calculated. When the cumulative total reaches the cap, the agent gets 100% (or a flat post-cap fee, if the plan defines one) on every deal for the rest of that calendar year.
 
-The cap year resets every January 1st, based on each deal's closing date — not the date it happens to be confirmed.
+The cap year resets every January 1st, based on each deal's closing date, not the date it happens to be confirmed.
 
 ## Shared team caps
 
-Some brokerages run a group of agents against **one combined cap** instead of a separate cap each. In SplitRE that's a **team**: any member's commission draws down the same pool, and every member flips to a 100% split at the same moment the pool reaches the team cap. A team can also have an optional lead who earns a cut of each member's team-deal commissions. Teams are set up from the Teams tab, not here — see [Teams and Shared Caps](/docs/teams) for the full walkthrough.
+Some brokerages run a group of agents against **one combined cap** instead of a separate cap each. In SplitRE that's a **team**: any member's commission draws down the same pool, and every member flips to a 100% split at the same moment the pool reaches the team cap. A team can also have an optional lead who earns a cut of each member's team-deal commissions. Teams are set up from the Teams tab, not here. See [Teams and Shared Caps](/docs/teams) for the full walkthrough.
 
-On a deal split between agents (see [Entering and Managing Deals](/docs/entering-and-managing-deals)), each agent's share still runs through their own cap — or their team's shared pool if they're on a team.
+On a deal split between agents (see [Entering and Managing Deals](/docs/entering-and-managing-deals)), each agent's share still runs through their own cap, or their team's shared pool if they're on a team.
 
 ## Related
 

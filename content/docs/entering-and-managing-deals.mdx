@@ -2,7 +2,7 @@
 title: "Entering and Managing Deals"
 category: "Core How-Tos"
 order: 4
-excerpt: "Draft, confirm, amend, or void — how the deal lifecycle works and what each action actually does."
+excerpt: "Draft, confirm, amend, or void: how the deal lifecycle works and what each action actually does."
 readTime: "5 min read"
 keywords: ["real estate deal entry", "confirm commission deal", "amend void deal"]
 ---
@@ -13,7 +13,7 @@ Every deal in SplitRE moves through a lifecycle. Understanding what each stage l
 
 Go to [Deals](https://app.splitre.app/deals) to start a new deal, or open an existing draft to keep editing it. While a deal is a draft:
 
-- Click **Save Draft** to save your progress without confirming — nothing is emailed to the agent, and nothing is final.
+- Click **Save Draft** to save your progress without confirming. Nothing is emailed to the agent, and nothing is final.
 - If you're editing an existing draft, the same button reads **Update Draft**.
 - Drafts don't count toward cap totals yet.
 
@@ -22,37 +22,37 @@ Go to [Deals](https://app.splitre.app/deals) to start a new deal, or open an exi
 When a deal is ready to be finalized, click **Confirm & Email Agent**. This:
 
 - Locks the deal's numbers into a permanent breakdown snapshot (edits after this point require an amendment, not a direct edit).
-- Recalculates the commission server-side — the numbers you see in the preview are double-checked, not just trusted from your browser.
-- Assigns the deal a sequential **Deal #**, shown in its own column on the Deals list — a stable reference that doesn't repeat or change even if the address does (the same property can close more than once over the years).
+- Recalculates the commission on the server, so the numbers you see in the preview are double-checked, not just trusted from your browser.
+- Assigns the deal a sequential **Deal #**, shown in its own column on the Deals list. This is a stable reference that doesn't repeat or change even if the address does (the same property can close more than once over the years).
 - Updates the agent's cap ledger for the year.
 - Emails the agent their commission breakdown.
 
-An agent can never be confirmed into a negative payout — SplitRE blocks any confirmation that would leave the agent's net below $0.
+An agent can never be confirmed into a negative payout. SplitRE blocks any confirmation that would leave the agent's net below $0.
 
 ## Splitting a deal between agents
 
-A deal can be credited to more than one agent — a co-listing, a mentor and mentee, or an in-house deal where the listing side and the buyer side are both your agents. In the Close-a-Deal drawer, click **+ Add another agent** under the agent picker and give each agent a **GCI share %**. Up to six agents; the primary agent's share fills in automatically as whatever's left of 100%.
+A deal can be credited to more than one agent: a co-listing, a mentor and mentee, or an in-house deal where the listing side and the buyer side are both your agents. In the Close-a-Deal drawer, click **+ Add another agent** under the agent picker and give each agent a **GCI share %**. Up to six agents; the primary agent's share fills in automatically as whatever's left of 100%.
 
 How the math works:
 
 - **Whole-deal adjustments come off the top once.** An outside referral %, a relocation %, a bonus, or an ad-hoc deduction is applied to the deal as a whole before anything is split (an ad-hoc deduction is attributed to the primary agent).
-- **Then each agent's share runs through their own terms.** Every agent's slice of what's left goes through their own commission plan — their split, their fees — and their own annual cap. One agent hitting their cap on the deal doesn't change what anyone else takes home.
-- If two of the agents are on the same **team**, their slices draw the same shared team pool, walked in order so a single deal can't pull the pool past its cap. If an agent is on a team with a lead, they still pay the lead their split from their share of this deal — unless the lead is one of the co-agents, in which case the lead's share is simply their production.
+- **Then each agent's share runs through their own terms.** Every agent's slice of what's left goes through their own commission plan (their split, their fees) and their own annual cap. One agent hitting their cap on the deal doesn't change what anyone else takes home.
+- If two of the agents are on the same **team**, their slices draw the same shared team pool, walked in order so a single deal can't pull the pool past its cap. If an agent is on a team with a lead, they still pay the lead their split from their share of this deal, unless the lead is one of the co-agents, in which case the lead's share is simply their production.
 
-It stays **one deal**: one GCI, one Deal #, one row on the Deals list (shown as e.g. "Jordan + 1"). Filtering the list by an agent includes every co-agent deal they're on, not just the ones where they're primary. The confirmation email — and any later amendment or void email — goes to you and to every agent on the deal, each showing the full breakdown.
+It stays **one deal**: one GCI, one Deal #, one row on the Deals list (shown as e.g. "Jordan + 1"). Filtering the list by an agent includes every co-agent deal they're on, not just the ones where they're primary. The confirmation email, and any later amendment or void email, goes to you and to every agent on the deal, each showing the full breakdown.
 
-**Amending** a co-agent deal changes deal-level fields only (price, commission %, closing date, the whole-deal adjustments). The set of agents and their shares are fixed once confirmed — to change who's on the deal or how it's split, void it and enter a new one.
+**Amending** a co-agent deal changes deal-level fields only (price, commission %, closing date, the whole-deal adjustments). The set of agents and their shares are fixed once confirmed. To change who's on the deal or how it's split, void it and enter a new one.
 
 ## Amend
 
-Need to fix a confirmed deal? Open it and click **Amend**, which takes you to an amendment form. Saving it (**Save Amendment**) creates a new deal record linked back to the original — the original stays in your history for an audit trail, and the amendment's numbers are what count going forward for cap and reporting purposes.
+Need to fix a confirmed deal? Open it and click **Amend**, which takes you to an amendment form. Saving it (**Save Amendment**) creates a new deal record linked back to the original. The original stays in your history for an audit trail, and the amendment's numbers are what count going forward for cap and reporting purposes.
 
 ## Removing a deal
 
 What "removing" means depends on whether the deal was ever confirmed:
 
-- A **draft** was never a real transaction, so it can be deleted outright: open it and click **Delete draft**, then confirm. This permanently removes the record — it never counted toward cap totals, so nothing else is affected.
-- A **confirmed** deal is a financial record — it's voided, never deleted, so there's always a trail of what actually happened. Open it and click **Void the deal**, then **Confirm void**. This reverses its contribution to the agent's cap ledger for the year and emails both you and the agent, since it's changing a record they may be relying on.
+- A **draft** was never a real transaction, so it can be deleted outright: open it and click **Delete draft**, then confirm. This permanently removes the record. It never counted toward cap totals, so nothing else is affected.
+- A **confirmed** deal is a financial record, so it's voided, never deleted, and there's always a trail of what actually happened. Open it and click **Void the deal**, then **Confirm void**. This reverses its contribution to the agent's cap ledger for the year and emails both you and the agent, since it's changing a record they may be relying on.
 
 ## Related
 

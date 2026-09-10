@@ -19,7 +19,7 @@ function todayISO() {
 type PendingAction = "download" | "email" | null;
 
 export default function DemoClient() {
-  // Deal details — cosmetic fields that personalize the PDF but don't affect math.
+  // Deal details: cosmetic fields that personalize the PDF but don't affect math.
   const [address, setAddress] = useState("");
   const [agentName, setAgentName] = useState("");
   const [brokerageName, setBrokerageName] = useState("");
@@ -39,9 +39,9 @@ export default function DemoClient() {
   const [referralPct, setReferralPct] = useState(0);
   const [bonusAmount, setBonusAmount] = useState(0);
 
-  // Co-agent rows (position 1+). Empty ⇒ a normal single-agent deal. Each
+  // Co-agent rows (position 1+). Empty means a normal single-agent deal. Each
   // co-agent gets a GCI share % and their own agent split %; they run through
-  // the same cap limit and fees as the primary (a demo simplification — in the
+  // the same cap limit and fees as the primary (a demo simplification: in the
   // real app each agent has their own full commission plan and live cap).
   const [coAgents, setCoAgents] = useState<{ id: number; name: string; sharePct: number; agentPct: number }[]>([]);
   const [nextCoId, setNextCoId] = useState(1);
@@ -168,7 +168,7 @@ export default function DemoClient() {
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Real Estate Commission Split Calculator</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Calculate exactly what your agent and brokerage each take home — 70/30 and 80/20 splits, franchise royalty and referral fees, annual cap tracking, and deals split between two agents, handled automatically. Plug in a real deal and get the same math and PDF you'd get inside SplitRE.
+          Calculate exactly what your agent and brokerage each take home. 70/30 and 80/20 splits, franchise royalty and referral fees, annual cap tracking, and deals split between two agents, all handled automatically. Plug in a real deal and get the same math and PDF you'd get inside SplitRE.
         </p>
       </div>
 
@@ -207,7 +207,7 @@ export default function DemoClient() {
             <div className="pt-4 border-t border-gray-100">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Commission plan</p>
               <div className="space-y-3">
-                <Field label={`${isMulti ? "Primary agent" : "Agent"} split — ${agentPct}% / ${100 - agentPct}% broker${isMulti ? ` · ${primarySharePct}% of GCI` : ""}`}>
+                <Field label={`${isMulti ? "Primary agent" : "Agent"} split: ${agentPct}% / ${100 - agentPct}% broker${isMulti ? ` · ${primarySharePct}% of GCI` : ""}`}>
                   <input
                     type="range"
                     min={40}
@@ -217,7 +217,7 @@ export default function DemoClient() {
                     className="w-full accent-indigo-600"
                   />
                 </Field>
-                <Field label="Franchise royalty fee % (optional — e.g. Keller Williams, RE/MAX)">
+                <Field label="Franchise royalty fee % (optional, e.g. Keller Williams, RE/MAX)">
                   <PctInput value={franchisePct} onChange={setFranchisePct} step={0.5} />
                 </Field>
                 <div className="grid grid-cols-2 gap-3">
@@ -266,7 +266,7 @@ export default function DemoClient() {
                     <Field label="GCI share %">
                       <PctInput value={c.sharePct} onChange={(n) => setCoAgents((prev) => prev.map((x) => (x.id === c.id ? { ...x, sharePct: n } : x)))} step={5} />
                     </Field>
-                    <Field label={`Split — ${c.agentPct}% agent`}>
+                    <Field label={`Split: ${c.agentPct}% agent`}>
                       <input
                         type="range"
                         min={40}
@@ -295,7 +295,7 @@ export default function DemoClient() {
                 <p className="mt-2 text-xs text-gray-500">
                   {sharesValid
                     ? `Shares total 100%. The referral, relocation, and bonus come off the top once; then each agent's share runs through their own split, and the cap + fees above are applied to each.`
-                    : `Shares must add up to 100% — right now they total ${(coShareSum + Math.max(0, primarySharePct)).toFixed(0)}%.`}
+                    : `Shares must add up to 100%. Right now they total ${(coShareSum + Math.max(0, primarySharePct)).toFixed(0)}%.`}
                 </p>
               )}
             </div>

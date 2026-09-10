@@ -61,11 +61,11 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 
 ### Homepage (`splitre.app`)
 - H1 target: "Stop Doing Commissions in Spreadsheets"
-- Meta title: "SplitRE — Commission Management Software for Real Estate Brokerages"
+- Meta title: "SplitRE: Commission Management Software for Real Estate Brokerages"
 - Primary: `real estate commission management software`, `independent brokerage software`
 
 ### Pricing (`splitre.app/pricing`)
-- Meta title: "Pricing — Real Estate Commission Management Software"
+- Meta title: "Pricing: Real Estate Commission Management Software"
 - Primary: `real estate commission software pricing`, `brokerage back office software cost`
 - Note: include dollar amounts in meta description (Boutique $35/mo, Independent $75/mo, Brokerage $199/mo) — Google surfaces prices in snippets
 

@@ -9,22 +9,24 @@ SplitRE is a web application that automates commission calculations, annual cap 
 - Calculates agent commission splits from rule-based commission plans (percentage splits, tiered splits, flat post-cap fees, E&O and transaction fee deductions, referral deductions)
 - Tracks each agent's annual gross commission income (GCI) toward their cap in real time
 - Automatically flips agent splits to 100% (or a flat post-cap fee) when they cross their annual cap
-- Exports confirmed deals as a QuickBooks-ready CSV, with pre-formatted invoice and bill descriptions, for import into QuickBooks Online
+- Splits one deal between up to six co-agents (co-listings, mentor deals, in-house buyer-and-listing transactions), each with a GCI share that runs through their own plan and their own cap
+- Runs a team of agents on one shared annual cap, with an optional team lead who earns a set percentage of each member's commission on team deals
+- Exports confirmed deals as a QuickBooks-ready CSV, with pre-formatted invoice and bill descriptions, for import into QuickBooks Online (one row per agent on a co-agent deal)
 - Lets a broker email a confirmed deal's commission breakdown to the agent, download it as a PDF, or copy a share link to it, each with a single click
 - Allows per-agent commission plan overrides without affecting brokerage-wide plans
 - Supports mid-year cap migration for agents who join during a cap year
 
 ## Who it is for
 
-Independent US real estate brokerages, typically 1–50 agents. Suitable for boutique broker-owners replacing spreadsheets, growing independents who need a QuickBooks-ready back office, and established brokerages with multiple commission plan structures.
+Independent US real estate brokerages, typically 1 to 50 agents. Suitable for boutique broker-owners replacing spreadsheets, growing independents who need a QuickBooks-ready back office, and established brokerages with multiple commission plan structures.
 
 ## Pricing
 
-Three plans, all features included on every tier — differentiated only by active agent headcount:
+Three plans, all features included on every tier, differentiated only by active agent headcount:
 
-- Boutique: $35/mo or $348/yr — up to 10 agents
-- Independent: $75/mo or $780/yr — up to 30 agents
-- Brokerage: $199/mo or $2,028/yr — unlimited agents
+- Boutique: $35/mo or $348/yr, up to 10 agents
+- Independent: $75/mo or $780/yr, up to 30 agents
+- Brokerage: $199/mo or $2,028/yr, unlimited agents
 
 All plans include a 14-day free trial with no credit card required.
 
@@ -44,7 +46,7 @@ All plans include a 14-day free trial with no credit card required.
 
 ## Blog highlights
 
-- SplitRE vs. Paperless Pipeline vs. Brokermint (now BoldTrail BackOffice): https://splitre.app/blog/best-commission-split-software-for-brokerages — pricing model and cap-tracking comparison
+- SplitRE vs. Paperless Pipeline vs. Brokermint (now BoldTrail BackOffice): https://splitre.app/blog/best-commission-split-software-for-brokerages (pricing model and cap-tracking comparison)
 - How the NAR Settlement Changed Commission Tracking for Brokerages: https://splitre.app/blog/nar-settlement-commission-changes
 - The Real Estate Commission Cap, Explained: https://splitre.app/blog/real-estate-commission-cap-explained
 - Tiered Commission Splits Explained: https://splitre.app/blog/tiered-commission-splits-explained
@@ -53,17 +55,18 @@ All plans include a 14-day free trial with no credit card required.
 
 Full help docs, indexed by topic: https://splitre.app/docs
 
-- Getting Started with SplitRE: https://splitre.app/docs/getting-started — the three things every brokerage sets up first, and the order to do them in
-- Creating a Commission Plan: https://splitre.app/docs/creating-commission-plans — splits, caps, deductions, and the 3-stage calculation
-- Adding Agents: https://splitre.app/docs/adding-agents — one at a time or bulk CSV import
-- Importing Agents and Deals via CSV: https://splitre.app/docs/importing-agents-and-deals-via-csv — column-by-column import reference
-- Entering and Managing Deals: https://splitre.app/docs/entering-and-managing-deals — draft, confirm, amend, void lifecycle
-- Setting Up Agent Caps: https://splitre.app/docs/setting-up-agent-caps — cap opening balances and the cap ledger
-- Sharing and Exporting Deals: https://splitre.app/docs/sharing-and-exporting-deals — email, PDF download, share link, QuickBooks CSV export
-- Exporting Your Brokerage Data: https://splitre.app/docs/exporting-your-brokerage-data — full account backup
-- Glossary: https://splitre.app/docs/glossary — definitions for GCI, cap, splittable amount, breakdown snapshot, and other SplitRE-specific terms
-- Managing Billing and Subscription: https://splitre.app/docs/managing-billing-and-subscription — tiers, limits, refunds, cancellation
-- Frequently Asked Questions: https://splitre.app/docs/faq — trial, pricing, data security, QuickBooks, agent access
+- Getting Started with SplitRE: https://splitre.app/docs/getting-started (the three things every brokerage sets up first, and the order to do them in)
+- Creating a Commission Plan: https://splitre.app/docs/creating-commission-plans (splits, caps, deductions, and the 3-stage calculation)
+- Adding Agents: https://splitre.app/docs/adding-agents (one at a time or bulk CSV import)
+- Importing Agents and Deals via CSV: https://splitre.app/docs/importing-agents-and-deals-via-csv (column-by-column import reference)
+- Entering and Managing Deals: https://splitre.app/docs/entering-and-managing-deals (draft, confirm, amend, and void lifecycle, plus splitting a deal between agents)
+- Setting Up Agent Caps: https://splitre.app/docs/setting-up-agent-caps (cap opening balances and the cap ledger)
+- Teams and Shared Caps: https://splitre.app/docs/teams (one combined cap across several agents, with an optional team lead)
+- Sharing and Exporting Deals: https://splitre.app/docs/sharing-and-exporting-deals (email, PDF download, share link, QuickBooks CSV export)
+- Exporting Your Brokerage Data: https://splitre.app/docs/exporting-your-brokerage-data (full account backup)
+- Glossary: https://splitre.app/docs/glossary (definitions for GCI, cap, splittable amount, breakdown snapshot, and other SplitRE-specific terms)
+- Managing Billing and Subscription: https://splitre.app/docs/managing-billing-and-subscription (tiers, limits, refunds, cancellation)
+- Frequently Asked Questions: https://splitre.app/docs/faq (trial, pricing, data security, QuickBooks, agent access)
 
 ## Company
 

@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // All crawlers — full access
+      // All crawlers: full access
       {
         userAgent: "*",
         allow: "/",
@@ -42,14 +42,14 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "CCBot",
         allow: "/",
       },
-      // Google's AI-only allowlist flag — separate from plain Googlebot above;
-      // controls use in Gemini / AI Overviews training and grounding, not
+      // Google's AI-only allowlist flag, separate from plain Googlebot above.
+      // Controls use in Gemini / AI Overviews training and grounding, not
       // classic search indexing.
       {
         userAgent: "Google-Extended",
         allow: "/",
       },
-      // Apple Intelligence / Siri — the AI-only counterpart to Applebot.
+      // Apple Intelligence / Siri: the AI-only counterpart to Applebot.
       {
         userAgent: "Applebot-Extended",
         allow: "/",

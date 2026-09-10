@@ -21,16 +21,18 @@ async function startDirectCheckout(plan: string, interval: string, couponCode: s
 const allFeatures = [
   "Unlimited deals and transactions",
   "Commission calculation engine",
-  "Commission plan templates — one plan, many agents",
+  "Commission plan templates: build a plan once, assign it to as many agents as you want",
   "Tiered splits, flat fees, referral deductions",
   "Annual cap tracking and automatic cap flip",
-  "Mid-year cap migration for new hires",
-  "Per-agent plan overrides",
+  "Co-agent deals: put up to 6 agents on one transaction, each running through their own plan and cap",
+  "Shared team caps, with an optional team lead who earns a cut of every team deal",
   "QuickBooks-ready CSV export for your bookkeeper",
+  "Per-agent plan overrides",
+  "Mid-year cap migration for new hires",
   "One-click PDF download and shareable links for confirmed deals",
   "Automated agent notifications on deal confirmation and amendments",
   "Email alerts (cap reached, deal confirmed)",
-  "Bulk deal & agent import from CSV",
+  "Bulk deal and agent import from CSV",
   "14-day free trial",
 ];
 
@@ -57,7 +59,7 @@ const faqs = [
   },
   {
     q: "What happens at the end of my free trial?",
-    a: "If you don't add a payment method before your trial ends, your account is paused and your data is kept for 30 days. Add a payment method any time in that window to pick up right where you left off — after 30 days, the data is permanently deleted.",
+    a: "If you don't add a payment method before your trial ends, your account is paused and your data is kept for 30 days. Add a payment method any time in that window to pick up right where you left off. After 30 days, the data is permanently deleted.",
   },
   {
     q: "Is my brokerage data secure?",
@@ -71,8 +73,8 @@ export default function PricingClient() {
   const [buyLoading, setBuyLoading] = useState<string | null>(null);
   const [buyError, setBuyError] = useState<string | null>(null);
   // Consent lives in a confirmation modal shown after "Subscribe now" is clicked, not
-  // as a page-level checkbox gating the button — a checkbox this far down the page,
-  // easy to scroll past, read as "the button is broken" rather than "check this
+  // as a page-level checkbox gating the button. A checkbox this far down the page,
+  // easy to scroll past, reads as "the button is broken" rather than "check this
   // first". "Start free trial" is unaffected: it routes to signup, which has its own
   // checkbox in the app.
   const [pendingPlan, setPendingPlan] = useState<string | null>(null);
@@ -101,7 +103,7 @@ export default function PricingClient() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
-          <p className="text-xl text-gray-600 mb-2">No feature paywalls. No surprise charges. One flat price for your agent-count tier — not a meter that climbs every time you add one more agent.</p>
+          <p className="text-xl text-gray-600 mb-2">No feature paywalls. No surprise charges. One flat price for your agent-count tier, not a meter that climbs every time you add one more agent.</p>
           <p className="text-indigo-600 font-semibold">14-day free trial on all plans, no credit card required.</p>
           <Link href="/real-estate-commission-split-calculator" className="inline-block mt-4 text-sm text-gray-500 underline hover:text-gray-700">
             Not ready to sign up? Try the calculator free →
@@ -175,7 +177,7 @@ export default function PricingClient() {
 
                 {interval === "annual" ? (
                   <p className="text-sm text-gray-400 mb-2">
-                    ${plan.annual}/yr — save ${plan.annualSavings}/yr
+                    ${plan.annual}/yr, saving ${plan.annualSavings}/yr
                   </p>
                 ) : (
                   <p className="text-sm text-gray-400 mb-2">billed monthly</p>
@@ -260,14 +262,14 @@ export default function PricingClient() {
             </h2>
             <div className="space-y-4 text-gray-600 max-w-2xl mx-auto">
               <p>
-                When your team is small, the risk isn&apos;t wasted hours — it&apos;s a single mistake. Pay one top producer wrong, and you&apos;re not fixing a spreadsheet; you&apos;re trying to keep them from leaving. Replacing a producing agent costs a brokerage <strong className="text-gray-900">$20,000–$50,000</strong> once you count recruiting, onboarding, and the deals that don&apos;t close while their seat is empty.
+                When your team is small, the risk isn&apos;t wasted hours. It&apos;s a single mistake. Pay one top producer wrong, and you&apos;re not fixing a spreadsheet; you&apos;re trying to keep them from leaving. Replacing a producing agent costs a brokerage <strong className="text-gray-900">$20,000 to $50,000</strong> once you count recruiting, onboarding, and the deals that don&apos;t close while their seat is empty.
               </p>
               <p>For a small brokerage, that agent might be a third of your business.</p>
               <p>
-                At <strong className="text-gray-900">$348 a year</strong>, SplitRE has to prevent <em>one</em> commission error, <em>one time</em>, to cover itself for the next <strong className="text-gray-900">57 years</strong> — and that&apos;s on the low end of what losing an agent costs. It&apos;s small enough to sit on your card and never think about, and precise enough that you never pay an agent wrong again. That&apos;s the whole trade.
+                At <strong className="text-gray-900">$348 a year</strong>, SplitRE has to prevent <em>one</em> commission error <em>one time</em> to cover itself for the next <strong className="text-gray-900">57 years</strong>, and that&apos;s on the low end of what losing an agent costs. It&apos;s small enough to sit on your card and never think about, and precise enough that you never pay an agent wrong again. That&apos;s the whole trade.
               </p>
               <p className="text-center text-indigo-600 font-semibold pt-2">
-                Start your free 14-day trial — no credit card required. No meetings, no migration project, no sales call.
+                Start your free 14-day trial. No credit card required, no meetings, no migration project, no sales call.
               </p>
             </div>
           </div>
@@ -300,9 +302,9 @@ export default function PricingClient() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { plan: "Boutique", size: "1–10 agents", hours: "~2.5 hrs", rate: "$30/hr", value: "~$900", cost: "$348", roi: "~2.6×", highlight: false },
-                  { plan: "Independent", size: "11–30 agents", hours: "~10 hrs", rate: "$40/hr", value: "~$4,800", cost: "$780", roi: "~6.2×", highlight: false },
-                  { plan: "Brokerage", size: "31+ agents", hours: "~25 hrs", rate: "$50/hr", value: "~$15,000", cost: "$2,028", roi: "~7.4×", highlight: true },
+                  { plan: "Boutique", size: "1 to 10 agents", hours: "~2.5 hrs", rate: "$30/hr", value: "~$900", cost: "$348", roi: "~2.6x", highlight: false },
+                  { plan: "Independent", size: "11 to 30 agents", hours: "~10 hrs", rate: "$40/hr", value: "~$4,800", cost: "$780", roi: "~6.2x", highlight: false },
+                  { plan: "Brokerage", size: "31+ agents", hours: "~25 hrs", rate: "$50/hr", value: "~$15,000", cost: "$2,028", roi: "~7.4x", highlight: true },
                 ].map(({ plan, size, hours, rate, value, cost, roi, highlight }) => (
                   <tr key={plan} className={highlight ? "bg-indigo-50" : "bg-white"}>
                     <td className="px-6 py-4 font-semibold text-gray-900">{plan}</td>
@@ -320,7 +322,7 @@ export default function PricingClient() {
 
           <div className="max-w-2xl mx-auto space-y-2 mb-6">
             <p className="text-center text-xs text-gray-400 italic">
-              All returns above use the annual plan price. Monthly billing costs slightly more per year and lowers these ratios proportionally — the annual figures are the honest baseline to quote.
+              All returns above use the annual plan price. Monthly billing costs slightly more per year and lowers these ratios proportionally, so the annual figures are the honest baseline to quote.
             </p>
           </div>
         </div>
@@ -372,7 +374,7 @@ export default function PricingClient() {
         </div>
       </section>
 
-      {/* Terms/Privacy consent — the final step before "Subscribe now" actually checks
+      {/* Terms/Privacy consent: the final step before "Subscribe now" actually checks
           out, shown only after a plan is picked (not a page-level checkbox easy to
           scroll past and mistake for a broken button). */}
       {pendingPlan && (

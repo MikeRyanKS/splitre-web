@@ -46,7 +46,7 @@ export default function ContactModal({ type = "support", trigger }: Props) {
     : "We typically respond within 2 business days.";
   const title = type === "sales" ? "Enterprise & Custom Pricing" : "Get in touch";
   const placeholder = type === "sales"
-    ? "Tell us about your brokerage — number of agents, offices, or any specific needs."
+    ? "Tell us about your brokerage: number of agents, offices, or any specific needs."
     : "How can we help?";
 
   return (

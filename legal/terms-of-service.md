@@ -1,7 +1,7 @@
 # SplitRE Terms of Service
 
 **Effective date:** August 23, 2026
-**Operated by:** Keplify LLC, a Delaware limited liability company — 8 The Green, Suite 20261, Dover, DE 19901, United States
+**Operated by:** Keplify LLC, a Delaware limited liability company, 8 The Green, Suite 20261, Dover, DE 19901, United States
 
 > This is the canonical source of the Terms of Service. `web/app/terms/page.tsx` must always match this document. If they ever diverge, this file is authoritative and the page should be corrected to match it.
 > This document is not legal advice and has not been reviewed by a licensed attorney. Keplify LLC should have it reviewed by counsel licensed in Delaware (and, given the customer base, familiar with California consumer-protection law) before or shortly after publication, and at least annually thereafter or whenever a material product or billing change occurs.
@@ -12,7 +12,7 @@
 
 These Terms of Service ("**Terms**") form a binding legal agreement between you ("**Customer**," "**you**," or "**your**") and **Keplify LLC** ("**we**," "**us**," "**our**," or "**Company**"), governing your access to and use of SplitRE at app.splitre.app and splitre.app (collectively, the "**Service**").
 
-**You accept these Terms — and our [Privacy Policy](/privacy) and [Refund / Cancellation Policy](/refund-policy), which are incorporated into these Terms by reference — by doing any of the following:** creating an account; checking a box or clicking a button presented alongside a link to these Terms during signup or checkout; starting a free trial; entering payment information; or otherwise accessing or using the Service in any way. Each of these actions is an independent, sufficient act of acceptance. If you do not agree to these Terms, do not create an account, do not proceed past any screen that references them, and do not otherwise use the Service.
+**You accept these Terms (together with our [Privacy Policy](/privacy) and [Refund / Cancellation Policy](/refund-policy), which are incorporated into these Terms by reference) by doing any of the following:** creating an account; checking a box or clicking a button presented alongside a link to these Terms during signup or checkout; starting a free trial; entering payment information; or otherwise accessing or using the Service in any way. Each of these actions is an independent, sufficient act of acceptance. If you do not agree to these Terms, do not create an account, do not proceed past any screen that references them, and do not otherwise use the Service.
 
 If you are accepting these Terms on behalf of a business entity (a brokerage), you represent and warrant that you have the legal authority to bind that entity, and "you" and "Customer" in these Terms then refer to that entity.
 
@@ -22,7 +22,7 @@ If you are accepting these Terms on behalf of a business entity (a brokerage), y
 
 ## 1. The Service
 
-SplitRE is a web-based software application that automates real estate commission calculations, annual agent cap tracking, and CSV export formatted for QuickBooks Online ("**QBO**") for independent real estate brokerages operating in the United States. The Service is offered on a subscription basis in three tiers — Boutique, Independent, and Brokerage — described in Section 4. All tiers include every feature; tiers differ only in the number of active agents permitted.
+SplitRE is a web-based software application that automates real estate commission calculations, annual agent cap tracking, and CSV export formatted for QuickBooks Online ("**QBO**") for independent real estate brokerages operating in the United States. The Service is offered on a subscription basis in three tiers (Boutique, Independent, and Brokerage), described in Section 4. All tiers include every feature; tiers differ only in the number of active agents permitted.
 
 We reserve the right to modify, discontinue, or update any feature of the Service at any time. Where a change materially reduces functionality you are actively using, we will provide at least 30 days' written notice to active subscribers by email before the change takes effect, except where an immediate change is required for security, legal compliance, or to prevent harm to the Service or its users.
 
@@ -42,9 +42,9 @@ Each account may serve one brokerage only. You may not share your account with t
 
 New accounts receive a 14-day free trial with complete access to every feature of the Service. No credit card or payment information is required to begin a trial. The trial period begins the day your account is created and ends at 11:59 PM Eastern Time on the 14th calendar day.
 
-At the end of the trial, if you have not added a payment method and chosen a paid plan, your account is automatically paused — you are not charged. We will send email reminders before the trial ends. A trial that converts to a paid subscription is an automatic renewal for purposes of Section 4.6 below, and by adding a payment method and selecting a plan you are giving the affirmative consent required by that section.
+At the end of the trial, if you have not added a payment method and chosen a paid plan, your account is automatically paused and you are not charged. We will send email reminders before the trial ends. A trial that converts to a paid subscription is an automatic renewal for purposes of Section 4.6 below, and by adding a payment method and selecting a plan you are giving the affirmative consent required by that section.
 
-**A paused trial gets the same 30-day data-retention treatment as a locked account under Section 13** — your data is preserved for 30 calendar days from the day the trial ends, during which you may log in only to export your data and to choose a plan, and choosing one within that window restores everything exactly as you left it. After 30 days, all brokerage data is permanently and automatically deleted. We will email you the exact deletion date.
+**A paused trial gets the same 30-day data-retention treatment as a locked account under Section 13.** Your data is preserved for 30 calendar days from the day the trial ends, during which you may log in only to export your data and to choose a plan, and choosing one within that window restores everything exactly as you left it. After 30 days, all brokerage data is permanently and automatically deleted. We will email you the exact deletion date.
 
 We may modify, shorten, or discontinue the free trial offer for prospective users at any time without notice. A trial already in progress will not be shortened without notice to the affected account.
 
@@ -68,11 +68,11 @@ Subscriptions are billed monthly or annually. Monthly plans are billed every 30 
 
 By subscribing, you authorize Keplify LLC and its payment processor, Stripe, Inc., to charge your designated payment method on a recurring basis at the rate for your selected plan and billing cycle, until you turn off auto-renewal or your subscription otherwise ends under these Terms. All prices are in US dollars and exclusive of applicable taxes; you are responsible for all taxes, duties, or government levies applicable to your subscription other than our own income taxes.
 
-### 4.3 Automatic renewal — required disclosures
+### 4.3 Automatic renewal: required disclosures
 
-**This is an automatically renewing subscription.** Unless you turn off auto-renewal before the end of your current billing period, your subscription will automatically renew at the end of that period — every 30 days for monthly plans, or every 12 months for annual plans — and we will charge your payment method on file the then-current price for your plan and billing frequency, with no further action required from you.
+**This is an automatically renewing subscription.** Unless you turn off auto-renewal before the end of your current billing period, your subscription will automatically renew at the end of that period (every 30 days for monthly plans, or every 12 months for annual plans), and we will charge your payment method on file the then-current price for your plan and billing frequency, with no further action required from you.
 
-- **How to stop automatic renewal:** switch off the **Auto-renewal** toggle at any time in **app.splitre.app › Settings › Billing**. This takes effect immediately as a matter of record, but your plan stays fully active and billing does not stop until the end of your current billing period — see Section 13.
+- **How to stop automatic renewal:** switch off the **Auto-renewal** toggle at any time in **app.splitre.app › Settings › Billing**. This takes effect immediately as a matter of record, but your plan stays fully active and billing does not stop until the end of your current billing period. See Section 13.
 - **Reminder:** we will send you an email reminder that your subscription is set to renew, at least annually and before any annual-plan renewal charge (see Section 4.6), so this is never a surprise.
 - **Free trial conversions** are automatic renewals for this purpose, and Section 3 describes the consent you give when you add payment information and select a plan.
 
@@ -80,7 +80,7 @@ By subscribing, you authorize Keplify LLC and its payment processor, Stripe, Inc
 
 If a scheduled payment fails, we notify you by email and retry the charge automatically up to four times over approximately 7 calendar days. Your account remains fully active during this retry window.
 
-If all retries fail, your account enters a grace period during which it is read-only — you may view your data and export it, but not create new deals:
+If all retries fail, your account enters a grace period during which it is read-only. You may view your data and export it, but not create new deals:
 
 - **Monthly plans:** 3-day grace period
 - **Annual plans:** 7-day grace period
@@ -91,13 +91,13 @@ If payment is not resolved by the end of the grace period, your account is **loc
 
 **Upgrades** (a higher tier, or switching from monthly to annual billing) take effect immediately. You are charged a prorated amount for the remainder of the current billing period, with a credit for unused days on the previous plan.
 
-**Downgrades** (a lower tier, or switching from annual to monthly billing) are scheduled to take effect at the end of the current billing period. You keep full access to your current plan until then. No refund or credit is issued for unused time on the current plan when a downgrade is scheduled — the amount already paid for the current period is fully earned at the time of payment. You may cancel a scheduled downgrade at any time before it takes effect, in Settings › Billing.
+**Downgrades** (a lower tier, or switching from annual to monthly billing) are scheduled to take effect at the end of the current billing period. You keep full access to your current plan until then. No refund or credit is issued for unused time on the current plan when a downgrade is scheduled; the amount already paid for the current period is fully earned at the time of payment. You may cancel a scheduled downgrade at any time before it takes effect, in Settings › Billing.
 
 If your active-agent count exceeds the new tier's limit when a scheduled downgrade takes effect, the excess agents are automatically locked (access suspended, history retained) rather than deleted; you can unlock them by deactivating other agents or upgrading again.
 
 ### 4.6 Price changes and renewal notices
 
-We may adjust subscription prices. We will provide at least 30 days' — and no fewer than 7 days' — written notice of any price increase to active subscribers before it takes effect, sent to your account email, stating the new price and how to cancel if you do not want to be charged at the new rate. Separately, and regardless of whether a price change is occurring, we will send an annual reminder to active subscribers that their subscription renews automatically, consistent with California's Automatic Renewal Law and equivalent laws in other states. Your continued use of the Service after a price-increase notice's effective date constitutes acceptance of the new price for renewals from that point forward; it does not retroactively apply to periods already paid.
+We may adjust subscription prices. We will provide at least 30 days' written notice (and in no case fewer than 7 days' notice) of any price increase to active subscribers before it takes effect, sent to your account email, stating the new price and how to cancel if you do not want to be charged at the new rate. Separately, and regardless of whether a price change is occurring, we will send an annual reminder to active subscribers that their subscription renews automatically, consistent with California's Automatic Renewal Law and equivalent laws in other states. Your continued use of the Service after a price-increase notice's effective date constitutes acceptance of the new price for renewals from that point forward; it does not retroactively apply to periods already paid.
 
 ---
 
@@ -130,7 +130,7 @@ We may investigate suspected violations and suspend or terminate an account we d
 
 ### 7.1 Ownership
 
-You retain full ownership of all data, records, and content you upload or create within the Service — commission plans, agent profiles, deal records, and everything else you enter ("**Customer Data**"). We claim no ownership interest in Customer Data.
+You retain full ownership of all data, records, and content you upload or create within the Service: commission plans, agent profiles, deal records, and everything else you enter ("**Customer Data**"). We claim no ownership interest in Customer Data.
 
 ### 7.2 License to process
 
@@ -138,7 +138,7 @@ You grant us a limited, non-exclusive, worldwide, royalty-free license to host, 
 
 ### 7.3 Your responsibilities
 
-You are solely responsible for the accuracy and legality of all Customer Data you enter. If your Customer Data includes personal information about your agents (names, license numbers, income/commission data, or similar), you are responsible for having the legal right to collect and process that information and for complying with all applicable privacy, employment, and independent-contractor laws that apply to *you* as the brokerage — including any state-specific requirements around the timing, itemization, and documentation of commission payments to your agents. SplitRE is a calculation and record-keeping tool; it does not determine, and is not responsible for, whether your commission structures or payment practices comply with the law governing your brokerage.
+You are solely responsible for the accuracy and legality of all Customer Data you enter. If your Customer Data includes personal information about your agents (names, license numbers, income/commission data, or similar), you are responsible for having the legal right to collect and process that information and for complying with all applicable privacy, employment, and independent-contractor laws that apply to *you* as the brokerage, including any state-specific requirements around the timing, itemization, and documentation of commission payments to your agents. SplitRE is a calculation and record-keeping tool; it does not determine, and is not responsible for, whether your commission structures or payment practices comply with the law governing your brokerage.
 
 ### 7.4 CCPA / state-law service-provider terms
 
@@ -166,7 +166,7 @@ The QuickBooks Online export feature is a convenience. You are solely responsibl
 
 ## 9. Intellectual Property
 
-The Service — all software, code, algorithms, user interfaces, text, graphics, logos, and trademarks — is owned by Keplify LLC and protected by US and international intellectual property law. "SplitRE" and the SplitRE logo are trademarks of Keplify LLC. Nothing in these Terms grants you any right, title, or interest in our intellectual property beyond the limited right to use the Service as described here.
+The Service, including all software, code, algorithms, user interfaces, text, graphics, logos, and trademarks, is owned by Keplify LLC and protected by US and international intellectual property law. "SplitRE" and the SplitRE logo are trademarks of Keplify LLC. Nothing in these Terms grants you any right, title, or interest in our intellectual property beyond the limited right to use the Service as described here.
 
 If you send us feedback, suggestions, or ideas about the Service ("**Feedback**"), you grant us a perpetual, irrevocable, worldwide, royalty-free license to use, incorporate, and commercialize that Feedback without any obligation to compensate you.
 
@@ -205,15 +205,15 @@ You agree to defend, indemnify, and hold harmless Keplify LLC and its members, m
 
 ## 13. Cancellation, Suspension, and Data Retention
 
-This Section governs two different things — **voluntary cancellation** (something you choose to do) and **suspension for non-payment** (something that happens if a payment fails and is never fixed). They have different consequences. Read the one that applies to you.
+This Section governs two different things: **voluntary cancellation** (something you choose to do) and **suspension for non-payment** (something that happens if a payment fails and is never fixed). They have different consequences. Read the one that applies to you.
 
 ### 13.1 Voluntary cancellation
 
-You may stop your subscription from renewing at any time, at no cost and with no minimum commitment, by switching off **Auto-renewal** in **app.splitre.app › Settings › Billing**, or by emailing billing@splitre.app. This takes effect as a cancellation of the *next* charge — you keep full, unrestricted access to the Service through the end of your current paid billing period, exactly as if you hadn't canceled.
+You may stop your subscription from renewing at any time, at no cost and with no minimum commitment, by switching off **Auto-renewal** in **app.splitre.app › Settings › Billing**, or by emailing billing@splitre.app. This takes effect as a cancellation of the *next* charge. You keep full, unrestricted access to the Service through the end of your current paid billing period, exactly as if you hadn't canceled.
 
-At the end of that period, your account becomes **locked**: you may log in only to export your data (Settings › Data Export) and to resubscribe — full read/write access to the Service is not available until you do. Your brokerage data is preserved for **30 calendar days** from the lock date. Reactivating your subscription at any time before then restores full access to everything exactly as you left it.
+At the end of that period, your account becomes **locked**: you may log in only to export your data (Settings › Data Export) and to resubscribe. Full read/write access to the Service is not available until you do. Your brokerage data is preserved for **30 calendar days** from the lock date. Reactivating your subscription at any time before then restores full access to everything exactly as you left it.
 
-After that 30-day window, **all brokerage data is permanently and automatically deleted**. We will email you the exact deletion date when your account is locked, and again as it approaches. If you want your data deleted sooner than the 30-day window, or exported on your behalf, contact legal@splitre.app — we will act on a verified request from an authorized account owner within 30 days of receiving it.
+After that 30-day window, **all brokerage data is permanently and automatically deleted**. We will email you the exact deletion date when your account is locked, and again as it approaches. If you want your data deleted sooner than the 30-day window, or exported on your behalf, contact legal@splitre.app. We will act on a verified request from an authorized account owner within 30 days of receiving it.
 
 ### 13.2 Suspension for non-payment
 

@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "SplitRE — Commission Management Software for Real Estate Brokerages",
+    default: "SplitRE: Commission Management Software for Real Estate Brokerages",
     template: "%s | SplitRE",
   },
   description:
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "SplitRE",
-    title: "SplitRE — Commission Management Software for Real Estate Brokerages",
+    title: "SplitRE: Commission Management Software for Real Estate Brokerages",
     description:
       "Automate commission calculations, cap tracking, and bookkeeper CSV exports for your independent real estate brokerage. Priced by agent-count tier, not a bill that climbs with every hire. Starts at $29/mo (annual).",
     url: "https://splitre.app",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@splitre",
-    title: "SplitRE — Commission Management for Real Estate Brokerages",
+    title: "SplitRE: Commission Management for Real Estate Brokerages",
     description:
       "Replace your commission spreadsheets. Automated calculations, cap tracking, and bookkeeper-ready CSV exports. From $29/mo (annual).",
     images: ["/screenshots/splitre-real-estate-brokerage-dashboard.png"],
