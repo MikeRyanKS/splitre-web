@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { calculateDeal, calculateMultiAgentDeal, type MultiAgentParticipant } from "@/lib/calculator";
 import type { RuleNode } from "@/types/commission-plan";
 import { getStoredLead, requestDemoDeal, type DemoLeadResult } from "@/lib/demoLead";
@@ -106,6 +106,28 @@ export default function DemoClient() {
         gci_after_top: multi.gci_after_top,
       }
     : single;
+
+  // GA4 funnel step between landing and sign_up_click: fire `calculator_used`
+  // once per visit, only after the visitor has changed the deal math away from
+  // the prefilled example and paused typing, so page load (which already
+  // renders the example breakdown) and each keystroke never count.
+  const mathSignature = JSON.stringify([
+    salePrice, commissionPct, agentPct, capLimit, capUsed, eoFee, txnFee, franchisePct,
+    referralPct, bonusAmount, coAgents.map((c) => [c.sharePct, c.agentPct]),
+  ]);
+  const defaultMathSignature = useRef(mathSignature);
+  const [calculatorUseTracked, setCalculatorUseTracked] = useState(false);
+  const hasRealResult = gci > 0 && sharesValid;
+
+  useEffect(() => {
+    if (calculatorUseTracked || !hasRealResult || mathSignature === defaultMathSignature.current) return;
+    const timer = setTimeout(() => {
+      const gtag = (window as { gtag?: (...args: unknown[]) => void }).gtag;
+      gtag?.("event", "calculator_used");
+      setCalculatorUseTracked(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [mathSignature, hasRealResult, calculatorUseTracked]);
 
   const dateLabel = closingDate
     ? new Date(closingDate + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
