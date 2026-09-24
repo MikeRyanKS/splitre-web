@@ -45,9 +45,9 @@ function signupUrl(anchor: HTMLAnchorElement): URL | null {
   }
 }
 
-// GA4 stops counting clicks to app.splitre.app as outbound clicks once it is
-// listed as a cross-domain, and the app itself runs no GA tag, so this event is
-// the only funnel step GA sees after the landing page. Mark it as a key event.
+// The app (app.splitre.app) deliberately runs no GA tag, so this event is the
+// last funnel step GA sees; trial and paid attribution live in the app's own
+// DB (brokerages.signup_attribution). Marked as a key event in GA.
 function trackSignupClick(anchor: HTMLAnchorElement) {
   const gtag = (window as { gtag?: (...args: unknown[]) => void }).gtag;
   if (!gtag) return;
