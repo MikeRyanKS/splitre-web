@@ -36,14 +36,32 @@ function readStored(): Record<string, string> {
   }
 }
 
-function decorate(anchor: HTMLAnchorElement) {
-  let url: URL;
+function signupUrl(anchor: HTMLAnchorElement): URL | null {
   try {
-    url = new URL(anchor.href);
+    const url = new URL(anchor.href);
+    return url.hostname === SIGNUP_HOST && url.pathname.startsWith("/signup") ? url : null;
   } catch {
-    return;
+    return null;
   }
-  if (url.hostname !== SIGNUP_HOST || !url.pathname.startsWith("/signup")) return;
+}
+
+// GA4 stops counting clicks to app.splitre.app as outbound clicks once it is
+// listed as a cross-domain, and the app itself runs no GA tag, so this event is
+// the only funnel step GA sees after the landing page. Mark it as a key event.
+function trackSignupClick(anchor: HTMLAnchorElement) {
+  const gtag = (window as { gtag?: (...args: unknown[]) => void }).gtag;
+  if (!gtag) return;
+  const plan = signupUrl(anchor)?.searchParams.get("plan");
+  gtag("event", "sign_up_click", {
+    cta_page: window.location.pathname,
+    link_text: anchor.textContent?.trim().slice(0, 100),
+    ...(plan ? { plan } : {}),
+  });
+}
+
+function decorate(anchor: HTMLAnchorElement) {
+  const url = signupUrl(anchor);
+  if (!url) return;
 
   const attribution = { ...readStored(), ...readFromUrl() };
   let changed = false;
@@ -71,7 +89,12 @@ export default function UtmForwarder() {
     const onInteract = (event: Event) => {
       const target = event.target as Element | null;
       const anchor = target?.closest?.("a[href]");
-      if (anchor instanceof HTMLAnchorElement) decorate(anchor);
+      if (!(anchor instanceof HTMLAnchorElement) || !signupUrl(anchor)) return;
+      decorate(anchor);
+      // Count actual activations only (left/keyboard click, middle click),
+      // not the pointerdown/contextmenu passes that just decorate the href.
+      const isMiddleClick = event.type === "auxclick" && (event as MouseEvent).button === 1;
+      if (event.type === "click" || isMiddleClick) trackSignupClick(anchor);
     };
 
     // pointerdown/contextmenu cover open-in-new-tab and middle click;
