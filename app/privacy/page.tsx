@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const EFFECTIVE_DATE = "August 10, 2026";
+const EFFECTIVE_DATE = "September 24, 2026";
 const COMPANY = "Keplify LLC";
 const LEGAL_EMAIL = "legal@splitre.app";
 const APP_NAME = "SplitRE";
@@ -80,17 +80,27 @@ export default function PrivacyPage() {
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">1.4 Analytics</h3>
             <p>
-              Our marketing pages (splitre.app) use <strong>Cloudflare Web Analytics</strong>, a cookieless
-              analytics service. It does not set tracking cookies, does not use persistent cross-site
-              identifiers, and reports aggregate metrics (page views, visits, load performance) that are not
-              tied to an individually identifiable visitor. We do not deploy advertising networks, behavioral
+              Our marketing pages (splitre.app) use two analytics services. <strong>Cloudflare Web
+              Analytics</strong> is cookieless and reports aggregate metrics (page views, visits, load
+              performance) that are not tied to an individually identifiable visitor. <strong>Google
+              Analytics 4</strong> (provided by Google LLC) sets first-party cookies to measure how visitors
+              find and use the marketing site, including which campaign or link brought them (for example,
+              the utm parameters on a link in an email we sent) and whether they went on to start a free
+              trial. Google Analytics receives your IP address, device and browser details, and the pages you
+              view; we have not enabled Google Signals or advertising features, and we do not use this data
+              for ad targeting. You can opt out with Google&apos;s{" "}
+              <a href="https://tools.google.com/dlpage/gaoptout" className="text-indigo-600 hover:underline">
+                browser add-on
+              </a>{" "}
+              or by blocking cookies for splitre.app. We do not deploy advertising networks, behavioral
               retargeting pixels, or session-replay tools on our website or inside the application.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">1.5 Cookies and local storage</h3>
             <p>
               We use strictly necessary cookies for session management and authentication
-              tokens. We do not use third-party advertising cookies. The application may
+              tokens, plus the Google Analytics cookies on our marketing pages described in
+              section 1.4. We do not use third-party advertising cookies. The application may
               store user preferences (such as sidebar state or selected date ranges) in
               your browser&apos;s local storage; this data never leaves your device.
             </p>
@@ -176,6 +186,11 @@ export default function PrivacyPage() {
                     <td className="py-2 pr-4 font-medium">Cloudflare, Inc.</td>
                     <td className="py-2 pr-4">Content delivery network, DNS, DDoS protection, cookieless web analytics</td>
                     <td className="py-2">Global edge (US primary)</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 pr-4 font-medium">Google LLC (Google Analytics)</td>
+                    <td className="py-2 pr-4">Marketing site analytics and campaign attribution (splitre.app only)</td>
+                    <td className="py-2">United States</td>
                   </tr>
                   <tr>
                     <td className="py-2 pr-4 font-medium">Intuit Inc. (QuickBooks Online)</td>

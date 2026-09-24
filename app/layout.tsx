@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import UtmForwarder from "@/components/UtmForwarder";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+const GA_MEASUREMENT_ID = "G-T54MEEW87Y";
 
 export const metadata: Metadata = {
   title: {
@@ -122,7 +126,9 @@ export default function RootLayout({
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        <UtmForwarder />
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }

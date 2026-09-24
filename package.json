@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.9",
     "@tailwindcss/typography": "^0.5.20",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
