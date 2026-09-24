@@ -132,7 +132,15 @@ Schema types eligible for Google AI Overviews and rich results: `HowTo`, `FAQPag
 
 ## Analytics
 
-Cloudflare Web Analytics is live for `splitre.app`, added via the dashboard in **Automatic setup** mode — Cloudflare injects the beacon into every response at the edge since Pages traffic is already proxied through their network, so no manual script tag in `layout.tsx` and no token in the codebase. Confirmed working (real page views, visits, and Core Web Vitals data flowing in the dashboard). Privacy-friendly, no cookie banner needed.
+Cloudflare Web Analytics is live for `splitre.app`, added via the dashboard in **Automatic setup** mode — Cloudflare injects the beacon into every response at the edge since Pages traffic is already proxied through their network, so no manual script tag in `layout.tsx` and no token in the codebase. Confirmed working (real page views, visits, and Core Web Vitals data flowing in the dashboard). Cookieless.
+
+**Google Analytics 4** (`G-T54MEEW87Y`, added 2026-09-24) runs alongside it for campaign attribution, which Cloudflare's aggregate numbers can't do. Loaded site-wide in `app/layout.tsx` via `@next/third-parties/google`. GA4 sets first-party cookies (disclosed in the privacy policy, section 1.4; Google Signals and ad features are deliberately off). Events:
+
+- `page_view` (automatic). Campaign links carry `utm_source` / `utm_medium` / `utm_campaign` / `utm_content`, which GA reads from the landing URL.
+- `calculator_used` (`app/real-estate-commission-split-calculator/DemoClient.tsx`): once per visit, only after the deal math differs from the prefilled example and the visitor pauses typing for 1.5s. Never on load, never per keystroke. No params.
+- `sign_up_click` (`components/UtmForwarder.tsx`): any click (or middle click) on an `app.splitre.app/signup` link. Params `cta_page`, `link_text`, `plan`. This is the key event.
+
+`components/UtmForwarder.tsx` also appends the visit's `utm_*` / `ref` (remembered in `sessionStorage`) onto every signup link, without overwriting existing params like `?plan=`. The app itself runs **no** GA; it stores the forwarded tags on the new trial brokerage, which is where campaign-to-trial-to-paid numbers come from. Only `splitre.app` is listed in GA's domain settings (no cross-domain tracking).
 
 ## Sitemap
 

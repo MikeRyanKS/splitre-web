@@ -1,6 +1,6 @@
 # SplitRE Privacy Policy
 
-**Effective date:** August 10, 2026
+**Effective date:** September 24, 2026
 **Operated by:** Keplify LLC, a Delaware limited liability company, 8 The Green, Suite 20261, Dover, DE 19901, United States
 
 > This is the canonical source of the Privacy Policy. `web/app/privacy/page.tsx` must always match this document; if they diverge, this file is authoritative.
@@ -32,11 +32,11 @@ Our servers automatically record IP address, browser type and version, operating
 
 ### 1.4 Analytics
 
-Our marketing pages (splitre.app) use **Cloudflare Web Analytics**, a cookieless analytics service. It does not set tracking cookies, does not use persistent cross-site identifiers, and reports aggregate metrics (page views, visits, load performance) that are not tied to an individually identifiable visitor. We do not deploy advertising networks, behavioral retargeting pixels, or session-replay tools on our website or inside the application.
+Our marketing pages (splitre.app) use two analytics services. **Cloudflare Web Analytics** is cookieless and reports aggregate metrics (page views, visits, load performance) that are not tied to an individually identifiable visitor. **Google Analytics 4** (provided by Google LLC) sets first-party cookies to measure how visitors find and use the marketing site, including which campaign or link brought them (for example, the utm parameters on a link in an email we sent) and whether they went on to start a free trial. Google Analytics receives your IP address, device and browser details, and the pages you view; we have not enabled Google Signals or advertising features, and we do not use this data for ad targeting. You can opt out with Google's [browser add-on](https://tools.google.com/dlpage/gaoptout) or by blocking cookies for splitre.app. We do not deploy advertising networks, behavioral retargeting pixels, or session-replay tools on our website or inside the application.
 
 ### 1.5 Cookies and local storage
 
-We use strictly necessary cookies for session management and authentication. We do not use third-party advertising cookies. The application may store user preferences (such as sidebar state or selected date ranges) in your browser's local storage; this never leaves your device.
+We use strictly necessary cookies for session management and authentication, plus the Google Analytics cookies on our marketing pages described in section 1.4. We do not use third-party advertising cookies. The application may store user preferences (such as sidebar state or selected date ranges) in your browser's local storage; this never leaves your device.
 
 ### 1.6 Communications
 
@@ -72,6 +72,7 @@ We use a limited number of subprocessors to operate the Service, each bound by a
 | Stripe, Inc. | Payment processing and subscription management | United States |
 | Resend, Inc. | Transactional and marketing email delivery | United States |
 | Cloudflare, Inc. | Content delivery, DNS, DDoS protection, cookieless web analytics | Global edge network (US primary) |
+| Google LLC (Google Analytics) | Marketing site analytics and campaign attribution (splitre.app only) | United States |
 | Intuit Inc. (QuickBooks Online) | Accounting sync, accessed only via your own OAuth credentials at your instruction | United States |
 
 We do not share your data with these providers beyond what's necessary to deliver their specific service. If you disconnect your QuickBooks integration, we immediately stop transmitting data to Intuit on your behalf. If we add or change a subprocessor in a way that materially changes how your data is handled, we will update this table and, for a material change, notify active subscribers by email.
