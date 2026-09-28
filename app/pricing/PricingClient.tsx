@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
-import { plans } from "@/lib/pricing";
+import { plans, paygPacks } from "@/lib/pricing";
 
 const CHECKOUT_URL = "https://pvxduycjxnvccputddbq.supabase.co/functions/v1/stripe-checkout-public";
 
@@ -62,12 +62,25 @@ const faqs = [
     a: "If you don't add a payment method before your trial ends, your account is paused and your data is kept for 30 days. Add a payment method any time in that window to pick up right where you left off. After 30 days, the data is permanently deleted.",
   },
   {
+    q: "How is pay-as-you-go different from a flat plan?",
+    a: "A flat plan is one price a month for however many deals you close. Pay-as-you-go has no monthly fee at all: you buy a pack of credits and spend one credit each time you confirm a deal. Every feature is included either way. It comes down to how many deals you close in a typical month; an occasional closer usually pays less on pay-as-you-go, a regular closer usually pays less on a flat plan.",
+  },
+  {
+    q: "Can I switch between a flat plan and pay-as-you-go?",
+    a: "Yes, any time, from your account settings. Switching to pay-as-you-go keeps your current plan active through the period you already paid for, then switches over with no gap. Switching back to a flat plan is just picking one, and any pay-as-you-go credits you have left are kept, not lost, in case you switch again later.",
+  },
+  {
+    q: "Do pay-as-you-go credits expire?",
+    a: "No. Buy them whenever you want and use them whenever you close a deal, with no clock running.",
+  },
+  {
     q: "Is my brokerage data secure?",
     a: "Yes. All data is encrypted in transit and at rest. Row-level security in our database ensures your brokerage data is completely isolated from other accounts. You can export all your data at any time.",
   },
 ];
 
 export default function PricingClient() {
+  const [planKind, setPlanKind] = useState<"flat" | "payg">("flat");
   const [interval, setInterval] = useState<"monthly" | "annual">("annual");
   const [couponCode, setCouponCode] = useState("");
   const [buyLoading, setBuyLoading] = useState<string | null>(null);
@@ -103,51 +116,83 @@ export default function PricingClient() {
       <section className="bg-white py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
-          <p className="text-xl text-gray-600 mb-2">No feature paywalls. No surprise charges. One flat price for your agent-count tier, not a meter that climbs every time you add one more agent.</p>
-          <p className="text-indigo-600 font-semibold">14-day free trial on all plans, no credit card required.</p>
+          <p className="text-xl text-gray-600 mb-2">No feature paywalls. No surprise charges. Pick a flat monthly price by agent count, or pay only for the deals you actually close.</p>
+          <p className="text-indigo-600 font-semibold">14-day free trial either way, no credit card required.</p>
           <Link href="/real-estate-commission-split-calculator" className="inline-block mt-4 text-sm text-gray-500 underline hover:text-gray-700">
             Not ready to sign up? Try the calculator free →
           </Link>
         </div>
       </section>
 
-      {/* Billing toggle */}
+      {/* Plan kind switcher: flat tiers vs. pay-as-you-go. This is the main
+          decision on the page, so it comes before (and is visually larger
+          than) the monthly/annual toggle, which only applies to flat plans. */}
       <section className="pb-6 px-4 text-center">
-        <div className="inline-flex items-center bg-gray-100 rounded-lg p-1 gap-1">
+        <div className="inline-flex items-center bg-gray-100 rounded-xl p-1.5 gap-1">
           <button
-            onClick={() => setInterval("monthly")}
-            className={`px-5 py-2 rounded-md text-sm font-medium transition-colors ${
-              interval === "monthly" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+            onClick={() => setPlanKind("flat")}
+            className={`px-6 py-3 rounded-lg text-sm font-semibold transition-colors ${
+              planKind === "flat" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
             }`}
           >
-            Monthly
+            Flat monthly plans
           </button>
           <button
-            onClick={() => setInterval("annual")}
-            className={`px-5 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 ${
-              interval === "annual" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+            onClick={() => setPlanKind("payg")}
+            className={`px-6 py-3 rounded-lg text-sm font-semibold transition-colors ${
+              planKind === "payg" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
             }`}
           >
-            Annual
-            <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
-              Save up to 17%
-            </span>
+            Pay as you go
           </button>
         </div>
+        <p className="text-xs text-gray-400 mt-3">
+          Not sure which fits? You can switch between them any time from your account, no need to decide now.
+        </p>
       </section>
 
-      {/* Coupon code */}
-      <section className="pb-6 px-4 text-center">
-        <input
-          type="text"
-          value={couponCode}
-          onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
-          placeholder="Have a coupon code?"
-          className="w-full max-w-[220px] rounded-lg border border-gray-200 px-3 py-2 text-sm text-center uppercase focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        />
-      </section>
+      {planKind === "flat" && (
+        <>
+          {/* Billing toggle */}
+          <section className="pb-6 px-4 text-center">
+            <div className="inline-flex items-center bg-gray-100 rounded-lg p-1 gap-1">
+              <button
+                onClick={() => setInterval("monthly")}
+                className={`px-5 py-2 rounded-md text-sm font-medium transition-colors ${
+                  interval === "monthly" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setInterval("annual")}
+                className={`px-5 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 ${
+                  interval === "annual" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                Annual
+                <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+                  Save up to 17%
+                </span>
+              </button>
+            </div>
+          </section>
 
-      {/* Plan cards */}
+          {/* Coupon code */}
+          <section className="pb-6 px-4 text-center">
+            <input
+              type="text"
+              value={couponCode}
+              onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
+              placeholder="Have a coupon code?"
+              className="w-full max-w-[220px] rounded-lg border border-gray-200 px-3 py-2 text-sm text-center uppercase focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </section>
+        </>
+      )}
+
+      {/* Flat plan cards */}
+      {planKind === "flat" && (
       <section className="pb-20 px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
           {plans.map((plan) => {
@@ -235,6 +280,72 @@ export default function PricingClient() {
           </div>
         </div>
       </section>
+      )}
+
+      {/* Pay-as-you-go: no subscription, no agent-count tier. Buy a pack of
+          credits and spend one per confirmed deal. For a brokerage closing too
+          few deals a year for a flat monthly plan to make sense. */}
+      {planKind === "payg" && (
+      <section className="pb-20 px-4">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <p className="text-gray-600">
+            No monthly fee. Buy a pack of deal credits whenever you need them, and spend one credit each time you confirm a deal. Credits never expire, and every feature is included, the same as the flat plans above.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          {paygPacks.map((pack, i) => (
+            <div
+              key={pack.credits}
+              className={`rounded-2xl p-5 md:p-8 border-2 relative flex flex-col ${
+                i === 1 ? "border-indigo-600 shadow-xl shadow-indigo-100" : "border-gray-200"
+              }`}
+            >
+              {i === 1 && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="bg-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                    Best value
+                  </span>
+                </div>
+              )}
+
+              <h2 className="text-xl font-bold text-gray-900 mb-1">{pack.credits} deal credits</h2>
+              <p className="text-sm text-gray-500 mb-5">
+                {i === 0 && "For an occasional closer, a handful of deals a year."}
+                {i === 1 && "For a broker who closes a steady few deals every month."}
+                {i === 2 && "For your busiest stretch of the year, at the lowest cost per deal."}
+              </p>
+
+              <div className="mb-1">
+                <span className="text-4xl font-extrabold text-gray-900">${pack.price}</span>
+              </div>
+              <p className="text-sm text-gray-400 mb-2">${pack.perCredit.toFixed(2)} per deal</p>
+              <p className="text-sm font-semibold text-indigo-600 mb-6">Credits never expire</p>
+
+              <Link
+                href="https://app.splitre.app/signup?planType=payg"
+                className={`block w-full text-center font-semibold py-3 rounded-xl transition-colors ${
+                  i === 1
+                    ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                    : "border-2 border-gray-300 text-gray-700 hover:border-indigo-400 hover:text-indigo-600"
+                }`}
+              >
+                Start free trial
+              </Link>
+              <p className="text-xs text-gray-400 text-center mt-3">
+                Buy credits any time after your trial starts, from your account.
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-5xl mx-auto mt-6">
+          <div className="bg-indigo-50 border border-indigo-100 rounded-xl px-6 py-4 text-sm text-indigo-700 text-center">
+            <strong>Every feature included.</strong> You only pay when a deal actually closes.
+          </div>
+        </div>
+      </section>
+      )}
 
       {/* All features list */}
       <section className="py-20 px-4 bg-gray-50">

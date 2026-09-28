@@ -9,6 +9,21 @@ export interface PricingPlan {
   popular: boolean;
 }
 
+export interface PaygPack {
+  credits: number;
+  price: number;
+  perCredit: number;
+}
+
+// Shared by PricingClient.tsx (rendering) and app/pricing/page.tsx (JSON-LD),
+// same reason as `plans` below. 1 credit = 1 confirmed deal, no monthly fee,
+// credits never expire.
+export const paygPacks: PaygPack[] = [
+  { credits: 5, price: 95, perCredit: 19 },
+  { credits: 10, price: 179, perCredit: 17.9 },
+  { credits: 25, price: 429, perCredit: 17.16 },
+];
+
 // Shared by PricingClient.tsx (rendering) and app/pricing/page.tsx (Product/Offer
 // JSON-LD) so the two can never drift out of sync with each other.
 export const plans: PricingPlan[] = [
