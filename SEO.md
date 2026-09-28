@@ -67,7 +67,9 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 ### Pricing (`splitre.app/pricing`)
 - Meta title: "Pricing: Real Estate Commission Management Software"
 - Primary: `real estate commission software pricing`, `brokerage back office software cost`
-- Note: include dollar amounts in meta description (Boutique $35/mo, Independent $75/mo, Brokerage $199/mo) — Google surfaces prices in snippets
+- Note: include dollar amounts in meta description (Boutique $35/mo, Independent $75/mo, Brokerage $199/mo, pay-as-you-go from $95 for 5 deal credits) — Google surfaces prices in snippets
+- As of 2026-09-28: page has a "Flat monthly plans" / "Pay as you go" toggle above the plan cards, and the JSON-LD `Offer` array (`app/pricing/page.tsx`) includes the 3 PAYG credit packs as one-time offers alongside the recurring tier offers. Both data sources live in `lib/pricing.ts` (`plans` and `paygPacks`).
+- Secondary (PAYG): `pay as you go real estate commission software`, `real estate commission software no monthly fee`, `per deal commission software pricing`
 
 ### Features (`splitre.app/features`)
 - Primary: `commission split calculator`, `real estate cap tracking`, `QuickBooks real estate brokerage`
