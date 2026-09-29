@@ -125,28 +125,50 @@ export default function PricingClient() {
       </section>
 
       {/* Plan kind switcher: flat tiers vs. pay-as-you-go. This is the main
-          decision on the page, so it comes before (and is visually larger
-          than) the monthly/annual toggle, which only applies to flat plans. */}
-      <section className="pb-6 px-4 text-center">
-        <div className="inline-flex items-center bg-gray-100 rounded-xl p-1.5 gap-1">
+          decision on the page, so it's two large, self-explanatory cards
+          rather than a small pill toggle easy to skim past. A "New" badge on
+          pay-as-you-go calls out that it's a second option worth a look, not
+          just decoration next to the plan cards. */}
+      <section className="pb-10 px-4">
+        <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+          How do you want to pay?
+        </p>
+        <div className="max-w-2xl mx-auto grid sm:grid-cols-2 gap-4">
           <button
             onClick={() => setPlanKind("flat")}
-            className={`px-6 py-3 rounded-lg text-sm font-semibold transition-colors ${
-              planKind === "flat" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+            aria-pressed={planKind === "flat"}
+            className={`text-left rounded-2xl border-2 px-6 py-5 transition-colors ${
+              planKind === "flat"
+                ? "border-indigo-600 bg-indigo-50 shadow-md shadow-indigo-100"
+                : "border-gray-200 bg-white hover:border-gray-300"
             }`}
           >
-            Flat monthly plans
+            <span className={`block text-lg font-bold mb-1 ${planKind === "flat" ? "text-indigo-700" : "text-gray-900"}`}>
+              Flat monthly plans
+            </span>
+            <span className="block text-sm text-gray-500">One price a month, by agent count. Everything included.</span>
           </button>
           <button
             onClick={() => setPlanKind("payg")}
-            className={`px-6 py-3 rounded-lg text-sm font-semibold transition-colors ${
-              planKind === "payg" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+            aria-pressed={planKind === "payg"}
+            className={`text-left rounded-2xl border-2 px-6 py-5 transition-colors ${
+              planKind === "payg"
+                ? "border-indigo-600 bg-indigo-50 shadow-md shadow-indigo-100"
+                : "border-gray-200 bg-white hover:border-gray-300"
             }`}
           >
-            Pay as you go
+            <span className="flex items-center gap-2 mb-1">
+              <span className={`text-lg font-bold ${planKind === "payg" ? "text-indigo-700" : "text-gray-900"}`}>
+                Pay as you go
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-wide text-white bg-indigo-600 px-2 py-0.5 rounded-full">
+                New
+              </span>
+            </span>
+            <span className="block text-sm text-gray-500">No monthly fee. Buy credits, spend one per deal you close.</span>
           </button>
         </div>
-        <p className="text-xs text-gray-400 mt-3">
+        <p className="text-center text-xs text-gray-400 mt-4">
           Not sure which fits? You can switch between them any time from your account, no need to decide now.
         </p>
       </section>
