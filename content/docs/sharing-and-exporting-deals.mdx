@@ -26,7 +26,11 @@ To pull a batch of deals into your accounting software:
 1. On [Deals](https://app.splitre.app/deals), select the confirmed deals you want (voided deals can't be selected).
 2. Click **Export CSV for QuickBooks**.
 
-This downloads a CSV formatted for QuickBooks import, with columns for date, address (split into street/city/state/zip), agent, share %, sale price, commission %, GCI, agent net, broker net, and pre-written QBO invoice/bill descriptions. It only includes the deals you selected. For a full data dump of everything in your brokerage, see [Exporting Your Brokerage Data](/docs/exporting-your-brokerage-data) instead.
+This downloads a CSV formatted for QuickBooks import, with columns for date, address (split into street/city/state/zip), agent, share %, sale price, commission %, GCI, agent net, broker net, and pre-written QBO invoice/bill descriptions. It only includes the deals you selected.
+
+If any of the deals you picked passed money to another company, either a company sharing the broker cut or a fee your plan says is paid to someone specific, you also get a "Paid to" column for each of them. Those amounts are what your bookkeeper records as a bill. They are not included in broker net, which is your brokerage's own revenue. Deals with no such company produce exactly the same file as before.
+
+There's a second export worth knowing about. Reports, then Broker Revenue, has a **By company** table showing what each company was paid across the deals in your date range, with its own Export CSV that lists every line item deal by deal. For a full data dump of everything in your brokerage, see [Exporting Your Brokerage Data](/docs/exporting-your-brokerage-data) instead.
 
 A deal credited to more than one agent (see [Entering and Managing Deals](/docs/entering-and-managing-deals)) exports as **one row per agent**. Each row carries that agent's share %, their share of the deal's gross commission income, their agent net, and their broker net, so the rows still add up to the deal's totals, and each agent posts to your books as their own line.
 

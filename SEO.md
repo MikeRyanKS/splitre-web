@@ -41,6 +41,15 @@ Independent US real estate brokerages, 3–50 agents. Owner-operators and office
 | split a real estate deal between two agents | Long-tail, high-intent — calculator page |
 | dual agency commission split calculator | Long-tail — calculator page (co-agent split covers the same math) |
 | mentor mentee commission split real estate | Long-tail — calculator page / co-agent deals |
+| split commission between two brokerages | Feature search (split broker share). Features page + plan doc |
+| commission split between two companies | Variation (split broker share) |
+| franchise royalty cap tracking | Feature search (capped fees). KW/C21 style royalty caps |
+| real estate royalty cap software | Variation (capped fees) |
+| graduated commission split real estate | Feature search (tiers) |
+| anniversary year commission cap | Feature search (cap periods). eXp/KW/Real reset on join date |
+| commission cap reset date brokerage | Variation (cap periods) |
+| company lead commission split tracking | Feature search (deal types) |
+| rental commission flat fee brokerage | Long-tail (deal types) |
 
 ---
 
@@ -75,6 +84,13 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 - Primary: `commission split calculator`, `real estate cap tracking`, `QuickBooks real estate brokerage`
 - Target one H2 per major feature with its exact keyword
 - Now also covers **Teams / shared caps** (H2 "Run a team on one shared cap" → `real estate team commission cap`, `shared commission cap`) and **co-agent deals** (H2 "One deal, more than one agent" → `co-listing commission split`, `split a real estate deal between two agents`). Both stated as included in every tier.
+- **Split broker share** (added 2026-10-02): H2 "When the broker side goes to more than one company" → `split commission between two brokerages`, `commission split between two companies`. Section carries a worked $500/$3,000 + remainder/$7,000 example and a visual of both caps filling independently. Three new `FAQPage` entries on this page cover splitting the broker side, franchise royalty caps, and anniversary cap years, which are the three questions this feature set gets asked.
+- The Commission Engine H2 bullet list now also names graduated splits, anniversary cap years, fees that stop at a yearly ceiling, and per-deal types, so `graduated commission split real estate`, `anniversary year commission cap`, and `franchise royalty cap tracking` all have on-page support.
+
+### Docs (`splitre.app/docs/*`)
+- `creating-commission-plans` carries the long-tail feature copy: splitting the broker share between companies (with the Axen/DownTown worked example), graduated splits, fees with a named payee and a yearly ceiling, deal types, and post-cap step-downs.
+- `setting-up-agent-caps` now owns `anniversary year commission cap` and `commission cap reset date brokerage` with a dedicated H2.
+- Glossary gained Split Company, Fee Cap, Graduated Split (Tier), and Deal Type, which is useful for definitional and AI-answer queries.
 
 ### Calculator (`splitre.app/real-estate-commission-split-calculator`)
 - Primary: `real estate commission split calculator`, `commission split calculator`

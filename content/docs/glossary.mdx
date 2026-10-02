@@ -39,7 +39,7 @@ The amount of broker cut already collected from an agent before they were added 
 
 ### Cap Year
 
-The calendar-year window (resets every January 1) used for cap tracking, determined by a deal's closing date rather than the date it was confirmed. See [Setting Up Agent Caps](/docs/setting-up-agent-caps).
+The 12-month window used for cap tracking, determined by a deal's closing date rather than the date it was confirmed. January 1 to December 31 by default, or starting on each agent's own anniversary date if the brokerage sets it up that way. See [Setting Up Agent Caps](/docs/setting-up-agent-caps).
 
 ### Closing Date
 
@@ -65,9 +65,17 @@ A commission plan rule that applies an extra fee only to an agent's first N deal
 
 A one-off customization (referral %, relocation %, bonus, custom deduction) applied to a single deal rather than the whole commission plan. Gets frozen into that deal's breakdown snapshot once confirmed. See [Creating a Commission Plan](/docs/creating-commission-plans).
 
+### Deal Type
+
+An optional category the broker picks on a deal, defined on the commission plan: a company-generated lead at a different split, or a rental for a flat fee to the brokerage. A type can also be marked as not counting toward the cap, so those deals don't move the agent's cap progress. Not available on a deal split between agents. See [Creating a Commission Plan](/docs/creating-commission-plans).
+
 ### Draft
 
 The deal status before confirmation. Drafts can be freely edited and don't count toward an agent's cap yet. See [Entering and Managing Deals](/docs/entering-and-managing-deals).
+
+### Fee Cap
+
+A yearly ceiling on one specific fee, separate from the agent's main cap. A franchise royalty that stops once the agent has paid $3,000 for the year is a fee cap. On the deal that crosses the line, only the remaining amount is charged. See [Creating a Commission Plan](/docs/creating-commission-plans).
 
 ### Flat Deduction
 
@@ -76,6 +84,10 @@ A fixed dollar amount subtracted either off the top (before the split) or from t
 ### GCI (Gross Commission Income)
 
 The starting number every calculation works from: sale price × commission percentage. See [Creating a Commission Plan](/docs/creating-commission-plans).
+
+### Graduated Split (Tier)
+
+A split that improves for the agent as they produce more, for example 70/30 up to $50,000 of year-to-date GCI and 80/20 after that. Tiers can be based on GCI, sales volume, broker cut paid, or closed deals, and they reset with the cap year. A deal that crosses a threshold is split across both tiers by default. See [Creating a Commission Plan](/docs/creating-commission-plans).
 
 ### Percentage Deduction
 
@@ -88,6 +100,10 @@ A per-agent adjustment to their assigned commission plan's split, cap, or deduct
 ### Split
 
 The agent/broker percentage division applied to the splittable amount, such as a 70/30 split. Must always total 100%. See [Creating a Commission Plan](/docs/creating-commission-plans).
+
+### Split Company
+
+One of two or more named companies that share the broker side of a deal, each with its own annual cap. Each takes a fixed amount per deal, a percentage of the broker share, or whatever is left, and each stops collecting on its own once its cap is reached. One of them is marked as your own brokerage; the rest are treated as money you collect and pass on, so they stay out of your revenue figures. See [Creating a Commission Plan](/docs/creating-commission-plans).
 
 ### Splittable Amount
 

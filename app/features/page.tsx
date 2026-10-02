@@ -5,7 +5,7 @@ import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 export const metadata: Metadata = {
   title: "Features: Commission Calculation, Cap Tracking, and Bookkeeper-Ready CSV Export",
   description:
-    "SplitRE is commission calculation software for brokerages: percentage and tiered splits, flat fees, E&O deductions, real estate cap tracking, shared team caps, co-agent deal splits, agent notifications, and QuickBooks-ready CSV export. Built for independent real estate brokerages.",
+    "SplitRE is commission calculation software for brokerages: percentage and graduated splits, splitting the broker share between companies with separate caps, franchise royalty caps, real estate cap tracking on a calendar or anniversary year, shared team caps, co-agent deal splits, and QuickBooks-ready CSV export.",
   alternates: { canonical: "https://splitre.app/features" },
   openGraph: {
     title: "SplitRE Features: Built for How Brokerages Actually Work",
@@ -69,6 +69,30 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "Can the broker side of a commission be split between two companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. A commission plan can divide the broker share between two or more named companies, each with its own annual cap. For example, on an 80/20 split the first $500 of each deal's 20% can go to one company that stops at $3,000 a year, with the rest going to a second company that stops at $7,000. Each company stops collecting the moment its own cap is reached, independently of the other. By default the agent keeps a capped company's share, or you can pass it to the next company instead. Only your own brokerage's share is counted as your revenue; amounts collected for another company are reported separately for your bookkeeper.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can a franchise royalty stop at an annual cap?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Any fee on a commission plan can name the company it is paid to and stop after a yearly amount, which covers a franchise royalty that stops once the agent has paid $3,000 for the year, or an E&O charge that stops at $750. On the deal that crosses the ceiling only the remaining amount is charged, and the deal breakdown shows it. Each capped fee gets its own progress bar alongside the agent's main cap.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can commission caps reset on each agent's anniversary instead of January 1?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Caps reset on January 1 by default, but a brokerage can switch to anniversary cap years, where each agent's cap resets on the anniversary of the date they joined. Set it once on the Commission Plans page, then enter each agent's anniversary date on their record. Teams get their own date for the shared pool. Agents left without a date keep resetting on January 1.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Can a real estate team share one commission cap?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -120,7 +144,11 @@ export default function FeaturesPage() {
               {[
                 "Live deal preview before confirming",
                 "Rule-based commission plans per agent",
+                "Graduated splits that step up as an agent produces",
                 "Annual cap tracking with automatic flip to 100%",
+                "Caps that reset January 1 or on each agent's anniversary",
+                "Franchise royalties and other fees that stop at a yearly ceiling",
+                "Per-deal types for company leads, rentals, and referrals",
                 "E&O and transaction fee deductions",
                 "Referral fee splits",
               ].map((item) => (
@@ -144,6 +172,74 @@ export default function FeaturesPage() {
               height={856}
               className="w-full h-auto"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Split broker share between companies */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div>
+            <div className="inline-block bg-orange-100 text-orange-700 rounded-full px-3 py-1 text-sm font-medium mb-4">Split Broker Share</div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">When the broker side goes to more than one company</h2>
+            <p className="text-gray-600 mb-6">Plenty of brokerages owe a partner company or a franchise a piece of every transaction, each with its own annual ceiling. SplitRE tracks both pots separately and stops each one the moment it fills, without anybody rebuilding a spreadsheet in March.</p>
+            <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 mb-6">
+              <p className="text-sm text-gray-500 mb-2">For example, on an 80/20 split with $10,000 a year going to the broker side:</p>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li>The first <strong>$500</strong> of each deal&apos;s 20% goes to Axen Realty, which stops at <strong>$3,000</strong></li>
+                <li>The rest goes to DownTown Realty, which stops at <strong>$7,000</strong></li>
+                <li>When Axen fills in March, the agent keeps that $500 and still pays DownTown</li>
+              </ul>
+            </div>
+            <ul className="space-y-3">
+              {[
+                "Each company gets a fixed amount, a percentage, or whatever is left",
+                "Each company has its own annual cap and stops on its own",
+                "A capped company's share goes back to the agent, or on to the next company",
+                "Only your own share counts as your revenue; the rest is reported as passed through",
+                "A progress bar per company on the dashboard and in each agent's record",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Link href="/docs/creating-commission-plans" className="inline-block mt-6 text-indigo-600 font-semibold hover:underline">
+              How to set it up &rarr;
+            </Link>
+          </div>
+          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8">
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-4">A $10,000 commission, 20% to the broker side</p>
+            <div className="space-y-4">
+              <div>
+                <div className="flex justify-between text-sm mb-1">
+                  <span className="font-medium text-gray-700">Axen Realty</span>
+                  <span className="text-gray-500">$3,000 of $3,000</span>
+                </div>
+                <div className="h-2 rounded-full bg-gray-200 overflow-hidden">
+                  <div className="h-full rounded-full bg-emerald-500" style={{ width: "100%" }} />
+                </div>
+                <p className="text-xs text-gray-500 mt-1">Full for the year. Takes $0 from this deal.</p>
+              </div>
+              <div>
+                <div className="flex justify-between text-sm mb-1">
+                  <span className="font-medium text-gray-700">DownTown Realty</span>
+                  <span className="text-gray-500">$4,500 of $7,000</span>
+                </div>
+                <div className="h-2 rounded-full bg-gray-200 overflow-hidden">
+                  <div className="h-full rounded-full bg-indigo-500" style={{ width: "64%" }} />
+                </div>
+                <p className="text-xs text-gray-500 mt-1">Takes $2,000 from this deal.</p>
+              </div>
+              <div className="border-t border-gray-200 pt-4 flex justify-between text-sm">
+                <span className="font-semibold text-gray-900">Agent keeps</span>
+                <span className="font-semibold text-gray-900">$8,000</span>
+              </div>
+              <p className="text-xs text-gray-500">Including the $500 Axen would have taken before it capped.</p>
+            </div>
           </div>
         </div>
       </section>

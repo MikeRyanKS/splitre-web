@@ -22,7 +22,11 @@ const softwareSchema = {
     "QuickBooks-ready CSV export for bookkeepers",
     "Automatic agent email notifications on confirmed and amended deals",
     "One-click PDF download for confirmed deals",
-    "Tiered commission split support",
+    "Graduated and tiered commission split support",
+    "Split the broker share between two or more companies, each with its own annual cap",
+    "Franchise royalty and other fees that stop at an annual cap",
+    "Cap years that reset January 1 or on each agent's anniversary date",
+    "Per-deal types for company leads, rentals, and referrals",
     "Per-agent commission plan overrides",
     "Co-agent deals: split one transaction across up to 6 agents, each with their own plan and cap",
     "Shared team caps with an optional team lead",
@@ -371,6 +375,15 @@ export default function HomePage() {
                 ),
                 title: "Shared team caps",
                 desc: "Run a group of agents on one combined annual cap instead of a cap each. Any member's commission draws the same pool, and everyone flips to 100% together when it's hit. Add an optional team lead who takes a set cut of team-deal commissions.",
+              },
+              {
+                color: "bg-orange-100",
+                iconColor: "text-orange-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2zM9 13h6m-6 4h3" />
+                ),
+                title: "Split the broker side between companies",
+                desc: "Owe a partner company or a franchise part of every deal? Divide the broker share between them, each with its own annual cap. Each one stops the moment it fills, and only your own share is counted as your revenue.",
               },
             ].map(({ color, iconColor, icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl p-5 md:p-8 border border-gray-100">

@@ -2,9 +2,9 @@
 title: "Creating a Commission Plan"
 category: "Core How-Tos"
 order: 1
-excerpt: "Splits, caps, and deductions: how SplitRE's commission plans work, and how to set one up for your brokerage."
-readTime: "6 min read"
-keywords: ["commission plan setup", "real estate commission split", "brokerage cap setup"]
+excerpt: "Splits, caps, deductions, graduated tiers, and splitting the broker share between companies: how SplitRE's commission plans work."
+readTime: "8 min read"
+keywords: ["commission plan setup", "real estate commission split", "brokerage cap setup", "tiered commission split", "franchise royalty cap", "split commission between two brokerages"]
 ---
 
 A commission plan is the reusable template that determines how every deal assigned to it gets calculated. Set it up once, assign agents to it, and every deal they close is split automatically the same way.
@@ -24,12 +24,57 @@ SplitRE runs every deal through three stages, in order:
 When building a plan, you'll combine these rule types:
 
 - **Split.** The agent/broker percentage split (e.g. 70/30). Must add up to 100%.
-- **Cap.** The maximum dollar amount the brokerage collects from an agent in a calendar year. Once hit, the agent keeps everything (or pays only a flat post-cap fee) for the rest of the year.
+- **Cap.** The maximum dollar amount the brokerage collects from an agent in a cap year. January 1 is the default, or you can reset each agent's cap on their own anniversary date. Once the cap is hit, the agent keeps everything, or pays only a flat post-cap fee if your plan defines one.
 - **Flat deduction.** A fixed dollar amount taken off the top or from the agent's share.
 - **Percentage deduction.** A percentage of GCI taken off the top (e.g. a franchise royalty).
 - **Counter gate.** An extra fee that only applies to an agent's first N deals (for example, a mentorship fee on their first 3 closings). This counts deals in the order they're confirmed, not the order they closed. See the note below.
 
+Everything in the next section is optional. A plan that uses none of it calculates exactly the way plans always have.
+
 Splitting commission with a **team lead**, or sharing one cap across several agents, isn't a plan rule. It's set up on the team itself. See [Setting Up Agent Caps](/docs/setting-up-agent-caps).
+
+## Splitting the broker share between companies
+
+Some brokerages don't keep the whole broker side. You might owe a partner company a cut of every transaction, with its own annual ceiling.
+
+Turn on "Split the broker share between two or more companies" under the plan's split, then list the companies in the order they get paid. Each one takes a fixed dollar amount per deal, a percentage of the broker share, or "the rest", and each gets its own annual cap.
+
+Here is the arrangement this was built for. The agent is on an 80/20 split with $10,000 a year going to the brokerage side. Of each deal's 20%, the first $500 goes to Axen Realty, which stops at $3,000 for the year. Everything after that goes to DownTown Realty, which stops at $7,000.
+
+Each company stops collecting on its own the moment its own cap is reached. If Axen fills up in March, the agent keeps paying DownTown until DownTown fills too, and the $500 that used to go to Axen stays with the agent. If you'd rather the next company pick it up instead, tick "give its share to the next company".
+
+Two details worth knowing:
+
+- **Order matters.** Companies are paid top to bottom, so on a small deal where 20% works out to less than $500, the first company takes all of it. If you want each company to keep its proportion on small deals, give them a percentage of the broker share instead of a fixed amount.
+- **Mark which company is you.** Tick "us" on the company that is your brokerage. The last one is assumed by default. Only that company's share counts as your revenue. The others are money you collect and hand over, so they're kept out of your revenue reporting and listed separately for your bookkeeper. This is the standard company dollar treatment, the same way a franchise royalty is handled.
+
+Each agent's drawer and your dashboard show a progress bar per company, so you can see at a glance who still owes what.
+
+## Graduated splits
+
+A plan can raise the agent's share as they produce more: 70/30 to start, 80/20 once they pass $50,000, 90/10 past $100,000.
+
+Tiers can be based on year-to-date GCI, sales volume, broker cut already paid, or number of closed deals, and they reset with the cap year. When a single deal crosses a threshold, it's split across both tiers by default, so $5,000 of it might settle at 70/30 and the other $5,000 at 80/20. Turn that off if you'd rather the tier in effect at the start of the deal apply to the whole thing.
+
+## Fees paid to someone else, and fees that stop
+
+Any fee on a plan can name who it's paid to and stop after a yearly amount.
+
+That covers the franchise royalty that stops once the agent has paid $3,000 for the year, and the E&O charge that stops at $750. On the deal that crosses the line, only the remaining amount is charged, and the breakdown says so.
+
+Fees with a named payee are treated as money passed through to that company rather than your own revenue. The transaction fee and custom deductions can also be a percentage of the sale price instead of a flat amount.
+
+## Deal types
+
+A plan can offer types the broker picks per deal: a company-generated lead at 50/50, or a rental for a flat $300 to the brokerage.
+
+A type can also be marked as not counting toward the cap. That way a capped agent still pays the brokerage on company-provided business, and those deals don't move the agent's cap progress. Deals with no type selected use the plan as normal.
+
+Deal types aren't available on a deal split between agents, because the agents can be on different plans.
+
+## Post-cap fees that step down
+
+If your capped agents pay a per-transaction fee, it can drop after a set amount. For example $250 per deal until they've paid $5,000 in post-cap fees, then $75 per deal for the rest of the year.
 
 ## A worked example
 
@@ -44,6 +89,8 @@ If that same agent had already had $18,500 collected from them this year, the br
 ## Per-agent overrides without a new plan
 
 If one agent needs a slightly different split, cap, or extra deduction, you don't need to duplicate the whole plan. Set a **plan override** for that agent from their row on [Agents](https://app.splitre.app/agents). Deal-specific one-offs (a referral fee or bonus that only applies to a single closing) are set as a **deal override** when entering that deal, and get frozen into that deal's record once it's confirmed.
+
+Two overrides don't apply to every plan. The split override does nothing on a plan with graduated tiers, because the tiers decide the split. The cap override only works on a plan with a single annual cap, so on a plan whose caps sit on its companies you edit the plan itself, or put that agent on a plan of their own. In both cases the option is greyed out with a note explaining why.
 
 ## A known limitation: counter gates and backdated deals
 

@@ -2,12 +2,12 @@
 title: "Setting Up Agent Caps"
 category: "Core How-Tos"
 order: 5
-excerpt: "How to set a cap opening balance for agents joining mid-year, and how the cap ledger tracks progress the rest of the time."
-readTime: "3 min read"
-keywords: ["real estate agent cap", "cap opening balance", "brokerage cap tracking"]
+excerpt: "Cap opening balances for agents joining mid-year, calendar versus anniversary cap years, and how cap progress is tracked the rest of the time."
+readTime: "5 min read"
+keywords: ["real estate agent cap", "cap opening balance", "brokerage cap tracking", "anniversary year cap", "cap year reset"]
 ---
 
-The cap is the maximum amount your brokerage collects from an agent in a calendar year. See [Creating a Commission Plan](/docs/creating-commission-plans) for how it factors into the calculation itself. This guide covers the one-time setup step: telling SplitRE how much of that cap an agent has already used.
+The cap is the maximum amount your brokerage collects from an agent in a cap year. See [Creating a Commission Plan](/docs/creating-commission-plans) for how it factors into the calculation itself. This guide covers the one-time setup step: telling SplitRE how much of that cap an agent has already used.
 
 ## Cap opening balance
 
@@ -15,13 +15,25 @@ If an agent joins mid-year, or you're migrating from another system where they a
 
 1. Go to [Agents](https://app.splitre.app/agents) and click the agent's row to open their drawer.
 2. Find the **Cap Opening Balance** field. It's described there as the amount of broker cut already collected for this agent before they were added to SplitRE.
-3. Enter the dollar amount and click **Save**. If they don't have a prior balance, use **Set to zero**.
+3. Enter the dollar amount and click **Save changes**. If they don't have a prior balance, use **Set to zero**.
+
+If the agent's plan has items with their own ceilings, a capped franchise royalty or companies sharing the broker cut, the drawer also asks how much was already paid toward each one this cap year. Those entries only count for the cap year you enter them in, so a royalty paid before you started with SplitRE in 2026 won't eat into 2027's allowance.
 
 ## How the cap ledger works after that
 
-Once the opening balance is set, SplitRE tracks the running total automatically. Every confirmed deal for that agent adds a row to their cap ledger, with the cumulative total (opening balance plus everything collected since) checked against the cap limit before each deal's broker cut is calculated. When the cumulative total reaches the cap, the agent gets 100% (or a flat post-cap fee, if the plan defines one) on every deal for the rest of that calendar year.
+Once the opening balance is set, SplitRE tracks the running total automatically. Every confirmed deal for that agent adds a row to their cap ledger, with the cumulative total (opening balance plus everything collected since) checked against the cap limit before each deal's broker cut is calculated. When the cumulative total reaches the cap, the agent gets 100% (or a flat post-cap fee, if the plan defines one) on every deal for the rest of that cap year.
 
-The cap year resets every January 1st, based on each deal's closing date, not the date it happens to be confirmed.
+Each agent's drawer shows their cap progress, plus a separate bar for anything with its own ceiling, so you can see that the royalty is done for the year while the brokerage split still has room.
+
+## Calendar year or anniversary year
+
+By default every cap resets on January 1, based on each deal's closing date rather than the date you got around to confirming it.
+
+Plenty of brokerages reset each agent's cap on the anniversary of the day they joined instead. To do that, go to [Commission Plans](https://app.splitre.app/plans) and set **Annual caps reset** to "on each agent's anniversary date". Then open each agent's drawer and enter their anniversary. A team's shared cap gets its own date on the team drawer.
+
+Only the month and day matter, so the year you enter doesn't need to be the year they actually started. Agents you leave blank keep resetting on January 1. The drawer spells out the current window, for example "Sep 1, 2026 to Aug 31, 2027", so there's no guessing.
+
+One thing to know about the annual earnings PDF: it covers a calendar year, so for an agent on an anniversary cap it reports what was collected from deals that closed in that year rather than a "so much of the cap used" figure, which would span two cap years and read as nonsense.
 
 ## Shared team caps
 
