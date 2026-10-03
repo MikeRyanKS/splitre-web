@@ -9,6 +9,16 @@ keywords: ["real estate agent cap", "cap opening balance", "brokerage cap tracki
 
 The cap is the maximum amount your brokerage collects from an agent in a cap year. See [Creating a Commission Plan](/docs/creating-commission-plans) for how it factors into the calculation itself. This guide covers the one-time setup step: telling SplitRE how much of that cap an agent has already used.
 
+<div className="my-8 rounded-xl overflow-hidden border border-gray-200 shadow-lg ring-1 ring-black/5">
+  <ZoomableScreenshot
+    src="/screenshots/splitre-agent-cap-tracking-dashboard.png"
+    alt="SplitRE tracking each real estate agent's annual cap progress, showing how much broker cut has been collected against the cap so far this year"
+    width="1440"
+    height="900"
+    className="w-full h-auto"
+  />
+</div>
+
 ## Cap opening balance
 
 If an agent joins mid-year, or you're migrating from another system where they already had deals collected against their cap this year, you need to set their **cap opening balance**. Otherwise SplitRE will think they're starting from $0 and they'll be under-capped for the rest of the year.
@@ -22,6 +32,16 @@ If the agent's plan has items with their own ceilings, a capped franchise royalt
 ## How the cap ledger works after that
 
 Once the opening balance is set, SplitRE tracks the running total automatically. Every confirmed deal for that agent adds a row to their cap ledger, with the cumulative total (opening balance plus everything collected since) checked against the cap limit before each deal's broker cut is calculated. When the cumulative total reaches the cap, the agent gets 100% (or a flat post-cap fee, if the plan defines one) on every deal for the rest of that cap year.
+
+<div className="my-8 rounded-xl overflow-hidden border border-gray-200 shadow-lg ring-1 ring-black/5">
+  <ZoomableScreenshot
+    src="/screenshots/splitre-cap-reached-notification.png"
+    alt="The notification SplitRE sends when a real estate agent reaches their annual cap and moves to a 100% commission split for the rest of the cap year"
+    width="546"
+    height="254"
+    className="w-full h-auto"
+  />
+</div>
 
 Each agent's drawer shows their cap progress, plus a separate bar for anything with its own ceiling, so you can see that the royalty is done for the year while the brokerage split still has room.
 

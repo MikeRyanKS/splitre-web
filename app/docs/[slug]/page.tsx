@@ -6,6 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import { getAllDocSlugs, getAllDocs, getDoc, getFaqEntries, slugifyCategory } from "@/lib/docs";
 import Breadcrumb from "@/components/Breadcrumb";
+import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 
 export async function generateStaticParams() {
   return getAllDocSlugs().map((slug) => ({ slug }));
@@ -130,7 +131,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
           <div className="prose prose-lg prose-gray max-w-none prose-a:text-indigo-600 prose-a:font-semibold">
             <MDXRemote
               source={doc.content}
-              components={{ a: DocLink, h2: Heading2 }}
+              components={{ a: DocLink, h2: Heading2, ZoomableScreenshot }}
               options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }}
             />
           </div>

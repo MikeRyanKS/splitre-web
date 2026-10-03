@@ -6,8 +6,11 @@ import Image from "next/image";
 type Props = {
   src: string;
   alt: string;
-  width: number;
-  height: number;
+  // Accept strings too: when this component is used from an MDX doc, attribute
+  // values come through as strings (MDX doesn't evaluate `{1911}` expression
+  // attributes the way a .tsx page does), so coerce before handing to next/image.
+  width: number | string;
+  height: number | string;
   className?: string;
   priority?: boolean;
 };
@@ -18,6 +21,8 @@ type Props = {
 // resolution rather than squeezed into a 2-column grid cell.
 export default function ZoomableScreenshot({ src, alt, width, height, className, priority }: Props) {
   const [open, setOpen] = useState(false);
+  const w = Number(width);
+  const h = Number(height);
 
   useEffect(() => {
     if (!open) return;
@@ -41,7 +46,7 @@ export default function ZoomableScreenshot({ src, alt, width, height, className,
         className="block w-full cursor-zoom-in group relative"
         aria-label={`Enlarge screenshot: ${alt}`}
       >
-        <Image src={src} alt={alt} width={width} height={height} className={className} priority={priority} />
+        <Image src={src} alt={alt} width={w} height={h} className={className} priority={priority} />
         <span className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/10 transition-colors">
           <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 text-white text-xs font-medium px-3 py-1.5 rounded-full flex items-center gap-1.5">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
