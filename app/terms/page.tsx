@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://splitre.app/terms" },
 };
 
-const EFFECTIVE_DATE = "August 23, 2026";
+const EFFECTIVE_DATE = "October 3, 2026";
 const COMPANY = "Keplify LLC";
 const ADDRESS = "8 The Green, Suite 20261, Dover, DE 19901";
 const LEGAL_EMAIL = "legal@splitre.app";
@@ -163,6 +163,19 @@ export default function TermsPage() {
               &ldquo;Active agents&rdquo; means any agent profile on your account that is not
               marked as inactive or archived. Inactive agents do not count toward your plan limit
               and retain their full commission and cap history.
+            </p>
+            <p className="mt-3">
+              <strong>Pay-as-you-go.</strong> As an alternative to a subscription tier, you may
+              choose a pay-as-you-go plan, which has no recurring subscription fee. Instead, you
+              purchase packs of deal credits in advance, and one credit is consumed each time you
+              confirm a deal. Credits do not expire. Current credit-pack prices are posted at{" "}
+              <a href="/pricing" className="text-indigo-600 hover:underline">splitre.app/pricing</a>.
+              Voiding a previously confirmed deal does not restore the credit used to confirm it.
+              Running out of credits does not lock your account or restrict access to data you have
+              already entered; it prevents only the confirmation of new deals until you purchase
+              more credits. You may switch between a subscription tier and pay-as-you-go at any time
+              in <strong>Settings &rsaquo; Billing</strong>, and any credits remaining when you
+              switch to a subscription are retained for later use.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">4.2 Payment Authorization</h3>
@@ -485,10 +498,11 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">13. Cancellation, Suspension, and Data Retention</h2>
             <p>
-              This Section governs two different things: <strong>voluntary cancellation</strong> (something
-              you choose to do) and <strong>suspension for non-payment</strong> (something that happens if a
-              payment fails and is never fixed). They have different consequences. Read the one that applies
-              to you.
+              This Section governs <strong>voluntary cancellation</strong> (something you choose to do),{" "}
+              <strong>suspension for non-payment</strong> (something that happens if a payment fails and is
+              never fixed), and, for pay-as-you-go accounts, <strong>closure after a long period of
+              inactivity</strong> (Section 13.4). They have different consequences. Read the one that
+              applies to you.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">13.1 Voluntary Cancellation</h3>
@@ -530,6 +544,22 @@ export default function TermsPage() {
               See our{" "}
               <a href="/refund-policy" className="text-indigo-600 hover:underline">Refund and Cancellation Policy</a>{" "}
               for when a refund is available upon cancellation.
+            </p>
+
+            <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">13.4 Inactive Account Closure (Pay-As-You-Go Accounts)</h3>
+            <p>
+              Accounts on the pay-as-you-go plan are kept open at no charge while they hold a credit
+              balance or show account activity. If a pay-as-you-go account has, for a continuous
+              period of twenty-four (24) months, (a) confirmed no deals, (b) purchased no credits,
+              and (c) held a zero credit balance, we may treat the account as inactive. Before closing
+              an inactive account, we will send advance email notice to the account&rsquo;s registered
+              email address and provide an opportunity to retain the account (by confirming a deal or
+              purchasing credits) and to export account data. Following the notice period, an inactive
+              account and its associated data may be placed in a read-only state and subsequently
+              permanently deleted in accordance with our standard data-retention and account-closure
+              practices. Accounts holding a positive credit balance will not be closed for inactivity.
+              Subscription accounts are governed by Sections 13.1 through 13.3 and are not subject to
+              this inactivity clause while their subscription is active.
             </p>
           </section>
 

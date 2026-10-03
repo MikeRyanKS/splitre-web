@@ -1,6 +1,6 @@
 # SplitRE Terms of Service
 
-**Effective date:** August 23, 2026
+**Effective date:** October 3, 2026
 **Operated by:** Keplify LLC, a Delaware limited liability company, 8 The Green, Suite 20261, Dover, DE 19901, United States
 
 > This is the canonical source of the Terms of Service. `web/app/terms/page.tsx` must always match this document. If they ever diverge, this file is authoritative and the page should be corrected to match it.
@@ -63,6 +63,8 @@ We may modify, shorten, or discontinue the free trial offer for prospective user
 Subscriptions are billed monthly or annually. Monthly plans are billed every 30 days from activation. Annual plans are billed in full at the start of each 12-month term. Current prices for each tier and billing frequency are posted at [splitre.app/pricing](/pricing).
 
 "Active agents" means any agent profile on your account not marked inactive or archived. Inactive agents do not count toward your plan limit and retain their full commission and cap history.
+
+**Pay-as-you-go.** As an alternative to a subscription tier, you may choose a pay-as-you-go plan, which has no recurring subscription fee. Instead, you purchase packs of deal credits in advance, and one credit is consumed each time you confirm a deal. Credits do not expire. Current credit-pack prices are posted at [splitre.app/pricing](/pricing). Voiding a previously confirmed deal does not restore the credit used to confirm it. Running out of credits does not lock your account or restrict access to data you have already entered; it prevents only the confirmation of new deals until you purchase more credits. You may switch between a subscription tier and pay-as-you-go at any time in Settings > Billing, and any credits remaining when you switch to a subscription are retained for later use.
 
 ### 4.2 Payment authorization
 
@@ -205,7 +207,7 @@ You agree to defend, indemnify, and hold harmless Keplify LLC and its members, m
 
 ## 13. Cancellation, Suspension, and Data Retention
 
-This Section governs two different things: **voluntary cancellation** (something you choose to do) and **suspension for non-payment** (something that happens if a payment fails and is never fixed). They have different consequences. Read the one that applies to you.
+This Section governs **voluntary cancellation** (something you choose to do), **suspension for non-payment** (something that happens if a payment fails and is never fixed), and, for pay-as-you-go accounts, **closure after a long period of inactivity** (Section 13.4). They have different consequences. Read the one that applies to you.
 
 ### 13.1 Voluntary cancellation
 
@@ -222,6 +224,10 @@ If a payment fails and is never resolved, the separate process in Section 4.4 ap
 ### 13.3 Refunds
 
 See our [Refund / Cancellation Policy](/refund-policy) for when a refund is available upon cancellation.
+
+### 13.4 Inactive account closure (pay-as-you-go accounts)
+
+Accounts on the pay-as-you-go plan are kept open at no charge while they hold a credit balance or show account activity. If a pay-as-you-go account has, for a continuous period of twenty-four (24) months, (a) confirmed no deals, (b) purchased no credits, and (c) held a zero credit balance, we may treat the account as inactive. Before closing an inactive account, we will send advance email notice to the account's registered email address and provide an opportunity to retain the account (by confirming a deal or purchasing credits) and to export account data. Following the notice period, an inactive account and its associated data may be placed in a read-only state and subsequently permanently deleted in accordance with our standard data-retention and account-closure practices. Accounts holding a positive credit balance will not be closed for inactivity. Subscription accounts are governed by Sections 13.1 through 13.3 and are not subject to this inactivity clause while their subscription is active.
 
 ---
 
