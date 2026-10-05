@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import UtmForwarder from "@/components/UtmForwarder";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Clarity from "@/components/Clarity";
 
 const GA_MEASUREMENT_ID = "G-T54MEEW87Y";
 
@@ -127,6 +128,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <UtmForwarder />
+        <Clarity />
       </body>
       <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>

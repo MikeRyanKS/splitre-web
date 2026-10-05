@@ -158,7 +158,11 @@ Cloudflare Web Analytics is live for `splitre.app`, added via the dashboard in *
 - `calculator_used` (`app/real-estate-commission-split-calculator/DemoClient.tsx`): once per visit, only after the deal math differs from the prefilled example and the visitor pauses typing for 1.5s. Never on load, never per keystroke. No params.
 - `sign_up_click` (`components/UtmForwarder.tsx`): any click (or middle click) on an `app.splitre.app/signup` link. Params `cta_page`, `link_text`, `plan`. This is the key event.
 
-`components/UtmForwarder.tsx` also appends the visit's `utm_*` / `ref` (remembered in `sessionStorage`) onto every signup link, without overwriting existing params like `?plan=`. The app itself runs **no** GA; it stores the forwarded tags on the new trial brokerage, which is where campaign-to-trial-to-paid numbers come from. Only `splitre.app` is listed in GA's domain settings (no cross-domain tracking).
+**Microsoft Clarity** (`yt07fygok6`, added 2026-10-05) runs alongside both for heatmaps and session replay, which answers "where on the page do people stall?" in a way neither of the other two can. Loaded site-wide from `components/Clarity.tsx` via `next/script` with `strategy="afterInteractive"`, so it never blocks first paint. Disclosed in the privacy policy, section 1.4 — note that the policy previously promised **no session-replay tools anywhere**, so that sentence was rewritten when Clarity went in. If Clarity is ever removed, put the stronger promise back.
+
+**All three are marketing-site only and must stay that way.** Nothing that profiles behaviour is loaded inside `app.splitre.app`, where the screen contains real brokerages' deal addresses, agent names and commission figures. The app's own funnel measurement is first-party instead: the `funnel_events` table (`free_deal_confirmed`, `paywall_shown`, `paywall_path_selected`) surfaced on the admin console's **Free Deals** panel.
+
+`components/UtmForwarder.tsx` also appends the visit's `utm_*` / `ref` (remembered in `sessionStorage`) onto every signup link, without overwriting existing params like `?plan=`. The app itself runs **no** GA; it stores the forwarded tags on the new free brokerage, which is where campaign-to-free-to-paid numbers come from. Only `splitre.app` is listed in GA's domain settings (no cross-domain tracking).
 
 ## Sitemap
 

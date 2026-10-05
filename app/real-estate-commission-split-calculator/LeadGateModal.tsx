@@ -94,9 +94,9 @@ export default function LeadGateModal({ action, deal, onClose, onResolved }: Pro
         </form>
 
         <p className="mt-4 text-[11px] text-gray-400 text-center">
-          Want unlimited deals?{" "}
+          Want to run real deals?{" "}
           <Link href="https://app.splitre.app/signup" className="text-indigo-600 font-medium hover:underline">
-            Start your free 14-day trial
+            Your first 3 are free
           </Link>
         </p>
       </div>

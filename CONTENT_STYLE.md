@@ -65,7 +65,11 @@ is encrypted and isolated per brokerage" is fine; naming the database is not.
   this is not.
 - **Teams / shared caps** and **co-agent deals** ship on every plan. They are
   not add-ons and not gated to higher tiers.
-- Free trial is **14 days**, no card required.
+- There is **no free trial and no time limit**. New accounts get their
+  **first 3 confirmed deals free**, no card required. Never write "14-day trial"
+  or any other clock; the whole point of the model is that the free allowance
+  waits for the broker's next closing.
+- The single promise, worded the same everywhere: **"Your first 3 deals free."**
 - The money-back guarantee is **7 days**.
 
 ## Before you ship copy

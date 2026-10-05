@@ -114,7 +114,7 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="mt-4 text-sm text-gray-400">
-            14-day free trial · All features included · Cancel any time ·{" "}
+            Your first 3 deals free · All features included · No card, no time limit ·{" "}
             <Link href="/real-estate-commission-split-calculator" className="underline hover:text-gray-600">try the commission split calculator, no signup needed</Link>
           </p>
         </div>
@@ -531,7 +531,7 @@ export default function HomePage() {
               href="https://app.splitre.app/signup"
               className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors"
             >
-              Start free trial
+              Get your first 3 deals free
             </Link>
             <Link
               href="/real-estate-commission-split-calculator"
@@ -546,7 +546,7 @@ export default function HomePage() {
               View pricing
             </Link>
           </div>
-          <p className="mt-4 text-sm text-indigo-300">14-day free trial · No credit card required · Demo needs no signup at all</p>
+          <p className="mt-4 text-sm text-indigo-300">Your first 3 deals free · No credit card, no time limit · Demo needs no signup at all</p>
         </div>
       </section>
     </>

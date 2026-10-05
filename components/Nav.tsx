@@ -29,7 +29,7 @@ export default function Nav() {
 
           <div className="hidden md:flex items-center gap-4">
             <Link href="https://app.splitre.app/login" className="text-gray-600 hover:text-gray-900 font-medium text-sm">Sign in</Link>
-            <Link href="https://app.splitre.app/signup" className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">Start free trial</Link>
+            <Link href="https://app.splitre.app/signup" className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">Start free</Link>
           </div>
 
           <button
@@ -57,7 +57,7 @@ export default function Nav() {
             <Link href="/about" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">About</Link>
             <div className="pt-2 flex flex-col gap-2">
               <Link href="https://app.splitre.app/login" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-700 font-medium">Sign in</Link>
-              <Link href="https://app.splitre.app/signup" onClick={() => setMobileOpen(false)} className="bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg text-center">Start free trial</Link>
+              <Link href="https://app.splitre.app/signup" onClick={() => setMobileOpen(false)} className="bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg text-center">Start free</Link>
             </div>
           </div>
         )}

@@ -33,7 +33,7 @@ const allFeatures = [
   "Automated agent notifications on deal confirmation and amendments",
   "Email alerts (cap reached, deal confirmed)",
   "Bulk deal and agent import from CSV",
-  "14-day free trial",
+  "Your first 3 deals free, with no card and no time limit",
 ];
 
 const faqs = [
@@ -58,12 +58,24 @@ const faqs = [
     a: "Every deal produces a row in the export with the closing date, property address, agent, GCI (commission income), agent net payout, broker net revenue, and pre-formatted memo lines for QuickBooks invoices and bills. Select any deals, click Export, and hand the file to your bookkeeper. No re-keying, no live connection to manage.",
   },
   {
-    q: "What happens at the end of my free trial?",
-    a: "If you don't add a payment method before your trial ends, your account is paused and your data is kept for 30 days. Add a payment method any time in that window to pick up right where you left off. After 30 days, the data is permanently deleted.",
+    q: "How do the 3 free deals work?",
+    a: "Every new account gets its first 3 confirmed deals free, with no credit card and no time limit. A free deal is used when you confirm a deal, not when you save a draft, so you can build and preview as much as you like. Voiding a deal doesn't give the free deal back, and amending a deal you already confirmed doesn't use another one. A deal split between co-agents counts as one, because it's one deal.",
+  },
+  {
+    q: "Are the free deals a limited version of the product?",
+    a: "No. They're the complete product: agent email notifications, PDF downloads and share links, cap tracking, QuickBooks-ready CSV export, co-agent deals, teams, amendments. Nothing is watermarked or held back. The point is that you run your own real closings through it and see the actual math.",
+  },
+  {
+    q: "What happens after my 3 free deals?",
+    a: "Nothing you've built goes anywhere. Your agents, commission plans and the deals you already confirmed stay exactly as they are, and you can keep using the account. To confirm a fourth deal you pick a path: buy a pack of pay-as-you-go credits, or start a flat plan. You can still build and preview that fourth deal before you decide.",
+  },
+  {
+    q: "Is there any time limit?",
+    a: "No. There's no trial clock to run out. If your next closing is four months away, your free deals are still sitting there waiting for it. We do close accounts that have had no deals and no credit purchases for 24 straight months, with email warnings first, and we never close an account that's still holding credits you paid for.",
   },
   {
     q: "How is pay-as-you-go different from a flat plan?",
-    a: "A flat plan is one price a month for however many deals you close. Pay-as-you-go has no monthly fee at all: you buy a pack of credits and spend one credit each time you confirm a deal. Every feature is included either way. It comes down to how many deals you close in a typical month; an occasional closer usually pays less on pay-as-you-go, a regular closer usually pays less on a flat plan.",
+    a: "A flat plan is one price a month for however many deals you close. Pay-as-you-go has no monthly fee at all: you buy a pack of credits and spend one credit each time you confirm a deal. Every feature is included either way. The rough break-even is a couple of deals a month: close a few deals a year and pay-as-you-go costs less, close regularly and a flat plan costs less. You can switch either way at any time, so you don't have to get this right up front.",
   },
   {
     q: "Can I switch between a flat plan and pay-as-you-go?",
@@ -88,7 +100,7 @@ export default function PricingClient() {
   // Consent lives in a confirmation modal shown after "Subscribe now" is clicked, not
   // as a page-level checkbox gating the button. A checkbox this far down the page,
   // easy to scroll past, reads as "the button is broken" rather than "check this
-  // first". "Start free trial" is unaffected: it routes to signup, which has its own
+  // first". "Start free" is unaffected: it routes to signup, which has its own
   // checkbox in the app.
   const [pendingPlan, setPendingPlan] = useState<string | null>(null);
   const [consentChecked, setConsentChecked] = useState(false);
@@ -117,7 +129,7 @@ export default function PricingClient() {
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Simple, transparent pricing</h1>
           <p className="text-xl text-gray-600 mb-2">No feature paywalls. No surprise charges. Pick a flat monthly price by agent count, or pay only for the deals you actually close.</p>
-          <p className="text-indigo-600 font-semibold">14-day free trial either way, no credit card required.</p>
+          <p className="text-indigo-600 font-semibold">Your first 3 deals are free either way. No credit card, and no clock.</p>
           <Link href="/real-estate-commission-split-calculator" className="inline-block mt-4 text-sm text-gray-500 underline hover:text-gray-700">
             Not ready to sign up? Try the calculator free →
           </Link>
@@ -147,6 +159,7 @@ export default function PricingClient() {
               Flat monthly plans
             </span>
             <span className="block text-sm text-gray-500">One price a month, by agent count. Everything included.</span>
+            <span className="block text-xs text-gray-400 mt-2">Close deals regularly? This costs less.</span>
           </button>
           <button
             onClick={() => setPlanKind("payg")}
@@ -166,10 +179,11 @@ export default function PricingClient() {
               </span>
             </span>
             <span className="block text-sm text-gray-500">No monthly fee. Buy credits, spend one per deal you close.</span>
+            <span className="block text-xs text-gray-400 mt-2">Close a few deals a year? This costs less.</span>
           </button>
         </div>
         <p className="text-center text-xs text-gray-400 mt-4">
-          Not sure which fits? You can switch between them any time from your account, no need to decide now.
+          Your first 3 deals are free either way, so you don't have to decide now. You can switch between them any time from your account.
         </p>
       </section>
 
@@ -260,7 +274,7 @@ export default function PricingClient() {
                       : "border-2 border-gray-300 text-gray-700 hover:border-indigo-400 hover:text-indigo-600"
                   }`}
                 >
-                  Start free trial
+                  Start free
                 </Link>
 
                 <button
@@ -352,10 +366,10 @@ export default function PricingClient() {
                     : "border-2 border-gray-300 text-gray-700 hover:border-indigo-400 hover:text-indigo-600"
                 }`}
               >
-                Start free trial
+                Start free
               </Link>
               <p className="text-xs text-gray-400 text-center mt-3">
-                Buy credits any time after your trial starts, from your account.
+                Your first 3 deals are free. Buy this pack whenever you need it, from your account.
               </p>
             </div>
           ))}
@@ -402,7 +416,7 @@ export default function PricingClient() {
                 At <strong className="text-gray-900">$348 a year</strong>, SplitRE has to prevent <em>one</em> commission error <em>one time</em> to cover itself for the next <strong className="text-gray-900">57 years</strong>, and that&apos;s on the low end of what losing an agent costs. It&apos;s small enough to sit on your card and never think about, and precise enough that you never pay an agent wrong again. That&apos;s the whole trade.
               </p>
               <p className="text-center text-indigo-600 font-semibold pt-2">
-                Start your free 14-day trial. No credit card required, no meetings, no migration project, no sales call.
+                Your first 3 deals are free. No credit card, no meetings, no migration project, no sales call.
               </p>
             </div>
           </div>
@@ -497,12 +511,12 @@ export default function PricingClient() {
       <section className="py-16 px-4 bg-indigo-600 text-white text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold mb-3">Ready to ditch the spreadsheet?</h2>
-          <p className="text-indigo-200 mb-8">Start your free 14-day trial. No credit card required.</p>
+          <p className="text-indigo-200 mb-8">Your first 3 deals are free. No credit card, no time limit.</p>
           <Link
             href="https://app.splitre.app/signup"
             className="inline-block bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors"
           >
-            Start free trial
+            Get your first 3 deals free
           </Link>
         </div>
       </section>

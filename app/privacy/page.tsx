@@ -80,20 +80,34 @@ export default function PrivacyPage() {
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">1.4 Analytics</h3>
             <p>
-              Our marketing pages (splitre.app) use two analytics services. <strong>Cloudflare Web
+              Our marketing pages (splitre.app) use three analytics services. <strong>Cloudflare Web
               Analytics</strong> is cookieless and reports aggregate metrics (page views, visits, load
               performance) that are not tied to an individually identifiable visitor. <strong>Google
               Analytics 4</strong> (provided by Google LLC) sets first-party cookies to measure how visitors
               find and use the marketing site, including which campaign or link brought them (for example,
-              the utm parameters on a link in an email we sent) and whether they went on to start a free
-              trial. Google Analytics receives your IP address, device and browser details, and the pages you
+              the utm parameters on a link in an email we sent) and whether they went on to create an
+              account. Google Analytics receives your IP address, device and browser details, and the pages you
               view; we have not enabled Google Signals or advertising features, and we do not use this data
               for ad targeting. You can opt out with Google&apos;s{" "}
               <a href="https://tools.google.com/dlpage/gaoptout" className="text-indigo-600 hover:underline">
                 browser add-on
               </a>{" "}
-              or by blocking cookies for splitre.app. We do not deploy advertising networks, behavioral
-              retargeting pixels, or session-replay tools on our website or inside the application.
+              or by blocking cookies for splitre.app. <strong>Microsoft Clarity</strong> (provided by
+              Microsoft Corporation) records how visitors interact with the marketing pages, producing
+              aggregated heatmaps and session replays of mouse movement, scrolling and clicks, so we can see
+              which parts of a page are confusing. Clarity masks text content by default and we do not use it
+              to identify individual visitors. You can opt out by blocking cookies for splitre.app, and
+              Microsoft describes its own handling in the{" "}
+              <a href="https://privacy.microsoft.com/privacystatement" className="text-indigo-600 hover:underline">
+                Microsoft Privacy Statement
+              </a>.
+            </p>
+            <p className="mt-3">
+              <strong>These three services run on our marketing pages only.</strong> None of them is
+              loaded inside the SplitRE application at app.splitre.app, so no analytics or
+              session-replay provider ever receives your brokerage&apos;s deal addresses, agent names,
+              client information or commission figures. We do not deploy advertising networks or
+              behavioral retargeting pixels anywhere.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-800 mt-5 mb-2">1.5 Cookies and local storage</h3>

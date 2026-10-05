@@ -42,7 +42,7 @@ export default function TermsPage() {
               <a href="/refund-policy" className="text-indigo-600 hover:underline">Refund / Cancellation Policy</a>,
               which are incorporated by reference) by doing any of the following:</strong> creating an account;
               checking a box or clicking a button presented alongside a link to these Terms during signup or
-              checkout; starting a free trial; entering payment information; or otherwise accessing or using the
+              checkout; creating a free account; entering payment information; or otherwise accessing or using the
               Service in any way. Each is an independent, sufficient act of acceptance. If you do not agree, do not
               create an account, do not proceed past any screen referencing these Terms, and do not use the Service.
             </p>
@@ -105,33 +105,42 @@ export default function TermsPage() {
 
           {/* 3 */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">3. Free Trial</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">3. Free Deals</h2>
             <p>
-              New accounts receive a 14-day free trial with complete access to all features of
-              the Service. No credit card or payment information is required to begin a trial.
-              The trial period begins on the date your account is created and ends at 11:59 PM
-              Eastern Time on the 14th calendar day.
+              New accounts receive their first three (3) confirmed deals free, with complete access
+              to all features of the Service. No credit card or payment information is required.
+              <strong> There is no time limit.</strong> The free allowance is measured in deals
+              confirmed, not in days elapsed, and it does not expire; an account that has not used
+              its allowance remains open and free, subject only to the inactivity provisions of
+              Section 13.4.
             </p>
             <p className="mt-3">
-              At the end of the trial period, if you have not provided a valid payment method
-              and selected a subscription plan, your account is automatically paused and you are not
-              charged. We will send you email reminders before the trial ends. A trial that converts
-              to a paid subscription is an automatic renewal for purposes of Section 4.3 below, and by
-              adding a payment method and selecting a plan you are giving the affirmative consent that
-              section describes.
+              A free deal is used at the moment you confirm a deal. Saving or editing a draft does
+              not use one. Voiding a confirmed deal does not return one. Amending a deal you have
+              already confirmed does not use an additional one. A single deal shared between
+              co-agents uses one free deal in total, not one per agent. We may vary the size of the
+              free allowance for an individual account at our discretion, for example as a
+              promotional or support courtesy; we will not reduce an allowance below the number of
+              deals you have already confirmed under it.
             </p>
             <p className="mt-3">
-              <strong>A paused trial gets the same 30-day data-retention treatment as a locked
-              account under Section 13.</strong> Your data is preserved for 30 calendar days from
-              the day the trial ends, during which you may log in only to export your data and to
-              choose a plan, and choosing one within that window restores everything exactly as you
-              left it. After 30 days, all brokerage data is permanently and automatically deleted.
-              We will email you the exact deletion date.
+              <strong>The free deals are not a restricted version of the Service.</strong> Agent
+              notifications, PDF generation, share links, cap tracking, data export, co-agent deals
+              and team features all operate exactly as they do on a paid plan.
             </p>
             <p className="mt-3">
-              We reserve the right to modify, shorten, or discontinue the free trial offer at
-              any time without notice to prospective users. Existing trials in progress will not
-              be shortened without notice.
+              Once the allowance is used, you may continue to access your account and to build and
+              preview further deals, but confirming an additional deal requires either a
+              pay-as-you-go credit or an active subscription plan. <strong>Nothing is deleted or
+              reset at that point:</strong> your agents, commission plans and previously confirmed
+              deals remain exactly as they are. Selecting a subscription plan is an automatic
+              renewal for purposes of Section 4.3 below, and by adding a payment method and
+              selecting a plan you are giving the affirmative consent that section describes.
+            </p>
+            <p className="mt-3">
+              We reserve the right to modify or discontinue the free-deal offer at any time without
+              notice to prospective users. An allowance already granted to an existing account will
+              not be reduced without notice.
             </p>
           </section>
 
@@ -210,7 +219,7 @@ export default function TermsPage() {
                 surprise.
               </li>
               <li>
-                <strong>Free trial conversions</strong> are automatic renewals for this purpose, and Section 3
+                <strong>Conversions from a free account to a paid plan</strong> are automatic renewals for this purpose, and Section 3
                 describes the consent you give when you add payment information and select a plan.
               </li>
             </ul>
@@ -548,10 +557,13 @@ export default function TermsPage() {
 
             <h3 className="text-lg font-semibold text-gray-800 mt-4 mb-2">13.4 Inactive Account Closure (Pay-As-You-Go Accounts)</h3>
             <p>
-              Accounts on the pay-as-you-go plan are kept open at no charge while they hold a credit
-              balance or show account activity. If a pay-as-you-go account has, for a continuous
-              period of twenty-four (24) months, (a) confirmed no deals, (b) purchased no credits,
-              and (c) held a zero credit balance, we may treat the account as inactive. Before closing
+              Accounts without an active subscription plan, including free accounts and accounts on
+              the pay-as-you-go plan, are kept open at no charge while they hold a credit balance or
+              show account activity. If such an account has, for a continuous period of twenty-four
+              (24) months, (a) confirmed no deals, (b) purchased no credits, and (c) held a zero
+              credit balance, we may treat the account as inactive. This applies equally to a free
+              account that has not used its full free-deal allowance, since no other time limit
+              applies to it. Before closing
               an inactive account, we will send advance email notice to the account&rsquo;s registered
               email address and provide an opportunity to retain the account (by confirming a deal or
               purchasing credits) and to export account data. Following the notice period, an inactive

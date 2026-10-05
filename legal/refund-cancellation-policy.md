@@ -14,9 +14,13 @@ Keplify LLC wants you to feel confident using SplitRE. This policy explains when
 
 ---
 
-## 1. Free Trial
+## 1. Free Deals
 
-All new accounts include a 14-day free trial. No credit card is required to start one. Your card is only charged when you actively add a payment method and choose a paid plan, and doing that is also your affirmative consent to automatic renewal under Section 3. If you do nothing during the trial, your account is paused automatically and you are not charged. Your data is kept for 30 days from the pause date, then permanently deleted, same as a locked account (Section 6.3). Choosing a plan any time in those 30 days restores everything exactly as you left it.
+All new accounts include their first three confirmed deals free. No credit card is required, and **there is no time limit** on using them. Your card is only charged when you actively buy pay-as-you-go credits or choose a paid plan, and choosing a plan is also your affirmative consent to automatic renewal under Section 3.
+
+If you never use the free deals, nothing is charged and nothing is cancelled; the account simply stays open and free. Accounts with no activity for 24 consecutive months may be closed for inactivity after email notice, as described in Section 13.4 of our [Terms of Service](/terms).
+
+Because the free deals are free, there is nothing to refund in respect of them. The refund window in Section 2 applies to subscription payments. Pay-as-you-go credit packs are governed by Section 4 of our [Terms of Service](/terms): credits do not expire, and voiding a confirmed deal does not restore the credit it used.
 
 ---
 
@@ -41,7 +45,7 @@ Approved refunds are issued for the amount paid, **less payment-processing fees 
 
 ## 3. Automatic Renewal: What You're Agreeing To
 
-**Your subscription renews automatically at the end of every billing period (every 30 days on a monthly plan, or every 12 months on an annual plan) at the price shown for your plan at [splitre.app/pricing](/pricing), charged to the payment method on file, until you turn it off.** By adding a payment method and choosing a plan (including converting a free trial to a paid plan), you affirmatively agree to this.
+**Your subscription renews automatically at the end of every billing period (every 30 days on a monthly plan, or every 12 months on an annual plan) at the price shown for your plan at [splitre.app/pricing](/pricing), charged to the payment method on file, until you turn it off.** By adding a payment method and choosing a plan (including moving from a free account to a paid plan), you affirmatively agree to this.
 
 **To stop automatic renewal:** switch off the **Auto-renewal** toggle at any time in **app.splitre.app › Settings › Billing**. There is no cancellation fee and no minimum commitment. See Section 4 for exactly what happens next.
 

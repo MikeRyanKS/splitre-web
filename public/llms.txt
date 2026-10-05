@@ -22,13 +22,21 @@ Independent US real estate brokerages, typically 1 to 50 agents. Suitable for bo
 
 ## Pricing
 
-Three plans, all features included on every tier, differentiated only by active agent headcount:
+Two ways to pay, with every feature included either way.
+
+Flat monthly plans, differentiated only by active agent headcount:
 
 - Boutique: $35/mo or $348/yr, up to 10 agents
 - Independent: $75/mo or $780/yr, up to 30 agents
 - Brokerage: $199/mo or $2,028/yr, unlimited agents
 
-All plans include a 14-day free trial with no credit card required.
+Pay-as-you-go, for brokerages that close too few deals a year for a flat plan to be worth it: no monthly fee at all, buy a pack of deal credits and spend one credit per confirmed deal. Credits never expire.
+
+- 5 deal credits: $95 ($19 per deal)
+- 10 deal credits: $179 ($17.90 per deal)
+- 25 deal credits: $429 ($17.16 per deal)
+
+Every new account gets its first 3 confirmed deals free, with no credit card and no time limit. There is no trial period and no expiry date: the allowance is counted in deals, not days, so it waits for the broker's next closing. The free deals are the complete product, not a restricted version. After that, the broker picks either path above.
 
 ## Key pages
 
@@ -42,7 +50,7 @@ All plans include a 14-day free trial with no credit card required.
 - Terms of Service: https://splitre.app/terms
 - Refund Policy: https://splitre.app/refund-policy
 - App login: https://app.splitre.app/login
-- Start free trial: https://app.splitre.app/signup
+- Create a free account: https://app.splitre.app/signup
 
 ## Blog highlights
 

@@ -12,7 +12,7 @@
 
 These Terms of Service ("**Terms**") form a binding legal agreement between you ("**Customer**," "**you**," or "**your**") and **Keplify LLC** ("**we**," "**us**," "**our**," or "**Company**"), governing your access to and use of SplitRE at app.splitre.app and splitre.app (collectively, the "**Service**").
 
-**You accept these Terms (together with our [Privacy Policy](/privacy) and [Refund / Cancellation Policy](/refund-policy), which are incorporated into these Terms by reference) by doing any of the following:** creating an account; checking a box or clicking a button presented alongside a link to these Terms during signup or checkout; starting a free trial; entering payment information; or otherwise accessing or using the Service in any way. Each of these actions is an independent, sufficient act of acceptance. If you do not agree to these Terms, do not create an account, do not proceed past any screen that references them, and do not otherwise use the Service.
+**You accept these Terms (together with our [Privacy Policy](/privacy) and [Refund / Cancellation Policy](/refund-policy), which are incorporated into these Terms by reference) by doing any of the following:** creating an account; checking a box or clicking a button presented alongside a link to these Terms during signup or checkout; creating a free account; entering payment information; or otherwise accessing or using the Service in any way. Each of these actions is an independent, sufficient act of acceptance. If you do not agree to these Terms, do not create an account, do not proceed past any screen that references them, and do not otherwise use the Service.
 
 If you are accepting these Terms on behalf of a business entity (a brokerage), you represent and warrant that you have the legal authority to bind that entity, and "you" and "Customer" in these Terms then refer to that entity.
 
@@ -38,15 +38,17 @@ Each account may serve one brokerage only. You may not share your account with t
 
 ---
 
-## 3. Free Trial
+## 3. Free Deals
 
-New accounts receive a 14-day free trial with complete access to every feature of the Service. No credit card or payment information is required to begin a trial. The trial period begins the day your account is created and ends at 11:59 PM Eastern Time on the 14th calendar day.
+New accounts receive their first three (3) confirmed deals free, with complete access to every feature of the Service. No credit card or payment information is required. **There is no time limit.** The free allowance is measured in deals confirmed, not in days elapsed, and it does not expire; an account that has not used its allowance remains open and free, subject only to the inactivity provisions of Section 13.4.
 
-At the end of the trial, if you have not added a payment method and chosen a paid plan, your account is automatically paused and you are not charged. We will send email reminders before the trial ends. A trial that converts to a paid subscription is an automatic renewal for purposes of Section 4.6 below, and by adding a payment method and selecting a plan you are giving the affirmative consent required by that section.
+A free deal is used at the moment you confirm a deal. Saving or editing a draft does not use one. Voiding a confirmed deal does not return one. Amending a deal you have already confirmed does not use an additional one. A single deal shared between co-agents uses one free deal in total, not one per agent. We may vary the size of the free allowance for an individual account at our discretion, for example as a promotional or support courtesy; we will not reduce an allowance below the number of deals you have already confirmed under it.
 
-**A paused trial gets the same 30-day data-retention treatment as a locked account under Section 13.** Your data is preserved for 30 calendar days from the day the trial ends, during which you may log in only to export your data and to choose a plan, and choosing one within that window restores everything exactly as you left it. After 30 days, all brokerage data is permanently and automatically deleted. We will email you the exact deletion date.
+**The free deals are not a restricted version of the Service.** Agent notifications, PDF generation, share links, cap tracking, data export, co-agent deals and team features all operate exactly as they do on a paid plan.
 
-We may modify, shorten, or discontinue the free trial offer for prospective users at any time without notice. A trial already in progress will not be shortened without notice to the affected account.
+Once the allowance is used, you may continue to access your account and to build and preview further deals, but confirming an additional deal requires either a pay-as-you-go credit or an active subscription plan. **Nothing is deleted or reset at that point:** your agents, commission plans and previously confirmed deals remain exactly as they are. Selecting a subscription plan is an automatic renewal for purposes of Section 4.6 below, and by adding a payment method and selecting a plan you are giving the affirmative consent required by that section.
+
+We may modify or discontinue the free-deal offer for prospective users at any time without notice. An allowance already granted to an existing account will not be reduced without notice to that account.
 
 ---
 
@@ -76,7 +78,7 @@ By subscribing, you authorize Keplify LLC and its payment processor, Stripe, Inc
 
 - **How to stop automatic renewal:** switch off the **Auto-renewal** toggle at any time in **app.splitre.app › Settings › Billing**. This takes effect immediately as a matter of record, but your plan stays fully active and billing does not stop until the end of your current billing period. See Section 13.
 - **Reminder:** we will send you an email reminder that your subscription is set to renew, at least annually and before any annual-plan renewal charge (see Section 4.6), so this is never a surprise.
-- **Free trial conversions** are automatic renewals for this purpose, and Section 3 describes the consent you give when you add payment information and select a plan.
+- **Conversions from a free account to a paid plan** are automatic renewals for this purpose, and Section 3 describes the consent you give when you add payment information and select a plan.
 
 ### 4.4 Billing failures and dunning
 
@@ -227,7 +229,7 @@ See our [Refund / Cancellation Policy](/refund-policy) for when a refund is avai
 
 ### 13.4 Inactive account closure (pay-as-you-go accounts)
 
-Accounts on the pay-as-you-go plan are kept open at no charge while they hold a credit balance or show account activity. If a pay-as-you-go account has, for a continuous period of twenty-four (24) months, (a) confirmed no deals, (b) purchased no credits, and (c) held a zero credit balance, we may treat the account as inactive. Before closing an inactive account, we will send advance email notice to the account's registered email address and provide an opportunity to retain the account (by confirming a deal or purchasing credits) and to export account data. Following the notice period, an inactive account and its associated data may be placed in a read-only state and subsequently permanently deleted in accordance with our standard data-retention and account-closure practices. Accounts holding a positive credit balance will not be closed for inactivity. Subscription accounts are governed by Sections 13.1 through 13.3 and are not subject to this inactivity clause while their subscription is active.
+Accounts without an active subscription plan, including free accounts and accounts on the pay-as-you-go plan, are kept open at no charge while they hold a credit balance or show account activity. If such an account has, for a continuous period of twenty-four (24) months, (a) confirmed no deals, (b) purchased no credits, and (c) held a zero credit balance, we may treat the account as inactive. This applies equally to a free account that has not used its full free-deal allowance, since no other time limit applies to it. Before closing an inactive account, we will send advance email notice to the account's registered email address and provide an opportunity to retain the account (by confirming a deal or purchasing credits) and to export account data. Following the notice period, an inactive account and its associated data may be placed in a read-only state and subsequently permanently deleted in accordance with our standard data-retention and account-closure practices. Accounts holding a positive credit balance will not be closed for inactivity. Subscription accounts are governed by Sections 13.1 through 13.3 and are not subject to this inactivity clause while their subscription is active.
 
 ---
 

@@ -148,7 +148,7 @@ export default function ReceiptCard({
             href="https://app.splitre.app/signup"
             className="inline-block mt-2 text-sm font-bold text-indigo-600 hover:text-indigo-700 hover:underline"
           >
-            Start your free 14-day trial → No credit card required
+            Your first 3 deals are free → No credit card, no time limit
           </a>
         </div>
       </div>

@@ -581,9 +581,9 @@ export default function FeaturesPage() {
       <section className="py-20 px-4 bg-indigo-600 text-white text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Try it on one month&apos;s deals</h2>
-          <p className="text-indigo-100 mb-8">Start your 14-day free trial and run a deal you&apos;ve already processed. Compare the math. No credit card needed.</p>
+          <p className="text-indigo-100 mb-8">Your first 3 deals are free, so run one you&apos;ve already processed and compare the math. No credit card, and no clock running down while you wait for your next closing.</p>
           <Link href="https://app.splitre.app/signup" className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl hover:bg-indigo-50 transition-colors inline-block">
-            Start free trial
+            Get your first 3 deals free
           </Link>
         </div>
       </section>

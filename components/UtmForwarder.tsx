@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 // Carries campaign attribution from the marketing site onto the app's signup
 // page. Cold-email links land on splitre.app with utm_* params, but the
-// "Start free trial" links point at app.splitre.app/signup, a different host,
+// The signup CTAs point at app.splitre.app/signup, a different host,
 // so without this the campaign is lost at the exact step we want to measure.
 //
 // The params are remembered for the browser session, so a visitor who lands

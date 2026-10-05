@@ -39,17 +39,27 @@ export default function RefundPolicyPage() {
             </p>
           </section>
 
-          {/* ─── 1. Free Trial ─── */}
+          {/* ─── 1. Free Deals ─── */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Free trial</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Free deals</h2>
             <p>
-              All new accounts include a 14-day free trial. No credit card is required
-              to start a trial. Your card is only charged when you actively add a payment method and choose a
-              paid plan, and doing that is also your affirmative consent to automatic renewal under Section 3.
-              If you do nothing during the trial period, your
-              account will be paused (you will not be charged) and your data is kept for 30 days from
-              the pause date, then permanently deleted, same as a locked account (Section 6.3). Choosing
-              a plan any time in those 30 days restores everything exactly as you left it.
+              All new accounts include their first three confirmed deals free. No credit card is
+              required, and <strong>there is no time limit</strong> on using them. Your card is only
+              charged when you actively buy pay-as-you-go credits or choose a paid plan, and choosing
+              a plan is also your affirmative consent to automatic renewal under Section 3.
+            </p>
+            <p className="mt-3">
+              If you never use the free deals, nothing is charged and nothing is cancelled; the
+              account simply stays open and free. Accounts with no activity for 24 consecutive months
+              may be closed for inactivity after email notice, as described in our Terms of Service.
+            </p>
+            <p className="mt-3">
+              Because the free deals are free, there is nothing to refund in respect of them. The
+              refund window in Section 2 applies to subscription payments. Pay-as-you-go credit
+              packs are governed by Section 4 of our{" "}
+              <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a>:
+              credits do not expire, and voiding a confirmed deal does not restore the credit it
+              used.
             </p>
           </section>
 
@@ -96,7 +106,7 @@ export default function RefundPolicyPage() {
               on a monthly plan, or every 12 months on an annual plan) at the price shown for your plan at{" "}
               <a href="/pricing" className="text-indigo-600 hover:underline">splitre.app/pricing</a>, charged to
               the payment method on file, until you turn it off.</strong> By adding a payment method and
-              choosing a plan (including converting a free trial to a paid plan), you affirmatively agree to
+              choosing a plan (including moving from a free account to a paid plan), you affirmatively agree to
               this.
             </p>
             <p className="mt-3">
