@@ -55,11 +55,9 @@ export default function RefundPolicyPage() {
             </p>
             <p className="mt-3">
               Because the free deals are free, there is nothing to refund in respect of them. The
-              refund window in Section 2 applies to subscription payments. Pay-as-you-go credit
-              packs are governed by Section 4 of our{" "}
-              <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a>:
-              credits do not expire, and voiding a confirmed deal does not restore the credit it
-              used.
+              refund window in Section 2 applies to subscription payments, and Section 2.4 covers
+              pay-as-you-go credit packs. Note that voiding a confirmed deal does not restore the
+              credit or the free deal it used.
             </p>
           </section>
 
@@ -96,6 +94,41 @@ export default function RefundPolicyPage() {
               <li>Partial-period refunds for unused time within a billing period we&apos;ve already fully earned (we do not pro-rate; see Section 5 for how downgrades are handled instead)</li>
               <li>Add-ons or one-time fees, if any are introduced in the future and stated as non-refundable at the time of purchase</li>
             </ul>
+          </section>
+
+          {/* ─── 2.4 Credit packs ─── */}
+          <section>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">2.4 Pay-as-you-go credit packs</h3>
+            <p>
+              A credit pack is a one-time purchase, not a subscription payment, so Sections 2.1 to
+              2.3 above are adapted for it as follows.
+            </p>
+            <p className="mt-3">
+              <strong>A credit pack is refundable within 7 calendar days of purchase, provided no
+              deal has been confirmed on your account since that purchase.</strong> Confirming a
+              deal draws on your credit balance, so once you have done so the pack has been used and
+              is no longer refundable. We do not refund part of a pack: because credits are
+              interchangeable and never expire, we cannot meaningfully separate a &ldquo;used&rdquo;
+              credit from an unused one, and this mirrors Section 2.3&rsquo;s rule that we do not
+              pro-rate.
+            </p>
+            <p className="mt-3">
+              Approved credit-pack refunds are issued on the same basis as any other refund: the
+              amount paid, less the payment-processing fees Stripe charges us (Section 2.2). The
+              credits from the refunded pack are removed from your balance at the same time.
+            </p>
+            <p className="mt-3">
+              Outside that window, an unused credit balance is not refundable, but <strong>it is
+              also not lost</strong>: credits never expire, there is no recurring fee keeping the
+              account open, and the balance stays available indefinitely for whenever you next close
+              a deal. An account holding credits is never closed for inactivity (see Section 13.4 of
+              the <a href="/terms" className="text-indigo-600 hover:underline">Terms of Service</a>).
+            </p>
+            <p className="mt-3">
+              To request one, use <strong>Request a refund</strong> in app.splitre.app under
+              Settings, Billing, or email{" "}
+              <a href="mailto:support@splitre.app" className="text-indigo-600 hover:underline">support@splitre.app</a>.
+            </p>
           </section>
 
           {/* ─── 3. Automatic Renewal ─── */}

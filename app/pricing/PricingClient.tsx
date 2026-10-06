@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "Do pay-as-you-go credits expire?",
-    a: "No. Buy them whenever you want and use them whenever you close a deal, with no clock running.",
+    a: "No. Buy them whenever you want and use them whenever you close a deal, with no clock running. If you buy a pack by mistake, it's refundable for 7 days as long as you haven't confirmed a deal since buying it. After that an unused balance isn't refundable, but it isn't lost either: it stays on the account indefinitely, and an account holding credits is never closed for inactivity.",
   },
   {
     q: "Is my brokerage data secure?",

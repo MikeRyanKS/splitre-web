@@ -20,7 +20,7 @@ All new accounts include their first three confirmed deals free. No credit card 
 
 If you never use the free deals, nothing is charged and nothing is cancelled; the account simply stays open and free. Accounts with no activity for 24 consecutive months may be closed for inactivity after email notice, as described in Section 13.4 of our [Terms of Service](/terms).
 
-Because the free deals are free, there is nothing to refund in respect of them. The refund window in Section 2 applies to subscription payments. Pay-as-you-go credit packs are governed by Section 4 of our [Terms of Service](/terms): credits do not expire, and voiding a confirmed deal does not restore the credit it used.
+Because the free deals are free, there is nothing to refund in respect of them. The refund window in Section 2 applies to subscription payments, and Section 2.4 covers pay-as-you-go credit packs. Note that voiding a confirmed deal does not restore the credit or the free deal it used.
 
 ---
 
@@ -40,6 +40,18 @@ Approved refunds are issued for the amount paid, **less payment-processing fees 
 - Your account was suspended or terminated for violating our Terms of Service;
 - You're asking for a partial refund for unused time within a billing period we've already fully earned (we don't pro-rate mid-period; see Section 5 for how downgrades are handled instead); or
 - The charge was for an add-on or one-time fee expressly marked non-refundable at the time of purchase, if we introduce any in the future.
+
+### 2.4 Pay-as-you-go credit packs
+
+A credit pack is a one-time purchase, not a subscription payment, so Sections 2.1 to 2.3 above are adapted for it as follows.
+
+**A credit pack is refundable within 7 calendar days of purchase, provided no deal has been confirmed on your account since that purchase.** Confirming a deal draws on your credit balance, so once you have done so the pack has been used and is no longer refundable. We do not refund part of a pack: because credits are interchangeable and never expire, we cannot meaningfully separate a "used" credit from an unused one, and this mirrors Section 2.3's rule that we do not pro-rate.
+
+Approved credit-pack refunds are issued on the same basis as any other refund: the amount paid, less the payment-processing fees Stripe charges us (Section 2.2). The credits from the refunded pack are removed from your balance at the same time.
+
+Outside that window, an unused credit balance is not refundable, but **it is also not lost**: credits never expire, there is no recurring fee keeping the account open, and the balance stays available indefinitely for whenever you next close a deal. An account holding credits is never closed for inactivity (see Section 13.4 of the [Terms of Service](/terms)).
+
+To request one, use **Request a refund** in app.splitre.app under Settings, Billing, or email [support@splitre.app](mailto:support@splitre.app).
 
 ---
 
