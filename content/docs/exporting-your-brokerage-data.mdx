@@ -2,25 +2,34 @@
 title: "Exporting Your Brokerage Data"
 category: "Core How-Tos"
 order: 7
-excerpt: "Download a full backup of your deals, agents, and cap history as a ZIP archive."
+excerpt: "Download a full backup of your deals, agents, and cap history as a ZIP archive, and which report to use when you want a spreadsheet instead."
 readTime: "2 min read"
-keywords: ["export brokerage data", "data backup real estate", "csv export"]
+keywords: ["export agent cap report spreadsheet", "export brokerage data", "data backup real estate", "csv export"]
 ---
 
 For a complete copy of everything in your brokerage, separate from the per-deal QuickBooks export covered in [Sharing and Exporting Deals](/docs/sharing-and-exporting-deals), go to [Data Export](https://app.splitre.app/settings/data-export) and click **Download my data**.
 
-This downloads a single ZIP file containing:
+This downloads a single ZIP file. It is a full backup, so some columns are raw data. Unzip it first, then open each .csv in Excel or Google Sheets. It contains:
 
-- **deals.csv**: all confirmed deals with payouts
+- **deals.csv**: all your deals, including drafts and voided ones. The `breakdown_snapshot` column holds the full commission breakdown for each deal as raw data, which is not meant to be read in a spreadsheet cell
 - **agents.csv**: your agent roster with plan assignments
-- **cap_ledger.csv**: the full cap progress history for every agent
+- **cap_ledger.csv**: each agent's running cap total per year (one row per agent per year, not one per deal)
 - **commission_plans.json**: every commission plan and its rules
 - **teams.csv**: your teams and their shared caps (only if you have any teams)
 - **deal_participants.csv**: the per-agent slices of any co-listed deals (only if you have any deals split between agents)
+
+## Want a spreadsheet of each deal toward an agent's cap?
+
+Use the report instead of the backup. Open [Reports > Agent Cap Report](https://app.splitre.app/reports/cap), pick an agent and a cap year, and click **Download as spreadsheet (CSV)**. You get one row per deal with the amount toward the cap, the running total, and what is left. Dates are MM/DD/YYYY and amounts are plain numbers, so the file also imports into QuickBooks. See [Setting Up Agent Caps](/docs/setting-up-agent-caps) for what each column means.
+
+The Broker Revenue report has a CSV too, for money passed through to other companies, and the Deals page has the per-deal QuickBooks export covered in [Sharing and Exporting Deals](/docs/sharing-and-exporting-deals).
+
+## If you cancel
 
 If you cancel, export a copy before your current billing period ends. Once your subscription actually ends and the account locks, self-service export isn't available until you resubscribe. Your data itself isn't deleted at that point; it's retained and fully restored the moment you reactivate.
 
 ## Related
 
 - [Sharing and Exporting Deals](/docs/sharing-and-exporting-deals)
+- [Setting Up Agent Caps](/docs/setting-up-agent-caps)
 - [Managing Billing and Subscription](/docs/managing-billing-and-subscription)

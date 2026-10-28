@@ -2,9 +2,9 @@
 title: "Creating a Commission Plan"
 category: "Core How-Tos"
 order: 1
-excerpt: "Splits, caps, deductions, graduated tiers, and splitting the broker share between companies: how SplitRE's commission plans work."
+excerpt: "Start from a template, set the split and annual cap, check the plan with a worked example, then add tiers, fees, and company splits if you need them."
 readTime: "8 min read"
-keywords: ["commission plan setup", "real estate commission split", "brokerage cap setup", "tiered commission split", "franchise royalty cap", "split commission between two brokerages"]
+keywords: ["80/20 split then 100% after cap", "commission plan setup", "real estate commission split", "brokerage cap setup", "tiered commission split", "franchise royalty cap", "split commission between two brokerages"]
 ---
 
 A commission plan is the reusable template that determines how every deal assigned to it gets calculated. Set it up once, assign agents to it, and every deal they close is split automatically the same way.
@@ -21,9 +21,37 @@ Go to [Commission Plans](https://app.splitre.app/plans) to create or edit a plan
   />
 </div>
 
+## Quick start: 80/20 until the cap, then 100%
+
+This is the most common plan, and it does not need tiers. It is a split plus an annual cap.
+
+1. Go to [Commission Plans](https://app.splitre.app/plans) and click **Create plan**.
+2. Pick **Split, then 100% after a cap**. Nothing is saved until you click **Save plan**, so you can close the panel at any point and nothing is left behind.
+3. Give the plan a name. It is required.
+4. The split starts at Agent 80% and Brokerage 20%. Change it if yours is different.
+5. Enter the **Annual Cap**. This is the most the brokerage collects from each agent in a year. It is the brokerage's share, not the agent's total commission. If an agent should hit the cap after earning $60,000 in commission, the cap on an 80/20 plan is $12,000. The link under the field works it out from what the agent earns.
+6. Leave **Flat fee per deal after the cap is reached** at $0 if the agent should keep everything once capped.
+7. Check the **What this plan does** box and the **Try a deal** example (more on those below), then click **Save plan**.
+8. Assign the plan to your agents. Open an agent from [Agents](https://app.splitre.app/agents) and pick it under Commission Plan.
+
+The cap amount starts empty on purpose, and the plan will not save until you fill it in, so a plan can never go live with a $0 cap by accident. A cap also needs the split turned on, because it limits the brokerage's share of that split.
+
+Here is what that plan does with a $10,000 commission and a $12,000 cap:
+
+- **Early in the year:** the brokerage keeps $2,000 (20%) and the agent nets $8,000.
+- **The deal that reaches the cap:** say the agent has already paid $11,000. The 20% would be $2,000, but only $1,000 is left under the cap. The brokerage keeps $1,000 and the agent nets $9,000.
+- **Every deal after that:** the brokerage keeps $0 and the agent nets the full $10,000, less any fees on the plan.
+
+## Check a plan before you save it
+
+Two things sit under the split and cap, and they update as you type:
+
+- **What this plan does** restates the plan in plain English: the split, when the cap is reached, what happens after it, and which fees still apply. If it does not say what you meant, fix the plan before saving.
+- **Try a deal** runs a sample commission (it starts at $10,000, and you can change it) through the plan and shows what the agent takes home and what the brokerage collects on an early deal, on the deal that reaches the cap, and on a deal after it. It uses the same math as a real deal.
+
 ## How a deal is calculated
 
-SplitRE runs every deal through three stages, in order:
+SplitRE runs every deal through three stages, in order. They match the three sections in the plan editor: "Fees taken before the split", "Split and annual cap", and "Fees charged to the agent after the split".
 
 1. **Off the top.** Franchise fee %, referral %, relocation %, and any flat or percentage deductions defined on the plan are subtracted from the GCI first. What's left is the **splittable amount**.
 2. **The split.** Your plan's agent/broker split percentage is applied to the splittable amount. If the agent has already hit their annual cap, the broker's cut is capped (or replaced with a flat post-cap fee, if your plan defines one).
@@ -56,7 +84,7 @@ Each company stops collecting on its own the moment its own cap is reached. If A
 Two details worth knowing:
 
 - **Order matters.** Companies are paid top to bottom, so on a small deal where 20% works out to less than $500, the first company takes all of it. If you want each company to keep its proportion on small deals, give them a percentage of the broker share instead of a fixed amount.
-- **Mark which company is you.** Tick "us" on the company that is your brokerage. The last one is assumed by default. Only that company's share counts as your revenue. The others are money you collect and hand over, so they're kept out of your revenue reporting and listed separately for your bookkeeper. This is the standard company dollar treatment, the same way a franchise royalty is handled.
+- **Mark which company is you.** Tick "This is our brokerage" on the line that is you. The last one is assumed by default. Only that company's share counts as your revenue. The others are money you collect and hand over, so they're kept out of your revenue reporting and listed separately for your bookkeeper. This is the standard company dollar treatment, the same way a franchise royalty is handled.
 
 Each agent's drawer and your dashboard show a progress bar per company, so you can see at a glance who still owes what.
 
@@ -64,7 +92,7 @@ Each agent's drawer and your dashboard show a progress bar per company, so you c
 
 A plan can raise the agent's share as they produce more: 70/30 to start, 80/20 once they pass $50,000, 90/10 past $100,000.
 
-Tiers can be based on year-to-date GCI, sales volume, broker cut already paid, or number of closed deals, and they reset with the cap year. When a single deal crosses a threshold, it's split across both tiers by default, so $5,000 of it might settle at 70/30 and the other $5,000 at 80/20. Turn that off if you'd rather the tier in effect at the start of the deal apply to the whole thing.
+Click **Tiered split** under the split to turn tiers on. Tiers can be based on GCI so far this cap year, sales volume, what the brokerage has collected from the agent so far, or the number of closed deals, and they start again each cap year. When a single deal crosses a threshold, it's split across both tiers by default, so $5,000 of it might settle at 70/30 and the other $5,000 at 80/20. Turn that off if you'd rather the tier in effect at the start of the deal apply to the whole thing. To go back to one flat split, click **Remove tiers (back to one split)**. You will be asked to confirm.
 
 ## Fees paid to someone else, and fees that stop
 
@@ -84,7 +112,7 @@ Deal types aren't available on a deal split between agents, because the agents c
 
 ## Post-cap fees that step down
 
-If your capped agents pay a per-transaction fee, it can drop after a set amount. For example $250 per deal until they've paid $5,000 in post-cap fees, then $75 per deal for the rest of the year.
+If your capped agents pay a per-transaction fee, it can drop after a set amount. The flat fee is charged on the deal that reaches the cap as well, on top of whatever is left of the cap. For example $250 per deal until they've paid $5,000 in post-cap fees, then $75 per deal for the rest of the year.
 
 ## A worked example
 
@@ -109,7 +137,7 @@ Counter gates count an agent's deals in the order they're **confirmed**, not the
 ## Related
 
 - [Adding Agents](/docs/adding-agents)
-- [Setting Up Agent Caps](/docs/setting-up-agent-caps)
+- [Setting Up Agent Caps](/docs/setting-up-agent-caps), including the Agent Cap Report
 - [Glossary](/docs/glossary): quick definitions for GCI, split, splittable amount, and more
 - Deeper dive: [The Real Estate Commission Cap, Explained](/blog/real-estate-commission-cap-explained)
 - Deeper dive: [How to Calculate Real Estate Agent Commission](/blog/how-to-calculate-real-estate-agent-commission)

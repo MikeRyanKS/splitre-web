@@ -2,9 +2,9 @@
 title: "Setting Up Agent Caps"
 category: "Core How-Tos"
 order: 5
-excerpt: "Cap opening balances for agents joining mid-year, calendar versus anniversary cap years, and how cap progress is tracked the rest of the time."
+excerpt: "Cap opening balances for agents joining mid-year, the Agent Cap Report that lists every deal toward a cap, and calendar versus anniversary cap years."
 readTime: "5 min read"
-keywords: ["real estate agent cap", "cap opening balance", "brokerage cap tracking", "anniversary year cap", "cap year reset"]
+keywords: ["agent cap report", "real estate agent cap", "cap opening balance", "brokerage cap tracking", "anniversary year cap", "cap year reset"]
 ---
 
 The cap is the maximum amount your brokerage collects from an agent in a cap year. See [Creating a Commission Plan](/docs/creating-commission-plans) for how it factors into the calculation itself. This guide covers the one-time setup step: telling SplitRE how much of that cap an agent has already used.
@@ -24,7 +24,7 @@ The cap is the maximum amount your brokerage collects from an agent in a cap yea
 If an agent joins mid-year, or you're migrating from another system where they already had deals collected against their cap this year, you need to set their **cap opening balance**. Otherwise SplitRE will think they're starting from $0 and they'll be under-capped for the rest of the year.
 
 1. Go to [Agents](https://app.splitre.app/agents) and click the agent's row to open their drawer.
-2. Find the **Cap Opening Balance** field. It's described there as the amount of broker cut already collected for this agent before they were added to SplitRE.
+2. Find the **Cap Opening Balance** field. It's the amount this agent had already paid the brokerage toward their cap this cap year, before they were added to SplitRE. That is the brokerage's share of their commissions, not their total commission.
 3. Enter the dollar amount and click **Save changes**. If they don't have a prior balance, use **Set to zero**.
 
 If the agent's plan has items with their own ceilings, a capped franchise royalty or companies sharing the broker cut, the drawer also asks how much was already paid toward each one this cap year. Those entries only count for the cap year you enter them in, so a royalty paid before you started with SplitRE in 2026 won't eat into 2027's allowance.
@@ -45,6 +45,31 @@ Once the opening balance is set, SplitRE tracks the running total automatically.
 
 Each agent's drawer shows their cap progress, plus a separate bar for anything with its own ceiling, so you can see that the royalty is done for the year while the brokerage split still has room.
 
+## See every deal that counted toward an agent's cap
+
+Open [Reports > Agent Cap Report](https://app.splitre.app/reports/cap). You get one block per agent per cap year, and each row is a confirmed deal. It opens on the current cap year. Use the filters to pick one agent or switch to **All years**.
+
+Each row shows:
+
+- **GCI**: the commission on that deal.
+- **Toward cap**: how much of the brokerage's share from that deal counted toward the agent's cap.
+- **Total toward cap**: the running total for the cap year, after that deal.
+- **Cap remaining**: how much more the agent pays before they cap.
+
+The block header shows the agent's total against their cap, for example "$9,480.74 of $18,000.00 cap", and flags the deal where the cap was reached.
+
+A few things you will see in the report:
+
+- **$0 toward cap** means the agent was already capped on that deal, or the deal's type is set to sit outside the cap.
+- **A "carried in" row** at the top is the agent's cap opening balance, with a link to where you set it.
+- **A "Paid after cap" column** appears when a plan charges a flat fee after the cap. That fee is shown on its own and does not count toward the cap.
+- **Team caps** show as their own block with a "Team cap" badge. The running total is the whole team's pool, so when a teammate's deals landed in between, a row says how much of the shared cap the other members used.
+- **Deals split between agents** show each agent's own share.
+
+Click **Download as spreadsheet (CSV)** to open the report in Excel or Google Sheets. Dates come out as MM/DD/YYYY, amounts are plain numbers, and each row has a description, so the file also imports into QuickBooks. The download follows whatever filters are on screen.
+
+The agents on your [Dashboard](https://app.splitre.app/dashboard) show the same figures. The "See each deal toward cap" link there opens this report.
+
 ## Calendar year or anniversary year
 
 By default every cap resets on January 1, based on each deal's closing date rather than the date you got around to confirming it.
@@ -64,6 +89,6 @@ On a deal split between agents (see [Entering and Managing Deals](/docs/entering
 ## Related
 
 - [Teams and Shared Caps](/docs/teams)
-- [Creating a Commission Plan](/docs/creating-commission-plans)
+- [Creating a Commission Plan](/docs/creating-commission-plans), including a quick start for "80/20 until the cap, then 100%"
 - [Adding Agents](/docs/adding-agents)
 - Deeper dive: [The Real Estate Commission Cap, Explained](/blog/real-estate-commission-cap-explained)
