@@ -53,13 +53,17 @@ Go to [Import Deals](https://app.splitre.app/settings/import-deals).
 
 If you include an agent email that doesn't match an existing agent, SplitRE creates that agent automatically as part of the import. You don't need to import agents first, though doing so lets you set their commission plan and cap balance ahead of time.
 
-Closing date determines which calendar year a deal counts against for cap purposes, not the date you import it. Leave it blank and it defaults to today for a draft row; a row you're importing as confirmed or voided needs a real closing date, since that's a requirement for every confirmed/voided deal in SplitRE, not just imported ones.
+SplitRE matches by email first, then by exact name (capital letters and extra spaces don't matter). It never matches part of a name, so "Lee" won't pick Thomas Lee. If a name fits two active agents, belongs to an agent with a different email, or the email belongs to a deactivated agent, the preview asks you to choose the agent instead of guessing.
+
+It reads numbers just as carefully. `$450,000`, `450,000.50`, `(1,500.00)` as a negative, `3.5%` and `3,5%` are all understood. If a price or percentage can't be read with confidence, such as `1.2M` or `N/A`, the row is flagged as "couldn't be read" instead of importing a wrong number. Rows with problems are skipped and the rest import.
+
+Closing date determines which calendar year a deal counts against for cap purposes, not the date you import it. Leave it blank and it defaults to today for a draft row; a row you're importing as confirmed or voided needs a real closing date, since that's a requirement for every confirmed/voided deal in SplitRE, not just imported ones. A closing year outside 1990 to next year is flagged as a likely typo.
 
 ## After import
 
 By default, imported rows land as **drafts**. Review them on [Deals](https://app.splitre.app/deals) and confirm each one when you're ready, exactly like a deal you entered by hand. See [Entering and Managing Deals](/docs/entering-and-managing-deals) for what confirming does.
 
-If you're migrating historical deals that already closed, add a **Status** column and set individual rows to `confirmed` or `voided`. This is useful for bringing in your existing transaction history without re-confirming every past deal one at a time. It records the deal directly rather than running it through the normal confirm/void flow, so **no email is sent to the agent** for an imported confirmed or voided row (unlike confirming or voiding from the Deals list, which always emails). A row you import as confirmed still gets the same "can't confirm an agent into a negative payout" check a normal confirm does: if the numbers would leave the agent's net below $0, that row lands as a draft instead so you can fix it before it's finalized.
+If you're migrating historical deals that already closed, add a **Status** column and set individual rows to `confirmed` or `voided`. This is useful for bringing in your existing transaction history without re-confirming every past deal one at a time. It records the deal directly rather than running it through the normal confirm/void flow, so **no email is sent to the agent** for an imported confirmed or voided row (unlike confirming or voiding from the Deals list, which emails the agent unless deal emails are switched off). A row you import as confirmed still gets the same "can't confirm an agent into a negative payout" check a normal confirm does: if the numbers would leave the agent's net below $0, that row lands as a draft instead so you can fix it before it's finalized.
 
 ## Related
 

@@ -26,18 +26,21 @@ Go to [Deals](https://app.splitre.app/deals) to start a new deal, or open an exi
 - Click **Save Draft** to save your progress without confirming. Nothing is emailed to the agent, and nothing is final.
 - If you're editing an existing draft, the same button reads **Update Draft**.
 - Drafts don't count toward cap totals yet.
+- The form catches typos as you go. A commission outside 0% to 100%, a sale price over $10,000,000,000, or a closing date more than ten years back or more than a year ahead gets a note under the field. Save Draft and Confirm Deal stay greyed out until you fix it.
 
 ## Confirm
 
-When a deal is ready to be finalized, click **Confirm & Email Agent**. This:
+When a deal is ready to be finalized, click **Confirm Deal**. This:
 
 - Locks the deal's numbers into a permanent breakdown snapshot (edits after this point require an amendment, not a direct edit).
 - Recalculates the commission on the server, so the numbers you see in the preview are double-checked, not just trusted from your browser.
 - Assigns the deal a sequential **Deal #**, shown in its own column on the Deals list. This is a stable reference that doesn't repeat or change even if the address does (the same property can close more than once over the years).
 - Updates the agent's cap ledger for the year.
-- Emails the agent their commission breakdown.
+- Emails you a copy, and emails the agent their commission breakdown unless you've turned deal emails off for that agent or for everyone. A small line under the button tells you whether the agent will be emailed.
 
 An agent can never be confirmed into a negative payout. SplitRE blocks any confirmation that would leave the agent's net below $0.
+
+Deal emails are on by default. To stop them for one agent, open the agent on [Agents](https://app.splitre.app/agents) and untick **Deal emails**. To stop them for every agent, go to Settings, then Brokerage Settings, and untick **Email agents about their deals**. Amend and void emails follow the same two switches. You always get your own copy, drafts never email anyone, and the email icon on a deal still sends to the agent when you click it.
 
 ## Deal types
 

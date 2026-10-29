@@ -18,6 +18,8 @@ This downloads a single ZIP file. It is a full backup, so some columns are raw d
 - **teams.csv**: your teams and their shared caps (only if you have any teams)
 - **deal_participants.csv**: the per-agent slices of any co-listed deals (only if you have any deals split between agents)
 
+If a name, address or note starts with =, +, - or @, the file puts an apostrophe in front of it so Excel and Google Sheets show it as text instead of running it as a formula. Amounts are never changed.
+
 ## Want a spreadsheet of each deal toward an agent's cap?
 
 Use the report instead of the backup. Open [Reports > Agent Cap Report](https://app.splitre.app/reports/cap), pick an agent and a cap year, and click **Download as spreadsheet (CSV)**. You get one row per deal with the amount toward the cap, the running total, and what is left. Dates are MM/DD/YYYY and amounts are plain numbers, so the file also imports into QuickBooks. See [Setting Up Agent Caps](/docs/setting-up-agent-caps) for what each column means.
