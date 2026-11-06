@@ -1,7 +1,7 @@
 ---
 title: "Tiered Commission Splits Explained"
 date: "2026-08-08"
-excerpt: "A tiered split raises an agent's percentage as their production climbs. Here's how the structure actually works, what it costs to track correctly, and how it compares to a simpler cap-based approach."
+excerpt: "A tiered split raises an agent's percentage as production climbs. How the bands work, what a deal that crosses one costs, and how to set them up."
 readTime: "6 min read"
 keywords: ["tiered commission split brokerage", "real estate agent commission tiers", "graduated commission split", "commission split structure"]
 related: ["real-estate-commission-cap-explained", "how-to-calculate-real-estate-agent-commission"]
@@ -25,16 +25,36 @@ An agent whose cumulative GCI is $55,000 closes a deal worth $10,000 in GCI. The
 
 ## What tiered splits solve for
 
-The pitch to agents is straightforward: the more you close, the more you keep, and the reward compounds continuously rather than kicking in all at once. For brokerages competing for high-producing agents without the recruiting budget of a national franchise, a visible, mechanical path to a better split is a real incentive. It's the same competitive logic that makes [commission caps](/blog/real-estate-commission-cap-explained) effective recruiting tools.
+The pitch to agents is straightforward: the more you close, the more you keep, and the reward compounds continuously rather than kicking in all at once. For brokerages competing for high-producing agents without the recruiting budget of a national franchise, a visible, mechanical path to a better split is a real incentive. It is the same competitive logic that makes an annual cap an effective recruiting tool.
 
 ## The operational cost of getting it right
 
 Tracking a tiered split correctly requires the same real-time information a cap requires, an accurate up-to-the-minute cumulative production total for every agent, applied more often, since every tier boundary is a potential mid-deal crossing, not just one cap threshold per year. In a spreadsheet, that means checking the agent's running total before every deal, correctly identifying which tier (or tiers) the deal spans, and splitting the calculation at each boundary. Miss a threshold crossing and the agent is either overpaid or underpaid for the rest of that tier. See [How to Calculate Real Estate Agent Commission](/blog/how-to-calculate-real-estate-agent-commission) for how much room for error a single crossing calculation already has, before adding a second or third tier boundary into the mix.
 
-## A simpler alternative: cap-based graduation
+## How SplitRE tracks a graduated split
 
-Here's the honest comparison, not a sales pitch: SplitRE's commission plans today support a fixed agent/broker split plus a cap that flips the agent to 100% (or a flat post-cap fee) once they've paid the broker a set amount for the year. See [Creating a Commission Plan](/docs/creating-commission-plans) for the full rule set. That's not a multi-tier production split. If you're specifically evaluating software because you run a three- or four-tier graduated structure today, SplitRE doesn't replicate that exact structure.
+SplitRE's commission plans do tiers directly. The plan editor has a "Tiered split" button, you stack as many bands as your agreement has, and you pick what moves an agent up a band: GCI so far this cap year, sales volume, what the brokerage has collected from them, or the number of closed deals. Tiers reset with the cap year, the same way a cap does.
 
-What it does instead is solve the same underlying goal, better economics for an agent's best-producing stretch of the year, with one threshold instead of several: a fixed split up to the cap, then the full deal to the agent afterward. For a lot of independent brokerages, that's the tiered split's real point (reward high production, simplify what the brokerage collects) without needing to define, document, and correctly track two or three separate percentage bands. If your plan genuinely needs multiple graduated tiers, that's worth knowing before you switch tools. But if a single cap threshold gets you most of the same effect, it's worth comparing before assuming you need the more complex structure.
+The crossing problem gets handled too, and you decide how. By default, a deal that crosses a threshold is split across both bands. Turn that off and the band the agent was in when the deal started applies to all of it.
 
-See [Setting Up Agent Caps](/docs/setting-up-agent-caps) for how the cap-based approach is configured, or [try the calculator](/real-estate-commission-split-calculator) to compare a capped split against your current tiered structure on a real deal.
+**Example.** A plan pays 60/40 up to $60,000 of GCI, 70/30 from there to $120,000, and 80/20 above that. An agent sitting at $55,000 of GCI for the cap year closes a deal with $10,000 of GCI.
+
+With crossing on, the first $5,000 is paid at 60/40 and the second $5,000 at 70/30:
+
+- $5,000 at 60% to the agent is $3,000, leaving $2,000 to the brokerage
+- $5,000 at 70% to the agent is $3,500, leaving $1,500 to the brokerage
+- Agent gross: $6,500. Brokerage: $3,500.
+
+With crossing off, the whole deal pays at 60/40: $6,000 to the agent, $4,000 to the brokerage. Same deal, $500 apart. That gap is exactly the argument you will have with an agent if your plan document never says which way it works, so pick one and write it down.
+
+The rest of the plan behaves normally around the tiers. A franchise royalty still comes off the gross commission before the split, and an E&O fee set as a percentage still comes off the agent's own share afterwards. [Creating a Commission Plan](/docs/creating-commission-plans) has the full order of operations.
+
+## Do you still need a cap on top of the tiers?
+
+Not necessarily, and you can run both. The two rules answer different questions. The ladder decides what percentage the agent keeps. The cap decides when the brokerage stops taking a percentage at all, which the top band of a ladder never quite does unless the top band is 100%.
+
+One tier is much easier to recruit on. "80/20 until we have collected $16,000 from you, then everything is yours" fits on a whiteboard. Three bands keyed to cumulative GCI do not, and every agent will ask you where they currently sit, which is a question your plan should be able to answer at any moment rather than at month end.
+
+Here is the honest limit. Editing a plan never reaches back into deals you have already confirmed. Redefine a band in August and August's deals calculate the new way while July's keep the numbers they were recorded with. That is on purpose, because quietly rewriting a payout someone has already banked is worse than living with a plan change that only applies going forward. It does mean a tiered plan rewards getting the thresholds right before the year starts.
+
+Set the bands, then [run one of your own deals through the calculator](/real-estate-commission-split-calculator) at each split to see what the brokerage actually keeps at the bottom and the top of the ladder.

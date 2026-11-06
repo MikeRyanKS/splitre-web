@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Two columns comparing what a transaction and compliance tool covers against what a commission and cap tool covers" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="600" y="72" font-size="38" font-weight="700" fill="#111827" text-anchor="middle">Two different jobs in one brokerage</text>
+  <rect x="60" y="120" width="520" height="368" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="3"/>
+  <rect x="620" y="120" width="520" height="368" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="3"/>
+  <text x="320" y="182" font-size="32" font-weight="700" fill="#374151" text-anchor="middle">Transaction and compliance</text>
+  <text x="880" y="182" font-size="32" font-weight="700" fill="#4338ca" text-anchor="middle">Commission and caps</text>
+  <text x="110" y="268" font-size="29" fill="#374151">Documents and checklists</text>
+  <text x="110" y="348" font-size="29" fill="#374151">Signatures and audit trail</text>
+  <text x="110" y="428" font-size="29" fill="#374151">The CDA for the closing table</text>
+  <text x="670" y="268" font-size="29" fill="#111827">Plan rules, fees and splits</text>
+  <text x="670" y="348" font-size="29" fill="#111827">Cap math on every deal</text>
+  <text x="670" y="428" font-size="29" fill="#111827">A bookkeeper ready export</text>
+  <text x="600" y="560" font-size="27" fill="#374151" text-anchor="middle">Some tools do both. Decide which job is costing you money first.</text>
+</svg>

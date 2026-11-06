@@ -2,7 +2,7 @@
 title: "How to Calculate Real Estate Agent Commission (The Right Way)"
 date: "2026-05-15"
 excerpt: "The basics of commission math are simple. The edge cases (caps, tiered splits, mid-deal crossings) are where errors happen. Here's how to handle all of it correctly."
-readTime: "8 min read"
+readTime: "7 min read"
 keywords: ["real estate agent commission calculator", "how to calculate commission split", "real estate commission formula", "commission cap calculation"]
 related: ["real-estate-commission-cap-explained", "eliminate-commission-spreadsheets"]
 ---
@@ -51,6 +51,8 @@ If an agent is on a 70/30 split with a $20,000 annual cap, the broker takes 30% 
 
 The cap balance is simply the running total of what the broker has collected so far in the plan year. It has to be accurate before every deal. The moment you enter a deal with a wrong balance, the calculation is wrong, and the error follows the agent's records forward. See [The Real Estate Commission Cap, Explained](/blog/real-estate-commission-cap-explained) for a full breakdown of how brokers get this wrong in practice.
 
+Two things decide which cap year a deal lands in: its closing date, and whether your caps reset on January 1 or on each agent's hire anniversary. Pick one rule and apply it to every agent. A couple of other plan rules bend the cap as well. A deal type can be marked as not counting toward it, so a capped agent still pays the brokerage on a company-generated lead. And if your brokerage share is divided between two companies, each one carries its own cap and stops collecting on its own.
+
 ## Cap Crossings: The Hard Part
 
 A cap crossing is what happens when a deal pushes the agent over their cap threshold mid-deal. The math changes partway through, which means you can't apply a single split percentage to the whole deal.
@@ -71,7 +73,9 @@ Getting this right requires catching that a crossing is happening, knowing the e
 
 If another agent referred the client, a referral fee typically comes off the agent's gross commission (not the net) before the internal split is applied. Referral fees are usually 20 to 25% and go to the referring party first.
 
-The order matters: collect the referral fee, then subtract pre-split deductions, then apply the internal split. If you apply the split first and deduct the referral fee from the agent's portion, you'll get the wrong number. The bookkeeper will notice.
+The order matters. Take the off-the-top items first, then apply the internal split. Deduct the referral from the agent's share after the split instead and the number will be wrong, and your bookkeeper will notice.
+
+One wrinkle is worth settling in writing before it costs you an argument. When a deal carries both a referral and a franchise royalty, is the royalty a percentage of the full commission or of what is left after the referral? On $15,000 of GCI with a 25% referral and a 6% royalty, the first reading is $900 and the second is $675. Most franchise royalties are figured on the full commission, so that is the default, but a plan can be set to the other base. It only changes deals that stack both fees.
 
 ## Doing the full calculation correctly
 
@@ -90,4 +94,4 @@ Purpose-built commission software handles all three automatically. The cap balan
 
 That doesn't take your judgment out of the process. You still review the deal and approve the numbers before anything is committed. It just means the arithmetic is correct when you do, not a number someone typed in a hurry.
 
-SplitRE is built specifically for this. Try the [commission split calculator](/real-estate-commission-split-calculator) free, or see [how it works end to end](/features).
+SplitRE is built for exactly this. Set the plan once and the cap balance, the crossing and the current tier all come off the agent's own record instead of a column somebody has to remember to update. [See how it works end to end](/features).

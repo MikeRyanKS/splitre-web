@@ -104,7 +104,7 @@ Search terms: `Paperless Pipeline alternative`, `Brokermint alternative`, `real 
 5. "How to Calculate Real Estate Agent Commission (The Right Way)" (`how-to-calculate-real-estate-agent-commission`) → `real estate agent commission calculator`
 6. "SplitRE vs. Paperless Pipeline vs. Brokermint" (`best-commission-split-software-for-brokerages`) → `Paperless Pipeline alternative`, `Brokermint alternative`
 7. "How the NAR Settlement Changed Commission Tracking for Brokerages" (`nar-settlement-commission-changes`) → `NAR settlement real estate`
-8. "Tiered Commission Splits Explained" (`tiered-commission-splits-explained`) → `tiered commission split brokerage` — honest about the gap: SplitRE's plan rules are a fixed split + cap-graduation, not multi-tier production splits; positions the cap as a simpler alternative rather than claiming a feature that doesn't exist
+8. "Tiered Commission Splits Explained" (`tiered-commission-splits-explained`) → `tiered commission split brokerage` — how graduated bands work, with a worked three-tier example of a deal that crosses a threshold (split across both bands by default, or all at the starting band); covers what moves an agent up a band and why confirmed deals never recalculate
 9. "How to Calculate a Commission Split When Two Agents Co-List a Property" (`co-listing-commission-split`) → `co-listing commission split` — maps directly to the co-agent-deals feature; links to the calculator's "Split between agents" mode
 10. "Running a Real Estate Team on One Shared Commission Cap" (`real-estate-team-shared-commission-cap`) → `real estate team commission cap` — maps directly to the Teams feature; links to `/docs/teams` and `/features`
 

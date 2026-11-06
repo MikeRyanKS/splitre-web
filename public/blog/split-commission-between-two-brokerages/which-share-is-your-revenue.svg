@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Only the company marked as yours counts as company dollar; the other company's share is treated as money passed through" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="600" y="76" font-size="38" font-weight="700" fill="#111827" text-anchor="middle">Only one of the two shares is your revenue</text>
+  <rect x="70" y="150" width="500" height="300" rx="10" fill="#eef2ff" stroke="#10b981" stroke-width="4"/>
+  <text x="320" y="238" font-size="32" font-weight="700" fill="#065f46" text-anchor="middle">Marked as your company</text>
+  <text x="320" y="304" font-size="29" fill="#111827" text-anchor="middle">Counts as company dollar</text>
+  <text x="320" y="368" font-size="29" fill="#111827" text-anchor="middle">Lands in Broker Net</text>
+  <rect x="630" y="150" width="500" height="300" rx="10" fill="#ffffff" stroke="#9ca3af" stroke-width="4"/>
+  <text x="880" y="238" font-size="32" font-weight="700" fill="#374151" text-anchor="middle">The partner company</text>
+  <text x="880" y="304" font-size="29" fill="#374151" text-anchor="middle">Treated as a pass through</text>
+  <text x="880" y="368" font-size="29" fill="#374151" text-anchor="middle">Gets its own export column</text>
+  <text x="600" y="536" font-size="29" fill="#374151" text-anchor="middle">Get this flag wrong and your revenue report counts money you never kept.</text>
+</svg>

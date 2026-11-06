@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="A royalty counter at 2,760 dollars of a 3,000 dollar yearly limit, where a deal asking for 720 dollars is charged only the 240 dollars of room left" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="600" y="76" font-size="38" font-weight="700" fill="#111827" text-anchor="middle">A 6% royalty that stops at $3,000 a year</text>
+  <text x="60" y="168" font-size="30" fill="#374151">The royalty counter for one agent, late in the cap year:</text>
+  <rect x="60" y="212" width="1080" height="96" fill="#ffffff" stroke="#e5e7eb" stroke-width="3"/>
+  <rect x="60" y="212" width="994" height="96" fill="#4f46e5"/>
+  <rect x="1054" y="212" width="86" height="96" fill="#10b981"/>
+  <text x="557" y="274" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Already paid: $2,760</text>
+  <text x="1097" y="356" font-size="26" font-weight="700" fill="#065f46" text-anchor="middle">$240</text>
+  <text x="60" y="438" font-size="30" fill="#111827">A $12,000 commission would owe 6%, which is $720.</text>
+  <text x="60" y="492" font-size="30" font-weight="700" fill="#4338ca">Only $240 is charged. The other $480 stays in the deal.</text>
+  <text x="60" y="566" font-size="27" fill="#374151">That is a second counter, running alongside the agent's split cap.</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Four ordered migration steps: commission plans, then agents, then the cap amounts already paid this year, then closed deals" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="600" y="78" font-size="38" font-weight="700" fill="#111827" text-anchor="middle">The order that keeps the cap math right</text>
+  <rect x="60" y="150" width="240" height="200" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="3"/>
+  <text x="180" y="240" font-size="34" font-weight="700" fill="#4338ca" text-anchor="middle">1</text>
+  <text x="180" y="296" font-size="29" fill="#111827" text-anchor="middle">Plans</text>
+  <line x1="300" y1="250" x2="348" y2="250" stroke="#4338ca" stroke-width="5"/>
+  <rect x="350" y="150" width="240" height="200" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="3"/>
+  <text x="470" y="240" font-size="34" font-weight="700" fill="#4338ca" text-anchor="middle">2</text>
+  <text x="470" y="296" font-size="29" fill="#111827" text-anchor="middle">Agents</text>
+  <line x1="590" y1="250" x2="638" y2="250" stroke="#4338ca" stroke-width="5"/>
+  <rect x="640" y="150" width="240" height="200" rx="10" fill="#4f46e5"/>
+  <text x="760" y="240" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="760" y="290" font-size="27" fill="#ffffff" text-anchor="middle">Cap paid</text>
+  <text x="760" y="324" font-size="27" fill="#ffffff" text-anchor="middle">so far</text>
+  <line x1="880" y1="250" x2="928" y2="250" stroke="#4338ca" stroke-width="5"/>
+  <rect x="930" y="150" width="210" height="200" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="3"/>
+  <text x="1035" y="240" font-size="34" font-weight="700" fill="#4338ca" text-anchor="middle">4</text>
+  <text x="1035" y="296" font-size="29" fill="#111827" text-anchor="middle">Deals</text>
+  <text x="600" y="446" font-size="30" fill="#374151" text-anchor="middle">Step 3 is the one brokers skip. Skip it and every cap restarts at zero,</text>
+  <text x="600" y="492" font-size="30" fill="#374151" text-anchor="middle">so your best producers pay a split they already finished paying.</text>
+  <text x="600" y="562" font-size="27" fill="#065f46" text-anchor="middle">An afternoon's work for a ten agent roster.</text>
+</svg>

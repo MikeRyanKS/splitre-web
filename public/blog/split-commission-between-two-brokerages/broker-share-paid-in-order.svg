@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="A 4,500 dollar broker share paid in order, with the first 500 dollars to one company and the remaining 4,000 to the other" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="600" y="76" font-size="38" font-weight="700" fill="#111827" text-anchor="middle">One broker share, two companies, paid in order</text>
+  <text x="60" y="160" font-size="30" fill="#374151">Your side of the deal keeps $4,500 as the broker share.</text>
+  <rect x="60" y="210" width="120" height="110" fill="#7c3aed"/>
+  <rect x="180" y="210" width="960" height="110" fill="#4f46e5"/>
+  <text x="120" y="366" font-size="27" font-weight="700" fill="#4338ca" text-anchor="middle">$500</text>
+  <text x="660" y="366" font-size="27" font-weight="700" fill="#4338ca" text-anchor="middle">$4,000</text>
+  <rect x="60" y="412" width="28" height="28" fill="#7c3aed"/>
+  <text x="104" y="440" font-size="29" fill="#374151">Company A: the first $500 of every deal, up to $3,000 a year</text>
+  <rect x="60" y="474" width="28" height="28" fill="#4f46e5"/>
+  <text x="104" y="502" font-size="29" fill="#374151">Company B: whatever is left, up to $7,000 a year</text>
+  <text x="60" y="572" font-size="27" fill="#065f46">Each cap is its own counter, so one can stop while the other carries on.</text>
+</svg>
