@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import type { HTMLAttributes } from "react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
-import { getAllSlugs, getAllPosts, getPost } from "@/lib/blog";
+import { getAllSlugs, getAllPosts, getPost, getPostOgImage } from "@/lib/blog";
+import { rehypeBlogFigures } from "@/lib/rehypeBlogFigures";
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -16,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
+  const ogImage = getPostOgImage(slug) ?? DEFAULT_OG_IMAGE;
   return {
     title: post.title,
     description: post.excerpt,
@@ -27,13 +29,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.excerpt,
       publishedTime: post.date,
       url: `https://splitre.app/blog/${slug}`,
-      images: [{ url: DEFAULT_OG_IMAGE }],
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: [DEFAULT_OG_IMAGE],
+      images: [ogImage],
     },
   };
 }
@@ -68,7 +70,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    image: `https://splitre.app${DEFAULT_OG_IMAGE}`,
+    image: `https://splitre.app${getPostOgImage(slug) ?? DEFAULT_OG_IMAGE}`,
     datePublished: post.date,
     dateModified: post.date,
     author: {
@@ -117,7 +119,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <MDXRemote
               source={post.content}
               components={{ h2: Heading2 }}
-              options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }}
+              options={{ mdxOptions: { rehypePlugins: [rehypeSlug, rehypeBlogFigures] } }}
             />
           </div>
 

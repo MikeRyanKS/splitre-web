@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Checklist of five places a brokerage commission spreadsheet breaks: cap crossings, backdated deals, mid-year joiners, co-agent deals and team pools" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="80" font-size="38" font-weight="700" fill="#111827">Where a commission spreadsheet breaks</text>
+  <circle cx="90" cy="175" r="20" fill="#4f46e5"/>
+  <text x="130" y="187" font-size="32" fill="#374151">Deals that cross the cap</text>
+  <circle cx="90" cy="265" r="20" fill="#4f46e5"/>
+  <text x="130" y="277" font-size="32" fill="#374151">Backdated closings</text>
+  <circle cx="90" cy="355" r="20" fill="#4f46e5"/>
+  <text x="130" y="367" font-size="32" fill="#374151">Agents who join mid-year</text>
+  <circle cx="90" cy="445" r="20" fill="#4f46e5"/>
+  <text x="130" y="457" font-size="32" fill="#374151">Two agents on one deal</text>
+  <circle cx="90" cy="535" r="20" fill="#4f46e5"/>
+  <text x="130" y="547" font-size="32" fill="#374151">Team cap pools</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="One 12,000 dollar commission divided into agent net, outside referral, franchise royalty and the brokerage's company dollar" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="90" font-size="38" font-weight="700" fill="#111827">One $12,000 commission, four destinations</text>
+  <rect x="60" y="180" width="473" height="110" fill="#4f46e5"/>
+  <rect x="533" y="180" width="270" height="110" fill="#7c3aed"/>
+  <rect x="803" y="180" width="65" height="110" fill="#9ca3af"/>
+  <rect x="868" y="180" width="272" height="110" fill="#10b981"/>
+  <rect x="60" y="322" width="28" height="28" fill="#4f46e5"/><text x="104" y="350" font-size="30" fill="#374151">Agent net: $5,251</text>
+  <rect x="60" y="382" width="28" height="28" fill="#7c3aed"/><text x="104" y="410" font-size="30" fill="#374151">Outside referral: $3,000</text>
+  <rect x="60" y="442" width="28" height="28" fill="#9ca3af"/><text x="104" y="470" font-size="30" fill="#374151">Franchise royalty: $720</text>
+  <rect x="60" y="502" width="28" height="28" fill="#10b981"/><text x="104" y="530" font-size="30" font-weight="700" fill="#065f46">Company dollar: $3,029</text>
+</svg>

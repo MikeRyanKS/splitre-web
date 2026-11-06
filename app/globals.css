@@ -83,3 +83,23 @@ body {
   border-top: 1px solid #e5e7eb;
   margin: 3em 0;
 }
+
+/* Blog figures: the build wraps a lone Markdown image in <figure> with a caption */
+.prose figure.blog-figure {
+  margin: 2.25em 0;
+}
+.prose figure.blog-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+.prose figure.blog-figure figcaption {
+  margin-top: 0.75em;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #6b7280;
+  text-align: center;
+}

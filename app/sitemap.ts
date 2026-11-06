@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts, getPostImages } from "@/lib/blog";
 import { getAllDocSlugs } from "@/lib/docs";
 
 export const dynamic = "force-static";
@@ -77,6 +77,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
+    ...(getPostImages(post.slug).length > 0
+      ? { images: getPostImages(post.slug).map((src) => `${BASE_URL}${src}`) }
+      : {}),
   }));
 
   const docPages: MetadataRoute.Sitemap = getAllDocSlugs().map((slug) => ({

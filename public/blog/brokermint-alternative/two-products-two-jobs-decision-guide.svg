@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Two-column decision guide: one system for transactions, accounting and payouts on the left, commission math and cap tracking on the right" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <rect x="60" y="80" width="515" height="470" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="625" y="80" width="515" height="470" rx="16" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="90" y="150" font-size="32" font-weight="700" fill="#111827">You want one system for</text>
+  <text x="90" y="215" font-size="30" fill="#374151">Transactions and forms</text>
+  <text x="90" y="275" font-size="30" fill="#374151">Agent billing and payouts</text>
+  <text x="90" y="335" font-size="30" fill="#374151">A full back-office suite</text>
+  <text x="655" y="150" font-size="32" font-weight="700" fill="#111827">Your problem is</text>
+  <text x="655" y="215" font-size="30" fill="#374151">Cap and split math</text>
+  <text x="655" y="275" font-size="30" fill="#374151">Plans that vary by agent</text>
+  <text x="655" y="335" font-size="30" fill="#374151">Teams and co-agent deals</text>
+</svg>

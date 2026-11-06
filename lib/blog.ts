@@ -53,6 +53,23 @@ export function getPost(slug: string): BlogPost | null {
   };
 }
 
+/** Site-relative image paths referenced by a post, in document order. */
+export function getPostImages(slug: string): string[] {
+  const filePath = path.join(contentDir, `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return [];
+  const { content } = matter(fs.readFileSync(filePath, "utf-8"));
+  const found: string[] = [];
+  for (const match of content.matchAll(/!\[[^\]]*\]\(\s*(\/[^)\s]+)/g)) {
+    if (!found.includes(match[1])) found.push(match[1]);
+  }
+  return found;
+}
+
+/** First screenshot-style (raster) image of a post, usable as an Open Graph image. SVG is not valid for OG. */
+export function getPostOgImage(slug: string): string | null {
+  return getPostImages(slug).find((src) => /\.(png|jpe?g|webp)$/i.test(src)) ?? null;
+}
+
 export function getAllSlugs(): string[] {
   return fs
     .readdirSync(contentDir)

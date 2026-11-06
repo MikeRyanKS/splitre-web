@@ -1,0 +1,74 @@
+---
+title: "Real Estate Commission Tracking Spreadsheet: Layout and Limits"
+date: "2026-11-12"
+excerpt: "A real estate commission tracking spreadsheet works until caps, mid-year hires and shared deals arrive. Copy the layout, then see the five places it breaks."
+readTime: "4 min read"
+keywords: ["real estate commission tracking spreadsheet", "brokerage commission spreadsheet", "commission spreadsheet template", "agent cap tracking spreadsheet"]
+related: ["eliminate-commission-spreadsheets", "how-to-calculate-real-estate-agent-commission"]
+publishAt: "2026-11-12T12:50"
+cluster: "C. Switching and software"
+reader: "Broker-owner"
+primaryKeyword: "real estate commission tracking spreadsheet"
+---
+
+A commission spreadsheet works while every agent follows one split and nobody reaches a cap. It stops working when agents cross caps, join mid-year, share a deal or sit on a team. Below is a column layout you can copy for a brokerage, then the five places it breaks, with the dollar amounts that go wrong when it does.
+
+![Checklist of five places a brokerage commission spreadsheet breaks](/blog/commission-tracking-spreadsheet-brokerage/five-spreadsheet-failure-points-checklist.svg "Each of these five needs a formula that looks at other rows, which is where most sheets go wrong.")
+
+## What should a real estate commission tracking spreadsheet include?
+
+Give every closed deal one row, with these columns in this order:
+
+- Closing date, address and agent
+- Sale price, commission percentage and gross commission
+- Off-the-top amounts: outside referral, franchise royalty
+- Amount to split, agent percentage and brokerage share
+- Agent fees such as E&O and a transaction fee
+- Agent net payout
+- Brokerage collected from this agent so far this year (a running total)
+- Cap room left
+
+Keep the closing date as a real date, not text, and sort by it. Everything below depends on that.
+
+## Where does a commission spreadsheet break?
+
+**A deal that crosses the cap.** Example: an agent has paid $16,000 toward an $18,000 cap and closes a $15,000 commission at 70/30. A plain formula takes 30%, which is $4,500. The cap leaves room for only $2,000, so you have overcharged the agent by $2,500. The fix is a formula that takes the smaller of the split and the cap room, and splits the deal in two at the boundary.
+
+**A closing that lands in the wrong year.** A December deal entered in January counts against the year it closed. If your running total follows the order you typed rows, it counts against the wrong cap year.
+
+**An agent who joins mid-year.** She may already have paid part of her cap elsewhere or under an earlier arrangement. Without an opening balance the sheet starts her at zero and overcharges her.
+
+**Two agents on one deal.** Each agent's share runs through their own split and their own cap, and whole-deal items like a referral come off once. One row cannot hold that without hidden helper columns.
+
+**A team with a shared cap.** Every member draws on the same pool, so one agent's closing changes what another owes on their next deal.
+
+![The deal entry screen showing a full commission breakdown and cap progress before the deal is confirmed](/screenshots/deal_entry.png "A live breakdown before you confirm, with the agent's cap progress alongside.")
+
+## When is a spreadsheet still fine?
+
+Be honest about it. If every agent is on the same flat split, no one has a cap, you rarely share deals and one person does all the entry, a sheet is fine and free. Nothing here is a reason to buy software today.
+
+The trouble is that these brokerages tend to change. You add an agent who negotiates a cap. A franchise changes its rules. The person who built the formulas leaves, and the knowledge goes with them. If your sheet already has a column of manual overrides, you are at the point where the sheet is the risk.
+
+## How do you move off a spreadsheet?
+
+Do it in this order.
+
+- Build your commission plans first, using real numbers from your agent agreements.
+- Import your agent roster, including how much each agent has already paid toward their cap this year.
+- Import closed deals from your sheet, so cap progress starts from the truth.
+- Run your next real closing in both places and compare.
+
+SplitRE imports agents and deals from CSV and freezes each imported confirmed deal, so a later plan change never rewrites it. See [Importing Agents and Deals via CSV](/docs/importing-agents-and-deals-via-csv). The longer case against sheets is in [Why Your Commission Spreadsheet Is Costing You More Than You Think](/blog/eliminate-commission-spreadsheets).
+
+## Common questions
+
+### Can I add a cap formula to my spreadsheet?
+
+You can. The cap room is the cap minus everything collected from that agent in the cap year, taken by closing date. The brokerage collects the smaller of the split and that room. It is easy to get right once and easy to break the next time someone inserts a row.
+
+### How do I check a deal quickly before I enter it?
+
+Run it through the [free commission split calculator](/real-estate-commission-split-calculator) and compare the agent net with your sheet.
+
+Ready to try your own deals? [Open a free account](https://app.splitre.app/signup) and run your first 3 deals free.
