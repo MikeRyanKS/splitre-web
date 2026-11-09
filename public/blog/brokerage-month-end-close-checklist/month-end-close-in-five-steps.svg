@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Five month end steps in order: confirm every draft that closed, check the closing dates, review the cap report, export the accounting CSV, then reconcile payouts against the bank" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="80" font-size="36" font-weight="700" fill="#111827">Month end close, in order</text>
+  <rect x="60" y="130" width="1080" height="82" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="90" y="180" font-size="30" fill="#111827">1. Confirm every draft deal that actually closed</text>
+  <rect x="60" y="226" width="1080" height="82" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="90" y="276" font-size="30" fill="#111827">2. Check each closing date sits in the right month</text>
+  <rect x="60" y="322" width="1080" height="82" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="90" y="372" font-size="30" fill="#111827">3. Read the Agent Cap Report for anyone near a cap</text>
+  <rect x="60" y="418" width="1080" height="82" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="90" y="468" font-size="30" fill="#111827">4. Export the confirmed deals as an accounting CSV</text>
+  <rect x="60" y="514" width="1080" height="82" rx="8" fill="#10b981"/>
+  <text x="90" y="564" font-size="30" font-weight="700" fill="#ffffff">5. Reconcile agent payouts against the bank</text>
+</svg>

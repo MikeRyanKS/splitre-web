@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Two bars for the same $15,000 deal: before the cap the brokerage takes a $4,500 split and the agent keeps $10,500, after the cap the brokerage takes a flat $250 fee and the agent keeps $14,750" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="70" font-size="36" font-weight="700" fill="#111827">The same $15,000 deal, before and after the cap</text>
+  <text x="60" y="160" font-size="30" font-weight="700" fill="#111827">Before: brokerage split of $4,500</text>
+  <rect x="60" y="185" width="324" height="110" rx="8" fill="#4f46e5"/>
+  <rect x="384" y="185" width="756" height="110" rx="8" fill="#10b981"/>
+  <text x="414" y="250" font-size="30" fill="#ffffff">Agent keeps $10,500</text>
+  <text x="60" y="400" font-size="30" font-weight="700" fill="#111827">After: a flat $250 transaction fee</text>
+  <rect x="60" y="425" width="22" height="110" rx="4" fill="#4f46e5"/>
+  <rect x="92" y="425" width="1048" height="110" rx="8" fill="#10b981"/>
+  <text x="122" y="490" font-size="30" fill="#ffffff">Agent keeps $14,750</text>
+  <text x="60" y="595" font-size="28" fill="#374151">The split stops at the cap. The flat fee does not.</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="A $15,000 commission in four bars: a $900 royalty off the top, a 70/30 split giving the brokerage $4,230, then $545 of agent fees, leaving an agent net of $9,325" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="70" font-size="36" font-weight="700" fill="#111827">One $15,000 commission, in order</text>
+  <rect x="60" y="120" width="1080" height="100" rx="8" fill="#7c3aed"/>
+  <text x="90" y="180" font-size="30" fill="#ffffff">Off the top: $900 royalty, $14,100 left to split</text>
+  <rect x="60" y="250" width="1080" height="100" rx="8" fill="#4f46e5"/>
+  <text x="90" y="310" font-size="30" fill="#ffffff">Split 70/30: brokerage $4,230, agent $9,870</text>
+  <rect x="60" y="380" width="1080" height="100" rx="8" fill="#4338ca"/>
+  <text x="90" y="440" font-size="30" fill="#ffffff">Agent fees: $150 insurance plus $395 transaction</text>
+  <rect x="60" y="510" width="1080" height="100" rx="8" fill="#10b981"/>
+  <text x="90" y="570" font-size="30" font-weight="700" fill="#ffffff">Agent net $9,325</text>
+</svg>

@@ -1,0 +1,56 @@
+---
+title: "Bookkeeper for Real Estate Brokerages: A Repeatable Setup"
+date: "2026-11-22"
+excerpt: "A repeatable setup for a bookkeeper serving several small real estate brokerages: the plans, the roster, cap opening balances, and who confirms a deal."
+readTime: "5 min read"
+keywords: ["bookkeeper for real estate brokerage", "brokerage bookkeeping setup", "commission bookkeeping multiple clients", "real estate bookkeeper workflow"]
+related: ["quickbooks-online-real-estate-brokerage", "real-estate-brokerage-accounting-basics"]
+publishAt: "2026-11-22T12:50"
+cluster: "B. Back-office and accounting"
+reader: "Bookkeeper"
+primaryKeyword: "bookkeeper for real estate brokerage"
+---
+
+A bookkeeper for a real estate brokerage spends most of the first month on setup, not on entries. Get the commission plans, the roster and each agent's cap balance right and the monthly work turns into a review. Get them wrong and you will be rebuilding figures in April. The same four steps work for every client.
+
+![Four setup steps for one brokerage client, from plans to agreeing who confirms a deal](/blog/bookkeeper-for-real-estate-brokerages/per-client-setup-in-four-steps.svg "The fourth step is the one that gets skipped, and it is the one that decides whose desk a missing deal lands on.")
+
+## What does a bookkeeper for a real estate brokerage set up first?
+
+The plans, and only the ones the brokerage genuinely uses. Ask for the signed agent agreements rather than a description of them, because a broker will tell you everyone is on 70/30 and the agreements will show two people on 75/25 and one on a desk fee. Build a plan per genuine shape, then handle the single oddity as an override on that agent's record instead of a fourth plan.
+
+Second, the roster. Import it from a spreadsheet rather than typing it, and know how matching works before you upload: the email address is the unique identifier, a duplicate email is skipped, and the same name with a different email will import as a second person. That is the right behavior, since names are not unique, but it means a roster carrying the same name twice needs a glance before you click import.
+
+Third, cap balances. This is the step that costs real money if you skip it.
+
+**Example.** You take on a brokerage in July. One agent has already paid the brokerage $7,200 toward an $18,000 cap through deals closed before you arrived. Enter $7,200 as her cap opening balance and the system measures the rest of her year against the $10,800 that is left. Leave it at zero and she looks like she has paid nothing. If she produces $60,000 of gross commission in the second half on a 70/30 plan, the brokerage's cut would be $18,000 with no balance recorded, against the $10,800 it should actually collect. That is $7,200 charged to an agent who had already paid it. [What the cap is counting](/blog/real-estate-commission-cap-explained) is worth reading before you enter a single balance.
+
+A balance applies to one cap year, the one you enter it in. You do not re-enter it next January.
+
+![The deal import preview showing each row matched to an agent before importing](/screenshots/splitre-import-deals-csv.png "The preview is where a bad match gets caught. A row that cannot be tied to one agent with confidence is flagged rather than guessed at.")
+
+## How do you keep five clients from becoming five systems?
+
+By making the differences live in the data, not in your process. Name plans the same way at every client ("Standard 70/30", "Senior 80/20"), run month end in the same order, and export the same file. Then the only thing you are holding in your head per client is their plan shapes, which are written down anyway.
+
+Be clear on one limitation before you promise anything: each brokerage is a separate account with its own data, so there is no single screen showing all your clients at once. You log in per client. For a bookkeeper that cuts both ways. There is no chance of entering Client A's deal against Client B, and there is no combined dashboard either.
+
+The historical deals question is worth settling early too. Importing last year's closings gives the broker real year-over-year reporting, and [the CSV import guide](/docs/importing-agents-and-deals-via-csv) covers the column format and what happens to a row that will not parse. The cheaper option is to import nothing and set cap opening balances instead, which gets this year's math right and leaves history in the old spreadsheet. Either is defensible. Mixing them is not, because a deal imported as confirmed and a cap opening balance covering the same deal will both count.
+
+## What do you hand the broker each month?
+
+Three things, and the same three every month. The accounting file for the month's confirmed deals, with gross commission income, agent net, the brokerage's own revenue and any pass-through amounts broken out. The cap report, so the broker can see who is close. And a short note on anything you corrected, usually a closing date in the wrong month or a draft that was never confirmed.
+
+What you are not handing over is a trust account reconciliation. Escrow and trust rules vary by state and sit outside commission tracking entirely, so agree with the broker who is doing that and confirm the requirements with their CPA and the state real estate commission. Agent billing is outside it too: a desk fee that comes off a commission is handled in the deal, but invoicing an agent monthly is not something this software does.
+
+## Common questions
+
+### Who should confirm deals, you or the broker?
+
+Whoever has the closing statement first. Confirming a deal freezes its breakdown and emails the agent their statement, so it is a real act, not data entry. Agree it in writing at the start of the engagement.
+
+### How do I check a figure a broker queries?
+
+Rebuild the deal. Our [split calculator](/real-estate-commission-split-calculator) handles one deal with cap room, which answers most queries in a minute. For where each figure belongs afterwards, see [recording both sides in the accounting file](/blog/quickbooks-online-real-estate-brokerage).
+
+SplitRE keeps each brokerage's data separate, freezes every confirmed deal so a later plan edit cannot move last quarter's numbers, and exports a file your accounting system can take. [Open a free account](https://app.splitre.app/signup) and run your first 3 deals free.
