@@ -405,7 +405,7 @@ export default function PricingClient() {
         <div className="max-w-4xl mx-auto">
           <div className="rounded-2xl border border-gray-200 bg-white px-6 py-10 sm:px-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-              At $29 a month, SplitRE costs less than one team lunch
+              At $29 a month billed annually, SplitRE costs less than one team lunch
             </h2>
             <div className="space-y-4 text-gray-600 max-w-2xl mx-auto">
               <p>

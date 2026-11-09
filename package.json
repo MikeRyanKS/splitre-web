@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "check:facts": "node --experimental-strip-types --no-warnings scripts/check-marketing-facts.mjs",
     "start": "next start"
   },
   "dependencies": {

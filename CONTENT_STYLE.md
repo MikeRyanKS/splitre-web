@@ -77,3 +77,5 @@ is encrypted and isolated per brokerage" is fine; naming the database is not.
 1. Search the file for `—`, `–`, `&mdash;`, `&ndash;`. There should be zero.
 2. Read it out loud. If it sounds like a press release, rewrite it.
 3. Check any dollar figures and percentages against the app's actual behavior.
+4. If the copy states a price, the free offer, a plan limit or a feature claim,
+   check it against `MARKETING_FACTS.md`, and run `npm run check:facts`.

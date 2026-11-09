@@ -5,7 +5,7 @@ import ZoomableScreenshot from "@/components/ZoomableScreenshot";
 export const metadata: Metadata = {
   title: "SplitRE: Commission Management Software for Real Estate Brokerages",
   description:
-    "SplitRE is real estate commission management software that replaces commission spreadsheets for independent brokerages. Automated split calculations, agent commission tracking, automatic notifications, and a QuickBooks-ready CSV export for your bookkeeper. Plans from $29/mo.",
+    "SplitRE is real estate commission management software that replaces commission spreadsheets for independent brokerages. Automated split calculations, agent commission tracking, automatic notifications, and a QuickBooks-ready CSV export for your bookkeeper. Plans from $29/mo (annual).",
   alternates: { canonical: "https://splitre.app" },
 };
 
@@ -519,9 +519,9 @@ export default function HomePage() {
       {/* Pricing CTA */}
       <section className="py-24 px-4 bg-gradient-to-br from-indigo-600 to-violet-700 text-white text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Plans from $29/month</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Plans from $29/month, billed annually</h2>
           <p className="text-indigo-100 text-lg mb-3">
-            All plans include every feature. Pay annually and save up to 17%.
+            All plans include every feature. Paying month to month starts at $35; paying annually saves up to 17%.
           </p>
           <p className="text-indigo-200 text-sm mb-8">
             For a 5-agent brokerage, SplitRE pays for itself the first time it catches a commission error.

@@ -1,0 +1,20 @@
+name: Marketing facts freshness
+
+# Fails (and so emails the repo owner) when MARKETING_FACTS.md has not been
+# re-verified against the live site for 30 days.
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run check:facts -- --max-age=30

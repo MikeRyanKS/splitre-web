@@ -5,12 +5,12 @@ import { plans, paygPacks } from "@/lib/pricing";
 export const metadata: Metadata = {
   title: "Pricing: Real Estate Commission Management Software",
   description:
-    "Real estate commission software pricing, plainly stated: SplitRE plans start at $29/mo (Boutique annual, up to 10 agents) through $169/mo (Brokerage, unlimited agents), or pay as you go from $95 for 5 deal credits, no monthly fee. Every option includes every feature: cap tracking, shared team caps, co-agent deal splits, QuickBooks-ready CSV export, one-click PDF downloads.",
+    "Real estate commission software pricing, plainly stated: SplitRE plans start at $29/mo (Boutique annual, up to 10 agents) through $169/mo (Brokerage, unlimited agents), all billed annually, or pay as you go from $95 for 5 deal credits, no monthly fee. Every option includes every feature: cap tracking, shared team caps, co-agent deal splits, QuickBooks-ready CSV export, one-click PDF downloads.",
   alternates: { canonical: "https://splitre.app/pricing" },
   openGraph: {
     title: "SplitRE Pricing: Commission Management for Every Brokerage Size",
     description:
-      "Boutique from $29/mo, Independent from $65/mo, Brokerage from $169/mo, or pay as you go from $95 for 5 deal credits with no monthly fee. Flat tier or per-deal, no feature paywalls. Your first 3 deals free either way.",
+      "Boutique from $29/mo, Independent from $65/mo, Brokerage from $169/mo (all billed annually; monthly billing is $35, $75 and $199), or pay as you go from $95 for 5 deal credits with no monthly fee. Flat tier or per-deal, no feature paywalls. Your first 3 deals free either way.",
     url: "https://splitre.app/pricing",
   },
 };

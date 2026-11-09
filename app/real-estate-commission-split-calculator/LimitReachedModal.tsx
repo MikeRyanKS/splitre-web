@@ -13,7 +13,7 @@ export default function LimitReachedModal({ onClose }: { onClose: () => void }) 
         </div>
         <h2 className="text-lg font-bold text-gray-900">You've used your 3 free demo deals</h2>
         <p className="mt-2 text-sm text-gray-500">
-          That's every free deal for this email for the next 6 months. Open a free SplitRE account and your first 3 real deals are free too, with no card and no time limit.
+          That's every free demo PDF for this email for the next 6 months. Open a free SplitRE account and your first 3 real deals are free too, with no card and no time limit.
         </p>
         <Link
           href="https://app.splitre.app/signup"
