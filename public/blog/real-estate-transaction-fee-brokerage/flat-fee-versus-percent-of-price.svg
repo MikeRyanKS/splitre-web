@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Three sale prices compared under a flat 395 dollar transaction fee and a fee of one tenth of one percent of the sale price, which charges 250 dollars on a 250,000 dollar sale and 900 dollars on a 900,000 dollar sale" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="76" font-size="36" font-weight="700" fill="#111827">A flat fee and a percentage fee, same three deals</text>
+  <rect x="60" y="110" width="30" height="30" rx="5" fill="#4f46e5"/>
+  <text x="104" y="134" font-size="28" fill="#374151">Flat $395 a deal</text>
+  <rect x="420" y="110" width="30" height="30" rx="5" fill="#7c3aed"/>
+  <text x="464" y="134" font-size="28" fill="#374151">0.1% of the sale price</text>
+
+  <text x="60" y="222" font-size="28" fill="#374151">$250,000 sale</text>
+  <rect x="420" y="196" width="263" height="36" rx="5" fill="#4f46e5"/>
+  <text x="699" y="223" font-size="26" fill="#111827">$395</text>
+  <rect x="420" y="244" width="167" height="36" rx="5" fill="#7c3aed"/>
+  <text x="603" y="271" font-size="26" fill="#111827">$250</text>
+
+  <text x="60" y="366" font-size="28" fill="#374151">$450,000 sale</text>
+  <rect x="420" y="340" width="263" height="36" rx="5" fill="#4f46e5"/>
+  <text x="699" y="367" font-size="26" fill="#111827">$395</text>
+  <rect x="420" y="388" width="300" height="36" rx="5" fill="#7c3aed"/>
+  <text x="736" y="415" font-size="26" fill="#111827">$450</text>
+
+  <text x="60" y="510" font-size="28" fill="#374151">$900,000 sale</text>
+  <rect x="420" y="484" width="263" height="36" rx="5" fill="#4f46e5"/>
+  <text x="699" y="511" font-size="26" fill="#111827">$395</text>
+  <rect x="420" y="532" width="600" height="36" rx="5" fill="#7c3aed"/>
+  <text x="1036" y="559" font-size="26" fill="#111827">$900</text>
+</svg>

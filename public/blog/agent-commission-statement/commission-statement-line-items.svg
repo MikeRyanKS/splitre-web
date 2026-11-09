@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="A commission statement for one deal, from a gross commission of 13,500 dollars down through the franchise royalty, the broker split, the E and O fee and the transaction fee to an agent net payout of 8,338 dollars" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <rect x="60" y="40" width="1080" height="550" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="100" y="110" font-size="36" font-weight="700" fill="#111827">One deal, every line the agent should see</text>
+  <text x="100" y="190" font-size="28" fill="#374151">Gross commission (3% of $450,000)</text>
+  <text x="1100" y="190" font-size="28" font-weight="600" fill="#111827" text-anchor="end">$13,500</text>
+  <text x="100" y="260" font-size="28" fill="#374151">Franchise royalty, 6% of gross</text>
+  <text x="1100" y="260" font-size="28" fill="#374151" text-anchor="end">-$810</text>
+  <text x="100" y="330" font-size="28" fill="#374151">Broker split, 30% of what is left</text>
+  <text x="1100" y="330" font-size="28" fill="#4f46e5" text-anchor="end">-$3,807</text>
+  <text x="100" y="400" font-size="28" fill="#374151">E and O fee</text>
+  <text x="1100" y="400" font-size="28" fill="#374151" text-anchor="end">-$150</text>
+  <text x="100" y="470" font-size="28" fill="#374151">Transaction fee</text>
+  <text x="1100" y="470" font-size="28" fill="#374151" text-anchor="end">-$395</text>
+  <rect x="100" y="500" width="1000" height="2" fill="#e5e7eb"/>
+  <text x="100" y="552" font-size="32" font-weight="700" fill="#111827">Agent net payout</text>
+  <text x="1100" y="552" font-size="32" font-weight="700" fill="#10b981" text-anchor="end">$8,338</text>
+</svg>

@@ -1,0 +1,66 @@
+---
+title: "Seven Commission Mistakes a Spreadsheet Lets You Make"
+date: "2026-11-27"
+excerpt: "The commission calculation mistakes that cost real money are structural, not arithmetic. Here are seven, each with the dollar figure it moves."
+readTime: "5 min read"
+keywords: ["commission calculation mistakes", "real estate commission calculation mistakes", "commission spreadsheet errors", "cap crossing miscalculation"]
+related: ["eliminate-commission-spreadsheets", "how-to-calculate-real-estate-agent-commission"]
+publishAt: "2026-11-27T08:10"
+cluster: "C. Switching and software evaluation"
+reader: "Broker-owner"
+primaryKeyword: "commission calculation mistakes"
+---
+
+Most commission calculation mistakes are not arithmetic errors. They are structural: a fee taken in the wrong order, a deal counted against the wrong year, a cap crossing charged in full. A spreadsheet will carry out every one of them without complaint, because a sheet does what the formula says rather than what the plan says.
+
+![A 6% royalty taken off the gross leaves the agent $8,883, while taking it after the split leaves $8,640](/blog/commission-calculation-mistakes/right-and-wrong-fee-order.svg "The fee is identical in both columns. Only its position in the calculation changed, and $243 moved with it.")
+
+## Which commission calculation mistakes come from the order of the math?
+
+Three of the seven, and they survive longest because every row looks plausible.
+
+**1. A franchise royalty taken after the split.** The royalty comes off the gross commission first, then what is left is split. On a $13,500 commission with a 6% royalty and a 70/30 plan, doing it in the right order leaves the agent $8,883. Taking the royalty off the agent's share afterwards leaves $8,640. The gap is always 30% of the fee.
+
+**2. A percentage E&O fee charged on the gross.** An E&O fee set as a percentage is a percentage of the agent's share, because it lands after the split. On a $15,000 commission at 70/30, 2% of the $10,500 agent share is $210. Two percent of the gross is $300. You have overcharged by $90.
+
+**3. An outside referral deducted twice.** A referral comes off the top once. A sheet with both a deal-level referral column and a per-agent deduction column makes it easy to apply in both places. A 25% referral on a $20,000 commission is $5,000. Taken twice it removes $10,000 from a $20,000 deal.
+
+## Which ones come from the calendar?
+
+**4. A deal counted against the wrong cap year.** The closing date decides the cap year, not the date you entered it. A deal that closed on December 28 and was confirmed on January 6 belongs to the old year. Put a $4,500 broker cut in the new year instead and last year's total is $4,500 light while this year's is $4,500 heavy. The agent caps earlier than she should and you collect less.
+
+**5. An anniversary cap reset on January 1.** If your plan resets each cap on the agent's hire anniversary, a January reset is not a rounding error. An agent who joined in June and has paid $11,000 toward an $18,000 cap by December owes only $7,000 more before her anniversary. Reset her in January and she can pay up to $18,000 in that window instead. That is up to $11,000 she did not agree to.
+
+The order behind all five is set out in our [walkthrough of a single deal's math](/blog/how-to-calculate-real-estate-agent-commission).
+
+## Which ones only show up on unusual deals?
+
+**6. A cap crossing charged in full.** The most common expensive one. Example: the cap is $18,000, you have collected $15,500, so $2,500 of room is left. The next deal is a $14,000 commission on a 70/30 plan, so the broker cut would be $4,200. Only $2,500 of it is yours. The rest comes to her at 100%, so her payout is $11,500. Charge the full $4,200 and you have overcollected $1,700.
+
+**7. Whole-deal deductions applied once per agent on a co-agent deal.** Two agents on one transaction means one gross commission, one referral, one bonus, two slices. Deal-level deductions come off before the slices are worked out. A per-agent layout invites the opposite, and a $5,000 referral becomes $10,000.
+
+![The amendment history showing each changed field as a before and after](/screenshots/splitre-deal-amendment-history.png "An amendment records what changed and what the payout became, which is what lets you answer an agent's question six months later.")
+
+## How do you catch one after the money has gone out?
+
+By keeping a record that can be read backwards. The question an agent asks is never "what is my split", it is "why was this deal $400 different from the last one". If answering means rebuilding a formula from memory, the mistake has already cost more in time than in dollars.
+
+Three habits. Keep the closing date on every deal, separate from when you entered it. Keep a per-agent running total of what the brokerage has collected this cap year, so a crossing is visible before you pay it. And never edit a past deal's numbers to make this month's report tie out.
+
+That last one is a design decision. In SplitRE a confirmed deal freezes its breakdown, so editing a plan in March does not reach back and change February. Correcting a real error is an amendment: the original is voided, a linked version replaces it, and the history records each changed field as a before and after. The workflow is in [entering and managing deals](/docs/entering-and-managing-deals). What it will not do is tell you the plan itself is wrong. It calculates what you set up.
+
+## Common questions
+
+### Is a spreadsheet ever good enough?
+
+For a few deals a year with one plan and no caps, yes. The failure points are caps, tiers, anniversary years, backdated closings and co-agent deals, which we went through in [why commission spreadsheets break](/blog/eliminate-commission-spreadsheets).
+
+### How do I audit last year without redoing every deal?
+
+Check two numbers per agent: what the brokerage collected against the cap, and the total paid out. Then re-run only the deals that straddle a cap or a tier boundary.
+
+### What is the fastest way to check one deal?
+
+Put it through the [free split calculator](/real-estate-commission-split-calculator) and compare line by line against your sheet. Do it on a cap-crossing deal first. If you have got as far as a shortlist, our [comparison of commission split tools](/blog/best-commission-split-software-for-brokerages) covers what to look for.
+
+Finding these by hand is what nobody has time for. [Open a free account](https://app.splitre.app/signup), enter a deal that crosses a cap, and check the breakdown against your sheet. Your first 3 deals free.

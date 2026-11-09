@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="A ten agent brokerage collects 162,000 dollars of split with no cap, 122,400 dollars once an 18,000 dollar cap applies, and 146,100 dollars once a 395 dollar transaction fee is added, against 108,000 dollars of fixed overhead" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="72" font-size="36" font-weight="700" fill="#111827">Ten agents, $540,000 of gross commission</text>
+  <text x="60" y="168" font-size="28" fill="#374151">30% of every deal, no cap: $162,000</text>
+  <rect x="60" y="184" width="760" height="44" rx="6" fill="#e5e7eb"/>
+  <text x="60" y="288" font-size="28" fill="#374151">The same split with an $18,000 cap: $122,400</text>
+  <rect x="60" y="304" width="574" height="44" rx="6" fill="#4f46e5"/>
+  <text x="60" y="408" font-size="28" fill="#374151">Plus a $395 fee on all 60 deals: $146,100</text>
+  <rect x="60" y="424" width="685" height="44" rx="6" fill="#7c3aed"/>
+  <rect x="565" y="150" width="4" height="330" fill="#10b981"/>
+  <text x="60" y="546" font-size="28" font-weight="600" fill="#10b981">The green line is $108,000 of fixed overhead</text>
+</svg>
