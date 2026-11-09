@@ -10,7 +10,7 @@ Product-tie notes are for the writer: verify every product claim in `docs/HOW_IT
 
 | ID | Working title | Pillar | Reader | Primary keyword | Slug | Status | Notes |
 |---|---|---|---|---|---|---|---|
-| B01 | Desk Fee vs Commission Split: How to Price Your Brokerage's Plan | A | BO | desk fee vs commission split | `desk-fee-vs-commission-split` | queued | Compare a capped split, a high split plus desk fee, and a hybrid for the same 12-deal agent. Plans support a desk fee and per-transaction fees. |
+| B01 | Desk Fee vs Commission Split: How to Price Your Brokerage's Plan | A | BO | desk fee vs commission split | `desk-fee-vs-commission-split` | published | Compare a capped split, a high split plus desk fee, and a hybrid for the same 12-deal agent. Plans support a desk fee and per-transaction fees. |
 | B02 | Real Estate Commission Tracking Spreadsheet: A Layout and Where It Breaks | C | BO | real estate commission tracking spreadsheet | `commission-tracking-spreadsheet-brokerage` | queued | Brokerage-level layout, then five failure points (cap crossing, anniversary year, backdated deals, co-agent, team pool). Link `eliminate-commission-spreadsheets`. |
 | B03 | What Is Company Dollar in Real Estate (and How to Calculate It) | B | BK | company dollar real estate | `company-dollar-real-estate` | queued | GCI minus agent payout and pass-throughs. Royalties and referral fees are pass-through, not company dollar. Ties to Broker Net in the CSV and Broker Revenue report. |
 | B04 | Brokermint Alternative: BoldTrail BackOffice vs SplitRE | C | BO | Brokermint alternative | `brokermint-alternative` | queued | Competitor facts only from their live pages, fetched now. No price comparison. Be fair about transaction management and CRM suite. |
