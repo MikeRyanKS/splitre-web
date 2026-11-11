@@ -2,6 +2,12 @@
 
 import { useEffect } from "react";
 
+import {
+  readAttribution,
+  readAttributionFromUrl,
+  rememberAttribution,
+} from "@/lib/attribution";
+
 // Carries campaign attribution from the marketing site onto the app's signup
 // page. Cold-email links land on splitre.app with utm_* params, but the
 // The signup CTAs point at app.splitre.app/signup, a different host,
@@ -13,28 +19,7 @@ import { useEffect } from "react";
 // every signup link on the site (Nav, CTAs, pricing cards, MDX content)
 // without touching each one.
 
-const KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref"];
-const STORAGE_KEY = "splitre_attribution";
 const SIGNUP_HOST = "app.splitre.app";
-
-function readFromUrl(): Record<string, string> {
-  const params = new URLSearchParams(window.location.search);
-  const found: Record<string, string> = {};
-  for (const key of KEYS) {
-    const value = params.get(key);
-    if (value) found[key] = value;
-  }
-  return found;
-}
-
-function readStored(): Record<string, string> {
-  try {
-    const raw = sessionStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch {
-    return {};
-  }
-}
 
 function signupUrl(anchor: HTMLAnchorElement): URL | null {
   try {
@@ -63,7 +48,7 @@ function decorate(anchor: HTMLAnchorElement) {
   const url = signupUrl(anchor);
   if (!url) return;
 
-  const attribution = { ...readStored(), ...readFromUrl() };
+  const attribution = readAttribution();
   let changed = false;
   for (const [key, value] of Object.entries(attribution)) {
     // Never overwrite params already on the link (e.g. ?plan=, or GA's _gl linker).
@@ -77,14 +62,7 @@ function decorate(anchor: HTMLAnchorElement) {
 
 export default function UtmForwarder() {
   useEffect(() => {
-    const fromUrl = readFromUrl();
-    if (Object.keys(fromUrl).length > 0) {
-      try {
-        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(fromUrl));
-      } catch {
-        // Storage blocked: the current page's own query string still works below.
-      }
-    }
+    rememberAttribution(readAttributionFromUrl());
 
     const onInteract = (event: Event) => {
       const target = event.target as Element | null;

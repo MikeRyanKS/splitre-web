@@ -1,3 +1,5 @@
+import { readAttribution } from "@/lib/attribution";
+
 // localStorage-only "who is this" cache for the public demo. This is a
 // convenience so a returning visitor isn't asked for their name/email again
 // in the same browser — it is NOT the enforcement mechanism for the free-deal
@@ -65,7 +67,17 @@ export async function requestDemoDeal(
     const res = await fetch(DEMO_LEAD_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, first_name: firstName, action, deal }),
+      // attribution is first-touch on the server: the edge function keeps
+      // whatever it recorded the first time this email appeared, so a lead who
+      // came from a cold email and returns later via Google stays credited to
+      // the email. An empty object is sent when there is nothing to report.
+      body: JSON.stringify({
+        email,
+        first_name: firstName,
+        action,
+        deal,
+        attribution: readAttribution(),
+      }),
     });
     const data = await res.json();
     if (!res.ok) return { ok: false, error: data.error ?? "Something went wrong. Please try again." };
