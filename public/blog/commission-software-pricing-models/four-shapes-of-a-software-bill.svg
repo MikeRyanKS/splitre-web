@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Four shapes a commission software bill takes: per active agent, a flat price per agent count tier, per transaction processed, and pay per confirmed deal with no monthly minimum" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="68" font-size="36" font-weight="700" fill="#111827">What the bill is actually counting</text>
+  <rect x="60" y="112" width="1080" height="104" rx="8" fill="#7c3aed"/>
+  <text x="92" y="174" font-size="30" fill="#ffffff">Per active agent: the roster drives the bill</text>
+  <rect x="60" y="232" width="1080" height="104" rx="8" fill="#4f46e5"/>
+  <text x="92" y="294" font-size="30" fill="#ffffff">Flat price per agent-count tier: steps, not a meter</text>
+  <rect x="60" y="352" width="1080" height="104" rx="8" fill="#4338ca"/>
+  <text x="92" y="414" font-size="30" fill="#ffffff">Per transaction: volume drives the bill</text>
+  <rect x="60" y="472" width="1080" height="104" rx="8" fill="#10b981"/>
+  <text x="92" y="534" font-size="30" fill="#ffffff">Pay per confirmed deal: a quiet quarter costs nothing</text>
+</svg>

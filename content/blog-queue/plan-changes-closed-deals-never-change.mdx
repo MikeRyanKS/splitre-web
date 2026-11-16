@@ -1,0 +1,62 @@
+---
+title: "If You Edit a Commission Plan, Do Past Deals Change?"
+date: "2026-11-29"
+excerpt: "Edit a commission plan and past deals may be silently recalculated. Here is why it happens, what it costs you, and what to check before you change a split."
+readTime: "5 min read"
+keywords: ["edit commission plan past deals", "change commission split mid year", "recalculate closed deals brokerage", "commission plan versioning"]
+related: ["commission-tracking-spreadsheet-brokerage", "best-commission-split-software-for-brokerages"]
+publishAt: "2026-11-29T08:10"
+cluster: "C. Switching and software evaluation"
+reader: "Broker-owner"
+primaryKeyword: "edit commission plan past deals"
+---
+
+It depends entirely on how your system stores a closed deal. If it saved the result, nothing changes and January keeps the numbers you paid out. If it saved a reference to the plan, every past deal is recalculated against the plan as it reads today, and six months of payouts quietly stop matching your books. Ask the question before you raise a split.
+
+![Two ways software remembers a closed deal after a plan edit in July](/blog/plan-changes-closed-deals-never-change/frozen-breakdown-versus-recalculated.svg "The second column is not a bug report. It is a design choice that some tools make and never mention.")
+
+## What happens to past deals when you edit a commission plan?
+
+In a system that freezes each breakdown at confirmation, nothing at all. The plan edit applies to deals you enter from now on, and the agent's cap history stays where it was. That is how SplitRE works: a confirmed deal keeps the exact breakdown it was recorded with, whether it was typed in live, amended, or imported from a spreadsheet.
+
+In a system that recalculates on read, the plan is the formula and the deal is just inputs. Change the formula and the whole year reprints. Nobody ships that on purpose to rewrite history. It happens because recalculating is the simpler thing to build, and because the first version of the product only ever had one plan.
+
+A spreadsheet does the same thing and does it faster. The split percentage lives in one cell, every row points at it, and changing it in July rewrites January in front of you. That is one of the [ways a commission spreadsheet breaks](/blog/commission-tracking-spreadsheet-brokerage) that you only notice at year end.
+
+## What does a silent recalculation actually cost?
+
+Real money, and the trust that is harder to get back.
+
+**Example.** An agent is on 70/30 with an $18,000 cap. By the end of June she had closed seven deals totalling $52,000 of gross commission, so the brokerage had collected $15,600 from her and she was $2,400 from capping. In July you reward her with 80/20. If your system recalculates past deals, those seven deals now read $10,400 collected instead of $15,600. Your books are off by $5,200 against checks you already wrote, and her cap progress has slid backwards: she is suddenly $7,600 from the cap she was about to hit.
+
+Then she caps later than she should have, pays you a split she does not owe, and finds out. The $5,200 was the cheap part.
+
+## How do you raise a split mid-year without rewriting January?
+
+Change the plan going forward and leave the closed deals alone. A mid-year raise is a decision about future production, not a refund on past deals, and treating it as either one is fine as long as you say which.
+
+If you genuinely do want to pay an agent back for earlier deals, do it as a visible adjustment rather than by editing a plan and hoping the numbers move. Amend the specific deals, or write one check with a note saying what it covers. The audit trail matters more than the method: a year from now you want to be able to say why that payout does not match the plan on file. SplitRE keeps an amendment history on each deal for exactly this, and emails the agent the revised breakdown.
+
+![A deal's amendment history showing what changed and when](/screenshots/splitre-deal-amendment-history.png "An amendment is recorded as its own event, so the original figures stay readable next to the revised ones.")
+
+## What should you check before you change a plan?
+
+Four things, in this order. Whether confirmed deals are locked. Whether unconfirmed drafts recalculate (they usually should). Whether tier thresholds and cap progress reset with the cap year or carry over. And whether the agent gets told.
+
+Ask a vendor the first one as a plain question: if I change this split today, what does last March's deal say tomorrow? A product that handles it well will answer immediately, because it is a decision someone made deliberately. Our [guide to evaluating commission software](/blog/best-commission-split-software-for-brokerages) covers the rest of that conversation. The [plan editor documentation](/docs/creating-commission-plans) shows which fields are involved.
+
+## Common questions
+
+### Should drafts recalculate when the plan changes?
+
+Yes, almost always. A draft is a deal you have not committed to, so it should reflect the current plan. The line that matters is confirmation: before it, the plan is live; after it, the numbers are history. SplitRE recalculates drafts and freezes confirmed deals.
+
+### What if I made the plan wrong and the deal is already confirmed?
+
+Amend the deal rather than the plan. Fixing the plan corrects the next deal but leaves the bad one standing, and editing the plan to force the old deal to change is how you lose the ability to explain either. Our [free split calculator](/real-estate-commission-split-calculator) is useful for checking what the corrected figure should have been before you touch anything.
+
+### Does this matter for a two-agent brokerage?
+
+Less, but it is also when plans change most. Small brokerages adjust splits as they recruit, and a recalculating system does the most damage in the year you are negotiating every plan individually.
+
+Plan edits are the quiet way a year of commission records goes wrong, because nothing errors and nobody gets an alert. [Open a free account](https://app.splitre.app/signup) and confirm a deal to see what gets frozen, with your first 3 deals free.

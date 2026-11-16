@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="A flow showing a brokerage-generated lead entered as a company lead deal type at 50/50, marked as not counting toward the cap, so the brokerage keeps $4,500 and the agent's cap progress does not move" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="68" font-size="36" font-weight="700" fill="#111827">A $9,000 commission on a lead you paid for</text>
+  <rect x="60" y="112" width="1080" height="80" rx="8" fill="#7c3aed"/>
+  <text x="92" y="161" font-size="30" fill="#ffffff">The lead came from the brokerage, not the agent</text>
+  <path d="M 600 192 L 600 232" stroke="#4338ca" stroke-width="4"/>
+  <rect x="60" y="238" width="1080" height="80" rx="8" fill="#4f46e5"/>
+  <text x="92" y="287" font-size="30" fill="#ffffff">Deal type: Company lead, split 50/50 for this deal</text>
+  <path d="M 600 318 L 600 358" stroke="#4338ca" stroke-width="4"/>
+  <rect x="60" y="364" width="1080" height="80" rx="8" fill="#4338ca"/>
+  <text x="92" y="413" font-size="30" fill="#ffffff">The type is marked as not counting toward the cap</text>
+  <path d="M 600 444 L 600 484" stroke="#4338ca" stroke-width="4"/>
+  <rect x="60" y="490" width="510" height="100" rx="8" fill="#10b981"/>
+  <text x="92" y="550" font-size="30" font-weight="700" fill="#ffffff">Brokerage keeps $4,500</text>
+  <rect x="630" y="490" width="510" height="100" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="662" y="550" font-size="30" font-weight="700" fill="#111827">Cap progress unchanged</text>
+</svg>

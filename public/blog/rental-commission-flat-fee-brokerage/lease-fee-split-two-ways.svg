@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="A $2,400 lease fee two ways: a 70/30 split gives the brokerage $720 and the agent $1,680, while a flat $300 broker fee gives the brokerage $300 and the agent $2,100" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="68" font-size="36" font-weight="700" fill="#111827">A $2,400 lease fee, two ways</text>
+  <rect x="60" y="112" width="510" height="88" rx="8" fill="#4338ca"/>
+  <text x="92" y="166" font-size="30" font-weight="700" fill="#ffffff">The usual 70/30 split</text>
+  <rect x="630" y="112" width="510" height="88" rx="8" fill="#4f46e5"/>
+  <text x="662" y="166" font-size="30" font-weight="700" fill="#ffffff">A flat $300 broker fee</text>
+  <rect x="60" y="226" width="510" height="88" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="92" y="280" font-size="30" fill="#374151">Brokerage keeps $720</text>
+  <rect x="630" y="226" width="510" height="88" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="662" y="280" font-size="30" fill="#374151">Brokerage keeps $300</text>
+  <rect x="60" y="340" width="510" height="88" rx="8" fill="#10b981"/>
+  <text x="92" y="394" font-size="30" font-weight="700" fill="#ffffff">Agent takes $1,680</text>
+  <rect x="630" y="340" width="510" height="88" rx="8" fill="#10b981"/>
+  <text x="662" y="394" font-size="30" font-weight="700" fill="#ffffff">Agent takes $2,100</text>
+  <text x="60" y="516" font-size="28" fill="#374151">Same lease, same paperwork, and the agent notices the difference.</text>
+</svg>

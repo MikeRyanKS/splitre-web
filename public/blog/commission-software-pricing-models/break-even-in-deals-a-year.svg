@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="The break-even calculation: divide the annual flat figure by the per deal figure to get the number of deals a year at which the two quotes cost the same, below which per deal is cheaper and above which flat is cheaper" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="68" font-size="36" font-weight="700" fill="#111827">Comparing two quotes with your own numbers</text>
+  <rect x="60" y="112" width="1080" height="130" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="92" y="175" font-size="32" fill="#111827">The annual flat figure, divided by the per deal figure,</text>
+  <text x="92" y="219" font-size="32" font-weight="700" fill="#4338ca">equals the deals a year where the two cost the same.</text>
+  <rect x="60" y="282" width="510" height="150" rx="8" fill="#10b981"/>
+  <text x="92" y="344" font-size="30" font-weight="700" fill="#ffffff">Fewer deals than that</text>
+  <text x="92" y="390" font-size="30" fill="#ffffff">Per deal wins</text>
+  <rect x="630" y="282" width="510" height="150" rx="8" fill="#4f46e5"/>
+  <text x="662" y="344" font-size="30" font-weight="700" fill="#ffffff">More deals than that</text>
+  <text x="662" y="390" font-size="30" fill="#ffffff">The flat figure wins</text>
+  <text x="60" y="500" font-size="28" fill="#374151">Use last year's confirmed deal count, not this year's hopes.</text>
+</svg>
