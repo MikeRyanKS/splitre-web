@@ -49,6 +49,7 @@ Each is still true as of 2026-11-09.
 - "Back office software". It is commission management software.
 - "Save 17%" as a flat figure, or any `annualPerMonth` price without "billed annually".
 - That the calculator's 3 PDFs are the account's 3 free deals.
+- That SplitRE pays, wires or disburses commissions. It calculates and exports; the broker moves the money through their own bank or accounting system.
 
 ## Keeping this file true
 
