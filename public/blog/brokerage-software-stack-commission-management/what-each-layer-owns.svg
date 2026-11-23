@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Four layers of a brokerage software stack: a CRM owns leads and contacts, a transaction and compliance tool owns documents and deadlines, commission management owns splits, caps and payout figures, and accounting owns the ledger and the tax filings." font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="62" font-size="36" font-weight="700" fill="#111827">Four layers, and what each one owns</text>
+  <rect x="60" y="100" width="1080" height="110" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="92" y="146" font-size="30" font-weight="700" fill="#111827">CRM</text>
+  <text x="92" y="186" font-size="28" fill="#374151">Leads, contacts, follow up, the pipeline before a deal exists</text>
+  <rect x="60" y="226" width="1080" height="110" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="92" y="272" font-size="30" font-weight="700" fill="#111827">Transactions and compliance</text>
+  <text x="92" y="312" font-size="28" fill="#374151">Documents, signatures, checklists, closing deadlines</text>
+  <rect x="60" y="352" width="1080" height="110" rx="8" fill="#4338ca"/>
+  <text x="92" y="398" font-size="30" font-weight="700" fill="#ffffff">Commission management</text>
+  <text x="92" y="438" font-size="28" fill="#ffffff">Splits, caps, fees, the payout figure and the audit trail behind it</text>
+  <rect x="60" y="478" width="1080" height="110" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="92" y="524" font-size="30" font-weight="700" fill="#111827">Accounting</text>
+  <text x="92" y="564" font-size="28" fill="#374151">The ledger, the bills, the filings, your accountant's view</text>
+</svg>

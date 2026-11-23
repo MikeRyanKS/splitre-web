@@ -1,0 +1,55 @@
+---
+title: "Where Commission Management Fits in a Brokerage Software Stack"
+date: "2026-12-05"
+excerpt: "A brokerage software stack has four layers, and most of them cannot answer what an agent gets paid. Here is which tool owns the payout figure, and why."
+readTime: "4 min read"
+keywords: ["brokerage software stack", "real estate brokerage software", "commission management software", "transaction management software"]
+related: ["best-commission-split-software-for-brokerages", "real-estate-commission-software-questions"]
+publishAt: "2026-12-05T16:40"
+cluster: "C. Switching and software evaluation"
+reader: "Broker-owner"
+primaryKeyword: "brokerage software stack"
+---
+
+Commission management sits between your transaction files and your accounting file. It owns one question nothing else in the stack can answer: given this agent, this plan and this point in their cap year, what does the brokerage keep and what does the agent get paid? A compliance tool knows the deal closed. It does not know the split.
+
+![Four layers of a brokerage software stack showing what each layer owns](/blog/brokerage-software-stack-commission-management/what-each-layer-owns.svg "Most small brokerages already run three of these four layers, with the third one living in a spreadsheet.")
+
+## What belongs in a brokerage software stack?
+
+Four layers, and for a 5 to 50 agent office they rarely come from one vendor.
+
+- **A CRM** for leads, contacts and follow up, which is everything before there is a deal.
+- **Transaction management and compliance** for documents, signatures, checklists and deadlines. This is the layer your state licensing audit cares about.
+- **Commission management** for splits, caps, fees and the payout figure.
+- **Accounting** for the ledger, the bills and the filings.
+
+Suites exist that cover two or three of these, and some brokerages are happy with that. The trade-off is familiar: one login and one bill, against a compliance module you would not have chosen on its own.
+
+## Why does commission management sit on its own?
+
+Because it is the only layer that has to carry a running total across the year. Documents are per deal. Ledger entries are per month. A cap is cumulative, and the arithmetic on any given deal depends on every deal before it.
+
+**Example.** An agent is on 80/20 against a $16,000 cap and your brokerage has collected $14,800 from her. Her next closing produces $10,000 of gross commission. A flat 20% would be $2,000, but only $1,200 of room is left, so the brokerage collects $1,200 and she keeps $8,800. She is capped from that moment, and her plan's $250 post-cap transaction fee applies, so her payout is $8,550.
+
+No document tool in the stack has the $14,800. Neither does the accounting file, which only sees the entries after the figure has been decided. That is the gap a spreadsheet usually fills, and the deal that crosses the cap is the one it gets wrong.
+
+![The Dashboard with broker revenue for the year and cap progress for each agent](/screenshots/dashboard.png "Cap progress is a running total, which is why it belongs where the deals are entered rather than in a month-end report.")
+
+## What should you not expect commission software to do?
+
+A fair amount. SplitRE calculates and records: it does not move money, hold trust or escrow funds, run your payouts, or file anything. It is not a document compliance tool and will not keep your transaction files audit ready. It does not run agent billing for recurring desk fees, and it is not a CRM.
+
+The handoff to accounting is a QuickBooks-ready CSV export with the invoice and bill descriptions already written, not a live connection to your books, so somebody still imports it. A broker evaluating this layer should ask what every tool in the shortlist does at the cap boundary, on a deal split between two agents, and when a plan changes mid-year. Our [12 questions to ask](/blog/real-estate-commission-software-questions) is written for that call. The [feature list](/features) says plainly what is in scope and what is not.
+
+## Common questions
+
+### Can a transaction management tool handle commissions too?
+
+Some advertise it, and for a flat split with no cap it will usually be fine. Ask to see a capped agent's deal that straddles the limit, a co-agent transaction, and a plan edit, then check whether deals already closed keep the numbers they were recorded with. That last one matters more than it sounds.
+
+### What if we already run a suite?
+
+Then the question is whether its commission module handles your plans, not whether it exists. Brokerages with anniversary caps, capped fees, team pools or a split between two companies tend to be the ones that outgrow a bundled module. The comparison in our [software guide for brokerages](/blog/best-commission-split-software-for-brokerages) covers what to look at.
+
+Before you add anything to the stack, price your own gap: run last month's deals through the [commission split calculator](/real-estate-commission-split-calculator) and see how many came out differently from the spreadsheet. If the answer is any at all, [start with your first 3 deals free](https://app.splitre.app/signup) and check the cap math against your own closings. The first evening of setup is covered in [getting started](/docs/getting-started).

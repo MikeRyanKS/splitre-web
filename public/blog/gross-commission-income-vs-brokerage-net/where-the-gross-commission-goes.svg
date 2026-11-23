@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Where an $18,000 gross commission goes on one deal: $10,039 to the agent as net payout, $5,081 kept by the brokerage as broker net, and $2,880 paid out to a franchise and a referring brokerage." font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="60" y="66" font-size="36" font-weight="700" fill="#111827">Where one $18,000 commission goes</text>
+  <rect x="60" y="108" width="1080" height="80" rx="8" fill="#4338ca"/>
+  <text x="92" y="157" font-size="30" font-weight="700" fill="#ffffff">Gross commission income $18,000</text>
+  <rect x="60" y="232" width="602" height="80" rx="8" fill="#10b981"/>
+  <text x="694" y="281" font-size="30" fill="#374151">Agent net $10,039</text>
+  <rect x="60" y="348" width="305" height="80" rx="8" fill="#4f46e5"/>
+  <text x="397" y="397" font-size="30" fill="#374151">Broker net $5,081</text>
+  <rect x="60" y="464" width="173" height="80" rx="8" fill="#eef2ff" stroke="#e5e7eb"/>
+  <text x="265" y="513" font-size="30" fill="#374151">Paid out to others $2,880</text>
+  <text x="60" y="590" font-size="28" fill="#374151">The last bar is a franchise royalty and an outside referral, so it is never brokerage revenue.</text>
+</svg>

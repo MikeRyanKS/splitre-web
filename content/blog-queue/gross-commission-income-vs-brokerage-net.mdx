@@ -1,0 +1,57 @@
+---
+title: "Gross Commission Income vs Brokerage Net: Recording Both"
+date: "2026-12-04"
+excerpt: "Brokerage gross commission income is the whole check. Broker net is what you keep. On a deal with pass-throughs the two differ by more than the agent payout."
+readTime: "4 min read"
+keywords: ["brokerage gross commission income", "gross commission income vs brokerage net", "real estate brokerage bookkeeping", "recording commission income"]
+related: ["company-dollar-real-estate", "quickbooks-online-real-estate-brokerage"]
+publishAt: "2026-12-04T14:25"
+cluster: "B. Back-office and accounting"
+reader: "Bookkeeper"
+primaryKeyword: "brokerage gross commission income"
+---
+
+A brokerage's gross commission income is the full commission the title company pays the broker, before anything comes out of it. Broker net is what the brokerage keeps once the agent is paid and every pass-through cost is gone. Both belong in the books, as income and as expenses, and a deal with a referral on it will not reconcile if you only record the difference.
+
+![An $18,000 commission divided into agent net, broker net and amounts paid out to others](/blog/gross-commission-income-vs-brokerage-net/where-the-gross-commission-goes.svg "The three bars add back to the full commission, which is the check that reconciles against the closing statement.")
+
+## What is the difference between gross commission income and brokerage net?
+
+Gross commission income, or GCI, is revenue. It is the sale price times the commission percentage, and it is the number on the closing statement. Broker net is the brokerage's own earnings from the same deal: its share of the split plus the fees it charged the agent, such as E and O or a transaction fee.
+
+Recording only the net deposit understates revenue, and it leaves nothing to reconcile against the closing statement when an agent queries a payout eight months later.
+
+## Why isn't brokerage net just GCI minus the agent's payout?
+
+Because some of the money was never yours. A franchise royalty and an outside referral fee pass through the brokerage on their way to somebody else, so they reduce the gross without becoming anyone's earnings at your office.
+
+**Example.** A $600,000 sale at 3% is $18,000 of gross commission. The deal carries a 6% franchise royalty, which is $1,080, and a 10% outside referral, which is $1,800. That leaves $15,120 to split. On a 70/30 plan the brokerage's share is $4,536 and the agent's is $10,584, less $150 of E and O and a $395 transaction fee, so the agent nets $10,039.
+
+Subtract the agent's payout from the gross and you get $7,961, which is not what your brokerage earned. Broker net is $4,536 plus the $545 of fees, so $5,081. The $2,880 gap is the royalty and the referral, both of which belong to someone else. On a deal with neither, the shortcut happens to work, which is exactly why it goes unnoticed for a year.
+
+![A deals list with selected rows being exported as a QuickBooks-ready CSV](/screenshots/splitre-deals-list-csv-export.png "The export writes Broker Net with pass-throughs already excluded, and one row per agent on a deal that had two.")
+
+## How do you record both in the accounting file?
+
+Four entries cover the deal above, and each one has a counterpart on the closing statement.
+
+| Line | Amount | How it is usually recorded |
+|---|---|---|
+| Gross commission income | $18,000 | Invoice, commission income |
+| Agent payout | $10,039 | Bill to the agent |
+| Franchise royalty | $1,080 | Bill, pass-through cost |
+| Outside referral | $1,800 | Bill, pass-through cost |
+
+What is left is the $5,081 your brokerage actually earned. SplitRE's export gives you those figures per deal as a QuickBooks-ready CSV with the invoice and bill descriptions already written, which is a file your bookkeeper imports rather than a live connection to your accounting system. Chart of accounts decisions, and how pass-throughs are presented on your own statements, are worth settling with your CPA once rather than per deal.
+
+## Common questions
+
+### Is broker net the same as company dollar?
+
+They are close and many brokerages use the words interchangeably. Company dollar usually means the brokerage's share of the split across a period, while broker net on a single deal also carries the agent fees charged on that deal. Our [guide to calculating company dollar](/blog/company-dollar-real-estate) works through the period version.
+
+### Which figure should the agent's statement show?
+
+Both. The agent wants to see the gross their deal produced and the deductions in the order they were taken, ending at their payout. Anything less and the first question is why the check does not match the split. The [data export documentation](/docs/exporting-your-brokerage-data) covers what each column holds.
+
+Run one of your own deals through the [commission split calculator](/real-estate-commission-split-calculator) and the receipt shows the same breakdown this post walks through, including what the brokerage keeps. The month-end routine that turns a stack of those deals into entries is in our [QuickBooks workflow for brokerages](/blog/quickbooks-online-real-estate-brokerage). To get the export and the per-deal history it relies on, [start with your first 3 deals free](https://app.splitre.app/signup).
