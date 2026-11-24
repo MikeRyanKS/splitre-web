@@ -27,7 +27,7 @@ Product-tie notes are for the writer: verify every product claim in `docs/HOW_IT
 | B15 | Post-Cap Transaction Fees Explained (Including Fees That Step Down) | A | BO | post cap transaction fee real estate | `post-cap-transaction-fee` | published | Flat post-cap fee and a step-down as a labeled example ($250 until $5,000 paid, then $75). |
 | B16 | The Real Estate Brokerage Month-End Close: A Checklist for Bookkeepers | B | BK | real estate brokerage month end close | `brokerage-month-end-close-checklist` | published | Confirm deals, export CSV, invoice and bill entries, reconcile payouts, review Agent Cap Report. Link `quickbooks-online-real-estate-brokerage`. |
 | B17 | A Bookkeeper's Guide to Serving Several Small Brokerages | B | BK | bookkeeper for real estate brokerage | `bookkeeper-for-real-estate-brokerages` | published | Repeatable per-client setup, export format, cap report as audit trail. |
-| B18 | Real Estate Agent Commission Statement: What to Include and a Sample | B | BO | agent commission statement | `agent-commission-statement` | queued | Line items, the frozen breakdown, the Annual Earnings Summary PDF (informational, not a tax document). |
+| B18 | Real Estate Agent Commission Statement: What to Include and a Sample | B | BO | agent commission statement | `agent-commission-statement` | published | Line items, the frozen breakdown, the Annual Earnings Summary PDF (informational, not a tax document). |
 
 ## Priority 2
 
