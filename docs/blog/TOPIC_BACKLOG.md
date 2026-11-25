@@ -34,7 +34,7 @@ Product-tie notes are for the writer: verify every product claim in `docs/HOW_IT
 | ID | Working title | Pillar | Reader | Primary keyword | Slug | Status | Notes |
 |---|---|---|---|---|---|---|---|
 | B19 | Transaction Fee in Real Estate: What Brokerages Charge and How to Set Yours | A | BO | real estate transaction fee brokerage | `real-estate-transaction-fee-brokerage` | published | Flat versus percent of sale price; a fee that stops at a yearly amount. No "typical range" figures unless fetched and linked. |
-| B20 | E&O Fee in a Commission Plan: Flat or Percentage? | A | BO | real estate E&O fee commission | `eo-fee-commission-plan` | queued | Percent-mode E&O is a percent of the agent's share after the split. Worked example. |
+| B20 | E&O Fee in a Commission Plan: Flat or Percentage? | A | BO | real estate E&O fee commission | `eo-fee-commission-plan` | published | Percent-mode E&O is a percent of the agent's share after the split. Worked example. |
 | B21 | How to Handle a Company Lead Split (and Keep It Off the Agent's Cap) | A | BO | company lead commission split | `company-lead-commission-split` | queued | Deal types that do not count toward the cap. |
 | B22 | Rental and Lease Commissions: Charging a Flat Fee Instead of a Split | A | BO | rental commission flat fee brokerage | `rental-commission-flat-fee-brokerage` | queued | Deal type with a flat broker fee. |
 | B23 | Mentor and Mentee Commission Splits: How to Structure and Track Them | A | BO | mentor mentee commission split | `mentor-mentee-commission-split` | queued | Co-agent deal with GCI shares; Mentor/Training Fee. Link `co-listing-commission-split`. |
